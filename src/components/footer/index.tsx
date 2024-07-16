@@ -1,0 +1,37 @@
+import './styles.scss'
+import logo from '../../assets/logo.png'
+import bbLogo from '../../assets/bb-logo.png'
+import cafeComUx from '../../assets/cafe-com-ux.png'
+
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-column">
+          <img
+            className="footer-logo"
+            src={logo}
+            alt="Logo do Accessibility Day"
+          />
+          <p className="footer-date">11 de setembro de 2024</p>
+        </div>
+        <div className="footer-column">
+          <p className="realization-support">Realização e apoio</p>
+          <div className="footer-icons">
+            <img
+              className="bb-logo"
+              src={bbLogo}
+              alt="Logo do Banco do Brasil"
+            />
+            <img
+              className="cafe-com-ux-logo"
+              src={cafeComUx}
+              alt="Logo do Café com UX"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="overlay" />
+    </footer>
+  )
+}

@@ -1,0 +1,85 @@
+@import '../../variables';
+@import '../../placeholders';
+
+.footer {
+  background-color: $backgroundDark;
+  height: 355px;
+  position: relative;
+  background-image: url('/footer-watermark.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+
+  .overlay {
+    height: 355px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, #3333BD 100%);
+  }
+}
+
+.footer-container {
+  @extend %container;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: $white;
+  position: relative;
+  z-index: 2;
+  @media (max-width: 430px) {
+    justify-content: space-between;
+    .footer-column {
+      width: auto;
+    }
+    .footer-logo {
+      width: 191px;
+      height: 28.76px;
+    }
+    .realization-support {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 17.5px;
+    }
+    .bb-logo {
+      width: 32px;
+      height: 32px;
+    }
+    .cafe-com-ux-logo {
+      width: 34px;
+      height: 35px;
+    }
+  }
+}
+
+.footer-column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  &:nth-child(2) {
+  }
+}
+
+.footer-logo {
+  width: 394px;
+  height: 59px;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  img {
+    padding: 20px 20px 20px 0;
+  }
+}
+.footer-date {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.realization-support {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
