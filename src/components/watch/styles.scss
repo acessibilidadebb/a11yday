@@ -1,0 +1,80 @@
+@import '../../variables';
+@import '../../placeholders';
+
+.watch {
+  @extend %container;
+  background-color: $watch-background;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $white;
+  
+  @media (max-width: 430px) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 172px;
+    justify-content: space-evenly;
+    .play {
+      display: initial;
+    }
+    h2 {
+      font-size: 22px !important;
+      display: flex;
+      align-items: center;
+      line-height: 28px !important;;
+    }
+    p {
+      font-size: 16px !important;
+      line-height: 22px !important;;
+    }
+    .buttons {
+      margin-right: 0;
+    }
+    .btn {
+      font-size: 12px;
+      padding: 9px 16px 9px 16px;
+      margin-right: 16px;
+    }
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+  p {
+    font-size: 22px;
+    margin-top: 10px;
+    line-height: 28px;
+  }
+}
+.play {
+  width: 0;
+  height: 0;
+  border-left: 12px solid $color;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  margin: 7px;
+  display: none;
+}
+.buttons {
+  margin-right: 100px;
+}
+.btn {
+  background-color: $backgroundYellow;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 4px;
+  color: $color-blue;
+  margin-right: 24px;
+
+  &:hover {
+    background-color: lighten($backgroundYellow, 5);
+  }
+
+  &:active {
+    background-color: darken($backgroundYellow, 10);
+  }
+}
