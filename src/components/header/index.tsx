@@ -8,7 +8,7 @@ import bilateralDeafness from '../../assets/bilateral-deafness.png'
 import './styles.scss'
 
 export default function Header() {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
   const handleMenuClick = () => {
     setOpen(!open)
   }
