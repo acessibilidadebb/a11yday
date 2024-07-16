@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import bbLogo from '../../assets/bb-logo.png'
 import logo from '../../assets/logo.png'
 import lowVision from '../../assets/low-vision.png'
@@ -8,12 +8,26 @@ import bilateralDeafness from '../../assets/bilateral-deafness.png'
 import './styles.scss'
 
 export default function Header() {
+  const [scrollPosition, setScrollPosition] = useState(0)
   const [open, setOpen] = useState(false)
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+  const sticky = scrollPosition > 30 ? 'sticky' : ''
+
   const handleMenuClick = () => {
     setOpen(!open)
   }
   return (
-    <header id="header" className="header">
+    <header id="header" className={`header ${sticky}`}>
       <div className="header-logo-container">
         <img
           className="header-logo-bb"
