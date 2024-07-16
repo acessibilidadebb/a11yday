@@ -1,0 +1,6 @@
+%container {
+  padding: $containerPadding;
+  @media (max-width: 430px) {
+    padding: $containerPaddingSmall;
+  }
+}
