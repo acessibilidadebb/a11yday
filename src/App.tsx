@@ -1,4 +1,5 @@
 import './App.scss'
+import FrequentlyAsked from './components/frequently-asked'
 import Header from './components/header'
 import Overview from './components/overview'
 import Schedule from './components/schedule'
@@ -16,6 +17,7 @@ function App() {
       {/* <Schedule /> */}
 
       {/* <Speakers /> */}
+      <FrequentlyAsked />
     </>
   )
 }

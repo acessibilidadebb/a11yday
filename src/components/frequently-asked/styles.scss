@@ -1,0 +1,53 @@
+@import '../../variables';
+@import '../../placeholders';
+
+.frequently-asked {
+  @extend %container;
+  padding-top: $containerPadding*2;
+  padding-bottom: $containerPadding*5;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 430px) {
+    display: none;
+  }
+  header {
+    display: flex;
+    align-items: flex-end;
+  }
+  h3 {
+    color: $color-blue;
+    font-size: 1.8rem;
+    padding: 5px 15px;
+  }
+  .watermark {
+    position: absolute;
+    right: - calc($containerPadding/4);
+    bottom: $containerPadding;
+    z-index: -1;
+  }
+}
+
+.frequently-asked-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid $border-gray2;
+  margin-top: 15px;
+  width: 48.5%;
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  p {
+    padding: 10px;
+  }
+}
+.collapse-btn {
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+}
