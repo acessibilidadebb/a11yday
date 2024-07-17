@@ -7,6 +7,7 @@ import Schedule from './components/schedule'
 import Sections from './components/sections'
 import Speakers from './components/speakers'
 import Watch from './components/watch'
+import { ModalProvider } from './contexts/modalContext'
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-export interface Speakers {
+export interface Speaker {
   id: string;
   horaDeInicio: string;
   horaDeConclusao: string;
@@ -7,7 +7,7 @@ export interface Speakers {
   seuNome: string;
   apelido: string;
   seuEmail: string;
-  qualSuaEmpresa: string;
+  empresa: string;
   deQualCidadeVoceVira: string;
   miniBio: string;
   linkedIn: string;
@@ -25,5 +25,5 @@ export interface Speakers {
   algoParaCompartilhar: string;
   conseguireiEstarPresencialmenteEmBrasilia: string;
   confirmoQueAPalestraEDeMinhaAutoria: string;
-  // photo?: string
+  image? : string
 }

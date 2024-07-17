@@ -17,10 +17,11 @@
   },
   {
     "time": "9h45",
-    "image": "cesar-sathler.jpeg",
+    "image": "",
     "title": "Silêncio: Palavras que não comunicam.",
     "speakers": [
       {
+        "image": "cesar-sathler.jpeg",
         "nome": "Cesar Luiz",
         "empresa": "Cast group"
       }
@@ -29,10 +30,11 @@
   },
   {
     "time": "10h10",
-    "image": "liliane-claudia.jpeg",
+    "image": "",
     "title": "Desbloqueando o Potencial Criativo com Acessibilidade e o Mapa da Alteridade",
     "speakers": [
       {
+        "image": "liliane-claudia.jpeg",
         "nome": "Liliane Claudia",
         "empresa": "Accenture"
       }
@@ -41,10 +43,11 @@
   },
   {
     "time": "10h55",
-    "image": "muriel-de-almeida-xavier.jpeg",
+    "image": "",
     "title": "Trazendo a acessibilidade para a realidade: uma nova experiência de usuário",
     "speakers": [
       {
+        "image": "muriel-de-almeida-xavier.jpeg",
         "nome": "Muriel",
         "empresa": "Banco do Brasil"
       }
@@ -53,10 +56,11 @@
   },
   {
     "time": "11h20",
-    "image": "sandyara-peres.jpeg",
+    "image": "",
     "title": "Gestão de Acessibilidade em Produtos Digitais: do processo às métricas",
     "speakers": [
       {
+        "image": "sandyara-peres.jpeg",
         "nome": "Sandyara Peres",
         "empresa": "Serasa Experian"
       }
@@ -65,10 +69,11 @@
   },
   {
     "time": "12h05",
-    "image": "maria-clara-tarrafa.jpeg",
+    "image": "",
     "title": "Então o seu produto é acessível. E o seu processo de trabalho?",
     "speakers": [
       {
+        "image": "maria-clara-tarrafa.jpeg",
         "nome": "Maria Clara",
         "empresa": "iFood"
       }
@@ -78,6 +83,7 @@
   {
     "time": "12h25",
     "image": "cafe-blue.png",
+    "imageAlt": "Ícone com um Garfo e uma Faca representando refeição",
     "title": "Pausa para almoço",
     "speakers": [],
     "subtitle": "Venha tomar um café e conhecer pessoas maravilhosas.",
@@ -86,16 +92,18 @@
   {
     "time": "13h30",
     "image": "d-braile.png",
+    "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
     "title": "Abertura tarde",
     "speakers": [],
     "details": ""
   },
   {
     "time": "14h35",
-    "image": "arthur-ximenes.jpeg",
+    "image": "",
     "title": "Conectando Vidas: Tecnologia e Acessibilidade",
     "speakers": [
       {
+        "image": "arthur-ximenes.jpeg",
         "nome": "Arthur Ximenes",
         "empresa": "Hefesto"
       }
@@ -104,10 +112,11 @@
   },
   {
     "time": "15h00",
-    "image": "sarah-fernn.jpeg",
+    "image": "",
     "title": "IA e Neurodiversidade: Ferramentas e Soluções em Acessibilidade Inclusivas para a Diversidade Cognitiva",
     "speakers": [
       {
+        "image": "sarah-fernn.jpeg",
         "nome": "Sarah Fernn",
         "empresa": "Stardust Zone"
       }
@@ -116,14 +125,16 @@
   },
   {
     "time": "15h45",
-    "image": "marcos-fernandes.jpeg",
+    "image": "",
     "title": "Design inclusivo para a 3º Idade",
     "speakers": [
       {
+        "image": "marcos-fernandes.jpeg",
         "nome": "Marcos Vinicius",
         "empresa": "GFT Tecnologia"
       },
       {
+        "image": "michael-liang.jpeg",
         "nome": "Michael Liang",
         "empresa": ""
       }
@@ -132,10 +143,11 @@
   },
   {
     "time": "16h10",
-    "image": "filipe-ballico-de-moraes.jpeg",
+    "image": "",
     "title": "Implementando Acessibilidade: Um Fluxo de Trabalho otimizado para Desenvolvedores",
     "speakers": [
       {
+        "image": "filipe-ballico-de-moraes.jpeg",
         "nome": "Filipe Ballico de Moraes",
         "empresa": "Ministério Público Federal"
       }
@@ -145,6 +157,7 @@
   {
     "time": "19h30",
     "image": "d-braile.png",
+    "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
     "title": "Encerramento",
     "speakers": [],
     "details": ""
