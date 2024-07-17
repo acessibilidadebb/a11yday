@@ -1,0 +1,22 @@
+export interface SpeakersTitleProps {
+  speakers: SpeakerTitle[]
+}
+
+export interface SpeakerTitle {
+  image: string
+  nome: string
+  empresa?: string
+}
+export interface ScheduleItemProps {
+  time: string
+  image?: string
+  imageAlt?: string
+  title: string
+  subtitle?: string
+  speakers: SpeakerTitle[]
+  details: string
+}
+export interface DetailsProps extends ScheduleItemProps {
+  showDetails: boolean
+  setShowDetails: React.Dispatch<React.SetStateAction<boolean>>
+}
