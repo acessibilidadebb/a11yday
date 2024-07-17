@@ -20,15 +20,23 @@ interface ScheduleItemProps {
 export default function Schedule() {
   const SpeakersTitle = ({ speakers }: SpeakersTitleProps) => {
     let speakersTitle = ''
+    let speakersCompany = ''
     if (Array.isArray(speakers) && speakers.length) {
-      speakersTitle = speakers
-        .map(
-          (speaker) =>
-            `${speaker.nome}${speaker.empresa ? ` | ${speaker.empresa}` : ''}`
-        )
+      speakersTitle += speakers
+        .map((speaker) => speaker.nome)
+        .filter((str) => str !== '')
+        .join(' - ')
+      speakersCompany += speakers
+        .map((speaker) => speaker.empresa)
+        .filter((str) => str !== '')
         .join(' - ')
     }
-    return <>{speakersTitle && <h4>{speakersTitle}</h4>}</>
+    return (
+      <>
+        {speakersTitle && <h4 className="name">{speakersTitle}</h4>}
+        <p className="company">{speakersCompany}</p>
+      </>
+    )
   }
   const ScheduleItem = ({
     time,
@@ -51,24 +59,21 @@ export default function Schedule() {
           }`}
         >
           <img
+            className="schedule-card-image"
             src={`/${speakers.length ? 'palestrantes/' : ''}${image}`}
             alt="Icone "
           />
-          <div className="schedule-card-content">
-            <h3>{title}</h3>
-            <SpeakersTitle speakers={speakers} />
-            {subtitle && <h4>{subtitle}</h4>}
-            {details && (
-              <button className="details">Detalhes da Palestra</button>
-            )}
-          </div>
+          <h3 className="title">{title}</h3>
+          <SpeakersTitle speakers={speakers} />
+          {subtitle && <h4 className="subtitle">{subtitle}</h4>}
+          {details && <button className="details">Detalhes da Palestra</button>}
         </div>
       </article>
     )
   }
   return (
     <section className="schedule">
-      <h2>Programação</h2>
+      <h2 className="schedule-title">Programação</h2>
       <section>
         <header className="schedule-header">
           <div className="schedule-time">Hora</div>
