@@ -40,7 +40,7 @@ export default function Sections({
     setShowFrequentlyAsked(!showFrequentlyAsked)
   }
   return (
-    <section className="sections" style={{display: showSections ? 'flex' : 'none'}}>
+    <section className={`sections ${!showSections ? 'closed' : ''}`}>
       <button onClick={handleClickSchedule} className='section-button'>
         <div className="section-card">
           <div className="section-card-cover cover-schedule">
