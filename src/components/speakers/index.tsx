@@ -10,6 +10,11 @@ import sandyaraPeres from '../../assets/palestrantes/sandyara-peres.jpeg'
 import sarahFern from '../../assets/palestrantes/sarah-fernn.jpeg'
 import './styles.scss'
 
+import { Speakers } from '../../types/speakers'
+import speakersData from '../../speakers.json'
+
+const speakers: Speakers[] = speakersData as Speakers[]
+
 export default function Speakers() {
   return (
     <section className="speakers">
