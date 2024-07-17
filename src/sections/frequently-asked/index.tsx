@@ -1,9 +1,8 @@
+import { useState } from 'react'
 import './styles.scss'
 import questionMark from '../../assets/question-mark.png'
 import questionMark2 from '../../assets/question-mark2.png'
-import colapseIcon from '../../assets/collapse-icon.png'
 import { Accordion } from '../../components/accordion'
-import { useState } from 'react'
 
 const questions = [
   {
@@ -42,25 +41,10 @@ const questions = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veniam, voluptas expedita sit dolorem deleniti molestias vitae, doloribus voluptatum quasi, beatae dolorum? Atque esse fuga praesentium, itaque alias sunt laboriosam!',
   },
 ]
-
-interface questionProps {
-  title: string
-}
-
 export default function FrequentlyAsked() {
-  const [openAccordion, setOpenAccordion] = useState<number | null>(null);
+  const [openAccordion, setOpenAccordion] = useState<number | null>(null)
   const toggleAccordion = (index: number) => {
-    setOpenAccordion(openAccordion === index ? null : index);
-  };
-  const Question = ({ title }: questionProps) => {
-    return (
-      <div className="question">
-        <p>{title}</p>
-        <button className="collapse-btn" aria-label="Expandir">
-          <img src={colapseIcon} alt="Ícone para colapsar conteúdo" />
-        </button>
-      </div>
-    )
+    setOpenAccordion(openAccordion === index ? null : index)
   }
   return (
     <section className="frequently-asked">

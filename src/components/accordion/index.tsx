@@ -24,7 +24,6 @@ export function Accordion({
           alt="Ícone para colapsar conteúdo"
           className={`accordion-icon ${isOpen ? 'open' : ''}`}
         />
-        {/* <span className={`accordion-icon ${isOpen ? 'open' : ''}`}>➯</span> */}
       </button>
       <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
         <p>{description}</p>
