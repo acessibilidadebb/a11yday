@@ -25,7 +25,8 @@
     "qualTempoDeDuracaoDaSuaPalestra": "20 minutos",
     "algoParaCompartilhar": "",
     "conseguireiEstarPresencialmenteEmBrasilia": "Sim",
-    "confirmoQueAPalestraEDeMinhaAutoria": "Sim"
+    "confirmoQueAPalestraEDeMinhaAutoria": "Sim",
+    "image": "filipe-ballico-de-moraes.jpeg"
   },
   {
     "id": "CONFIRMADA",
@@ -53,7 +54,8 @@
     "qualTempoDeDuracaoDaSuaPalestra": "40 minutos",
     "algoParaCompartilhar": "Em meu site há um link de todas as palestras que já forneci. Será a primeira vez que dou essa palestra publicamente dado que, até então, a concedo como parte de treinamento. ;)",
     "conseguireiEstarPresencialmenteEmBrasilia": "Sim",
-    "confirmoQueAPalestraEDeMinhaAutoria": "Sim"
+    "confirmoQueAPalestraEDeMinhaAutoria": "Sim",
+    "image": "sandyara-peres.jpeg"
   },
   {
     "id": "CONFIRMADA",
@@ -61,7 +63,7 @@
     "horaDeConclusao": "5.29.24 10:41:24",
     "email": "",
     "nome": "FISICA 20'",
-    "seuNome": "Arthur",
+    "seuNome": "Arthur Ximenes",
     "apelido": "Ximenes",
     "seuEmail": "ximenesarthur9@gmail.com",
     "empresa": "Hefestoshop.com",
@@ -81,7 +83,8 @@
     "qualTempoDeDuracaoDaSuaPalestra": "20 minutos",
     "algoParaCompartilhar": "1- https://youtu.be/1EUuOY5uu8E?feature=shared            2 - https://youtu.be/h9d3NyxZy5Q?si=FMaTQjrN4Ig3x_PI                                                  3-  https://www.folhape.com.br/colunistas/tecnologia-e-games/recifense-e-ceo-de-plataforma-que-ajuda-a-impulsionar-tecnologias-para-deficientes-fisicos/39998/",
     "conseguireiEstarPresencialmenteEmBrasilia": "Sim",
-    "confirmoQueAPalestraEDeMinhaAutoria": "Sim"
+    "confirmoQueAPalestraEDeMinhaAutoria": "Sim",
+    "image": "arthur-ximenes.jpeg"
   },
   {
     "id": "CONFIRMADA",
@@ -109,7 +112,8 @@
     "qualTempoDeDuracaoDaSuaPalestra": "40 minutos",
     "algoParaCompartilhar": "Existem 2 palestras, no tópico neurodiversidade que podem ser usadas para avaliação: \n\n1. Google 2023 | Deficiência Tech: \nhttps://www.youtube.com/live/9Vg4M6ybJbE?si=aA2s04LlqV6eje2j&t=21325 (começando em 5h55 min) \n\n2. Escola de Governo do Estado do Piauí: \nhttps://www.youtube.com/watch?v=In0aewfcm1I",
     "conseguireiEstarPresencialmenteEmBrasilia": "Sim",
-    "confirmoQueAPalestraEDeMinhaAutoria": "Sim"
+    "confirmoQueAPalestraEDeMinhaAutoria": "Sim",
+    "image": "sarah-fernn.jpeg"
   },
   {
     "id": "CONFIRMADA",
@@ -137,7 +141,8 @@
     "qualTempoDeDuracaoDaSuaPalestra": "20 minutos",
     "algoParaCompartilhar": "",
     "conseguireiEstarPresencialmenteEmBrasilia": "Sim",
-    "confirmoQueAPalestraEDeMinhaAutoria": "Sim"
+    "confirmoQueAPalestraEDeMinhaAutoria": "Sim",
+    "image": "maria-clara-tarrafa.jpeg"
   },
   {
     "id": "CONFIRMADA",
@@ -165,7 +170,8 @@
     "qualTempoDeDuracaoDaSuaPalestra": "20 minutos",
     "algoParaCompartilhar": "Referência citada na palestra\nSites com boa estrutura e adequados para leitores de telas é a necessidade assistiva mais desejada \nhttps://mwpt.com.br/sites-com-boa-estrutura-e-adequados-para-leitores-de-",
     "conseguireiEstarPresencialmenteEmBrasilia": "Sim",
-    "confirmoQueAPalestraEDeMinhaAutoria": "Sim"
+    "confirmoQueAPalestraEDeMinhaAutoria": "Sim",
+    "image": "muriel-de-almeida-xavier.jpeg"
   },
   {
     "id": "CONFIRMADA",
@@ -193,7 +199,8 @@
     "qualTempoDeDuracaoDaSuaPalestra": "20 minutos",
     "algoParaCompartilhar": "Vide palestra \"PcD pra q?\" realizada no evento Super Café com UX, organizado pela Gecap12 SP no dia 15 de março de 2024 no CCB São Paulo e via teams.",
     "conseguireiEstarPresencialmenteEmBrasilia": "Sim",
-    "confirmoQueAPalestraEDeMinhaAutoria": "Sim"
+    "confirmoQueAPalestraEDeMinhaAutoria": "Sim",
+    "image": "cesar-sathler.jpeg"
   },
   {
     "id": "26",
@@ -221,7 +228,8 @@
     "qualTempoDeDuracaoDaSuaPalestra": "40 minutos",
     "algoParaCompartilhar": "Artigo sobre o Mapa da Alteridade: https://brasil.uxdesign.cc/mapa-da-alteridade-uma-ferramenta-colaborativa-de-design-inclusivo-2df21f9882f8",
     "conseguireiEstarPresencialmenteEmBrasilia": "Não",
-    "confirmoQueAPalestraEDeMinhaAutoria": "Sim"
+    "confirmoQueAPalestraEDeMinhaAutoria": "Sim",
+    "image": "liliane-claudia.jpeg"
   },
   {
     "id": "28",
@@ -249,6 +257,7 @@
     "qualTempoDeDuracaoDaSuaPalestra": "20 minutos",
     "algoParaCompartilhar": "",
     "conseguireiEstarPresencialmenteEmBrasilia": "Sim",
-    "confirmoQueAPalestraEDeMinhaAutoria": "Sim"
+    "confirmoQueAPalestraEDeMinhaAutoria": "Sim",
+    "image": "marcos-fernandes.jpeg"
   }
 ]

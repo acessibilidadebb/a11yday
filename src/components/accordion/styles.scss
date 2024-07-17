@@ -1,0 +1,53 @@
+@import '../../variables';
+
+.accordion {
+  width: 48.5%;
+  border-radius: 4px;
+  border: 1px solid $border-gray2;
+  margin-top: 15px;
+
+  &.open {
+    .accordion-label {
+      color: $link;
+      background-color: $backgroundActive;
+    }
+  }
+}
+
+.accordion-content {
+  max-width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+  &.open {
+    max-height: 10rem;
+  }
+  p {
+    margin: 0;
+    padding: 1rem;
+  }
+}
+
+.accordion-label {
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 0;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.accordion-icon {
+  display: inline-block;
+  text-align: center;
+  transition: all 0.35s;
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+
