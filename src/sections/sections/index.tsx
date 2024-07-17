@@ -1,26 +1,70 @@
 import './styles.scss'
 
-export default function Sections() {
+interface SectionProps {
+  showSections: boolean
+  setShowSections: React.Dispatch<React.SetStateAction<boolean>>
+  showSchedule: boolean
+  setShowSchedule: React.Dispatch<React.SetStateAction<boolean>>
+  showSpeakers: boolean
+  setShowSpeakers: React.Dispatch<React.SetStateAction<boolean>>
+  showFrequentlyAsked: boolean
+  setShowFrequentlyAsked: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export default function Sections({
+  showSections,
+  setShowSections,
+  showSchedule,
+  setShowSchedule,
+  showSpeakers,
+  setShowSpeakers,
+  showFrequentlyAsked,
+  setShowFrequentlyAsked,
+}: SectionProps) {
+  const handleClickSchedule = () => {
+    setShowSections(false)
+    setShowSchedule(!showSchedule)
+    setShowSpeakers(false)
+    setShowFrequentlyAsked(false)
+  }
+  const handleClickSpeakers = () => {
+    setShowSections(false)
+    setShowSchedule(false)
+    setShowSpeakers(!showSpeakers)
+    setShowFrequentlyAsked(false)
+  }
+  const handleClickFrequentlyAsked = () => {
+    setShowSections(false)
+    setShowSchedule(false)
+    setShowSpeakers(false)
+    setShowFrequentlyAsked(!showFrequentlyAsked)
+  }
   return (
-    <section className="sections">
-      <article className="sections-card">
-        <div className="sections-card-cover cover-schedule">
-          <h3>Programação</h3>
+    <section className="sections" style={{display: showSections ? 'flex' : 'none'}}>
+      <button onClick={handleClickSchedule} className='section-button'>
+        <div className="section-card">
+          <div className="section-card-cover cover-schedule">
+            <h3>Programação</h3>
+          </div>
+          <p>Programação</p>
         </div>
-        <p>Programação</p>
-      </article>
-      <article className="sections-card">
-        <div className="sections-card-cover cover-speakers">
-          <h3>Palestrantes</h3>
+      </button>
+      <button onClick={handleClickSpeakers} className='section-button'>
+        <div className="section-card">
+          <div className="section-card-cover cover-speakers">
+            <h3>Palestrantes</h3>
+          </div>
+          <p>Palestrantes</p>
         </div>
-        <p>Palestrantes</p>
-      </article>
-      <article className="sections-card">
-        <div className="sections-card-cover cover-frequently-asked">
-          <h3>Dúvidas frequentes</h3>
+      </button>
+      <button onClick={handleClickFrequentlyAsked} className='section-button'>
+        <div className="section-card">
+          <div className="section-card-cover cover-frequently-asked">
+            <h3>Dúvidas frequentes</h3>
+          </div>
+          <p>Dúvidas frequentes</p>
         </div>
-        <p>Dúvidas frequentes</p>
-      </article>
+      </button>
     </section>
   )
 }

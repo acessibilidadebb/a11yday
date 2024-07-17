@@ -9,14 +9,20 @@
     display: flex;
   }
 }
-.sections-card {
+.section-button {
+  border: none;
+  padding: 0;
+  background: none;
   margin: $containerPaddingSmall $containerPaddingSmall 0 0;
   box-shadow: 0px 0px 1px 0px #19191C40, 0px 1px 1px 0px #1515182E;
   border-radius: 4px;
-  width: 191px;
+  cursor: pointer;
   &:nth-child(even) {
     margin-right: 0;
   }
+}
+.section-card {
+  width: 191px;
   h3 {
     color: $white;
     font-size: 16px;
@@ -25,9 +31,10 @@
   p {
     font-size: 14px;
     padding: $containerPaddingSmall;
+    text-align: initial;
   }
 }
-.sections-card-cover {
+.section-card-cover {
   display: flex;
   align-items: flex-end;
   padding: $containerPaddingSmall;

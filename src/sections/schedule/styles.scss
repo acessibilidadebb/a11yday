@@ -6,6 +6,12 @@
   background-color: $white;
   display: flex;
   flex-direction: column;
+  @media (max-width: 430px) {
+    display: none;
+    &.open {
+      display: flex;
+    }
+  }
 }
 .schedule-title {
   font-size: 1.6rem;

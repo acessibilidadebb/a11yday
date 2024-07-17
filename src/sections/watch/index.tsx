@@ -1,8 +1,12 @@
 import './styles.scss'
 
-export default function Watch() {
+interface WatchProps {
+  style?: React.CSSProperties;
+}
+
+export default function Watch({style}: WatchProps) {
   return (
-    <section className="watch">
+    <section className="watch" style={style}>
       <div>
         <h2>
           <div className="play" /> Assista a transmissão ao vivo!

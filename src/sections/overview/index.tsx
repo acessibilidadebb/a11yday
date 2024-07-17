@@ -5,9 +5,13 @@ import signLanguageBig from '../../assets/sign-language-big.png'
 import braile from '../../assets/braile.png'
 import bilateralDeafness from '../../assets/bilateral-deafness.png'
 
-export default function Overview() {
+interface OverviewProps {
+  style?: React.CSSProperties;
+}
+
+export default function Overview({style}: OverviewProps) {
   return (
-    <section className="overview-section">
+    <section className="overview-section" style={style}>
       <div>
         <div className="decorative-icons">
           <img
