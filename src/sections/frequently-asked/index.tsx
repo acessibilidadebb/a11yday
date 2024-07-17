@@ -50,7 +50,7 @@ export default function FrequentlyAsked() {
       </header>
       <div className="frequently-asked-body">
         {questions.map((question) => (
-          <Question title={question.title} />
+          <Question key={question.title} title={question.title} />
         ))}
       </div>
       <div className="watermark">

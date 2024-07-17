@@ -1,13 +1,12 @@
 import './App.scss'
-import Footer from './components/footer'
-import FrequentlyAsked from './components/frequently-asked'
-import Header from './components/header'
-import Overview from './components/overview'
-import Schedule from './components/schedule'
-import Sections from './components/sections'
-import Speakers from './components/speakers'
-import Watch from './components/watch'
-import { ModalProvider } from './contexts/modalContext'
+import Footer from './sections/footer'
+import FrequentlyAsked from './sections/frequently-asked'
+import Header from './sections/header'
+import Overview from './sections/overview'
+import Schedule from './sections/schedule'
+import Sections from './sections/sections'
+import Speakers from './sections/speakers'
+import Watch from './sections/watch'
 
 function App() {
   return (
