@@ -6,15 +6,15 @@ interface SpeakersTitleProps {
 }
 
 interface SpeakerTitle {
-  nome: string,
+  nome: string
   empresa?: string
 }
 interface ScheduleItemProps {
-  time: string,
-  image: string,
-  title: string,
-  subtitle?: string,
-  speakers: SpeakerTitle[],
+  time: string
+  image: string
+  title: string
+  subtitle?: string
+  speakers: SpeakerTitle[]
   details: string
 }
 export default function Schedule() {
@@ -30,11 +30,26 @@ export default function Schedule() {
     }
     return <>{speakersTitle && <h4>{speakersTitle}</h4>}</>
   }
-  const ScheduleItem = ({ time, image, title, subtitle, speakers, details }: ScheduleItemProps) => {
+  const ScheduleItem = ({
+    time,
+    image,
+    title,
+    subtitle,
+    speakers,
+    details,
+  }: ScheduleItemProps) => {
     return (
       <article className="schedule-item">
-        <div className="schedule-time">{time}</div>
-        <div className="schedule-card bg-lightblue">
+        <div className="schedule-time">
+          <div className="schedule-time-content">{time}</div>
+        </div>
+        <div
+          className={`schedule-card ${
+            Array.isArray(speakers) && speakers.length
+              ? 'bg-lightgray'
+              : 'bg-lightblue'
+          }`}
+        >
           <img
             src={`/${speakers.length ? 'palestrantes/' : ''}${image}`}
             alt="Icone "
@@ -60,7 +75,7 @@ export default function Schedule() {
           <div className="schedule-event">Acontecimento</div>
         </header>
         {scheduleData.map((item) => (
-          <ScheduleItem {...item} />
+          <ScheduleItem key={item.title} {...item} />
         ))}
       </section>
     </section>

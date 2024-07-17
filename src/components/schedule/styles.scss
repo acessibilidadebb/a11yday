@@ -1,6 +1,9 @@
 @import '../../variables';
 @import '../../placeholders';
 
+$scheduleItemMarginTop: 24px;
+$scheduleItemMarginLeft: 45px;
+
 .schedule {
   @extend %container;
   background-color: $white;
@@ -47,6 +50,9 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+  @media (max-width: 430px) {
+    display: none;
+  }
   .schedule-time, .schedule-event {
     font-size: 16px;
     font-weight: 700;
@@ -56,8 +62,26 @@
   }
 }
 .schedule-item {
-  margin-top: 24px;
   display: flex;
+  @media (max-width: 430px) {
+    flex-direction: column;
+    margin-top: 16px;
+    .schedule-time {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22.5px;
+      border: none;
+    }
+    .schedule-card {
+      margin-top: 8px;
+      margin-left: 0;
+      margin-bottom: 24px;
+    }
+    .schedule-time-content {
+      margin-top: 0;
+    }
+    border-bottom: 1px solid $border-gray;
+  }
 }
 .schedule-time {
   vertical-align: top;
@@ -67,10 +91,15 @@
   line-height: 32.5px;
   text-align: left;
   color: $color-gray;
-  border-right: 1px solid #333;
+  width: 115px;
+  border-right: 1px solid $border-gray;
+}
+.schedule-time-content {
+  margin-top: $scheduleItemMarginTop;
 }
 .schedule-event {
   flex-grow: 1;
+  margin-left: $scheduleItemMarginTop;
 }
 .schedule-card {
   flex-grow: 1;
@@ -78,6 +107,8 @@
   justify-content: flex-start;
   padding: 16px;
   border-radius: 4px;
+  margin-top: $scheduleItemMarginTop;
+  margin-left: $scheduleItemMarginTop;
   img {
     width: 72px;
     height: 72px;
