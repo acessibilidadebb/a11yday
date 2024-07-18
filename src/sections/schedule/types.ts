@@ -1,7 +1,5 @@
 export interface ScheduleProps {
-  setShowSections: React.Dispatch<React.SetStateAction<boolean>>
   showSchedule: boolean
-  setShowSchedule: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export interface SpeakersTitleProps {

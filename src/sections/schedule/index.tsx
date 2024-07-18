@@ -3,11 +3,7 @@ import { ScheduleItem } from './components/scheduleItem'
 import { ScheduleProps } from './types'
 import './styles.scss'
 
-export default function Schedule({
-  setShowSections,
-  showSchedule,
-  setShowSchedule,
-}: ScheduleProps) {
+export default function Schedule({ showSchedule }: ScheduleProps) {
   return (
     <section id="schedule" className={`schedule ${showSchedule ? 'open' : ''}`}>
       <h2 className="schedule-title">Programação</h2>

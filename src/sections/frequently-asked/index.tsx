@@ -4,17 +4,10 @@ import questionMark from '../../assets/question-mark.png'
 import questionMark2 from '../../assets/question-mark2.png'
 import { Accordion } from '../../components/accordion'
 import questions from './questions.json'
-
-interface FrequentlyAskedProps {
-  setShowSections: React.Dispatch<React.SetStateAction<boolean>>
-  showFrequentlyAsked: boolean
-  setShowFrequentlyAsked: React.Dispatch<React.SetStateAction<boolean>>
-}
+import { FrequentlyAskedProps } from './types'
 
 export default function FrequentlyAsked({
-  setShowSections,
   showFrequentlyAsked,
-  setShowFrequentlyAsked,
 }: FrequentlyAskedProps) {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null)
   const toggleAccordion = (index: number) => {

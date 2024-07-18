@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import bbLogo from '../../assets/bb-logo.png'
 import logo from '../../assets/logo.png'
 import lowVision from '../../assets/low-vision.png'
@@ -7,9 +8,25 @@ import braile from '../../assets/braile.png'
 import bilateralDeafness from '../../assets/bilateral-deafness.png'
 import './styles.scss'
 
-export default function Header() {
+interface HeaderProps {
+  setShowSections: React.Dispatch<React.SetStateAction<boolean>>
+  setShowSchedule: React.Dispatch<React.SetStateAction<boolean>>
+  setShowSpeakers: React.Dispatch<React.SetStateAction<boolean>>
+  setShowFrequentlyAsked: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export default function Header({
+  setShowSections,
+  setShowSchedule,
+  setShowSpeakers,
+  setShowFrequentlyAsked,
+}: HeaderProps) {
   const [scrollPosition, setScrollPosition] = useState(0)
   const [open, setOpen] = useState(false)
+  const location = useLocation()
+  // const headerRef = useRef(null) // Referência ao cabeçalho fixo
+  const headerRef = useRef<HTMLDivElement | null>(null) // Define explicitamente o tipo como HTMLDivElement ou null
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY)
@@ -22,41 +39,120 @@ export default function Header() {
     }
   }, [])
   const sticky = scrollPosition > 30 ? 'sticky' : ''
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[id]')
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5, // Quando 50% do elemento estiver visível
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id
+          const url = `/${id}`
+          history.replaceState({}, '', url)
+        }
+      })
+    }, observerOptions)
+
+    sections.forEach((section) => {
+      observer.observe(section)
+    })
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
+  useEffect(() => {
+    const scrollToSectionOnLoad = () => {
+      const { pathname } = location
+      if (
+        pathname === '/schedule' ||
+        pathname === '/speakers' ||
+        pathname === '/frequently-asked-questions'
+      ) {
+        const id = pathname.substring(1)
+        const element = document.getElementById(id)
+
+        if (element) {
+          const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0// Altura do cabeçalho fixo
+          const offsetTop = element.offsetTop - headerHeight
+
+          // Rola apenas um pouco se o header não estiver fixo
+          const topPosition = sticky !== '' ? offsetTop : offsetTop - 50
+
+          window.scrollTo({
+            top: topPosition,
+            behavior: 'smooth',
+          })
+          openSection(pathname.substring(1))
+        }
+      } else {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        })
+      }
+    }
+    scrollToSectionOnLoad()
+  }, [location])
 
   const handleMenuClick = () => {
     setOpen(!open)
   }
-  const headerRef = useRef(null) // Referência ao cabeçalho fixo
+  const resetSections = () => {
+    setShowSections(true)
+    setShowSchedule(false)
+    setShowSpeakers(false)
+    setShowFrequentlyAsked(false)
+    setOpen(false)
+  }
+  const openSection = (section: string) => {
+    setShowSections(false)
+    switch (section) {
+      case 'schedule':
+        setShowSchedule(true)
+        break
+      case 'speakers':
+        setShowSpeakers(true)
+        break
+      case 'frequently-asked-questions':
+        setShowFrequentlyAsked(true)
+        break
 
-  const scrollToSection = (event) => {
-    event.preventDefault()
-
-    const id = event.target.getAttribute('href').substring(1)
-    const element = document.getElementById(id)
-
-    if (element) {
-      const headerHeight = headerRef.current.offsetHeight // Altura do cabeçalho fixo
-      const offsetTop = element.offsetTop - headerHeight // Calcula o topo considerando o cabeçalho fixo
-
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth',
-      })
+      default:
+        break
     }
   }
+  const handleClickSchedule = () => {
+    resetSections()
+    openSection('schedule')
+  }
+  const handleClickSpeakers = () => {
+    resetSections()
+    openSection('speakers')
+  }
+  const handleClickFrequentlyAsked = () => {
+    resetSections()
+    openSection('frequently-asked-questions')
+  }
   return (
-    <header id="header" className={`header ${sticky}`} ref={headerRef}>
+    <header className={`header ${sticky}`} ref={headerRef}>
       <h1 className="header-logo-container">
-        <img
-          className="header-logo-bb"
-          src={bbLogo}
-          alt="Logo do Banco do Brasil"
-        />
-        <img
-          className="header-logo"
-          src={logo}
-          alt="Logo do Accessibility Day"
-        />
+        <Link to="/" onClick={resetSections}>
+          <img
+            className="header-logo-bb"
+            src={bbLogo}
+            alt="Logo do Banco do Brasil"
+          />
+          <img
+            className="header-logo"
+            src={logo}
+            alt="Logo do Accessibility Day"
+          />
+        </Link>
       </h1>
       <button
         onClick={handleMenuClick}
@@ -66,7 +162,7 @@ export default function Header() {
       >
         <span className="hamburguer" />
       </button>
-      <nav id="navbar" className={`navbar  ${open ? 'open' : ''}`}>
+      <nav id="navbar" className={`navbar ${open ? 'open' : ''}`}>
         <div className="navbar-content">
           <div className="decorative-icons">
             <img
@@ -91,20 +187,28 @@ export default function Header() {
             />
           </div>
           <ul id="nav-list">
+            <li className="home-link">
+              <Link to="/" onClick={resetSections}>
+                Página Inicial
+              </Link>
+            </li>
             <li>
-              <a href="#schedule" onClick={scrollToSection}>
+              <Link to="schedule" onClick={handleClickSchedule}>
                 Programação
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#speakers" onClick={scrollToSection}>
+              <Link to="speakers" onClick={handleClickSpeakers}>
                 Palestrantes
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#frequently-asked-questions" onClick={scrollToSection}>
+              <Link
+                to="frequently-asked-questions"
+                onClick={handleClickFrequentlyAsked}
+              >
                 Dúvidas
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

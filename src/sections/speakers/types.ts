@@ -1,16 +1,17 @@
 import { Speaker } from "../../types/speakers"
 
 export interface SpeakersProps {
-  setShowSections: React.Dispatch<React.SetStateAction<boolean>>
   showSpeakers: boolean
-  setShowSpeakers: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export interface SpeakerProps {
   speaker: Speaker
+  setActiveSpeaker: React.Dispatch<React.SetStateAction<Speaker>>
+  setShowDetails: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export interface SpeakerDetailsProps extends SpeakerProps {
+export interface SpeakerDetailsProps {
+  speaker: Speaker
   showDetails: boolean
   setShowDetails: React.Dispatch<React.SetStateAction<boolean>>
 }

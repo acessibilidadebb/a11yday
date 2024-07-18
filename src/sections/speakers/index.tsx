@@ -5,14 +5,14 @@ import { Speaker } from '../../types/speakers'
 import speakersData from '../../speakers.json'
 import { SpeakersProps } from './types'
 import SpeakerItem from './components/speaker'
+import { useState } from 'react'
+import { SpeakerDetails } from './components/speakerDetails'
 
 const speakers: Speaker[] = speakersData as Speaker[]
 
-export default function Speakers({
-  setShowSections,
-  showSpeakers,
-  setShowSpeakers,
-}: SpeakersProps) {
+export default function Speakers({ showSpeakers }: SpeakersProps) {
+  const [showDetails, setShowDetails] = useState(false)
+  const [activeSpeaker, setActiveSpeaker] = useState({} as Speaker)
   return (
     <section id="speakers" className={`speakers ${showSpeakers ? 'open' : ''}`}>
       <div className="watermark">
@@ -22,10 +22,20 @@ export default function Speakers({
       <div className="speakers-container">
         {speakers.map((speaker: Speaker, index) => {
           return (
-            <SpeakerItem key={`${index}${speaker.seuEmail}`} speaker={speaker} />
+            <SpeakerItem
+              key={`${index}${speaker.seuEmail}`}
+              setShowDetails={setShowDetails}
+              speaker={speaker}
+              setActiveSpeaker={setActiveSpeaker}
+            />
           )
         })}
       </div>
+      <SpeakerDetails
+        speaker={activeSpeaker}
+        showDetails={showDetails}
+        setShowDetails={setShowDetails}
+      />
     </section>
   )
 }

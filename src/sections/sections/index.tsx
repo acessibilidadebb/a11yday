@@ -21,26 +21,29 @@ export default function Sections({
   showFrequentlyAsked,
   setShowFrequentlyAsked,
 }: SectionProps) {
+  const resetSections = () => {
+    setShowSections(true)
+    setShowSchedule(false)
+    setShowSpeakers(false)
+    setShowFrequentlyAsked(false)    
+  }
   const handleClickSchedule = () => {
+    resetSections()
     setShowSections(false)
     setShowSchedule(!showSchedule)
-    setShowSpeakers(false)
-    setShowFrequentlyAsked(false)
   }
   const handleClickSpeakers = () => {
+    resetSections()
     setShowSections(false)
-    setShowSchedule(false)
     setShowSpeakers(!showSpeakers)
-    setShowFrequentlyAsked(false)
   }
   const handleClickFrequentlyAsked = () => {
+    resetSections()
     setShowSections(false)
-    setShowSchedule(false)
-    setShowSpeakers(false)
     setShowFrequentlyAsked(!showFrequentlyAsked)
   }
   return (
-    <section className={`sections ${!showSections ? 'closed' : ''}`}>
+    <section id="sections" className={`sections ${!showSections ? 'closed' : ''}`}>
       <button onClick={handleClickSchedule} className='section-button'>
         <div className="section-card">
           <div className="section-card-cover cover-schedule">

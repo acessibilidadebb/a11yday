@@ -1,13 +1,11 @@
-import { useState } from 'react'
 import { SpeakerProps } from '../types'
 import './speaker.scss'
-import { SpeakerDetails } from './speakerDetails'
 
 export default function SpeakerItem(props: SpeakerProps) {
-  const { speaker } = props
-  const [showDetails, setShowDetails] = useState(false)
+  const { speaker, setActiveSpeaker,setShowDetails } = props
   const handleClick = () => {
     setShowDetails(true)
+    setActiveSpeaker(speaker)
   }
   return (
     <article className="speaker-card">
@@ -22,11 +20,6 @@ export default function SpeakerItem(props: SpeakerProps) {
           Conheça
         </button>
       </div>
-      <SpeakerDetails
-        showDetails={showDetails}
-        setShowDetails={setShowDetails}
-        {...props}
-      />
     </article>
   )
 }

@@ -131,6 +131,9 @@
       ul {
         visibility: initial;
       }
+      .home-link {
+        display: initial;
+      }
     }
     ul {
       display: flex;
@@ -145,6 +148,9 @@
   li {
     margin-left: 20px
   }
+}
+.home-link {
+  display: none;
 }
 .menu-icon {
   display: none;

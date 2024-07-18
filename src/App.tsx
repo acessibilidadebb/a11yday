@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 import './App.scss'
 import Footer from './sections/footer'
 import FrequentlyAsked from './sections/frequently-asked'
@@ -9,14 +10,19 @@ import Sections from './sections/sections'
 import Speakers from './sections/speakers'
 import Watch from './sections/watch'
 
-function App() {
+export default function App() {
   const [showSections, setShowSections] = useState(true)
   const [showSchedule, setShowSchedule] = useState(false)
   const [showSpeakers, setShowSpeakers] = useState(false)
   const [showFrequentlyAsked, setShowFrequentlyAsked] = useState(false)
   return (
-    <>
-      <Header />
+    <Router>
+      <Header
+        setShowSections={setShowSections}
+        setShowSchedule={setShowSchedule}
+        setShowSpeakers={setShowSpeakers}
+        setShowFrequentlyAsked={setShowFrequentlyAsked}
+      />
       <Overview style={{ display: showSections ? 'flex' : 'none' }} />
       <Watch style={{ display: showSections ? 'flex' : 'none' }} />
       <Sections
@@ -29,25 +35,10 @@ function App() {
         showFrequentlyAsked={showFrequentlyAsked}
         setShowFrequentlyAsked={setShowFrequentlyAsked}
       />
-      <Schedule
-        setShowSections={setShowSections}
-        showSchedule={showSchedule}
-        setShowSchedule={setShowSchedule}
-      />
-
-      <Speakers
-        setShowSections={setShowSections}
-        showSpeakers={showSpeakers}
-        setShowSpeakers={setShowSpeakers}
-      />
-      <FrequentlyAsked
-        setShowSections={setShowSections}
-        showFrequentlyAsked={showFrequentlyAsked}
-        setShowFrequentlyAsked={setShowFrequentlyAsked}
-      />
+      <Schedule showSchedule={showSchedule} />
+      <Speakers showSpeakers={showSpeakers} />
+      <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />
       <Footer />
-    </>
+    </Router>
   )
 }
-
-export default App
