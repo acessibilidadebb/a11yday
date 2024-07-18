@@ -3,64 +3,42 @@ import './styles.scss'
 import questionMark from '../../assets/question-mark.png'
 import questionMark2 from '../../assets/question-mark2.png'
 import { Accordion } from '../../components/accordion'
+import questions from './questions.json'
 
-const questions = [
-  {
-    title: 'O que é o Accessibility Day?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veniam, voluptas expedita sit dolorem deleniti molestias vitae, doloribus voluptatum quasi, beatae dolorum? Atque esse fuga praesentium, itaque alias sunt laboriosam!',
-  },
-  {
-    title: 'Funcionários BB - Vai valer como hora de treinamento?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veniam, voluptas expedita sit dolorem deleniti molestias vitae, doloribus voluptatum quasi, beatae dolorum? Atque esse fuga praesentium, itaque alias sunt laboriosam!',
-  },
-  {
-    title: 'Quem pode participar do evento?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veniam, voluptas expedita sit dolorem deleniti molestias vitae, doloribus voluptatum quasi, beatae dolorum? Atque esse fuga praesentium, itaque alias sunt laboriosam!',
-  },
-  {
-    title: 'Vou receber certificado?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veniam, voluptas expedita sit dolorem deleniti molestias vitae, doloribus voluptatum quasi, beatae dolorum? Atque esse fuga praesentium, itaque alias sunt laboriosam!',
-  },
-  {
-    title: 'Quem pode enviar palestra para o evento?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veniam, voluptas expedita sit dolorem deleniti molestias vitae, doloribus voluptatum quasi, beatae dolorum? Atque esse fuga praesentium, itaque alias sunt laboriosam!',
-  },
-  {
-    title: 'Ainda tenho dúvidas, como falo com vocês?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veniam, voluptas expedita sit dolorem deleniti molestias vitae, doloribus voluptatum quasi, beatae dolorum? Atque esse fuga praesentium, itaque alias sunt laboriosam!',
-  },
-  {
-    title: 'Onde será o evento?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veniam, voluptas expedita sit dolorem deleniti molestias vitae, doloribus voluptatum quasi, beatae dolorum? Atque esse fuga praesentium, itaque alias sunt laboriosam!',
-  },
-]
-export default function FrequentlyAsked() {
+interface FrequentlyAskedProps {
+  setShowSections: React.Dispatch<React.SetStateAction<boolean>>
+  showFrequentlyAsked: boolean
+  setShowFrequentlyAsked: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export default function FrequentlyAsked({
+  setShowSections,
+  showFrequentlyAsked,
+  setShowFrequentlyAsked,
+}: FrequentlyAskedProps) {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null)
   const toggleAccordion = (index: number) => {
     setOpenAccordion(openAccordion === index ? null : index)
   }
   return (
-    <section className="frequently-asked">
+    <section
+      id="frequently-asked-questions"
+      className={`frequently-asked ${showFrequentlyAsked ? 'open' : ''}`}
+    >
       <header>
         <img src={questionMark} alt="Ponto de Interrogação" />
-        <h3>Dúvidas Frequentes</h3>
+        <h2>Dúvidas Frequentes</h2>
       </header>
       <div className="frequently-asked-body">
         {questions.map((question, index) => (
-          <Accordion
-            key={index}
-            title={question.title}
-            description={question.description}
-            isOpen={index === openAccordion}
-            onToggle={() => toggleAccordion(index)}
-          />
+          <div className="accordion-container" key={index}>
+            <Accordion
+              title={question.title}
+              description={question.description}
+              isOpen={index === openAccordion}
+              onToggle={() => toggleAccordion(index)}
+            />
+          </div>
         ))}
       </div>
       <div className="watermark">

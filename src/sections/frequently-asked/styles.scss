@@ -5,16 +5,36 @@
   @extend %container;
   padding-top: $containerPadding*2;
   padding-bottom: $containerPadding*5;
-  position: relative;
-  overflow: hidden;
   @media (max-width: 430px) {
     display: none;
+    &.open {
+      display: flex;
+      flex-direction: column;
+      .frequently-asked-body {
+        width: 100%;
+      }
+      .accordion-container {
+        width: 100%;
+      }
+    }
+
+    .watermark {
+      display: none;
+    }
+    header {
+      h2 {
+        color: $black;
+      }
+      img {
+        display: none;
+      }
+    }
   }
   header {
     display: flex;
     align-items: flex-end;
   }
-  h3 {
+  h2 {
     color: $color-blue;
     font-size: 1.8rem;
     padding: 5px 15px;
@@ -32,4 +52,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.accordion-container {
+  width: 48.5%;
 }

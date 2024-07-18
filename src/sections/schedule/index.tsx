@@ -9,17 +9,17 @@ export default function Schedule({
   setShowSchedule,
 }: ScheduleProps) {
   return (
-    <section className={`schedule ${showSchedule ? 'open' : ''}`}>
+    <section id="schedule" className={`schedule ${showSchedule ? 'open' : ''}`}>
       <h2 className="schedule-title">Programação</h2>
-      <section>
-        <header className="schedule-header">
+      <div>
+        <div className="schedule-header">
           <div className="schedule-time">Hora</div>
           <div className="schedule-event">Acontecimento</div>
-        </header>
+        </div>
         {scheduleData.map((item) => (
           <ScheduleItem key={item.title} {...item} />
         ))}
-      </section>
+      </div>
     </section>
   )
 }

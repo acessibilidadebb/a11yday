@@ -1,6 +1,6 @@
 import React from 'react'
-import collapseIcon from '../../assets/collapse-icon.png'
 import './styles.scss'
+import SvgCaret from '../../assets/IconComponents/SvgCaret'
 
 interface AccordionProps {
   title: string
@@ -19,11 +19,7 @@ export function Accordion({
     <div className={`accordion ${isOpen ? 'open' : ''}`}>
       <button className="accordion-label" onClick={onToggle}>
         {title}
-        <img
-          src={collapseIcon}
-          alt="Ícone para colapsar conteúdo"
-          className={`accordion-icon ${isOpen ? 'open' : ''}`}
-        />
+        <SvgCaret className={`accordion-icon svg ${isOpen ? 'open' : ''}`} />
       </button>
       <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
         <p>{description}</p>

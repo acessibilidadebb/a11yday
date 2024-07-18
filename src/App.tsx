@@ -17,7 +17,6 @@ function App() {
   return (
     <>
       <Header />
-      {/* 
       <Overview style={{ display: showSections ? 'flex' : 'none' }} />
       <Watch style={{ display: showSections ? 'flex' : 'none' }} />
       <Sections
@@ -41,8 +40,11 @@ function App() {
         showSpeakers={showSpeakers}
         setShowSpeakers={setShowSpeakers}
       />
-      */}
-      <FrequentlyAsked />
+      <FrequentlyAsked
+        setShowSections={setShowSections}
+        showFrequentlyAsked={showFrequentlyAsked}
+        setShowFrequentlyAsked={setShowFrequentlyAsked}
+      />
       <Footer />
     </>
   )

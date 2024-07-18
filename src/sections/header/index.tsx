@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import bbLogo from '../../assets/bb-logo.png'
 import logo from '../../assets/logo.png'
 import lowVision from '../../assets/low-vision.png'
@@ -26,9 +26,27 @@ export default function Header() {
   const handleMenuClick = () => {
     setOpen(!open)
   }
+  const headerRef = useRef(null) // Referência ao cabeçalho fixo
+
+  const scrollToSection = (event) => {
+    event.preventDefault()
+
+    const id = event.target.getAttribute('href').substring(1)
+    const element = document.getElementById(id)
+
+    if (element) {
+      const headerHeight = headerRef.current.offsetHeight // Altura do cabeçalho fixo
+      const offsetTop = element.offsetTop - headerHeight // Calcula o topo considerando o cabeçalho fixo
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth',
+      })
+    }
+  }
   return (
-    <header id="header" className={`header ${sticky}`}>
-      <div className="header-logo-container">
+    <header id="header" className={`header ${sticky}`} ref={headerRef}>
+      <h1 className="header-logo-container">
         <img
           className="header-logo-bb"
           src={bbLogo}
@@ -39,7 +57,7 @@ export default function Header() {
           src={logo}
           alt="Logo do Accessibility Day"
         />
-      </div>
+      </h1>
       <button
         onClick={handleMenuClick}
         className={`menu-icon ${open ? 'open' : ''}`}
@@ -74,13 +92,19 @@ export default function Header() {
           </div>
           <ul id="nav-list">
             <li>
-              <a href="#">Programação</a>
+              <a href="#schedule" onClick={scrollToSection}>
+                Programação
+              </a>
             </li>
             <li>
-              <a href="#">Palestrantes</a>
+              <a href="#speakers" onClick={scrollToSection}>
+                Palestrantes
+              </a>
             </li>
             <li>
-              <a href="#">Dúvidas</a>
+              <a href="#frequently-asked-questions" onClick={scrollToSection}>
+                Dúvidas
+              </a>
             </li>
           </ul>
         </div>

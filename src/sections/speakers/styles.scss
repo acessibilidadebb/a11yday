@@ -17,7 +17,7 @@
     &.open {
       display: flex;
     }
-    h3 {
+    h2 {
       color: $black !important;
     }
     .watermark {
@@ -27,7 +27,7 @@
       justify-content: space-between;
     }
   }
-  h3 {
+  h2 {
     color: $darkPink;
     font-size: 1.9rem;
     padding: 15px 0;

@@ -35,7 +35,7 @@ export default function Overview({style}: OverviewProps) {
             alt="Ícone de Surdez Bilateral"
           />
         </div>
-        <h1>O Evento de Acessibilidade Digital do Banco do Brasil</h1>
+        <h2>O Evento de Acessibilidade Digital do Banco do Brasil</h2>
         <div className="overview-details">
           <p className="hightlight">Presencial em Brasília</p>
           <p className="hightlight">11 de setembro de 2024</p>
