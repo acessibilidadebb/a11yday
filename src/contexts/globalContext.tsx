@@ -5,6 +5,8 @@ export const StickyContext = createContext({
   setIsSticky: (_: boolean) => {},
   headerOffsetHeight: 0,
   setHeaderOffsetHeight: (_: number) => {},
+  isModalOpen: false,
+  setIsModalOpen: (_: boolean) => {},
 })
 
 interface StickyContextProviderProps {
@@ -14,8 +16,9 @@ interface StickyContextProviderProps {
 export default function StickyContextProvider({ children }: StickyContextProviderProps) {
   const [isSticky, setIsSticky] = useState(false)
   const [headerOffsetHeight, setHeaderOffsetHeight] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   return (
-    <StickyContext.Provider value={{ isSticky, setIsSticky, headerOffsetHeight, setHeaderOffsetHeight }}>
+    <StickyContext.Provider value={{ isSticky, setIsSticky, headerOffsetHeight, setHeaderOffsetHeight, isModalOpen, setIsModalOpen }}>
       {children}
     </StickyContext.Provider>
   )
