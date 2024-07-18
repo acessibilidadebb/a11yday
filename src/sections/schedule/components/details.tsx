@@ -29,13 +29,13 @@ export function Details(props: DetailsProps) {
           <p className="details-description">{speakerDetails.resumo}</p>
         </header>
         <section className="details-body">
-          <h4 className="details-about">Sobre a Palestrante</h4>
+          <p className="details-about">Sobre a Palestrante</p>
           <img
             className="details-image"
             src={`/palestrantes/${speakerDetails.image}`}
             alt={`Foto de ${speakerDetails.seuNome}`}
           />
-          <h5 className="details-name">{speakerDetails.seuNome}</h5>
+          <h4 className="details-name">{speakerDetails.seuNome}</h4>
           <p className="details-company">{speakerDetails.empresa}</p>
           <p className="details-description">{speakerDetails?.miniBio}</p>
         </section>

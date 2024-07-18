@@ -29,7 +29,7 @@ export default function Speakers({
           alt={`Foto de ${speaker.seuNome}`}
         />
         <div className="speaker-card-body">
-          <h4>{speaker.seuNome}</h4>
+          <h3>{speaker.seuNome}</h3>
           <p>{speaker.empresa}</p>
           <button className="speaker-btn">Conheça</button>
         </div>
