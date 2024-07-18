@@ -15,27 +15,26 @@
   overflow-y: auto;
 
   &.open {
-    // Desktop: visibility and opacity transitions handled in media query below
+    .schedule-details-container {
+      right: 0;
+    }
+  }
+  &:not(.open) .schedule-details-container {
+    right: -100%;
   }
 
   @media (min-width: 431px) {
     visibility: hidden;
     opacity: 0;
-    // opacity: 1;
-    // visibility: visible;
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
     .schedule-details-container {
       right: -100%;
-      
+      transition: right 0.5s ease-in-out;
     }
 
     &.open {
       visibility: visible;
       opacity: 1;
-      .schedule-details-container {
-        
-        right: 0;
-      }
     }
   }
 
@@ -47,37 +46,17 @@
     background-color: transparent;
     left: auto;
 
-
     &.open {
       right: 0;
     }
   }
 }
-
 .schedule-details-container {
   @extend %container;
   background-color: white;
   max-width: 500px;
   margin-left: 300px;
   position: relative;
-  transform: translateX(100%);
-  transition: transform 0.5s ease-in-out;
-
-  @media (max-width: 430px) {
-    // position: absolute;
-    height: 100%;
-    max-width: none;
-    margin-left: 0;
-    // transform: none; /* No mobile, no transformations on the container */
-    position: absolute; /* Ensure it slides along with the modal */
-    // right: -100%;
-    // transition: right 0.5s ease-in-out;
-  }
-
-  .schedule-details-content {
-    position: relative;
-    padding: 16px 0;
-  }
 
   .schedule-details-close-btn {
     position: absolute;
@@ -92,22 +71,26 @@
     justify-content: center;
     align-items: center;
   }
-}
-
-.schedule-details-modal.open .schedule-details-container {
-  transform: translateX(0);
-
   @media (max-width: 430px) {
-    right: 0;
+    height: 100%;
+    max-width: none;
+    margin-left: 0;
+    position: absolute; /* Ensure it slides along with the modal */
+    
+    .schedule-details-content {
+      position: relative;
+      padding: 16px 0;
+    }
+    .schedule-details-close-btn {
+      right: 0;
+    }
   }
 }
-
 .schedule-details-header {
   padding-bottom: 32px;
   margin-bottom: 32px;
   border-bottom: 1px solid $border-gray;
 }
-
 .schedule-details-title {
   margin-right: 32px;
   margin-bottom: 16px;
@@ -116,34 +99,29 @@
   line-height: 30.8px;
   text-align: left;
 }
-
 .schedule-details-description {
   font-size: 14px;
   font-weight: 400;
   line-height: 22.4px;
   text-align: left;
 }
-
 .schedule-details-about {
   font-size: 18px;
   font-weight: 700;
   line-height: 28.8px;
   text-align: left;
 }
-
 .schedule-details-image {
   width: 191px;
   margin: 16px 0;
   border-radius: 8px;
 }
-
 .schedule-details-name {
   font-size: 22px;
   font-weight: 700;
   line-height: 30.8px;
   text-align: left;
 }
-
 .schedule-details-company {
   margin-bottom: 16px;
   font-size: 14px;
