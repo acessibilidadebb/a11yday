@@ -1,7 +1,7 @@
 @import '../../../variables';
 @import '../../../placeholders';
 
-.details-modal {
+.speaker-details-modal {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -16,7 +16,7 @@
   }
 }
 
-.details-container {
+.speaker-details-container {
   @extend %container;
 }
 .close-btn {
@@ -29,44 +29,24 @@
   top: 16px;
   right: 16px;
 }
-.details-header {
-  padding-bottom: 32px;
-  margin-bottom: 32px;
-  border-bottom: 1px solid $border-gray;
-}
-
-.details-title {
-  margin-right: 32px;
-  margin-bottom: 16px;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 30.8px;
-  text-align: left;
-}
-.details-description {
+.speaker-details-description {
   font-size: 14px;
   font-weight: 400;
   line-height: 22.4px;
   text-align: left;
 }
-.details-about {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 28.8px;
-  text-align: left;
-}
-.details-image {
+.speaker-details-image {
   width: 191px;
   margin: 16px 0;
   border-radius: 8px;
 }
-.details-name {
+.speaker-details-name {
   font-size: 22px;
   font-weight: 700;
   line-height: 30.8px;
   text-align: left;
 }
-.details-company {
+.speaker-details-company {
   margin-bottom: 16px;
   font-size: 14px;
   font-weight: 400;

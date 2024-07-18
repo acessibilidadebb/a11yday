@@ -3,39 +3,16 @@ import './styles.scss'
 
 import { Speaker } from '../../types/speakers'
 import speakersData from '../../speakers.json'
+import { SpeakersProps } from './types'
+import SpeakerItem from './components/speaker'
 
 const speakers: Speaker[] = speakersData as Speaker[]
-
-interface SpeakersProps {
-  setShowSections: React.Dispatch<React.SetStateAction<boolean>>
-  showSpeakers: boolean
-  setShowSpeakers: React.Dispatch<React.SetStateAction<boolean>>
-}
-
-interface SpeakerProps {
-  speaker: Speaker
-}
 
 export default function Speakers({
   setShowSections,
   showSpeakers,
   setShowSpeakers,
 }: SpeakersProps) {
-  function Speaker({ speaker }: SpeakerProps) {
-    return (
-      <article className="speaker-card">
-        <img
-          src={`/palestrantes/${speaker.image}`}
-          alt={`Foto de ${speaker.seuNome}`}
-        />
-        <div className="speaker-card-body">
-          <h3>{speaker.seuNome}</h3>
-          <p>{speaker.empresa}</p>
-          <button className="speaker-btn">Conheça</button>
-        </div>
-      </article>
-    )
-  }
   return (
     <section id="speakers" className={`speakers ${showSpeakers ? 'open' : ''}`}>
       <div className="watermark">
@@ -45,7 +22,7 @@ export default function Speakers({
       <div className="speakers-container">
         {speakers.map((speaker: Speaker, index) => {
           return (
-            <Speaker key={`${index}${speaker.seuEmail}`} speaker={speaker} />
+            <SpeakerItem key={`${index}${speaker.seuEmail}`} speaker={speaker} />
           )
         })}
       </div>
