@@ -8,6 +8,7 @@
   margin-right: $containerPadding * 2;
   border-radius: 0 10px 10px 0;
   position: relative;
+  overflow: hidden;
   @media (max-width: 430px) {
     display: none;
     flex-wrap: wrap;
