@@ -1,41 +1,114 @@
 @import '../../../variables';
 @import '../../../placeholders';
 
-.details-modal {
+.schedule-details-modal {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  top: 0;
-  right: -100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   z-index: 99;
-  background-color: white;
-  transition: right 0.5s ease-in-out;
   overflow-y: auto;
+
   &.open {
+    // Desktop: visibility and opacity transitions handled in media query below
+  }
+
+  @media (min-width: 431px) {
+    visibility: hidden;
+    opacity: 0;
+    // opacity: 1;
+    // visibility: visible;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    .schedule-details-container {
+      right: -100%;
+      
+    }
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      .schedule-details-container {
+        
+        right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 430px) {
+    position: absolute;
+    right: -100%;
+    opacity: 1; /* Ensure the dark background always appears on mobile */
+    transition: right 0.5s ease-in-out;
+    background-color: transparent;
+    left: auto;
+
+
+    &.open {
+      right: 0;
+    }
+  }
+}
+
+.schedule-details-container {
+  @extend %container;
+  background-color: white;
+  max-width: 500px;
+  margin-left: 300px;
+  position: relative;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+
+  @media (max-width: 430px) {
+    // position: absolute;
+    height: 100%;
+    max-width: none;
+    margin-left: 0;
+    // transform: none; /* No mobile, no transformations on the container */
+    position: absolute; /* Ensure it slides along with the modal */
+    // right: -100%;
+    // transition: right 0.5s ease-in-out;
+  }
+
+  .schedule-details-content {
+    position: relative;
+    padding: 16px 0;
+  }
+
+  .schedule-details-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.schedule-details-modal.open .schedule-details-container {
+  transform: translateX(0);
+
+  @media (max-width: 430px) {
     right: 0;
   }
 }
 
-.details-container {
-  @extend %container;
-}
-.close-btn {
-  border: none;
-  background-color: transparent;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-.details-header {
+.schedule-details-header {
   padding-bottom: 32px;
   margin-bottom: 32px;
   border-bottom: 1px solid $border-gray;
 }
 
-.details-title {
+.schedule-details-title {
   margin-right: 32px;
   margin-bottom: 16px;
   font-size: 22px;
@@ -43,30 +116,35 @@
   line-height: 30.8px;
   text-align: left;
 }
-.details-description {
+
+.schedule-details-description {
   font-size: 14px;
   font-weight: 400;
   line-height: 22.4px;
   text-align: left;
 }
-.details-about {
+
+.schedule-details-about {
   font-size: 18px;
   font-weight: 700;
   line-height: 28.8px;
   text-align: left;
 }
-.details-image {
+
+.schedule-details-image {
   width: 191px;
   margin: 16px 0;
   border-radius: 8px;
 }
-.details-name {
+
+.schedule-details-name {
   font-size: 22px;
   font-weight: 700;
   line-height: 30.8px;
   text-align: left;
 }
-.details-company {
+
+.schedule-details-company {
   margin-bottom: 16px;
   font-size: 14px;
   font-weight: 400;
