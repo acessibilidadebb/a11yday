@@ -14,6 +14,7 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
       </button>
       <div className="speaker-details-container">
         <section className="speaker-details-body">
+          <p className="speaker-details-about">Sobre a pessoa Palestrante</p>
           <img
             className="speaker-details-image"
             src={`/palestrantes/${speaker.image}`}
