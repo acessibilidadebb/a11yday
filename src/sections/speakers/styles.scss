@@ -1,30 +1,37 @@
 @import '../../variables';
 @import '../../placeholders';
 
+
 .speakers {
+  overflow: hidden;
+  position: relative;
+  @media (max-width: 430px) {
+    display: none;
+    &.open {
+      display: flex;
+    }
+  }
+}
+
+.speakers-container {
   @extend %container;
   padding-bottom: calc($containerPadding/2);
   background-color: $lightPink;
   margin-right: $containerPadding * 2;
   border-radius: 0 10px 10px 0;
   position: relative;
-  overflow: hidden;
   @media (max-width: 430px) {
-    display: none;
     flex-wrap: wrap;
     background-color: inherit;
     margin-right: 0;
     border-radius: 0;
-    &.open {
-      display: flex;
-    }
     h2 {
       color: $black !important;
     }
     .watermark {
       display: none;
     }
-    .speakers-container {
+    .speakers-content {
       justify-content: space-between;
     }
   }
@@ -41,7 +48,7 @@
   }
 }
 
-.speakers-container {
+.speakers-content {
   width: 100%;
   display: flex;
   flex-wrap: wrap;

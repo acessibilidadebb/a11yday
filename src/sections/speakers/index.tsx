@@ -13,28 +13,33 @@ const speakers: Speaker[] = speakersData as Speaker[]
 export default function Speakers({ showSpeakers }: SpeakersProps) {
   const [showDetails, setShowDetails] = useState(false)
   const [activeSpeaker, setActiveSpeaker] = useState({} as Speaker)
+  const [ initialIsStick, setInitialIsStick ] = useState(false)
   return (
     <section id="speakers" className={`speakers ${showSpeakers ? 'open' : ''}`}>
-      <div className="watermark">
-        <img src={lowVisionMark} alt="Marca d'água ícone de Baixa Visão " />
-      </div>
-      <h2>Palestrantes</h2>
       <div className="speakers-container">
-        {speakers.map((speaker: Speaker, index) => {
-          return (
-            <SpeakerItem
-              key={`${index}${speaker.seuEmail}`}
-              setShowDetails={setShowDetails}
-              speaker={speaker}
-              setActiveSpeaker={setActiveSpeaker}
-            />
-          )
-        })}
+        <div className="watermark">
+          <img src={lowVisionMark} alt="Marca d'água ícone de Baixa Visão " />
+        </div>
+        <h2>Palestrantes</h2>
+        <div className="speakers-content">
+          {speakers.map((speaker: Speaker, index) => {
+            return (
+              <SpeakerItem
+                key={`${index}${speaker.seuEmail}`}
+                setShowDetails={setShowDetails}
+                speaker={speaker}
+                setActiveSpeaker={setActiveSpeaker}
+                setInitialIsStick={setInitialIsStick}
+              />
+            )
+          })}
+        </div>
       </div>
       <SpeakerDetails
         speaker={activeSpeaker}
         showDetails={showDetails}
         setShowDetails={setShowDetails}
+        initialIsStick={initialIsStick}
       />
     </section>
   )

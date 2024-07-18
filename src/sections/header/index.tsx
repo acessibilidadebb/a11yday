@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import bbLogo from '../../assets/bb-logo.png'
 import logo from '../../assets/logo.png'
@@ -7,6 +7,7 @@ import signLanguage from '../../assets/sign-language.png'
 import braile from '../../assets/braile.png'
 import bilateralDeafness from '../../assets/bilateral-deafness.png'
 import './styles.scss'
+import { StickyContext } from '../../contexts/globalContext'
 
 interface HeaderProps {
   setShowSections: React.Dispatch<React.SetStateAction<boolean>>
@@ -24,7 +25,7 @@ export default function Header({
   const [scrollPosition, setScrollPosition] = useState(0)
   const [open, setOpen] = useState(false)
   const location = useLocation()
-  // const headerRef = useRef(null) // Referência ao cabeçalho fixo
+  const { isSticky, setHeaderOffsetHeight } = useContext(StickyContext)
   const headerRef = useRef<HTMLDivElement | null>(null) // Define explicitamente o tipo como HTMLDivElement ou null
 
   useEffect(() => {
@@ -38,7 +39,7 @@ export default function Header({
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
-  const sticky = scrollPosition > 30 ? 'sticky' : ''
+  const sticky = scrollPosition > 30 || isSticky ? 'sticky' : ''
   useEffect(() => {
     const sections = document.querySelectorAll('section[id]')
     const observerOptions = {
@@ -77,7 +78,10 @@ export default function Header({
         const element = document.getElementById(id)
 
         if (element) {
-          const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0// Altura do cabeçalho fixo
+          const headerHeight = headerRef.current
+            ? headerRef.current.offsetHeight
+            : 0 // Altura do cabeçalho fixo
+          setHeaderOffsetHeight(headerHeight)
           const offsetTop = element.offsetTop - headerHeight
 
           // Rola apenas um pouco se o header não estiver fixo
@@ -98,6 +102,10 @@ export default function Header({
     }
     scrollToSectionOnLoad()
   }, [location])
+  useEffect(() => {
+    const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0 // Altura do cabeçalho fixo
+    setHeaderOffsetHeight(headerHeight)
+  }, [isSticky])
 
   const handleMenuClick = () => {
     setOpen(!open)

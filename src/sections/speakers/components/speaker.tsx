@@ -1,11 +1,16 @@
+import { useContext } from 'react'
 import { SpeakerProps } from '../types'
 import './speaker.scss'
+import { StickyContext } from '../../../contexts/globalContext'
 
 export default function SpeakerItem(props: SpeakerProps) {
-  const { speaker, setActiveSpeaker,setShowDetails } = props
+  const { speaker, setActiveSpeaker,setShowDetails, setInitialIsStick } = props
+  const { isSticky, setIsSticky } = useContext(StickyContext)
   const handleClick = () => {
     setShowDetails(true)
     setActiveSpeaker(speaker)
+    setInitialIsStick(isSticky)
+    setIsSticky(true)
   }
   return (
     <article className="speaker-card">

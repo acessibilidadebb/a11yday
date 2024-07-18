@@ -1,29 +1,25 @@
 import closeBtn from '../../../assets/close.png'
 import './speakerDetails.scss'
 import { SpeakerDetailsProps } from '../types'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { StickyContext } from '../../../contexts/globalContext'
 
 export function SpeakerDetails(props: SpeakerDetailsProps) {
-  const { speaker, showDetails, setShowDetails } = props
-  const [scrollPosition, setScrollPosition] = useState(0)
+  const { speaker, showDetails, setShowDetails, initialIsStick } = props
+  const { setIsSticky, headerOffsetHeight } = useContext(StickyContext)
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight)
 
   useEffect(() => {
-    if (showDetails) {
-      // Armazenar a posição de rolagem atual e rolar para o topo
-      setScrollPosition(window.scrollY)
-      window.scrollTo(0, 0)
-      document.body.style.overflow = 'hidden' // Previne rolagem da página principal
-    } else {
-      // Restaurar a posição de rolagem ao fechar
-      document.body.style.overflow = '' // Restaura rolagem da página principal
-      window.scrollTo(0, scrollPosition)
-    }
-  }, [showDetails])
+    const handleResize = () => setWindowHeight(window.innerHeight)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const handleClose = () => {
     setShowDetails(false)
+    setIsSticky(initialIsStick)
   }
-  const handleOverlayClick = (event) => {
+  const handleOverlayClick = (event: React.MouseEvent) => {
     if (event.target === event.currentTarget) {
       handleClose()
     }
@@ -31,13 +27,21 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
   return (
     <div
       onClick={handleOverlayClick}
+      style={{
+        height: windowHeight - headerOffsetHeight,
+        marginTop: headerOffsetHeight,
+      }}
       className={`speaker-details-modal ${showDetails ? 'open' : ''}`}
     >
       <div className="speaker-details-container">
         <div className="speaker-details-content">
-        <button onClick={handleClose} className="speaker-details-close-btn" aria-label="Fechar">
-          <img src={closeBtn} alt="Ícone de Fechar" />
-        </button>
+          <button
+            onClick={handleClose}
+            className="speaker-details-close-btn"
+            aria-label="Fechar"
+          >
+            <img src={closeBtn} alt="Ícone de Fechar" />
+          </button>
           <section className="speaker-details-body">
             <p className="speaker-details-about">Sobre a pessoa Palestrante</p>
             <img
