@@ -1,5 +1,9 @@
 @import 'variables';
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 .hightlight {
   color: $highlight;
 }

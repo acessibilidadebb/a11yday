@@ -19,6 +19,7 @@
       right: 0;
     }
   }
+  
   &:not(.open) .schedule-details-container {
     right: -100%;
   }
@@ -27,6 +28,7 @@
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
     .schedule-details-container {
       right: -100%;
       transition: right 0.5s ease-in-out;
@@ -39,7 +41,6 @@
   }
 
   @media (max-width: 430px) {
-    position: absolute;
     right: -100%;
     opacity: 1; /* Ensure the dark background always appears on mobile */
     transition: right 0.5s ease-in-out;
@@ -51,17 +52,30 @@
     }
   }
 }
+
 .schedule-details-container {
   @extend %container;
   background-color: white;
+  height: 100%;
   max-width: 500px;
   margin-left: 300px;
   position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Ensures that the overflow is hidden initially */
+  transition: right 0.5s ease-in-out;
+
+  .schedule-details-content {
+    position: relative;
+    flex-grow: 1; /* Ensures the content area takes up remaining space */
+    overflow-y: auto; /* Ensures overflow is handled inside the content area */
+  }
 
   .schedule-details-close-btn {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 0;
+    right: 0;
     border: none;
     background-color: transparent;
     width: 16px;
@@ -71,26 +85,26 @@
     justify-content: center;
     align-items: center;
   }
+
   @media (max-width: 430px) {
-    height: 100%;
     max-width: none;
     margin-left: 0;
     position: absolute; /* Ensure it slides along with the modal */
-    
-    .schedule-details-content {
-      position: relative;
-      padding: 16px 0;
-    }
+    right: -100%;
+
     .schedule-details-close-btn {
-      right: 0;
+      right: 16px;
     }
   }
+
 }
+
 .schedule-details-header {
   padding-bottom: 32px;
   margin-bottom: 32px;
   border-bottom: 1px solid $border-gray;
 }
+
 .schedule-details-title {
   margin-right: 32px;
   margin-bottom: 16px;
@@ -99,29 +113,34 @@
   line-height: 30.8px;
   text-align: left;
 }
+
 .schedule-details-description {
   font-size: 14px;
   font-weight: 400;
   line-height: 22.4px;
   text-align: left;
 }
+
 .schedule-details-about {
   font-size: 18px;
   font-weight: 700;
   line-height: 28.8px;
   text-align: left;
 }
+
 .schedule-details-image {
   width: 191px;
   margin: 16px 0;
   border-radius: 8px;
 }
+
 .schedule-details-name {
   font-size: 22px;
   font-weight: 700;
   line-height: 30.8px;
   text-align: left;
 }
+
 .schedule-details-company {
   margin-bottom: 16px;
   font-size: 14px;

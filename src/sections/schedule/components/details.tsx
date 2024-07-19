@@ -1,13 +1,17 @@
+import { useContext } from 'react'
 import closeBtn from '../../../assets/close.png'
 import speakersData from '../../../speakers.json'
 import { Speaker } from '../../../types/speakers'
 import { DetailsProps } from '../types'
 import './details.scss'
+import { GlobalContext } from '../../../contexts/globalContext'
 
 export function Details(props: DetailsProps) {
   const { title, speakers, showDetails, setShowDetails } = props
+  const { setModalOpen } = useContext(GlobalContext)
   const handleClose = () => {
     setShowDetails(false)
+    setModalOpen(false)
   }
   const speakerDetails = speakers.map((speaker) => ({
     ...speakersData.find(

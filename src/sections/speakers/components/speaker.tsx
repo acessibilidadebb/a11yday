@@ -1,17 +1,28 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { SpeakerProps } from '../types'
 import './speaker.scss'
-import { StickyContext } from '../../../contexts/globalContext'
+import { GlobalContext } from '../../../contexts/globalContext'
 
 export default function SpeakerItem(props: SpeakerProps) {
   const { speaker, setActiveSpeaker,setShowDetails, setInitialIsStick } = props
-  const { isSticky, setIsSticky } = useContext(StickyContext)
+  const { isSticky, setIsSticky, isModalOpen, setModalOpen } = useContext(GlobalContext)
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add('no-scroll')
+    } else {
+      document.body.classList.remove('no-scroll')
+    }
+  }, [isModalOpen])
+
   const handleClick = () => {
     setShowDetails(true)
     setActiveSpeaker(speaker)
     setInitialIsStick(isSticky)
     setIsSticky(true)
+    setModalOpen(true)
   }
+  
   return (
     <article className="speaker-card">
       <img

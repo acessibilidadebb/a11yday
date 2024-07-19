@@ -1,15 +1,28 @@
-import { useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { ScheduleItemProps } from "../types"
 import { Details } from "./details"
 import { SpeakersTitle } from "./speakersTitle"
 import './scheduleitem.scss'
+import { GlobalContext } from "../../../contexts/globalContext"
 
 export function ScheduleItem(props: ScheduleItemProps) {
   const { time, image, imageAlt, title, subtitle, speakers, details } = props
+  const { isModalOpen, setModalOpen } = useContext(GlobalContext)
   const [showDetails, setShowDetails] = useState(false)
+  
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add('no-scroll')
+    } else {
+      document.body.classList.remove('no-scroll')
+    }
+  }, [isModalOpen])
+
   const handleClickDetails = () => {
     setShowDetails(true)
+    setModalOpen(true)
   }
+
   const getAltText = () => {
     let altText = ''
     if (speakers.length) {

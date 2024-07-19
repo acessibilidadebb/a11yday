@@ -1,25 +1,25 @@
 import { createContext, useState } from 'react'
 
-export const StickyContext = createContext({
+export const GlobalContext = createContext({
   isSticky: false,
   setIsSticky: (_: boolean) => {},
   headerOffsetHeight: 0,
   setHeaderOffsetHeight: (_: number) => {},
   isModalOpen: false,
-  setIsModalOpen: (_: boolean) => {},
+  setModalOpen: (_: boolean) => {},
 })
 
-interface StickyContextProviderProps {
+interface GlobalContextProviderProps {
   children: React.ReactNode;
 }
 
-export default function StickyContextProvider({ children }: StickyContextProviderProps) {
+export default function GlobalContextProvider({ children }: GlobalContextProviderProps) {
   const [isSticky, setIsSticky] = useState(false)
   const [headerOffsetHeight, setHeaderOffsetHeight] = useState(0)
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setModalOpen] = useState(false)
   return (
-    <StickyContext.Provider value={{ isSticky, setIsSticky, headerOffsetHeight, setHeaderOffsetHeight, isModalOpen, setIsModalOpen }}>
+    <GlobalContext.Provider value={{ isSticky, setIsSticky, headerOffsetHeight, setHeaderOffsetHeight, isModalOpen, setModalOpen }}>
       {children}
-    </StickyContext.Provider>
+    </GlobalContext.Provider>
   )
 }

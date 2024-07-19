@@ -7,7 +7,7 @@ import signLanguage from '../../assets/sign-language.png'
 import braile from '../../assets/braile.png'
 import bilateralDeafness from '../../assets/bilateral-deafness.png'
 import './styles.scss'
-import { StickyContext } from '../../contexts/globalContext'
+import { GlobalContext } from '../../contexts/globalContext'
 
 interface HeaderProps {
   setShowSections: React.Dispatch<React.SetStateAction<boolean>>
@@ -25,7 +25,7 @@ export default function Header({
   const [scrollPosition, setScrollPosition] = useState(0)
   const [open, setOpen] = useState(false)
   const location = useLocation()
-  const { isSticky, setHeaderOffsetHeight } = useContext(StickyContext)
+  const { isSticky, setHeaderOffsetHeight } = useContext(GlobalContext)
   const headerRef = useRef<HTMLDivElement | null>(null) // Define explicitamente o tipo como HTMLDivElement ou null
 
   useEffect(() => {

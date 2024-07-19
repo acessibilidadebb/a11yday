@@ -2,11 +2,11 @@ import closeBtn from '../../../assets/close.png'
 import './speakerDetails.scss'
 import { SpeakerDetailsProps } from '../types'
 import { useContext, useEffect, useState } from 'react'
-import { StickyContext } from '../../../contexts/globalContext'
+import { GlobalContext } from '../../../contexts/globalContext'
 
 export function SpeakerDetails(props: SpeakerDetailsProps) {
   const { speaker, showDetails, setShowDetails, initialIsStick } = props
-  const { setIsSticky, headerOffsetHeight } = useContext(StickyContext)
+  const { setIsSticky, headerOffsetHeight, setModalOpen } = useContext(GlobalContext)
   const [windowHeight, setWindowHeight] = useState(window.innerHeight)
 
   useEffect(() => {
@@ -18,6 +18,7 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
   const handleClose = () => {
     setShowDetails(false)
     setIsSticky(initialIsStick)
+    setModalOpen(false)
   }
   const handleOverlayClick = (event: React.MouseEvent) => {
     if (event.target === event.currentTarget) {
