@@ -50,7 +50,7 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
               src={`/palestrantes/${speaker.image}`}
               alt={`Foto de ${speaker.seuNome}`}
             />
-            <h4 className="speaker-details-name">{speaker.seuNome}</h4>
+            <h3 className="speaker-details-name">{speaker.seuNome}</h3>
             <p className="speaker-details-company">{speaker.empresa}</p>
             <p className="speaker-details-description">{speaker?.miniBio}</p>
           </section>
