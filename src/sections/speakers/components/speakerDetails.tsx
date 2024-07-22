@@ -8,9 +8,13 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
   const { speaker, showDetails, setShowDetails, initialIsStick } = props
   const { setIsSticky, headerOffsetHeight, setModalOpen } = useContext(GlobalContext)
   const [windowHeight, setWindowHeight] = useState(window.innerHeight)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   useEffect(() => {
-    const handleResize = () => setWindowHeight(window.innerHeight)
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight)
+      setWindowWidth(window.innerWidth)
+    }
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
@@ -30,7 +34,7 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
       onClick={handleOverlayClick}
       style={{
         height: windowHeight - headerOffsetHeight,
-        marginTop: headerOffsetHeight,
+        marginTop: windowWidth <= 430 ? headerOffsetHeight : 0,
       }}
       className={`speaker-details-modal ${showDetails ? 'open' : ''}`}
     >
