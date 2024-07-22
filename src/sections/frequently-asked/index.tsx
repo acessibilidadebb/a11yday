@@ -3,7 +3,7 @@ import './styles.scss'
 import questionMark from '../../assets/question-mark.png'
 import questionMark2 from '../../assets/question-mark2.png'
 import { Accordion } from '../../components/accordion'
-import questions from './questions.json'
+import faq from './faq.json'
 import { FrequentlyAskedProps } from './types'
 
 export default function FrequentlyAsked({
@@ -23,7 +23,7 @@ export default function FrequentlyAsked({
         <h2>Dúvidas Frequentes</h2>
       </header>
       <div className="frequently-asked-body">
-        {questions.map((question, index) => (
+        {faq.map((question, index) => (
           <div className="accordion-container" key={index}>
             <Accordion
               title={question.title}
