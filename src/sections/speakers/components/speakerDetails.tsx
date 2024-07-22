@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../../../contexts/globalContext'
 
 export function SpeakerDetails(props: SpeakerDetailsProps) {
-  const { speaker, showDetails, setShowDetails, initialIsStick } = props
+  const { speaker, isOpen, setIsOpen, initialIsStick } = props
   const { setIsSticky, headerOffsetHeight, setModalOpen } = useContext(GlobalContext)
   const [windowHeight, setWindowHeight] = useState(window.innerHeight)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -20,7 +20,7 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
   }, [])
 
   const handleClose = () => {
-    setShowDetails(false)
+    setIsOpen(false)
     setIsSticky(initialIsStick)
     setModalOpen(false)
   }
@@ -36,7 +36,7 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
         height: windowHeight - headerOffsetHeight,
         marginTop: windowWidth <= 430 ? headerOffsetHeight : 0,
       }}
-      className={`speaker-details-modal ${showDetails ? 'open' : ''}`}
+      className={`speaker-details-modal ${isOpen ? 'open' : ''}`}
     >
       <div className="speaker-details-container">
         <div className="speaker-details-content">

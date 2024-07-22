@@ -4,7 +4,7 @@ import './speaker.scss'
 import { GlobalContext } from '../../../contexts/globalContext'
 
 export default function SpeakerItem(props: SpeakerProps) {
-  const { speaker, setActiveSpeaker,setShowDetails, setInitialIsStick } = props
+  const { speaker, setActiveSpeaker,setIsModalOpen, setInitialIsStick } = props
   const { isSticky, setIsSticky, isModalOpen, setModalOpen } = useContext(GlobalContext)
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function SpeakerItem(props: SpeakerProps) {
   }, [isModalOpen])
 
   const handleClick = () => {
-    setShowDetails(true)
+    setIsModalOpen(true)
     setActiveSpeaker(speaker)
     setInitialIsStick(isSticky)
     setIsSticky(true)

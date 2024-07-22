@@ -11,7 +11,7 @@ import { SpeakerDetails } from './components/speakerDetails'
 const speakers: Speaker[] = speakersData as Speaker[]
 
 export default function Speakers({ showSpeakers }: SpeakersProps) {
-  const [showDetails, setShowDetails] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const [activeSpeaker, setActiveSpeaker] = useState({} as Speaker)
   const [ initialIsStick, setInitialIsStick ] = useState(false)
   return (
@@ -26,7 +26,7 @@ export default function Speakers({ showSpeakers }: SpeakersProps) {
             return (
               <SpeakerItem
                 key={`${index}${speaker.seuEmail}`}
-                setShowDetails={setShowDetails}
+                setIsModalOpen={setIsModalOpen}
                 speaker={speaker}
                 setActiveSpeaker={setActiveSpeaker}
                 setInitialIsStick={setInitialIsStick}
@@ -37,9 +37,10 @@ export default function Speakers({ showSpeakers }: SpeakersProps) {
       </div>
       <SpeakerDetails
         speaker={activeSpeaker}
-        showDetails={showDetails}
-        setShowDetails={setShowDetails}
+        isOpen={isModalOpen}
+        setIsOpen={setIsModalOpen}
         initialIsStick={initialIsStick}
+        onClose={() => {setIsModalOpen(false)}}
       />
     </section>
   )

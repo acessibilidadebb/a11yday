@@ -7,13 +7,13 @@ export interface SpeakersProps {
 export interface SpeakerProps {
   speaker: Speaker
   setActiveSpeaker: React.Dispatch<React.SetStateAction<Speaker>>
-  setShowDetails: React.Dispatch<React.SetStateAction<boolean>>
+  setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>
   setInitialIsStick: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export interface SpeakerDetailsProps {
   speaker: Speaker
-  showDetails: boolean
-  setShowDetails: React.Dispatch<React.SetStateAction<boolean>>
+  isOpen: boolean
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
   initialIsStick: boolean
 }
