@@ -16,4 +16,5 @@ export interface SpeakerDetailsProps {
   isOpen: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
   initialIsStick: boolean
+  onClose: () => void
 }
