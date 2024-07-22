@@ -259,5 +259,33 @@
     "conseguireiEstarPresencialmenteEmBrasilia": "Sim",
     "confirmoQueAPalestraEDeMinhaAutoria": "Sim",
     "image": "marcos-fernandes.jpeg"
+  },
+  {
+    "horaDeInicio": "",
+    "horaDeConclusao": "",
+    "email": "",
+    "nome": "",
+    "seuNome": "Michael Liang",
+    "apelido": "",
+    "seuEmail": "",
+    "empresa": "",
+    "deQualCidadeVoceVira": "",
+    "miniBio": "Michael Liang é um desenvolvedor full-stack com foco em soluções de alta performance e especialista em Angular, com mais de 5 anos de experiência na área. Apaixonado por tecnologia, Michael dedica-se a encontrar as melhores soluções para os desafios digitais, sempre com uma abordagem inclusiva e acessível, garantindo que todas as pessoas, independentemente de suas habilidades, possam usufruir das tecnologias de maneira plena e eficiente.",
+    "linkedIn": "",
+    "instagram": "",
+    "twitter": "",
+    "facebook": "",
+    "website": "",
+    "titulo": "",
+    "resumo": "",
+    "descricaoDaSuaPalestra": "",
+    "tresLicoesQueOPublicoAprenderaComASuaPalestra": "",
+    "publicoAlvoRecomendado": "",
+    "jaPalestrou": "",
+    "qualTempoDeDuracaoDaSuaPalestra": "",
+    "algoParaCompartilhar": "",
+    "conseguireiEstarPresencialmenteEmBrasilia": "",
+    "confirmoQueAPalestraEDeMinhaAutoria": "",
+    "image": "michael-liang.jpeg"
   }
 ]
