@@ -32,10 +32,10 @@
     opacity: 1;
     visibility: visible;
     z-index: 85;
+    transition: right 0.5s ease-in-out;
     &.open {
       right: 0;
     }
-    transition: right 0.5s ease-in-out;
     .speaker-details-container {
       height: 100%;
       border-radius: 0;
