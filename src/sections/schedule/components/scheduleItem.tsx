@@ -47,7 +47,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
       >
         <img
           className="schedule-card-image"
-          src={`/${
+          src={`${import.meta.env.BASE_URL}${
             speakers.length ? `palestrantes/${speakers[0].image}` : image
           }`}
           alt={getAltText()}
