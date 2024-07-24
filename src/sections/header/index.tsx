@@ -149,7 +149,7 @@ export default function Header({
   return (
     <header className={`header ${sticky}`} ref={headerRef}>
       <h1 className="header-logo-container">
-        <Link to="/" onClick={resetSections}>
+        <Link to={`${import.meta.env.BASE_URL}`} onClick={resetSections}>
           <img
             className="header-logo-bb"
             src={bbLogo}
@@ -196,23 +196,23 @@ export default function Header({
           </div>
           <ul id="nav-list">
             <li className="home-link">
-              <Link to={`${import.meta.env.BASE_URL}/`} onClick={resetSections}>
+              <Link to={`${import.meta.env.BASE_URL}`} onClick={resetSections}>
                 Página Inicial
               </Link>
             </li>
             <li>
-              <Link to={`${import.meta.env.BASE_URL}/schedule/`} onClick={handleClickSchedule}>
+              <Link to={`${import.meta.env.BASE_URL}schedule/`} onClick={handleClickSchedule}>
                 Programação
               </Link>
             </li>
             <li>
-              <Link to={`${import.meta.env.BASE_URL}/speakers/`} onClick={handleClickSpeakers}>
+              <Link to={`${import.meta.env.BASE_URL}speakers/`} onClick={handleClickSpeakers}>
                 Palestrantes
               </Link>
             </li>
             <li>
               <Link
-                to={`${import.meta.env.BASE_URL}/frequently-asked-questions/`}
+                to={`${import.meta.env.BASE_URL}frequently-asked-questions/`}
                 onClick={handleClickFrequentlyAsked}
               >
                 Dúvidas
