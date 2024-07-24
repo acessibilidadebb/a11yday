@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import './App.scss'
 import Footer from './sections/footer'
 import FrequentlyAsked from './sections/frequently-asked'

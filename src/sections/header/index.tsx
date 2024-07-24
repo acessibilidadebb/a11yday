@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
 import bbLogo from '../../assets/bb-logo.png'
 import logo from '../../assets/logo.png'
 import lowVision from '../../assets/low-vision.png'
@@ -118,7 +119,9 @@ export default function Header({
     setOpen(false)
   }
   const openSection = (section: string) => {
-    setShowSections(false)
+    if (window.innerWidth <= 430) {
+      setShowSections(false)
+    }
     switch (section) {
       case 'schedule':
         setShowSchedule(true)
@@ -149,7 +152,7 @@ export default function Header({
   return (
     <header className={`header ${sticky}`} ref={headerRef}>
       <h1 className="header-logo-container">
-        <Link to={`${import.meta.env.BASE_URL}`} onClick={resetSections}>
+        <Link smooth to={`/`} onClick={resetSections}>
           <img
             className="header-logo-bb"
             src={bbLogo}
@@ -196,23 +199,31 @@ export default function Header({
           </div>
           <ul id="nav-list">
             <li className="home-link">
-              <Link to={`${import.meta.env.BASE_URL}`} onClick={resetSections}>
+              <Link smooth to={`/`} onClick={resetSections}>
                 Página Inicial
               </Link>
             </li>
             <li>
-              <Link to={`${import.meta.env.BASE_URL}schedule/`} onClick={handleClickSchedule}>
+              <Link
+                smooth
+                to={`/schedule`}
+                onClick={handleClickSchedule}
+              >
                 Programação
               </Link>
             </li>
             <li>
-              <Link to={`${import.meta.env.BASE_URL}speakers/`} onClick={handleClickSpeakers}>
+              <Link
+                smooth
+                to={`/speakers`}
+                onClick={handleClickSpeakers}
+              >
                 Palestrantes
               </Link>
             </li>
             <li>
               <Link
-                to={`${import.meta.env.BASE_URL}frequently-asked-questions/`}
+                to={`/frequently-asked-questions`}
                 onClick={handleClickFrequentlyAsked}
               >
                 Dúvidas

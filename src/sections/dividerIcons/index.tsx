@@ -3,7 +3,7 @@ import bilateralDeafness from '../../assets/bilateral-deafness-alt.png'
 import lowVision from '../../assets/low-vision.png'
 import signLanguage from '../../assets/sign-language.png'
 import './styles.scss'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 interface Icon {
   src: string
@@ -64,7 +64,7 @@ export default function DividerIcons() {
     setAditionalIcons(newIcons)
   }, [])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     iconRefs.forEach((iconRef) => {
       if (iconRef.current) {
         const dividerIconsPadding = window.getComputedStyle(
