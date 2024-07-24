@@ -13,7 +13,7 @@ const speakers: Speaker[] = speakersData as Speaker[]
 export default function Speakers({ showSpeakers }: SpeakersProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [activeSpeaker, setActiveSpeaker] = useState({} as Speaker)
-  const [ initialIsStick, setInitialIsStick ] = useState(false)
+  const [initialIsStick, setInitialIsStick] = useState(false)
   return (
     <section id="speakers" className={`speakers ${showSpeakers ? 'open' : ''}`}>
       <div className="speakers-container">
@@ -35,13 +35,17 @@ export default function Speakers({ showSpeakers }: SpeakersProps) {
           })}
         </div>
       </div>
-      <SpeakerDetails
-        speaker={activeSpeaker}
-        isOpen={isModalOpen}
-        setIsOpen={setIsModalOpen}
-        initialIsStick={initialIsStick}
-        onClose={() => {setIsModalOpen(false)}}
-      />
+      {Object.keys(activeSpeaker).length && (
+        <SpeakerDetails
+          speaker={activeSpeaker}
+          isOpen={isModalOpen}
+          setIsOpen={setIsModalOpen}
+          initialIsStick={initialIsStick}
+          onClose={() => {
+            setIsModalOpen(false)
+          }}
+        />
+      )}
     </section>
   )
 }

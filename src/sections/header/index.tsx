@@ -52,7 +52,7 @@ export default function Header({
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const id = entry.target.id
-          const url = `/${id}`
+          const url = `${import.meta.env.BASE_URL}${id}`
           history.replaceState({}, '', url)
         }
       })

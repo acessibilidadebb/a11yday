@@ -29,6 +29,7 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
       handleClose()
     }
   }
+  console.log(speaker)
   return (
     <div
       onClick={handleOverlayClick}
@@ -51,7 +52,7 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
             <p className="speaker-details-about">Sobre a pessoa Palestrante</p>
             <img
               className="speaker-details-image"
-              src={`${import.meta.env.BASE_URL}/palestrantes/${speaker.image}`}
+              src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image}`}
               alt={`Foto de ${speaker.seuNome}`}
             />
             <h3 className="speaker-details-name">{speaker.seuNome}</h3>
