@@ -41,32 +41,6 @@ export default function Header({
     }
   }, [])
   const sticky = scrollPosition > 30 || isSticky ? 'sticky' : ''
-    useEffect(() => {
-    const sections = document.querySelectorAll('section[id]')
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5, // Quando 50% do elemento estiver visível
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id
-          const url = `${import.meta.env.BASE_URL}#/${id}`
-          history.replaceState({}, '', url)
-        }
-      })
-    }, observerOptions)
-
-    sections.forEach((section) => {
-      observer.observe(section)
-    })
-
-    return () => {
-      observer.disconnect()
-    }
-  }, [])
   useEffect(() => {
     const scrollToSectionOnLoad = () => {
       const { pathname } = location
