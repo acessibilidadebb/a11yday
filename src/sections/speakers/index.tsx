@@ -35,7 +35,7 @@ export default function Speakers({ showSpeakers }: SpeakersProps) {
           })}
         </div>
       </div>
-      {Object.keys(activeSpeaker).length && (
+      {!!Object.keys(activeSpeaker).length && (
         <SpeakerDetails
           speaker={activeSpeaker}
           isOpen={isModalOpen}
