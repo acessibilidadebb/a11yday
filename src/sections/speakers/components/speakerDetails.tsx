@@ -29,7 +29,6 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
       handleClose()
     }
   }
-  console.log(speaker)
   return (
     <div
       onClick={handleOverlayClick}
