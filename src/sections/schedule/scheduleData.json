@@ -102,7 +102,7 @@
     "details": ""
   },
   {
-    "time": "14h35",
+    "time": "14h45",
     "image": "",
     "title": "Conectando Vidas: Tecnologia e Acessibilidade",
     "speakers": [
@@ -115,7 +115,7 @@
     "details": "Detalhes da Palestra"
   },
   {
-    "time": "15h00",
+    "time": "15h10",
     "image": "",
     "title": "IA e Neurodiversidade: Ferramentas e Soluções em Acessibilidade Inclusivas para a Diversidade Cognitiva",
     "speakers": [
@@ -128,7 +128,7 @@
     "details": "Detalhes da Palestra"
   },
   {
-    "time": "15h45",
+    "time": "15h55",
     "image": "",
     "title": "Design inclusivo para a 3º Idade",
     "speakers": [
@@ -146,7 +146,7 @@
     "details": "Detalhes da Palestra"
   },
   {
-    "time": "16h10",
+    "time": "16h20",
     "image": "",
     "title": "Implementando Acessibilidade: Um Fluxo de Trabalho otimizado para Desenvolvedores",
     "speakers": [
@@ -159,7 +159,7 @@
     "details": "Detalhes da Palestra"
   },
   {
-    "time": "19h30",
+    "time": "17h00",
     "image": "d-braile.png",
     "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
     "imageAriaHidden": true,
