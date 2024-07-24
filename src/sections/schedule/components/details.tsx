@@ -29,6 +29,7 @@ export function Details(props: DetailsProps) {
   }
   return (
     <div
+      aria-hidden={!showDetails}
       onClick={handleOverlayClick}
       className={`schedule-details-modal ${showDetails ? 'open' : ''}`}
     >
@@ -51,7 +52,9 @@ export function Details(props: DetailsProps) {
             <p className="schedule-details-about">Sobre a Palestrante</p>
             <img
               className="schedule-details-image"
-              src={`${import.meta.env.BASE_URL}/palestrantes/${speakerDetails.image}`}
+              src={`${import.meta.env.BASE_URL}/palestrantes/${
+                speakerDetails.image
+              }`}
               alt={`Foto de ${speakerDetails.seuNome}`}
             />
             <h4 className="schedule-details-name">{speakerDetails.seuNome}</h4>

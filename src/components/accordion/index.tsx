@@ -16,12 +16,12 @@ export function Accordion({
   onToggle,
 }: AccordionProps): React.ReactElement {
   return (
-    <div className={`accordion ${isOpen ? 'open' : ''}`}>
-      <button className="accordion-label" onClick={onToggle}>
+    <div className={`accordion ${isOpen ? 'open' : ''}`} role="region" aria-labelledby={title}>
+      <button aria-expanded={isOpen} className="accordion-label" onClick={onToggle}>
         {title}
         <SvgCaret className={`accordion-icon svg ${isOpen ? 'open' : ''}`} />
       </button>
-      <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
+      <div className={`accordion-content ${isOpen ? 'open' : ''}`} aria-hidden={!isOpen}>
         <p>{description}</p>
       </div>
     </div>

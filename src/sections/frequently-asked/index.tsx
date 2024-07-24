@@ -19,7 +19,11 @@ export default function FrequentlyAsked({
       className={`frequently-asked ${showFrequentlyAsked ? 'open' : ''}`}
     >
       <header>
-        <img src={questionMark} alt="Ponto de Interrogação" />
+        <img
+          src={questionMark}
+          alt="Ponto de Interrogação"
+          aria-hidden="true"
+        />
         <h2>Dúvidas Frequentes</h2>
       </header>
       <div className="frequently-asked-body">
@@ -38,6 +42,7 @@ export default function FrequentlyAsked({
         <img
           src={questionMark2}
           alt="Marca d'água ponto de interrogação grande na cor "
+          aria-hidden="true"
         />
       </div>
     </section>

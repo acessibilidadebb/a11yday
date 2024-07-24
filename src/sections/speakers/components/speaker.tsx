@@ -4,8 +4,9 @@ import './speaker.scss'
 import { GlobalContext } from '../../../contexts/globalContext'
 
 export default function SpeakerItem(props: SpeakerProps) {
-  const { speaker, setActiveSpeaker,setIsModalOpen, setInitialIsStick } = props
-  const { isSticky, setIsSticky, isModalOpen, setModalOpen } = useContext(GlobalContext)
+  const { speaker, setActiveSpeaker, setIsModalOpen, setInitialIsStick } = props
+  const { isSticky, setIsSticky, isModalOpen, setModalOpen } =
+    useContext(GlobalContext)
 
   useEffect(() => {
     if (isModalOpen) {
@@ -22,7 +23,7 @@ export default function SpeakerItem(props: SpeakerProps) {
     setIsSticky(true)
     setModalOpen(true)
   }
-  
+
   return (
     <article className="speaker-card">
       <img
@@ -32,7 +33,11 @@ export default function SpeakerItem(props: SpeakerProps) {
       <div className="speaker-card-body">
         <h3>{speaker.seuNome}</h3>
         <p>{speaker.empresa}</p>
-        <button onClick={handleClick} className="speaker-btn">
+        <button
+          onClick={handleClick}
+          className="speaker-btn"
+          aria-label={`Conheça ${speaker.seuNome}`}
+        >
           Conheça
         </button>
       </div>

@@ -3,6 +3,7 @@
     "time": "8h00",
     "image": "d-braile.png",
     "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
+    "imageAriaHidden": true,
     "title": "Checkin",
     "speakers": [],
     "details": ""
@@ -11,6 +12,7 @@
     "time": "9h00",
     "image": "d-braile.png",
     "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
+    "imageAriaHidden": true,
     "title": "Abertura do Evento",
     "speakers": [],
     "details": ""
@@ -85,6 +87,7 @@
     "image": "cafe-blue.png",
     "imageAlt": "Ícone com um Garfo e uma Faca representando refeição",
     "title": "Pausa para almoço",
+    "imageAriaHidden": true,
     "speakers": [],
     "subtitle": "Venha tomar um café e conhecer pessoas maravilhosas.",
     "details": ""
@@ -93,6 +96,7 @@
     "time": "13h30",
     "image": "d-braile.png",
     "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
+    "imageAriaHidden": true,
     "title": "Abertura tarde",
     "speakers": [],
     "details": ""
@@ -158,6 +162,7 @@
     "time": "19h30",
     "image": "d-braile.png",
     "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
+    "imageAriaHidden": true,
     "title": "Encerramento",
     "speakers": [],
     "details": ""

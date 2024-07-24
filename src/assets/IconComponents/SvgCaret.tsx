@@ -8,6 +8,7 @@ export const SvgCaret = ({ className }: SvgCaretProps) => (
   <div
     className="caret-container"
     role="img"
+    aria-hidden="true"
     aria-label="Ícone para colapsar conteúdo"
   >
     <svg

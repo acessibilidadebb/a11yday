@@ -15,6 +15,7 @@ export interface ScheduleItemProps {
   time: string
   image?: string
   imageAlt?: string
+  imageAriaHidden?: boolean
   title: string
   subtitle?: string
   speakers: SpeakerTitle[]

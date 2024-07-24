@@ -6,30 +6,34 @@ import braile from '../../assets/braile.png'
 import bilateralDeafness from '../../assets/bilateral-deafness.png'
 
 interface OverviewProps {
-  style?: React.CSSProperties;
+  style?: React.CSSProperties
 }
 
-export default function Overview({style}: OverviewProps) {
+export default function Overview({ style }: OverviewProps) {
   return (
     <section className="overview-section" style={style}>
       <div>
         <div className="decorative-icons">
           <img
+            aria-hidden="true"
             className="decorative-icon low-vision"
             src={lowVision}
             alt="Ícone de Baixa Visão"
           />
           <img
+            aria-hidden="true"
             className="decorative-icon sign-language"
             src={signLanguage}
             alt="Ícone de Linguagem de Sinais"
           />
           <img
+            aria-hidden="true"
             className="decorative-icon braile"
             src={braile}
             alt="Ícone de Braile"
           />
           <img
+            aria-hidden="true"
             className="decorative-icon bilateral-deafness"
             src={bilateralDeafness}
             alt="Ícone de Surdez Bilateral"
@@ -45,6 +49,7 @@ export default function Overview({style}: OverviewProps) {
       <div className="overview-background-detail">
         <div className="overview-icons">
           <img
+            aria-hidden="true"
             className="overview-icon"
             src={signLanguageBig}
             alt="Ícone de Linguagem de Sinais"

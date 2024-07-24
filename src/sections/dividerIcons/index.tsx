@@ -27,7 +27,6 @@ const icons: Icon[] = [
 ]
 
 export default function DividerIcons() {
-  
   const [aditionalIcons, setAditionalIcons] = useState<Icon[]>([])
 
   const dividerIconsRef = useRef<HTMLDivElement | null>(null)
@@ -91,6 +90,7 @@ export default function DividerIcons() {
       <>
         {icons.map((icon, index) => (
           <img
+            aria-hidden="true"
             key={index}
             ref={iconRefs[index]}
             className={`icon ${icon.className}`}
@@ -107,6 +107,7 @@ export default function DividerIcons() {
       <>
         {aditionalIcons.map((icon, index) => (
           <img
+            aria-hidden="true"
             key={index}
             ref={iconRefs[index]}
             className={`icon ${icon.className}`}
@@ -119,8 +120,8 @@ export default function DividerIcons() {
   }
 
   return (
-    <section ref={dividerIconsRef} className="divider-icons">
-      <div ref={containerRef} className="icons-container">
+    <section ref={dividerIconsRef} className="divider-icons" aria-hidden="true">
+      <div ref={containerRef} className="icons-container" aria-hidden="true">
         <IconContainer />
         <IconCompleter />
       </div>

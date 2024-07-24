@@ -1,15 +1,24 @@
-import { useContext, useEffect, useState } from "react"
-import { ScheduleItemProps } from "../types"
-import { Details } from "./details"
-import { SpeakersTitle } from "./speakersTitle"
+import { useContext, useEffect, useState } from 'react'
+import { ScheduleItemProps } from '../types'
+import { Details } from './details'
+import { SpeakersTitle } from './speakersTitle'
 import './scheduleitem.scss'
-import { GlobalContext } from "../../../contexts/globalContext"
+import { GlobalContext } from '../../../contexts/globalContext'
 
 export function ScheduleItem(props: ScheduleItemProps) {
-  const { time, image, imageAlt, title, subtitle, speakers, details } = props
+  const {
+    time,
+    image,
+    imageAlt,
+    imageAriaHidden,
+    title,
+    subtitle,
+    speakers,
+    details,
+  } = props
   const { isModalOpen, setModalOpen } = useContext(GlobalContext)
   const [showDetails, setShowDetails] = useState(false)
-  
+
   useEffect(() => {
     if (isModalOpen) {
       document.body.classList.add('no-scroll')
@@ -26,8 +35,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
   const getAltText = () => {
     let altText = ''
     if (speakers.length) {
-      altText =
-        'Foto de ' + speakers.map((speaker) => speaker.nome).join(', ')
+      altText = 'Foto de ' + speakers.map((speaker) => speaker.nome).join(', ')
     } else {
       altText = imageAlt ?? ''
     }
@@ -46,6 +54,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
         }`}
       >
         <img
+          aria-hidden={`${!!imageAriaHidden}`}
           className="schedule-card-image"
           src={`${import.meta.env.BASE_URL}${
             speakers.length ? `palestrantes/${speakers[0].image}` : image
@@ -59,7 +68,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
           <button
             onClick={handleClickDetails}
             className="details"
-            aria-label="Exibir detalhes da Palestra"
+            aria-label={`Exibir detalhes da Palestra ${title}`}
           >
             Detalhes da Palestra
           </button>

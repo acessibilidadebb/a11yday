@@ -8,6 +8,16 @@ import SpeakerItem from './components/speaker'
 import { useState } from 'react'
 import { SpeakerDetails } from './components/speakerDetails'
 
+speakersData.sort((a, b) => {
+  if (a.seuNome < b.seuNome) {
+    return -1
+  }
+  if (a.seuNome > b.seuNome) {
+    return 1
+  }
+  return 0
+})
+
 const speakers: Speaker[] = speakersData as Speaker[]
 
 export default function Speakers({ showSpeakers }: SpeakersProps) {
@@ -18,7 +28,11 @@ export default function Speakers({ showSpeakers }: SpeakersProps) {
     <section id="speakers" className={`speakers ${showSpeakers ? 'open' : ''}`}>
       <div className="speakers-container">
         <div className="watermark">
-          <img src={lowVisionMark} alt="Marca d'água ícone de Baixa Visão " />
+          <img
+            src={lowVisionMark}
+            alt="Marca d'água ícone de Baixa Visão "
+            aria-hidden="true"
+          />
         </div>
         <h2>Palestrantes</h2>
         <div className="speakers-content">
