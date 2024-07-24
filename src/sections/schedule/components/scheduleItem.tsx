@@ -76,8 +76,8 @@ export function ScheduleItem(props: ScheduleItemProps) {
       </div>
       {!!speakers.length && (
         <Details
-          showDetails={showDetails}
-          setShowDetails={setShowDetails}
+          isOpen={showDetails}
+          setIsOpen={setShowDetails}
           {...props}
         />
       )}

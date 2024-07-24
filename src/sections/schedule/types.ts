@@ -22,6 +22,6 @@ export interface ScheduleItemProps {
   details: string
 }
 export interface DetailsProps extends ScheduleItemProps {
-  showDetails: boolean
-  setShowDetails: React.Dispatch<React.SetStateAction<boolean>>
+  isOpen: boolean
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }

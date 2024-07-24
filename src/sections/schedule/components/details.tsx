@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 import closeBtn from '../../../assets/close.png'
 import speakersData from '../../../speakers.json'
 import { Speaker } from '../../../types/speakers'
@@ -7,12 +7,70 @@ import './details.scss'
 import { GlobalContext } from '../../../contexts/globalContext'
 
 export function Details(props: DetailsProps) {
-  const { title, speakers, showDetails, setShowDetails } = props
+  const { title, speakers, isOpen, setIsOpen } = props
   const { setModalOpen } = useContext(GlobalContext)
+  const modalRef = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    if (isOpen) {
+      const modalElement = modalRef.current
+      if (modalElement) {
+        //add any focusable HTML element you want to include to this string
+        const focusableElements = modalElement.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        ) as NodeListOf<HTMLElement>
+        const firstElement = focusableElements[0]
+        const lastElement = focusableElements[focusableElements.length - 1]
+
+        const handleTabKeyPress = (event: KeyboardEvent) => {
+          if (event.key === 'Tab') {
+            if (event.shiftKey && document.activeElement === firstElement) {
+              event.preventDefault()
+              lastElement.focus()
+            } else if (
+              !event.shiftKey &&
+              document.activeElement === lastElement
+            ) {
+              event.preventDefault()
+              firstElement.focus()
+            }
+          }
+        }
+
+        const handleEscapeKeyPress = (event: KeyboardEvent) => {
+          if (event.key === 'Escape') {
+            setIsOpen(false)
+          }
+        }
+
+        modalElement.addEventListener(
+          'keydown',
+          handleTabKeyPress as unknown as EventListener
+        )
+        modalElement.addEventListener(
+          'keydown',
+          handleEscapeKeyPress as unknown as EventListener
+        )
+
+        return () => {
+          modalElement.removeEventListener(
+            'keydown',
+            handleTabKeyPress as unknown as EventListener
+          )
+          modalElement.removeEventListener(
+            'keydown',
+            handleEscapeKeyPress as unknown as EventListener
+          )
+        }
+      }
+    }
+  }, [isOpen, setIsOpen])
+
   const handleClose = () => {
-    setShowDetails(false)
+    setIsOpen(false)
     setModalOpen(false)
   }
+
   const speakerDetails = speakers.map((speaker) => ({
     ...speakersData.find(
       (item) =>
@@ -22,18 +80,20 @@ export function Details(props: DetailsProps) {
     ),
     image: speaker.image,
   }))[0] as Speaker
+
   const handleOverlayClick = (event: React.MouseEvent) => {
     if (event.target === event.currentTarget) {
       handleClose()
     }
   }
+
   return (
     <div
-      aria-hidden={!showDetails}
+      aria-hidden={!isOpen}
       onClick={handleOverlayClick}
-      className={`schedule-details-modal ${showDetails ? 'open' : ''}`}
+      className={`schedule-details-modal ${isOpen ? 'open' : ''}`}
     >
-      <article className="schedule-details-container">
+      <div className="schedule-details-container" ref={modalRef}>
         <div className="schedule-details-content">
           <button
             onClick={handleClose}
@@ -64,7 +124,7 @@ export function Details(props: DetailsProps) {
             </p>
           </section>
         </div>
-      </article>
+      </div>
     </div>
   )
 }
