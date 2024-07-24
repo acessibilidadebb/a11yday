@@ -41,7 +41,7 @@ export default function Header({
     }
   }, [])
   const sticky = scrollPosition > 30 || isSticky ? 'sticky' : ''
-  useEffect(() => {
+    useEffect(() => {
     const sections = document.querySelectorAll('section[id]')
     const observerOptions = {
       root: null,
@@ -53,7 +53,7 @@ export default function Header({
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const id = entry.target.id
-          const url = `${import.meta.env.BASE_URL}${id}`
+          const url = `${import.meta.env.BASE_URL}#/${id}`
           history.replaceState({}, '', url)
         }
       })
