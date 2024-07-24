@@ -6,9 +6,11 @@ import { GlobalContext } from '../../../contexts/globalContext'
 
 export function SpeakerDetails(props: SpeakerDetailsProps) {
   const { speaker, isOpen, setIsOpen, initialIsStick } = props
-  const { setIsSticky, headerOffsetHeight, setModalOpen } = useContext(GlobalContext)
+  const { setIsSticky, headerOffsetHeight, setModalOpen } =
+    useContext(GlobalContext)
   const [windowHeight, setWindowHeight] = useState(window.innerHeight)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [isTransitionReady, setIsTransitionReady] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -18,6 +20,16 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
+  
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => {
+        setIsTransitionReady(true)
+      }, 100)
+    } else {
+      setIsTransitionReady(false)
+    }
+  }, [isOpen])
 
   const handleClose = () => {
     setIsOpen(false)
@@ -31,12 +43,13 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
   }
   return (
     <div
+      aria-hidden={!isOpen}
       onClick={handleOverlayClick}
       style={{
-        height: windowHeight - headerOffsetHeight,
+        height: windowWidth <= 430 ?  windowHeight - headerOffsetHeight : '100vh',
         marginTop: windowWidth <= 430 ? headerOffsetHeight : 0,
       }}
-      className={`speaker-details-modal ${isOpen ? 'open' : ''}`}
+      className={`speaker-details-modal ${isOpen && isTransitionReady ? 'open' : ''}`}
     >
       <div className="speaker-details-container">
         <div className="speaker-details-content">
@@ -48,13 +61,12 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
             <img src={closeBtn} alt="Ícone de Fechar" />
           </button>
           <section className="speaker-details-body">
-            <p className="speaker-details-about">Sobre a pessoa Palestrante</p>
+            <h3 className="speaker-details-name">Sobre {speaker.seuNome}</h3>
             <img
               className="speaker-details-image"
               src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image}`}
               alt={`Foto de ${speaker.seuNome}`}
             />
-            <h3 className="speaker-details-name">{speaker.seuNome}</h3>
             <p className="speaker-details-company">{speaker.empresa}</p>
             <p className="speaker-details-description">{speaker?.miniBio}</p>
           </section>
