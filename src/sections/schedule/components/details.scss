@@ -1,5 +1,6 @@
 @import '../../../variables';
 @import '../../../placeholders';
+@import '../../../mixins';
 
 .schedule-details-modal {
   position: fixed;
@@ -14,7 +15,7 @@
   z-index: 99;
   overflow-y: auto;
 
-  @media (min-width: 431px) {
+  @include respond-to(lg) {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
@@ -36,9 +37,10 @@
     }
   }
 
-  @media (max-width: 430px) {
+  @include respond-to-max(lg) {
     right: -100%;
-    opacity: 1; /* Ensure the dark background always appears on mobile */
+    visibility: visible;
+    opacity: 1;
     transition: right 0.5s ease-in-out;
     background-color: transparent;
     left: auto;
@@ -85,10 +87,10 @@
     align-items: center;
   }
 
-  @media (max-width: 430px) {
+  @include respond-to-max(lg) {
     max-width: none;
     margin-left: 0;
-    position: absolute; /* Ensure it slides along with the modal */
+    position: absolute;
     right: -100%;
 
     .schedule-details-close-btn {

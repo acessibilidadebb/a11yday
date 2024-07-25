@@ -5,3 +5,35 @@
     }
   }
 }
+
+@mixin respond-to-max($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (max-width: map-get($grid-breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+/*
+// usage
+
+.container {
+  width: 100%;
+  
+  @include respond-to(sm) {
+    width: 540px;
+  }
+  
+  @include respond-to(md) {
+    width: 720px;
+  }
+  
+  @include respond-to(lg) {
+    width: 960px;
+  }
+  
+  @include respond-to(xl) {
+    width: 1140px;
+  }
+}
+*/

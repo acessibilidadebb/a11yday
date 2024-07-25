@@ -1,16 +1,17 @@
 @import '../../variables';
 @import '../../placeholders';
+@import '../../mixins';
 
 .schedule {
   @extend %container;
   background-color: $white;
-  display: flex;
   flex-direction: column;
-  @media (max-width: 430px) {
-    display: none;
-    &.open {
-      display: flex;
-    }
+  display: none;
+  &.open {
+    display: flex;
+  }
+  @include respond-to(lg) {
+    display: flex;
   }
 }
 .schedule-title {
@@ -47,11 +48,11 @@
   color: $color-gray;
   text-transform: uppercase;
   margin-top: 36px;
-  display: flex;
+  display: none;
   justify-content: flex-start;
   align-items: flex-end;
-  @media (max-width: 430px) {
-    display: none;
+  @include respond-to(lg) {
+    display: flex;
   }
   .schedule-time,
   .schedule-event {
