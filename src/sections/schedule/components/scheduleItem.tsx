@@ -1,21 +1,13 @@
 import { useContext, useEffect, useState } from 'react'
-import { ScheduleItemProps } from '../types'
+import { ScheduleCardImageProps, ScheduleItemProps } from '../types'
 import { Details } from './details'
 import { SpeakersTitle } from './speakersTitle'
 import './scheduleitem.scss'
 import { GlobalContext } from '../../../contexts/globalContext'
+import ScheduleCardImage from './scheduleCardImage'
 
 export function ScheduleItem(props: ScheduleItemProps) {
-  const {
-    time,
-    image,
-    imageAlt,
-    imageAriaHidden,
-    title,
-    subtitle,
-    speakers,
-    details,
-  } = props
+  const { time, title, subtitle, speakers, details } = props
   const { isModalOpen, setModalOpen } = useContext(GlobalContext)
   const [showDetails, setShowDetails] = useState(false)
 
@@ -31,16 +23,48 @@ export function ScheduleItem(props: ScheduleItemProps) {
     setShowDetails(true)
     setModalOpen(true)
   }
-
-  const getAltText = () => {
-    let altText = ''
-    if (speakers.length) {
-      altText = 'Foto de ' + speakers.map((speaker) => speaker.nome).join(', ')
-    } else {
-      altText = imageAlt ?? ''
+  const ScheduleCardImage = ({
+    speakers,
+    image,
+    imageAlt,
+    imageAriaHidden,
+  }: ScheduleCardImageProps) => {
+    const getAltText = () => {
+      let altText = ''
+      if (speakers.length) {
+        altText =
+          'Foto de ' + speakers.map((speaker) => speaker.nome).join(', ')
+      } else {
+        altText = imageAlt ?? ''
+      }
+      return altText
     }
-    return altText
+    return (
+      <div className="schedule-card-image">
+        {speakers.length ? (
+          speakers.map((speaker, index) => {
+            console.log(speaker, index)
+            return (
+              <img
+                key={`speakerCardImage${index}`}
+                style={{ width: `${100 / speakers.length}%` }}
+                aria-hidden={`${!!imageAriaHidden}`}
+                src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image}`}
+                alt={getAltText()}
+              />
+            )
+          })
+        ) : (
+          <img
+            aria-hidden={`${!!imageAriaHidden}`}
+            src={`${import.meta.env.BASE_URL}${image}`}
+            alt={getAltText()}
+          />
+        )}
+      </div>
+    )
   }
+
   return (
     <article className="schedule-item">
       <div className="schedule-time">
@@ -53,14 +77,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
             : 'bg-lightblue'
         }`}
       >
-        <img
-          aria-hidden={`${!!imageAriaHidden}`}
-          className="schedule-card-image"
-          src={`${import.meta.env.BASE_URL}${
-            speakers.length ? `palestrantes/${speakers[0].image}` : image
-          }`}
-          alt={getAltText()}
-        />
+        <ScheduleCardImage {...props} />
         <h3 className="title">{title}</h3>
         <SpeakersTitle speakers={speakers} />
         {subtitle && <h4 className="subtitle">{subtitle}</h4>}
@@ -75,11 +92,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
         )}
       </div>
       {!!speakers.length && (
-        <Details
-          isOpen={showDetails}
-          setIsOpen={setShowDetails}
-          {...props}
-        />
+        <Details isOpen={showDetails} setIsOpen={setShowDetails} {...props} />
       )}
     </article>
   )
