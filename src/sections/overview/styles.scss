@@ -108,9 +108,12 @@
 .overview-icons {
   @extend %overview-background-height;
   position: absolute;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
+  @include respond-to(xl) {
+    display: flex;
+  }
 }
 .overview-icons {
   width: 75%;
