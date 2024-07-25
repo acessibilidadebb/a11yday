@@ -4,7 +4,6 @@ import { Details } from './details'
 import { SpeakersTitle } from './speakersTitle'
 import './scheduleitem.scss'
 import { GlobalContext } from '../../../contexts/globalContext'
-import ScheduleCardImage from './scheduleCardImage'
 
 export function ScheduleItem(props: ScheduleItemProps) {
   const { time, title, subtitle, speakers, details } = props
@@ -43,11 +42,22 @@ export function ScheduleItem(props: ScheduleItemProps) {
       <div className="schedule-card-image">
         {speakers.length ? (
           speakers.map((speaker, index) => {
-            console.log(speaker, index)
+            const borderRadiusStyle = {
+              borderTopLeftRadius: index === 0 ? '10px' : '0',
+              borderBottomLeftRadius: index === 0 ? '10px' : '0',
+              borderTopRightRadius:
+                index === speakers.length - 1 ? '10px' : '0',
+              borderBottomRightRadius:
+                index === speakers.length - 1 ? '10px' : '0',
+            }
+
             return (
               <img
                 key={`speakerCardImage${index}`}
-                style={{ width: `${100 / speakers.length}%` }}
+                style={{
+                  width: `${100 / speakers.length}%`,
+                  ...borderRadiusStyle,
+                }}
                 aria-hidden={`${!!imageAriaHidden}`}
                 src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image}`}
                 alt={getAltText()}

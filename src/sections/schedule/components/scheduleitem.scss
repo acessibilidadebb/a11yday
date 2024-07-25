@@ -118,10 +118,14 @@ $scheduleItemMarginLeft: 45px;
 .schedule-card-image {
   width: 72px;
   height: 72px;
-  object-fit: cover;
-  border-radius: 8px;
   grid-column: 1;
   grid-row: 1/5;
+  img  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
 }
 .schedule-card-content {
   margin-left: 15px;

@@ -25,3 +25,10 @@ export interface DetailsProps extends ScheduleItemProps {
   isOpen: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
+
+export interface ScheduleCardImageProps {
+  image?: string
+  imageAlt?: string
+  imageAriaHidden?: boolean
+  speakers: SpeakerTitle[]
+}
