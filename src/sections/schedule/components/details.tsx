@@ -71,7 +71,7 @@ export function Details(props: DetailsProps) {
     setModalOpen(false)
   }
 
-  const speakerDetails = speakers.map((speaker) => ({
+  const speakersDetails = speakers.map((speaker) => ({
     ...speakersData.find(
       (item) =>
         item.seuNome.includes(speaker.nome) ||
@@ -79,12 +79,40 @@ export function Details(props: DetailsProps) {
         (item.seuNome + ' ' + item.apelido).includes(speaker.nome)
     ),
     image: speaker.image,
-  }))[0] as Speaker
+  })) as Speaker[]
 
   const handleOverlayClick = (event: React.MouseEvent) => {
     if (event.target === event.currentTarget) {
       handleClose()
     }
+  }
+
+  const getResumo = () => {
+    const foundSpeaker = speakersDetails.find(
+      (speaker: Speaker) => speaker.resumo.trim().length
+    )
+    if (foundSpeaker) {
+      const resumo = foundSpeaker.resumo
+      if (typeof resumo === 'string') {
+        return resumo
+      }
+    }
+    return ''
+  }
+
+  const ScheduleSpeaker = ({ speaker }: { speaker: Speaker }) => {
+    return (
+      <div className="schedule-details-body">
+        <h4 className="schedule-details-name">Sobre {speaker.seuNome}</h4>
+        <img
+          className="schedule-details-image"
+          src={`${import.meta.env.BASE_URL}/palestrantes/${speaker.image}`}
+          alt={`Foto de ${speaker.seuNome}`}
+        />
+        <p className="schedule-details-company">{speaker.empresa}</p>
+        <p className="schedule-details-description">{speaker?.miniBio}</p>
+      </div>
+    )
   }
 
   return (
@@ -104,25 +132,17 @@ export function Details(props: DetailsProps) {
           </button>
           <header className="schedule-details-header">
             <h3 className="schedule-details-title">{title}</h3>
-            <p className="schedule-details-description">
-              {speakerDetails.resumo}
-            </p>
+            <p className="schedule-details-description">{getResumo()}</p>
           </header>
-          <section className="schedule-details-body">
-            <p className="schedule-details-about">Sobre a Palestrante</p>
-            <img
-              className="schedule-details-image"
-              src={`${import.meta.env.BASE_URL}/palestrantes/${
-                speakerDetails.image
-              }`}
-              alt={`Foto de ${speakerDetails.seuNome}`}
-            />
-            <h4 className="schedule-details-name">{speakerDetails.seuNome}</h4>
-            <p className="schedule-details-company">{speakerDetails.empresa}</p>
-            <p className="schedule-details-description">
-              {speakerDetails?.miniBio}
-            </p>
-          </section>
+          {!!speakersDetails.length &&
+            speakersDetails.map((speaker, index) => {
+              return (
+                <ScheduleSpeaker
+                  key={`schedulespeaker${index}`}
+                  speaker={speaker}
+                />
+              )
+            })}
         </div>
       </div>
     </div>

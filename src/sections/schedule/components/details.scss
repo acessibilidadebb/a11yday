@@ -121,11 +121,15 @@
   text-align: left;
 }
 
-.schedule-details-about {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 28.8px;
-  text-align: left;
+.schedule-details-body {
+  padding-bottom: $containerPadding;
+  border-bottom: 1px solid $border-gray;
+  margin-bottom: $containerPadding;
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 .schedule-details-image {
