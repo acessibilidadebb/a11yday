@@ -27,20 +27,26 @@ export default function Sections({
     setShowSpeakers(false)
     setShowFrequentlyAsked(false)    
   }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   const handleClickSchedule = () => {
     resetSections()
     setShowSections(false)
     setShowSchedule(!showSchedule)
+    scrollToTop()
   }
   const handleClickSpeakers = () => {
     resetSections()
     setShowSections(false)
     setShowSpeakers(!showSpeakers)
+    scrollToTop()
   }
   const handleClickFrequentlyAsked = () => {
     resetSections()
     setShowSections(false)
     setShowFrequentlyAsked(!showFrequentlyAsked)
+    scrollToTop()
   }
   return (
     <section id="sections" className={`sections ${!showSections ? 'closed' : ''}`}>
