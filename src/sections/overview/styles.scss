@@ -1,43 +1,21 @@
 @import '../../variables';
 @import '../../placeholders';
+@import '../../mixins';
 
 .overview-section {
   @extend %container;
   height: $overviewSectionHeight;
+  width: calc(100% - #{2 * $containerPaddingSmall});
   position: relative;
   display: flex;
   align-items: flex-end;
   background-color: $background;
   color: $color;
+
   h2 {
-    font-size: 40px;
-    line-height: 50px;
-    max-width: 700px;
-  }
-  @media (max-width: 430px) {
-    h2 {
-      font-size: 32px;
-      max-width: 100%;
-    }
-    p {
-      font-size: 16px;
-    }
-    .low-vision {
-      width: 26px !important;
-      height: 15px !important;
-    }
-    .sign-language {
-      width: 30px !important;
-      height: 23px !important;
-    }
-    .braile {
-      width: 15px !important;
-      height: 26px !important;
-    }
-    .bilateral-deafness {
-      width: 22px !important;
-      height: 25px !important;
-    }
+    line-height: 40px;
+    font-size: 32px;
+    max-width: 100%;
   }
 
   .decorative-icons {
@@ -49,46 +27,72 @@
     padding: 15px 20px 15px 0;
   }
   .low-vision {
-    width: 35px;
-    height: 20px;
+    width: 26px;
+    height: 15px;
   }
   .sign-language {
-    width: 40px;
-    height: 31px;
+    width: 30px;
+    height: 23px;
   }
   .braile {
-    width: 20px;
-    height: 34px;
+    width: 15px;
+    height: 26px;
   }
   .bilateral-deafness {
-    width: 30px;
-    height: 33px;
+    width: 22px;
+    height: 25px;
+  }
+
+  @include respond-to(lg) {
+    width: auto;
+    h2 {
+      font-size: 40px;
+      line-height: 50px;
+      max-width: 700px;
+    }
+    .low-vision {
+      width: 35px;
+      height: 20px;
+    }
+    .sign-language {
+      width: 40px;
+      height: 31px;
+    }
+    .braile {
+      width: 20px;
+      height: 34px;
+    }
+    .bilateral-deafness {
+      width: 30px;
+      height: 33px;
+    }
   }
 }
 
 .overview-details {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
   max-width: 700px;
   font-size: 16px;
   font-weight: 700;
   padding: 15px 0;
-  @media (max-width: 430px) {
-    justify-content: space-between;
-    p {
-      margin-right: 0 !important;
-    }
-  }
 
   p {
     font-size: 20px;
     margin-bottom: 10px;
-    margin-right: 70px;
+    margin-right: 0;
   }
+  @include respond-to(lg) {
+    justify-content: flex-start;
+    p {
+      margin-right: 70px;
+    }
+  }
+
 }
 %overview-background-height {
-  height: $overviewSectionHeight+ 2*$containerPadding;
+  height: $overviewSectionHeight + 2 * $containerPadding;
 }
 .overview-background-detail {
   @extend %overview-background-height;
@@ -97,8 +101,9 @@
   overflow: hidden;
   top: 0;
   right: 0;
-  @media (max-width: 430px) {
-    display: none;
+  display: none;
+  @include respond-to(lg) {
+    display: initial;
   }
 }
 .overview-icons {
