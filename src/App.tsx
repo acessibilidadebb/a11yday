@@ -26,8 +26,10 @@ export default function App() {
           setShowSpeakers={setShowSpeakers}
           setShowFrequentlyAsked={setShowFrequentlyAsked}
         />
-        <Overview style={{ display: showSections ? 'flex' : 'none' }} />
-        <Watch style={{ display: showSections ? 'flex' : 'none' }} />
+        <div style={{ overflowX: 'hidden' }}>
+          <Overview style={{ display: showSections ? 'flex' : 'none' }} />
+          <Watch style={{ display: showSections ? 'flex' : 'none' }} />
+        </div>
         <Sections
           showSections={showSections}
           setShowSections={setShowSections}

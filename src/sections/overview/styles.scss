@@ -98,7 +98,6 @@
   @extend %overview-background-height;
   width: calc(50% + #{$containerPadding});
   position: absolute;
-  overflow: hidden;
   top: 0;
   right: 0;
   display: none;
