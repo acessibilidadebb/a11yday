@@ -14,16 +14,6 @@
   z-index: 99;
   overflow-y: auto;
 
-  &.open {
-    .schedule-details-container {
-      right: 0;
-    }
-  }
-  
-  &:not(.open) .schedule-details-container {
-    right: -100%;
-  }
-
   @media (min-width: 431px) {
     visibility: hidden;
     opacity: 0;
@@ -37,6 +27,12 @@
     &.open {
       visibility: visible;
       opacity: 1;
+      .schedule-details-container {
+        right: 0;
+      }
+    }
+    &:not(.open) .schedule-details-container {
+      right: -100%;
     }
   }
 
@@ -48,6 +44,9 @@
     left: auto;
 
     &.open {
+      right: 0;
+    }
+    .schedule-details-container {
       right: 0;
     }
   }
