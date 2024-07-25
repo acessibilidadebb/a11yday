@@ -9,7 +9,7 @@ export default function Watch({style}: WatchProps) {
     <section className="watch" style={style}>
       <div>
         <h2>
-          <div className="play" /> Assista a transmissão ao vivo!
+          <div className="play" /> Assista à transmissão ao vivo!
         </h2>
         <p>Nossa transmissão conta com tradução ao vivo em Libras</p>
       </div>
