@@ -3,13 +3,12 @@
 
 .sections {
   @extend %container;
-  display: none;
   flex-wrap: wrap;
-  @media (max-width: 430px) {
-    display: flex;
-    &.closed {
-      display: none;
-    }
+  &.closed {
+    display: none;
+  }
+  @include respond-to(lg) {
+    display: none;
   }
 }
 .section-button {
@@ -17,7 +16,7 @@
   padding: 0;
   background: none;
   margin: $containerPaddingSmall $containerPaddingSmall 0 0;
-  box-shadow: 0px 0px 1px 0px #19191C40, 0px 1px 1px 0px #1515182E;
+  box-shadow: 0px 0px 1px 0px #19191c40, 0px 1px 1px 0px #1515182e;
   border-radius: 4px;
   cursor: pointer;
   &:nth-child(even) {
@@ -44,13 +43,12 @@
   height: 125px;
   border-radius: 4px 4px 0 0;
   &.cover-schedule {
-    background-color: #7AC3BC;
+    background-color: #7ac3bc;
   }
   &.cover-speakers {
-    background-color: #3333BD;
+    background-color: #3333bd;
   }
   &.cover-frequently-asked {
-    background-color: #705FA9;
-
+    background-color: #705fa9;
   }
 }

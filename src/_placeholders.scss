@@ -1,6 +1,7 @@
+@import 'mixins';
 %container {
-  padding: $containerPadding;
-  @media (max-width: 430px) {
-    padding: $containerPaddingSmall;
+  padding: $containerPaddingSmall;
+  @include respond-to(lg) {
+    padding: $containerPadding;
   }
 }

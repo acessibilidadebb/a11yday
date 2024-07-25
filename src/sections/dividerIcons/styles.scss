@@ -3,9 +3,7 @@
 
 .divider-icons {
   @extend %container;
-  @media (max-width: 430px) {
-    display: none;
-  }
+  display: none;
   .icons-container {
     display: flex;
     align-items: center;
@@ -30,5 +28,8 @@
   .sign-language {
     width: 65px;
     height: 51px;
+  }
+  @include respond-to(lg) {
+    display: block;
   }
 }
