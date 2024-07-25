@@ -104,8 +104,8 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
       onClick={handleOverlayClick}
       style={{
         height:
-          windowWidth <= 430 ? windowHeight - headerOffsetHeight : '100vh',
-        marginTop: windowWidth <= 430 ? headerOffsetHeight : 0,
+          windowWidth <= 768 ? windowHeight - headerOffsetHeight : '100vh',
+        marginTop: windowWidth <= 768 ? headerOffsetHeight : 0,
       }}
       className={`speaker-details-modal ${
         isOpen && isTransitionReady ? 'open' : ''

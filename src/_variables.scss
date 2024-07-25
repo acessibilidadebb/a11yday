@@ -40,3 +40,12 @@ $highlightYellow: #F5EC39;
 $overviewSectionHeight: 400px;
 $containerPadding: 32px;
 $containerPaddingSmall: 16px;
+
+$grid-breakpoints: (
+  xs: 0, // Mobile (small phones)
+  sm: 576px, // Mobile (larger phones)
+  md: 768px, // Tablets
+  lg: 992px, // Small Laptops
+  xl: 1200px, // Large laptops and desktops
+  xxl: 1400px // Large desktops and high-resolution monitors
+) !default;

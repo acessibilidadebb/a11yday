@@ -1,5 +1,6 @@
 @import '../../variables';
 @import '../../placeholders';
+@import '../../mixins';
 .header {
   @extend %container;
   height: 60px;
@@ -9,20 +10,9 @@
   background-color: $background;
   color: $color;
   padding-top: 36px;
-  width: calc(100% - #{2 * $containerPadding});
   transition: height 0.3s ease, border-bottom 0.3s ease; 
-
-  @media (max-width: 430px) {
-    // Adicione suas regras CSS para iPhone 14 aqui
-    position: relative;
-    width: calc(100% - #{2 * $containerPaddingSmall});
-    .header-logo-bb {
-      display: none;
-    }
-    .header-logo {
-      width: 249px;
-    }
-  }
+  position: relative;
+  width: calc(100% - #{2 * $containerPaddingSmall});
 
   &.sticky {
     position: fixed;
@@ -41,6 +31,14 @@
       width: 166px;
       height: 25px;
     }
+  }
+
+  .header-logo-bb {
+    display: none;
+  }
+  
+  .header-logo {
+    width: 249px;
   }
 
   ul {
@@ -64,11 +62,27 @@
   a {
     cursor: pointer;
   }
+
+  @include respond-to(md) {
+    .header-logo-bb {
+      display: initial;
+    }
+  }
+  
+  @include respond-to(lg) {
+    position: static;
+    width: calc(100% - #{2 * $containerPadding});
+    .header-logo {
+      width: auto;
+    }
+  }
 }
 
 .header-logo-container {
-  display: flex;
-  align-items: center;
+  a {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header-logo-bb {
@@ -83,6 +97,45 @@
   transition: all 0.3s ease;
 }
 .navbar {
+  position: fixed;
+  width: 100%;
+  background-color: $darkBlue;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 90;
+
+  .navbar-content {
+    padding: $containerPaddingSmall;
+  }
+  &.open {
+    visibility: visible;
+    transform: translateX(0);
+
+    .decorative-icons {
+      height: auto;
+      visibility: visible;
+    }
+
+    ul {
+      visibility: initial;
+    }
+    .home-link {
+      display: initial;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+  }
+  li {
+    margin-left: 0;
+    margin-top: $containerPadding;
+  }
+
   .decorative-icons {
     display: flex;
     justify-items: flex-start;
@@ -109,63 +162,40 @@
     width: 22px;
     height: 25px;
   }
-  @media (max-width: 430px) {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: $darkBlue;
-    top: 0;
-    right: 0;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 90;
-
+  @include respond-to(lg) {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    transform: none;
+    transition: none;
+    z-index: auto;
     .navbar-content {
-      padding: $containerPaddingSmall;
-    }
-    &.open {
-      visibility: visible;
-      transform: translateX(0);
-
-      .decorative-icons {
-        height: auto;
-        visibility: visible;
-      }
-
-      ul {
-        visibility: initial;
-      }
-      .home-link {
-        display: initial;
-      }
+      padding: 0;
     }
     ul {
-      display: flex;
-      flex-direction: column;
-      visibility: hidden;
+      display: inline-flex;
+      flex-direction: row;
+      visibility: visible;
     }
     li {
-      margin-left: 0 !important;
-      margin-top: $containerPadding;
+      margin-left: 20px;
+      margin-top: 0;
     }
-  }
-  li {
-    margin-left: 20px
   }
 }
 .home-link {
   display: none;
 }
 .menu-icon {
-  display: none;
   background: transparent;
   border: none;
   cursor: pointer;
   position: absolute;
   right: 2 * $containerPaddingSmall;
   z-index: 100;
-  @media (max-width: 430px) {
-    display: initial;
+  @include respond-to(lg) {
+    display: none;
   }
 }
 .hamburguer {

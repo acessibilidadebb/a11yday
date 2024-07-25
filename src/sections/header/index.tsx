@@ -93,7 +93,7 @@ export default function Header({
     setOpen(false)
   }
   const openSection = (section: string) => {
-    if (window.innerWidth <= 430) {
+    if (window.innerWidth <= 768) {
       setShowSections(false)
     }
     switch (section) {
