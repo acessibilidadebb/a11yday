@@ -1,5 +1,6 @@
 @import '../../../variables';
 @import '../../../placeholders';
+@import '../../../mixins';
 
 .speaker-details-modal {
   position: fixed;
@@ -10,42 +11,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
+  right: -100%;
+  opacity: 1;
+  visibility: visible;
+  z-index: 85;
+  transition: right 0.5s ease-in-out;
   &.open {
     opacity: 1;
     visibility: visible;
+    right: 0;
   }
-  /* Transições somente para telas maiores */
-  @media (min-width: 431px) {
+  @include respond-to(lg) {
+    right: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: none;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000;
     &.open {
       .speaker-details-container {
-        transform: translateY(0); /* Mover para a tela */
+        transform: translateY(0);
       }
-    }
-  }
-  @media (max-width: 430px) {
-    position: fixed;
-    right: -100%;
-    opacity: 1;
-    visibility: visible;
-    z-index: 85;
-    transition: right 0.5s ease-in-out;
-    &.open {
-      right: 0;
     }
     .speaker-details-container {
-      height: 100%;
-      border-radius: 0;
+      height: auto;
+      border-radius: 10px;
     }
     .speaker-details-content {
-      position: relative;
-      padding: 16px 0;
-      .speaker-details-close-btn {
-        right: 0;
-      }
+      padding: 0;
     }
   }
 }
@@ -53,15 +46,22 @@
 .speaker-details-container {
   @extend %container;
   max-width: 800px;
-  border-radius: 10px;
   background: white;
   position: relative;
   overflow: auto;
+  height: 100%;
+  border-radius: 0;
 
-  /* Transições somente para telas maiores */
-  @media (min-width: 431px) {
-    transform: translateY(100%); /* Inicialmente fora da tela */
+  @include respond-to(lg) {
+    transform: translateY(100%);
     transition: transform 0.3s ease-in-out;
+  }
+}
+.speaker-details-content {
+  position: relative;
+  padding: 16px 0;
+  .speaker-details-close-btn {
+    right: 0;
   }
 }
 .speaker-details-close-btn {
@@ -71,8 +71,6 @@
   height: 16px;
   cursor: pointer;
   position: absolute;
-  top: 16px;
-  right: 16px;
   display: flex;
   justify-content: center;
   align-items: center;

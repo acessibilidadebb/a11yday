@@ -1,14 +1,17 @@
 @import '../../../variables';
+@import '../../../mixins';
 
 .speaker-card {
   display: flex;
   flex-direction: column;
   width: 232px;
   margin: 0 30px 30px 0;
+  margin: 0 0 16px;
   @media (max-width: 430px) {
     width: 191px;
-    margin: 0;
-    margin-bottom: 16px;
+  }
+  @include respond-to(sm) {
+    margin: 0 30px 30px 0;
   }
   img {
     border-radius: 8px 8px 0 0;
