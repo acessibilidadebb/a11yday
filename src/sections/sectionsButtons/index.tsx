@@ -11,7 +11,7 @@ interface SectionProps {
   setShowFrequentlyAsked: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function Sections({
+export default function SectionsButtons({
   showSections,
   setShowSections,
   showSchedule,
@@ -30,23 +30,36 @@ export default function Sections({
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+  const focusSectionTitle = (sectionId: string) => {
+    const sectionElement = document.getElementById(sectionId)
+    if (sectionElement) {
+      const sectionTitle = sectionElement.querySelector('h2')
+      if (sectionTitle) {
+        sectionTitle.setAttribute('tabindex', '-1')
+        sectionTitle.focus()
+      }
+    }
+  }
   const handleClickSchedule = () => {
     resetSections()
     setShowSections(false)
     setShowSchedule(!showSchedule)
     scrollToTop()
+    focusSectionTitle('schedule')
   }
   const handleClickSpeakers = () => {
     resetSections()
     setShowSections(false)
     setShowSpeakers(!showSpeakers)
     scrollToTop()
+    focusSectionTitle('speakers')
   }
   const handleClickFrequentlyAsked = () => {
     resetSections()
     setShowSections(false)
     setShowFrequentlyAsked(!showFrequentlyAsked)
     scrollToTop()
+    focusSectionTitle('frequently-asked-questions')
   }
   return (
     <section

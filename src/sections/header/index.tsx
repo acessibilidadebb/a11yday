@@ -67,6 +67,11 @@ export default function Header({
             behavior: 'smooth',
           })
           openSection(pathname.substring(1))
+          const sectionTitle = element.querySelector('h2')
+          if (sectionTitle) {
+            sectionTitle.setAttribute('tabindex', '-1')
+            sectionTitle.focus()
+          }
         }
       } else {
         window.scrollTo({
