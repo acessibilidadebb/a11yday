@@ -2,15 +2,9 @@ import { useState } from 'react'
 import { HashRouter as Router } from 'react-router-dom'
 import './App.scss'
 import Footer from './sections/footer'
-import FrequentlyAsked from './sections/frequently-asked'
 import Header from './sections/header'
-import Overview from './sections/overview'
-import Schedule from './sections/schedule'
-import SectionsButtons from './sections/sectionsButtons'
-import Speakers from './sections/speakers'
-import Watch from './sections/watch'
-import DividerIcons from './sections/dividerIcons'
 import GlobalContextProvider from './contexts/globalContext'
+import Home from './pages/home'
 
 export default function App() {
   const [showSections, setShowSections] = useState(true)
@@ -26,11 +20,7 @@ export default function App() {
           setShowSpeakers={setShowSpeakers}
           setShowFrequentlyAsked={setShowFrequentlyAsked}
         />
-        <div style={{ overflowX: 'hidden' }}>
-          <Overview style={{ display: showSections ? 'flex' : 'none' }} />
-          <Watch style={{ display: showSections ? 'flex' : 'none' }} />
-        </div>
-        <SectionsButtons
+        <Home
           showSections={showSections}
           setShowSections={setShowSections}
           showSchedule={showSchedule}
@@ -40,10 +30,6 @@ export default function App() {
           showFrequentlyAsked={showFrequentlyAsked}
           setShowFrequentlyAsked={setShowFrequentlyAsked}
         />
-        <Schedule showSchedule={showSchedule} />
-        <DividerIcons />
-        <Speakers showSpeakers={showSpeakers} />
-        <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />
         <Footer />
       </Router>
     </GlobalContextProvider>
