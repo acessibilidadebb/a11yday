@@ -2,7 +2,9 @@
 @import '../../placeholders';
 
 .sections {
-  @extend %container;
+  padding: $containerPaddingSmall 0 2 * $containerPaddingSmall 0;
+  display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   &.closed {
     display: none;
@@ -15,16 +17,19 @@
   border: none;
   padding: 0;
   background: none;
-  margin: $containerPaddingSmall $containerPaddingSmall 0 0;
+  margin: $containerPaddingSmall 0 0 0;
   box-shadow: 0px 0px 1px 0px #19191c40, 0px 1px 1px 0px #1515182e;
   border-radius: 4px;
   cursor: pointer;
-  &:nth-child(even) {
+  width: calc((100% - 2 * #{$containerPaddingSmall}) / 2);
+  max-width: 191px;
+  min-width: 150px;
+
+  &:nth-child(2n) {
     margin-right: 0;
   }
 }
 .section-card {
-  width: 191px;
   h3 {
     color: $white;
     font-size: 16px;
@@ -42,6 +47,7 @@
   padding: $containerPaddingSmall;
   height: 125px;
   border-radius: 4px 4px 0 0;
+  text-align: left;
   &.cover-schedule {
     background-color: #7ac3bc;
   }
