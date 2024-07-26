@@ -6,7 +6,6 @@
   overflow: hidden;
   position: relative;
   display: none;
-  @extend %container;
   &.open {
     display: block;
   }
@@ -15,6 +14,7 @@
   }
 }
 .speakers-container {
+  @extend %container;
   padding-bottom: calc($containerPadding/2);
   position: relative;
   h2 {
