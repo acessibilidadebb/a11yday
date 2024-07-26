@@ -76,7 +76,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
   }
 
   return (
-    <article className="schedule-item">
+    <div className="schedule-item">
       <div className="schedule-time">
         <div className="schedule-time-content">{time}</div>
       </div>
@@ -105,6 +105,6 @@ export function ScheduleItem(props: ScheduleItemProps) {
       {!!speakers.length && (
         <Details isOpen={showDetails} setIsOpen={setShowDetails} {...props} />
       )}
-    </article>
+    </div>
   )
 }

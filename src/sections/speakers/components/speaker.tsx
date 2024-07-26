@@ -25,7 +25,7 @@ export default function SpeakerItem(props: SpeakerProps) {
   }
 
   return (
-    <article className="speaker-card">
+    <div className="speaker-card">
       <img
         src={`${import.meta.env.BASE_URL}/palestrantes/${speaker.image}`}
         alt={`Foto de ${speaker.seuNome}`}
@@ -42,6 +42,6 @@ export default function SpeakerItem(props: SpeakerProps) {
           Conheça
         </button>
       </div>
-    </article>
+    </div>
   )
 }
