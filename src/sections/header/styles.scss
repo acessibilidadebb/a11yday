@@ -3,7 +3,7 @@
 @import '../../mixins';
 .header {
   @extend %container;
-  height: 60px;
+  height: $headerHeightSmall;
   display: flex;
   justify-content: space-between;
   align-items: center;

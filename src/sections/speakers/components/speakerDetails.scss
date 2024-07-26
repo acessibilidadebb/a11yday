@@ -16,6 +16,7 @@
   visibility: visible;
   z-index: 85;
   transition: right 0.5s ease-in-out;
+  margin-top: $headerHeightSmall;
   &.open {
     opacity: 1;
     visibility: visible;
@@ -28,12 +29,14 @@
     transition: none;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     z-index: 1000;
+    margin-top: 0;
     &.open {
       .speaker-details-container {
         transform: translateY(0);
       }
     }
     .speaker-details-container {
+      max-width: 800px;
       height: auto;
       border-radius: 10px;
     }
@@ -45,7 +48,6 @@
 
 .speaker-details-container {
   @extend %container;
-  max-width: 800px;
   background: white;
   position: relative;
   overflow: auto;
