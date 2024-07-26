@@ -1,26 +1,13 @@
 import closeBtn from '../../../assets/close.png'
 import './speakerDetails.scss'
 import { SpeakerDetailsProps } from '../types'
-import { KeyboardEvent, useContext, useEffect, useRef, useState } from 'react'
+import { KeyboardEvent, useContext, useEffect, useRef } from 'react'
 import { GlobalContext } from '../../../contexts/globalContext'
 
 export function SpeakerDetails(props: SpeakerDetailsProps) {
   const { speaker, isOpen, setIsOpen, initialIsStick } = props
-  const { setIsSticky, headerOffsetHeight, setModalOpen } =
+  const { setIsSticky, setModalOpen } =
     useContext(GlobalContext)
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight)
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-  const [isTransitionReady, setIsTransitionReady] = useState(false)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowHeight(window.innerHeight)
-      setWindowWidth(window.innerWidth)
-    }
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
   const modalRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
@@ -78,16 +65,6 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
     }
   }, [isOpen, setIsOpen])
 
-  useEffect(() => {
-    if (isOpen) {
-      setTimeout(() => {
-        setIsTransitionReady(true)
-      }, 100)
-    } else {
-      setIsTransitionReady(false)
-    }
-  }, [isOpen])
-
   const handleClose = () => {
     setIsOpen(false)
     setIsSticky(initialIsStick)
@@ -102,14 +79,7 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
     <div
       aria-hidden={!isOpen}
       onClick={handleOverlayClick}
-      style={{
-        height:
-          windowWidth <= 768 ? windowHeight - headerOffsetHeight : '100vh',
-        marginTop: windowWidth <= 768 ? headerOffsetHeight : 0,
-      }}
-      className={`speaker-details-modal ${
-        isOpen && isTransitionReady ? 'open' : ''
-      }`}
+      className={`speaker-details-modal ${isOpen ? 'open' : ''}`}
     >
       <div className="speaker-details-container" ref={modalRef}>
         <div className="speaker-details-content">
@@ -121,14 +91,14 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
           >
             <img src={closeBtn} alt="Ícone de Fechar" />
           </button>
-          <h3 className="speaker-details-name">Sobre {speaker.seuNome}</h3>
+          <h3 className="speaker-details-name">Sobre {speaker.seuNome ? speaker.seuNome : ''}</h3>
           <img
             className="speaker-details-image"
-            src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image}`}
-            alt={`Foto de ${speaker.seuNome}`}
+            src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image ? speaker.image : ''}`}
+            alt={`Foto de ${speaker.seuNome ? speaker.seuNome : ''}`}
           />
-          <p className="speaker-details-company">{speaker.empresa}</p>
-          <p className="speaker-details-description">{speaker?.miniBio}</p>
+          <p className="speaker-details-company">{speaker.empresa ? speaker.empresa : ''}</p>
+          <p className="speaker-details-description">{speaker?.miniBio ? speaker?.miniBio : ''}</p>
         </div>
       </div>
     </div>

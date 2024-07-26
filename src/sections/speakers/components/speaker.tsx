@@ -1,10 +1,12 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { SpeakerProps } from '../types'
 import './speaker.scss'
 import { GlobalContext } from '../../../contexts/globalContext'
+import { SpeakerDetails } from './speakerDetails'
 
 export default function SpeakerItem(props: SpeakerProps) {
-  const { speaker, setActiveSpeaker, setIsModalOpen, setInitialIsStick } = props
+  const { speaker, initialIsStick, setInitialIsStick } = props
+  const [ isOpen, setIsOpen ] = useState(false)
   const { isSticky, setIsSticky, isModalOpen, setModalOpen } =
     useContext(GlobalContext)
 
@@ -17,8 +19,7 @@ export default function SpeakerItem(props: SpeakerProps) {
   }, [isModalOpen])
 
   const handleClick = () => {
-    setIsModalOpen(true)
-    setActiveSpeaker(speaker)
+    setIsOpen(true)
     setInitialIsStick(isSticky)
     setIsSticky(true)
     setModalOpen(true)
@@ -42,6 +43,15 @@ export default function SpeakerItem(props: SpeakerProps) {
           Conheça
         </button>
       </div>
+      <SpeakerDetails
+        speaker={speaker}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        initialIsStick={initialIsStick}
+        onClose={() => {
+          setIsOpen(false)
+        }}
+      />
     </div>
   )
 }

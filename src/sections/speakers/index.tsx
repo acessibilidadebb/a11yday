@@ -6,7 +6,6 @@ import speakersData from '../../speakers.json'
 import { SpeakersProps } from './types'
 import SpeakerItem from './components/speaker'
 import { useState } from 'react'
-import { SpeakerDetails } from './components/speakerDetails'
 
 speakersData.sort((a, b) => {
   if (a.seuNome < b.seuNome) {
@@ -21,8 +20,6 @@ speakersData.sort((a, b) => {
 const speakers: Speaker[] = speakersData as Speaker[]
 
 export default function Speakers({ showSpeakers }: SpeakersProps) {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [activeSpeaker, setActiveSpeaker] = useState({} as Speaker)
   const [initialIsStick, setInitialIsStick] = useState(false)
   return (
     <section id="speakers" className={`speakers ${showSpeakers ? 'open' : ''}`}>
@@ -42,26 +39,14 @@ export default function Speakers({ showSpeakers }: SpeakersProps) {
             return (
               <SpeakerItem
                 key={`${index}${speaker.seuEmail}`}
-                setIsModalOpen={setIsModalOpen}
                 speaker={speaker}
-                setActiveSpeaker={setActiveSpeaker}
                 setInitialIsStick={setInitialIsStick}
+                initialIsStick={initialIsStick}
               />
             )
           })}
         </div>
       </div>
-      {!!Object.keys(activeSpeaker).length && (
-        <SpeakerDetails
-          speaker={activeSpeaker}
-          isOpen={isModalOpen}
-          setIsOpen={setIsModalOpen}
-          initialIsStick={initialIsStick}
-          onClose={() => {
-            setIsModalOpen(false)
-          }}
-        />
-      )}
     </section>
   )
 }
