@@ -124,6 +124,7 @@ export function Details(props: DetailsProps) {
       <div className="schedule-details-container" ref={modalRef}>
         <div className="schedule-details-content">
           <button
+            type="button"
             onClick={handleClose}
             className="schedule-details-close-btn"
             aria-label="Fechar"

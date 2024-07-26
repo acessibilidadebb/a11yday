@@ -17,7 +17,7 @@ export function Accordion({
 }: AccordionProps): React.ReactElement {
   return (
     <div className={`accordion ${isOpen ? 'open' : ''}`} role="region" aria-labelledby={title}>
-      <button aria-expanded={isOpen} className="accordion-label" onClick={onToggle}>
+      <button type='button' aria-expanded={isOpen} className="accordion-label" onClick={onToggle}>
         {title}
         <SvgCaret className={`accordion-icon svg ${isOpen ? 'open' : ''}`} />
       </button>

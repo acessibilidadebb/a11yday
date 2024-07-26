@@ -114,6 +114,7 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
       <div className="speaker-details-container" ref={modalRef}>
         <div className="speaker-details-content">
           <button
+            type="button"
             onClick={handleClose}
             className="speaker-details-close-btn"
             aria-label="Fechar"

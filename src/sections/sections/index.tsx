@@ -25,7 +25,7 @@ export default function Sections({
     setShowSections(true)
     setShowSchedule(false)
     setShowSpeakers(false)
-    setShowFrequentlyAsked(false)    
+    setShowFrequentlyAsked(false)
   }
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -49,8 +49,15 @@ export default function Sections({
     scrollToTop()
   }
   return (
-    <section id="sections" className={`sections ${!showSections ? 'closed' : ''}`}>
-      <button onClick={handleClickSchedule} className='section-button'>
+    <section
+      id="sections"
+      className={`sections ${!showSections ? 'closed' : ''}`}
+    >
+      <button
+        type="button"
+        onClick={handleClickSchedule}
+        className="section-button"
+      >
         <div className="section-card">
           <div className="section-card-cover cover-schedule">
             <h3>Programação</h3>
@@ -58,7 +65,11 @@ export default function Sections({
           <p>Programação</p>
         </div>
       </button>
-      <button onClick={handleClickSpeakers} className='section-button'>
+      <button
+        type="button"
+        onClick={handleClickSpeakers}
+        className="section-button"
+      >
         <div className="section-card">
           <div className="section-card-cover cover-speakers">
             <h3>Palestrantes</h3>
@@ -66,7 +77,11 @@ export default function Sections({
           <p>Palestrantes</p>
         </div>
       </button>
-      <button onClick={handleClickFrequentlyAsked} className='section-button'>
+      <button
+        type="button"
+        onClick={handleClickFrequentlyAsked}
+        className="section-button"
+      >
         <div className="section-card">
           <div className="section-card-cover cover-frequently-asked">
             <h3>Dúvidas frequentes</h3>

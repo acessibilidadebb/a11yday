@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink as Link } from 'react-router-hash-link'
 import bbLogo from '../../assets/bb-logo.png'
 import logo from '../../assets/logo.png'
 import lowVision from '../../assets/low-vision.png'
@@ -140,6 +140,7 @@ export default function Header({
         </Link>
       </h1>
       <button
+        type="button"
         onClick={handleMenuClick}
         className={`menu-icon ${open ? 'open' : ''}`}
         id="toggle-menu"
@@ -178,20 +179,12 @@ export default function Header({
               </Link>
             </li>
             <li>
-              <Link
-                smooth
-                to={`/schedule`}
-                onClick={handleClickSchedule}
-              >
+              <Link smooth to={`/schedule`} onClick={handleClickSchedule}>
                 Programação
               </Link>
             </li>
             <li>
-              <Link
-                smooth
-                to={`/speakers`}
-                onClick={handleClickSpeakers}
-              >
+              <Link smooth to={`/speakers`} onClick={handleClickSpeakers}>
                 Palestrantes
               </Link>
             </li>

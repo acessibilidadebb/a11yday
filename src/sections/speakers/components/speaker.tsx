@@ -34,6 +34,7 @@ export default function SpeakerItem(props: SpeakerProps) {
         <h3>{speaker.seuNome}</h3>
         <p>{speaker.empresa}</p>
         <button
+          type="button"
           onClick={handleClick}
           className="speaker-btn"
           aria-label={`Conheça ${speaker.seuNome}`}

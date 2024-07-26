@@ -93,6 +93,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
         {subtitle && <h4 className="subtitle">{subtitle}</h4>}
         {details && (
           <button
+            type="button"
             onClick={handleClickDetails}
             className="details"
             aria-label={`Exibir detalhes da Palestra ${title}`}
