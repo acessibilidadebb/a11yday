@@ -53,6 +53,11 @@ export default function Header({
         const element = document.getElementById(id)
 
         if (element) {
+          const sectionTitle = element.querySelector('h2')
+          if (sectionTitle) {
+            sectionTitle.setAttribute('tabindex', '-1')
+            sectionTitle.focus()
+          }
           const headerHeight = headerRef.current
             ? headerRef.current.offsetHeight
             : 0 // Altura do cabeçalho fixo
@@ -62,16 +67,12 @@ export default function Header({
           // Rola apenas um pouco se o header não estiver fixo
           const topPosition = sticky !== '' ? offsetTop : offsetTop - 50
 
+          console.log(topPosition)
           window.scrollTo({
             top: topPosition,
             behavior: 'smooth',
           })
           openSection(pathname.substring(1))
-          const sectionTitle = element.querySelector('h2')
-          if (sectionTitle) {
-            sectionTitle.setAttribute('tabindex', '-1')
-            sectionTitle.focus()
-          }
         }
       } else {
         window.scrollTo({
