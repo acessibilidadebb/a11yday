@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  base: '/a11yday/'
+  base: 'https://accessibilityday.com.br/'
 })
