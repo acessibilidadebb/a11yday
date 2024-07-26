@@ -28,7 +28,7 @@ export default function SpeakerItem(props: SpeakerProps) {
   return (
     <div className="speaker-card">
       <img
-        src={`${import.meta.env.BASE_URL}/palestrantes/${speaker.image}`}
+        src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image}`}
         alt={`Foto de ${speaker.seuNome}`}
       />
       <div className="speaker-card-body">
