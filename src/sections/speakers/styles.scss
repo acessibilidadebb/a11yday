@@ -6,6 +6,7 @@
   overflow: hidden;
   position: relative;
   display: none;
+  @extend %container;
   &.open {
     display: block;
   }
@@ -28,7 +29,7 @@
   }
   @include respond-to(lg) {
     .speakers-content {
-      padding: $containerPadding;
+      padding: $containerPadding 0;
       justify-content: flex-start;
     }
   }
@@ -43,9 +44,6 @@
       display: block;
     }
   }
-}
-.speakers-container-header {
-  @extend %container;
 }
 .speakers-content {
   width: 100%;
