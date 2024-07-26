@@ -14,7 +14,6 @@
   }
 }
 .speakers-container {
-  @extend %container;
   padding-bottom: calc($containerPadding/2);
   position: relative;
   h2 {
@@ -29,6 +28,7 @@
   }
   @include respond-to(lg) {
     .speakers-content {
+      padding: $containerPadding;
       justify-content: flex-start;
     }
   }
@@ -43,6 +43,9 @@
       display: block;
     }
   }
+}
+.speakers-container-header {
+  @extend %container;
 }
 .speakers-content {
   width: 100%;

@@ -34,7 +34,9 @@ export default function Speakers({ showSpeakers }: SpeakersProps) {
             aria-hidden="true"
           />
         </div>
-        <h2>Palestrantes</h2>
+        <div className="speakers-container-header">
+          <h2>Palestrantes</h2>
+        </div>
         <div className="speakers-content">
           {speakers.map((speaker: Speaker, index) => {
             return (
