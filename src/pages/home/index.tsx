@@ -5,6 +5,7 @@ import Schedule from '../../sections/schedule'
 import SectionsButtons from '../../sections/sectionsButtons'
 import Speakers from '../../sections/speakers'
 import Watch from '../../sections/watch'
+import ScrollUp from '../../components/scrollUp'
 import { HomeProps } from './types'
 
 export default function Home(props: HomeProps) {
@@ -38,6 +39,7 @@ export default function Home(props: HomeProps) {
       <DividerIcons />
       <Speakers showSpeakers={showSpeakers} />
       <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />
+      <ScrollUp />
     </>
   )
 }

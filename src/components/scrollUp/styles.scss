@@ -1,0 +1,27 @@
+@import '../../variables';
+@import '../../placeholders';
+@import '../../mixins';
+
+.scroll-up-btn {
+  position: fixed;
+  bottom: 3 * $containerPadding;
+  right: $containerPadding;
+  background-color: $buttonSecondary;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+
+  &:hover,
+  &:active {
+    background-color: darken($buttonSecondary, 5);
+  }
+  @include respond-to(lg) {
+    display: block;
+  }
+}
