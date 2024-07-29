@@ -55,4 +55,9 @@
   text-align: center;
   color: $darkBlue;
   cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: darken($buttonSecondary, 5);
+  }
 }
