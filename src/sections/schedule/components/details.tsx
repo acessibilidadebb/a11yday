@@ -106,7 +106,7 @@ export function Details(props: DetailsProps) {
         <h4 className="schedule-details-name">Sobre {speaker.seuNome}</h4>
         <img
           className="schedule-details-image"
-          src={`${import.meta.env.BASE_URL}/palestrantes/${speaker.image}`}
+          src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image}`}
           alt={`Foto de ${speaker.seuNome}`}
         />
         <p className="schedule-details-company">{speaker.empresa}</p>
