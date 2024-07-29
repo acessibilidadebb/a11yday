@@ -96,6 +96,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
             type="button"
             onClick={handleClickDetails}
             className="details"
+            title={`Exibir detalhes da Palestra ${title}`}
             aria-label={`Exibir detalhes da Palestra ${title}`}
           >
             Detalhes da Palestra

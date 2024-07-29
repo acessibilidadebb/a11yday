@@ -87,6 +87,7 @@ export function SpeakerDetails(props: SpeakerDetailsProps) {
             type="button"
             onClick={handleClose}
             className="speaker-details-close-btn"
+            title="Fechar"
             aria-label="Fechar"
           >
             <img src={closeBtn} alt="Ícone de Fechar" />

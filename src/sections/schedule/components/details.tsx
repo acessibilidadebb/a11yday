@@ -127,6 +127,7 @@ export function Details(props: DetailsProps) {
             type="button"
             onClick={handleClose}
             className="schedule-details-close-btn"
+            title="Fechar"
             aria-label="Fechar"
           >
             <img src={closeBtn} alt="Icone de Fechar" />

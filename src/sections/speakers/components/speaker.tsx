@@ -38,6 +38,7 @@ export default function SpeakerItem(props: SpeakerProps) {
           type="button"
           onClick={handleClick}
           className="speaker-btn"
+          title={`Conheça ${speaker.seuNome}`}
           aria-label={`Conheça ${speaker.seuNome}`}
         >
           Conheça
