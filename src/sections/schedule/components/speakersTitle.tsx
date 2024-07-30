@@ -7,11 +7,11 @@ export function SpeakersTitle({ speakers }: SpeakersTitleProps) {
     speakersTitle += speakers
       .map((speaker) => speaker.nome)
       .filter((str) => str !== '')
-      .join(' - ')
+      .join(' & ')
     speakersCompany += speakers
       .map((speaker) => speaker.empresa)
       .filter((str) => str !== '')
-      .join(' - ')
+      .join(' & ')
   }
   return (
     <>
