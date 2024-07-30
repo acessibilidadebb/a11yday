@@ -1,7 +1,25 @@
+import { useEffect, useState } from 'react'
 import scrollUp from '../../assets/arrow-up.png'
 import './styles.scss'
 
 export default function ScrollUp() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  const handleScroll = () => {
+    if (window.scrollY > 500) {
+      setIsVisible(true)
+    } else {
+      setIsVisible(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   const handleScrollUpClick = () => {
     window.scrollTo({
       top: 0,
@@ -14,7 +32,7 @@ export default function ScrollUp() {
       type="button"
       title="Rolar para o topo da página"
       aria-label="Rolar para o topo da página"
-      className='scroll-up-btn'
+      className={`scroll-up-btn ${isVisible ? 'visible' : 'hidden'}`}
     >
       <img src={scrollUp} alt="Icone de setinha para cima" />
     </button>
