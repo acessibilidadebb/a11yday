@@ -1,21 +1,16 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { HashLink as Link } from 'react-router-hash-link'
+import './styles.scss'
+
+import { GlobalContext } from '../../contexts/globalContext'
+import { HeaderProps } from './types'
 import bbLogo from '../../assets/bb-logo.png'
 import logo from '../../assets/logo.png'
 import lowVision from '../../assets/low-vision.png'
 import signLanguage from '../../assets/sign-language.png'
 import braile from '../../assets/braile.png'
 import bilateralDeafness from '../../assets/bilateral-deafness.png'
-import './styles.scss'
-import { GlobalContext } from '../../contexts/globalContext'
-
-interface HeaderProps {
-  setShowSections: React.Dispatch<React.SetStateAction<boolean>>
-  setShowSchedule: React.Dispatch<React.SetStateAction<boolean>>
-  setShowSpeakers: React.Dispatch<React.SetStateAction<boolean>>
-  setShowFrequentlyAsked: React.Dispatch<React.SetStateAction<boolean>>
-}
 
 export default function Header({
   setShowSections,

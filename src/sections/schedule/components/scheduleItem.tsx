@@ -1,9 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
-import { ScheduleCardImageProps, ScheduleItemProps } from '../types'
-import { Details } from './details'
-import { SpeakersTitle } from './speakersTitle'
-import './scheduleitem.scss'
 import { GlobalContext } from '../../../contexts/globalContext'
+import './scheduleitem.scss'
+
+import { SpeakersTitle } from './speakersTitle'
+import { Details } from './details'
+import { ScheduleCardImageProps, ScheduleItemProps } from '../types'
 
 export function ScheduleItem(props: ScheduleItemProps) {
   const { time, title, subtitle, speakers, details } = props

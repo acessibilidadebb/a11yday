@@ -1,7 +1,7 @@
+import './styles.scss'
 import scheduleData from './scheduleData.json'
 import { ScheduleItem } from './components/scheduleItem'
 import { ScheduleProps } from './types'
-import './styles.scss'
 
 export default function Schedule({ showSchedule }: ScheduleProps) {
   return (

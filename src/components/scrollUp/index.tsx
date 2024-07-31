@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import scrollUp from '../../assets/arrow-up.png'
 import './styles.scss'
+import scrollUp from '../../assets/arrow-up.png'
 
 export default function ScrollUp() {
   const [isVisible, setIsVisible] = useState(false)

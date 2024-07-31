@@ -1,9 +1,10 @@
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import './styles.scss'
+
 import braile from '../../assets/braile.png'
 import bilateralDeafness from '../../assets/bilateral-deafness-alt.png'
 import lowVision from '../../assets/low-vision.png'
 import signLanguage from '../../assets/sign-language.png'
-import './styles.scss'
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 interface Icon {
   src: string

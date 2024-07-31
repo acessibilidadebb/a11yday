@@ -1,4 +1,5 @@
 import './styles.scss'
+
 import logo from '../../assets/logo.png'
 import bbLogo from '../../assets/bb-logo.png'
 import cafeComUx from '../../assets/cafe-com-ux.png'

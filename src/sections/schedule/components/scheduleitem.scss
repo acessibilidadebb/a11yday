@@ -1,6 +1,6 @@
-@import '../../../variables';
-@import '../../../placeholders';
-@import '../../../mixins';
+@import '../../../scss/variables';
+@import '../../../scss/placeholders';
+@import '../../../scss/mixins';
 
 $scheduleItemMarginTop: 24px;
 $scheduleItemMarginLeft: 45px;
@@ -148,13 +148,6 @@ $scheduleItemMarginLeft: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &.bg-blue {
-    background-color: $background;
-  }
-  &.bg-yellow {
-    background-color: $backgroundYellow;
-  }
 }
 
 .subtitle,

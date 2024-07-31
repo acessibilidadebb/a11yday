@@ -1,4 +1,5 @@
-@import 'variables';
+@import 'scss/variables';
+@import 'scss/fonts';
 
 .no-scroll {
   overflow-y: hidden;
@@ -8,14 +9,16 @@
   color: $highlight;
 }
 
+.bg-lightgray { background-color: $lightGray; }
+.bg-lightblue { background-color: $lightBlue; }
+.bg-lightcyan { background-color: $lightCyan; }
+.bg-lightpink { background-color: $lightPink; }
+.bg-lightgreen { background-color: $lightGreen; }
+.bg-lavender { background-color: $lavender; }
+.bg-peach { background-color: $peach; }
+.bg-blue { background-color: $background; }
+.bg-yellow { background-color: $backgroundYellow; }
 
-
-
-
-.bg-lightgray { background-color: #F0F2F4; }
-.bg-lightblue { background-color: #E1F7FE; }
-.bg-lightcyan { background-color: #CCFFF9; }
-.bg-lightpink { background-color: #FAD1E5; }
-.bg-lightgreen { background-color: #D1FAE1; }
-.bg-lavender { background-color: #DFD9F2; }
-.bg-peach { background-color: #FFE7CC; }
+body {
+  font-family: 'BancoDoBrasilTextos', sans-serif;
+}

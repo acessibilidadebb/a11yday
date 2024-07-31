@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from 'react'
-import { SpeakerProps } from '../types'
-import './speaker.scss'
 import { GlobalContext } from '../../../contexts/globalContext'
+import './speaker.scss'
+
 import { SpeakerDetails } from './speakerDetails'
+import { SpeakerProps } from '../types'
 
 export default function SpeakerItem(props: SpeakerProps) {
   const { speaker, initialIsStick, setInitialIsStick } = props

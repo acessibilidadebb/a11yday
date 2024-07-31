@@ -1,8 +1,9 @@
-import closeBtn from '../../../assets/close.png'
-import './speakerDetails.scss'
-import { SpeakerDetailsProps } from '../types'
 import { KeyboardEvent, useContext, useEffect, useRef } from 'react'
 import { GlobalContext } from '../../../contexts/globalContext'
+import './speakerDetails.scss'
+
+import closeBtn from '../../../assets/close.png'
+import { SpeakerDetailsProps } from '../types'
 
 export function SpeakerDetails(props: SpeakerDetailsProps) {
   const { speaker, isOpen, setIsOpen, initialIsStick } = props

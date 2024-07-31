@@ -1,8 +1,5 @@
 import './styles.scss'
-
-interface WatchProps {
-  style?: React.CSSProperties;
-}
+import { WatchProps } from './types'
 
 export default function Watch({style}: WatchProps) {
   return (

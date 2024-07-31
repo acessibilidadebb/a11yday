@@ -1,6 +1,6 @@
-@import '../../variables';
-@import '../../placeholders';
-@import '../../mixins';
+@import '../../scss/variables';
+@import '../../scss/placeholders';
+@import '../../scss/mixins';
 
 .overview-section {
   @extend %container;

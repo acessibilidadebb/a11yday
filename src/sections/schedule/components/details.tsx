@@ -1,10 +1,11 @@
 import { useContext, useEffect, useRef } from 'react'
+import { GlobalContext } from '../../../contexts/globalContext'
+import './details.scss'
+
+import { Speaker } from '../../../types/speakers'
 import closeBtn from '../../../assets/close.png'
 import speakersData from '../../../speakers.json'
-import { Speaker } from '../../../types/speakers'
 import { DetailsProps } from '../types'
-import './details.scss'
-import { GlobalContext } from '../../../contexts/globalContext'
 
 export function Details(props: DetailsProps) {
   const { title, speakers, isOpen, setIsOpen } = props

@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { HashRouter as Router } from 'react-router-dom'
-import './App.scss'
-import Footer from './sections/footer'
-import Header from './sections/header'
 import GlobalContextProvider from './contexts/globalContext'
+import './App.scss'
+
+import Header from './sections/header'
 import Home from './pages/home'
+import Footer from './sections/footer'
 
 export default function App() {
   const [showSections, setShowSections] = useState(true)

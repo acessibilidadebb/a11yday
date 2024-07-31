@@ -1,11 +1,11 @@
-import lowVisionMark from '../../assets/low-vision-mark.png'
+import { useState } from 'react'
 import './styles.scss'
 
-import { Speaker } from '../../types/speakers'
-import speakersData from '../../speakers.json'
-import { SpeakersProps } from './types'
 import SpeakerItem from './components/speaker'
-import { useState } from 'react'
+import lowVisionMark from '../../assets/low-vision-mark.png'
+import speakersData from '../../speakers.json'
+import { Speaker } from '../../types/speakers'
+import { SpeakersProps } from './types'
 
 speakersData.sort((a, b) => {
   if (a.seuNome < b.seuNome) {
