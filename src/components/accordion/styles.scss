@@ -18,7 +18,8 @@
   overflow: hidden;
   transition: all 0.35s;
   &.open {
-    max-height: 10rem;
+    overflow: auto;
+    max-height: 20rem;
   }
   p {
     margin: 0;
