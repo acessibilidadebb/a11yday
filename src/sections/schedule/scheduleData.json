@@ -102,6 +102,15 @@
     "details": ""
   },
   {
+    "time": "13h45",
+    "image": "d-braile.png",
+    "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
+    "imageAriaHidden": true,
+    "title": "Painel Inclua+ TI",
+    "speakers": [],
+    "details": ""
+  },
+  {
     "time": "14h45",
     "image": "",
     "title": "Conectando Vidas: Tecnologia e Acessibilidade",
