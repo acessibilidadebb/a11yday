@@ -1,4 +1,4 @@
-import { SpeakersTitleProps } from "../types"
+import { SpeakersTitleProps } from '../types'
 
 export function SpeakersTitle({ speakers }: SpeakersTitleProps) {
   let speakersTitle = ''
@@ -8,9 +8,11 @@ export function SpeakersTitle({ speakers }: SpeakersTitleProps) {
       .map((speaker) => speaker.nome)
       .filter((str) => str !== '')
       .join(' & ')
-    speakersCompany += speakers
+    const speakerCompanies = speakers
       .map((speaker) => speaker.empresa)
       .filter((str) => str !== '')
+    speakersCompany = speakerCompanies
+      .filter((item, index) => speakerCompanies.indexOf(item) === index)
       .join(' & ')
   }
   return (
