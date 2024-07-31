@@ -4,7 +4,7 @@
 
 .watch {
   @extend %container;
-  background-color: darken($watch-background, 10);
+  background-color: $watch-background;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
