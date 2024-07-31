@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { HashLink as Link } from 'react-router-hash-link'
 import './styles.scss'
