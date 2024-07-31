@@ -18,7 +18,7 @@
     max-width: 232px;
     margin: 0 30px 30px 0;
   }
-  img {
+  .speaker-card-image {
     border-radius: 8px 8px 0 0;
     object-fit: cover;
   }
@@ -61,4 +61,38 @@
   &:active {
     background-color: darken($buttonSecondary, 5);
   }
+}
+
+
+.speaker-details-content {
+  position: relative;
+  padding: 16px 0;
+  .speaker-details-close-btn {
+    right: 0;
+  }
+}
+.speaker-details-description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.4px;
+  text-align: left;
+}
+.speaker-details-image {
+  width: 191px;
+  margin: 16px 0;
+  border-radius: 8px;
+}
+.speaker-details-name {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30.8px;
+  text-align: left;
+}
+.speaker-details-company {
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 15.75px;
+  letter-spacing: 0.005em;
+  text-align: left;
 }
