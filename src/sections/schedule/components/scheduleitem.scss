@@ -142,6 +142,21 @@ $scheduleItemMarginLeft: 45px;
     border-radius: 8px;
   }
 }
+.schedule-card-image-bg {
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.bg-blue {
+    background-color: $background;
+  }
+  &.bg-yellow {
+    background-color: $backgroundYellow;
+  }
+}
+
 .subtitle,
 .company {
   color: $dark-gray;
@@ -152,7 +167,7 @@ $scheduleItemMarginLeft: 45px;
   text-align: left;
 }
 .subtitle {
-  grid-row: 2;
+  grid-column: 2/3;
 }
 .company {
   grid-row: 3;

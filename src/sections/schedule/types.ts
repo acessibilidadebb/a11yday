@@ -16,6 +16,7 @@ export interface ScheduleItemProps {
   image?: string
   imageAlt?: string
   imageAriaHidden?: boolean
+  imageBackground?: string
   title: string
   subtitle?: string
   speakers: SpeakerTitle[]
@@ -30,5 +31,6 @@ export interface ScheduleCardImageProps {
   image?: string
   imageAlt?: string
   imageAriaHidden?: boolean
+  imageBackground?: string
   speakers: SpeakerTitle[]
 }

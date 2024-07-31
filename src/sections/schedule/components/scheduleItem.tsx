@@ -27,6 +27,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
     image,
     imageAlt,
     imageAriaHidden,
+    imageBackground,
   }: ScheduleCardImageProps) => {
     const getAltText = () => {
       let altText = ''
@@ -65,11 +66,13 @@ export function ScheduleItem(props: ScheduleItemProps) {
             )
           })
         ) : (
-          <img
-            aria-hidden={`${!!imageAriaHidden}`}
-            src={`${import.meta.env.BASE_URL}${image}`}
-            alt={getAltText()}
-          />
+          <div className={imageBackground?.trim() ? `schedule-card-image-bg ${imageBackground}` : ''}>
+            <img
+              aria-hidden={`${!!imageAriaHidden}`}
+              src={`${import.meta.env.BASE_URL}${image}`}
+              alt={getAltText()}
+            />
+          </div>
         )}
       </div>
     )
@@ -90,7 +93,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
         <ScheduleCardImage {...props} />
         <h3 className="title">{title}</h3>
         <SpeakersTitle speakers={speakers} />
-        {subtitle && <h4 className="subtitle">{subtitle}</h4>}
+        {subtitle && <p className="subtitle">{subtitle}</p>}
         {details && (
           <button
             type="button"

@@ -103,10 +103,11 @@
   },
   {
     "time": "13h45",
-    "image": "d-braile.png",
+    "image": "inclua-mais-ti-2.png",
     "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
     "imageAriaHidden": true,
-    "title": "Painel Inclua+ TI",
+    "imageBackground": "bg-blue",
+    "title": "Painel Inclua Mais TI",
     "speakers": [],
     "details": ""
   },
