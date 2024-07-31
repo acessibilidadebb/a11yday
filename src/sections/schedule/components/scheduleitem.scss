@@ -27,13 +27,6 @@ $scheduleItemMarginLeft: 45px;
     .schedule-time-content {
       margin-top: $scheduleItemMarginTop;
     }
-    .title,
-    .name,
-    .subtitle,
-    .company,
-    .details {
-      grid-column: 2/-1;
-    }
   }
 }
 .schedule-time {
@@ -93,6 +86,13 @@ $scheduleItemMarginLeft: 45px;
     .name {
       font-weight: 500;
       grid-row: 2;
+    }
+    .title,
+    .name,
+    .subtitle,
+    .company,
+    .details {
+      grid-column: 2/-1;
     }
   }
   @include respond-to(xxl) {
