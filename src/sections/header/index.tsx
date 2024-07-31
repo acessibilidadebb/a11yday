@@ -67,7 +67,6 @@ export default function Header({
           // Rola apenas um pouco se o header não estiver fixo
           const topPosition = sticky !== '' ? offsetTop : offsetTop - 50
 
-          console.log(topPosition)
           window.scrollTo({
             top: topPosition,
             behavior: 'smooth',
