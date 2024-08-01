@@ -189,6 +189,7 @@ export default function Modal({
     <div
       className={`dialog-backdrop ${isOpen ? 'active' : ''}`}
       role="dialog"
+      aria-modal="true"
       aria-labelledby={titleId}
       aria-describedby={descriptionId}
       onClick={handleOverlayClick}
