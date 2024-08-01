@@ -17,8 +17,8 @@
   &.sticky {
     position: fixed;
     top: 0;
-    height: 56px;
-    border-bottom: 4px solid $yellow;
+    height: $headerHeightSmall - $headerBorder;
+    border-bottom: $headerBorder solid $yellow;
     padding-top: 0;
     padding-bottom: 0;
     z-index: 98;
