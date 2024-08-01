@@ -77,9 +77,7 @@ export default function SpeakerItem(props: SpeakerProps) {
         onClose={() => {
           setIsOpen(false)
           setModalOpen(false)
-          setTimeout(() => {
-            setIsSticky(initialIsStick)
-          }, 500)
+          setIsSticky(initialIsStick)
         }}
         titleId={titleId}
         descriptionId={descriptionId}
