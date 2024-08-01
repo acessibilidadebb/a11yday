@@ -150,7 +150,6 @@ export default function Modal({
   const handleKeyDown: EventListener = (event: Event) => {
     if (event instanceof KeyboardEvent) {
       if (isOpen && modalRef.current) {
-        console.log(event.key)
         switch (event.key) {
           case 'ArrowUp':
             // Handle ArrowUp
