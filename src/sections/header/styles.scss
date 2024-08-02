@@ -1,6 +1,28 @@
 @import '../../scss/variables';
 @import '../../scss/placeholders';
 @import '../../scss/mixins';
+
+.has-dialog .header,
+.header.sticky {
+  position: fixed;
+  top: 0;
+  height: $headerHeightSmall - $headerBorder;
+  border-bottom: $headerBorder solid $yellow;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 98;
+
+  .header-logo-bb {
+    width: 36px;
+    height: 36px;
+  }
+  .header-logo {
+    width: 166px;
+    height: 25px;
+  }
+}
+
+
 .header {
   @extend %container;
   height: $headerHeightSmall;
@@ -13,25 +35,6 @@
   transition: height 0.3s ease, border-bottom 0.3s ease; 
   position: relative;
   width: calc(100% - #{2 * $containerPaddingSmall});
-
-  &.sticky {
-    position: fixed;
-    top: 0;
-    height: $headerHeightSmall - $headerBorder;
-    border-bottom: $headerBorder solid $yellow;
-    padding-top: 0;
-    padding-bottom: 0;
-    z-index: 98;
-
-    .header-logo-bb {
-      width: 36px;
-      height: 36px;
-    }
-    .header-logo {
-      width: 166px;
-      height: 25px;
-    }
-  }
 
   .header-logo-bb {
     display: none;

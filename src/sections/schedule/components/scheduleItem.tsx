@@ -1,15 +1,21 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { GlobalContext } from '../../../contexts/globalContext'
 import './scheduleitem.scss'
 
+import Modal from '../../../components/modal'
 import { SpeakersTitle } from './speakersTitle'
-import { Details } from './details'
+import { Speaker } from '../../../types/speakers'
+import speakersData from '../../../speakers.json'
 import { ScheduleCardImageProps, ScheduleItemProps } from '../types'
+import { generateUniqueId } from '../../../utils/functions'
 
 export function ScheduleItem(props: ScheduleItemProps) {
   const { time, title, subtitle, speakers, details } = props
   const { isModalOpen, setModalOpen } = useContext(GlobalContext)
-  const [showDetails, setShowDetails] = useState(false)
+  const titleId = generateUniqueId()
+  const descriptionId = generateUniqueId()
+  const [isOpen, setIsOpen] = useState(false)
+  const buttonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     if (isModalOpen) {
@@ -20,7 +26,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
   }, [isModalOpen])
 
   const handleClickDetails = () => {
-    setShowDetails(true)
+    setIsOpen(true)
     setModalOpen(true)
   }
   const ScheduleCardImage = ({
@@ -67,7 +73,13 @@ export function ScheduleItem(props: ScheduleItemProps) {
             )
           })
         ) : (
-          <div className={imageBackground?.trim() ? `schedule-card-image-bg ${imageBackground}` : ''}>
+          <div
+            className={
+              imageBackground?.trim()
+                ? `schedule-card-image-bg ${imageBackground}`
+                : ''
+            }
+          >
             <img
               aria-hidden={`${!!imageAriaHidden}`}
               src={`${import.meta.env.BASE_URL}${image}`}
@@ -75,6 +87,68 @@ export function ScheduleItem(props: ScheduleItemProps) {
             />
           </div>
         )}
+      </div>
+    )
+  }
+
+  const getResumo = () => {
+    const foundSpeaker = speakersDetails.find(
+      (speaker: Speaker) => speaker.resumo.trim().length
+    )
+    if (foundSpeaker) {
+      const resumo = foundSpeaker.resumo
+      if (typeof resumo === 'string') {
+        return resumo
+      }
+    }
+    return ''
+  }
+
+  const speakersDetails = speakers.map((speaker) => ({
+    ...speakersData.find(
+      (item) =>
+        item.seuNome.includes(speaker.nome) ||
+        item.apelido.includes(speaker.nome) ||
+        (item.seuNome + ' ' + item.apelido).includes(speaker.nome)
+    ),
+    image: speaker.image,
+  })) as Speaker[]
+
+  const ScheduleSpeaker = ({ speaker }: { speaker: Speaker }) => {
+    return (
+      <div className="schedule-details-body">
+        <h4 className="schedule-details-name">Sobre {speaker.seuNome}</h4>
+        <img
+          className="schedule-details-image"
+          src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image}`}
+          alt={`Foto de ${speaker.seuNome}`}
+        />
+        <p className="schedule-details-company">{speaker.empresa}</p>
+        <p className="schedule-details-description">{speaker?.miniBio}</p>
+      </div>
+    )
+  }
+
+  const Details = () => {
+    return (
+      <div className="default_dialog-content">
+        <div className="schedule-details-header">
+          <h3 className="schedule-details-title" id={titleId}>
+            {title}
+          </h3>
+          <p className="schedule-details-description" id={descriptionId}>
+            {getResumo()}
+          </p>
+        </div>
+        {!!speakersDetails.length &&
+          speakersDetails.map((speaker, index) => {
+            return (
+              <ScheduleSpeaker
+                key={`schedulespeaker${index}`}
+                speaker={speaker}
+              />
+            )
+          })}
       </div>
     )
   }
@@ -102,14 +176,24 @@ export function ScheduleItem(props: ScheduleItemProps) {
             className="details"
             title={`Exibir detalhes da Palestra ${title}`}
             aria-label={`Exibir detalhes da Palestra ${title}`}
+            ref={buttonRef}
           >
             Detalhes da Palestra
           </button>
         )}
       </div>
-      {!!speakers.length && (
-        <Details isOpen={showDetails} setIsOpen={setShowDetails} {...props} />
-      )}
+      <Modal
+        isOpen={isOpen}
+        onClose={() => {
+          setIsOpen(false)
+          setModalOpen(false)
+        }}
+        titleId={titleId}
+        descriptionId={descriptionId}
+        focusAfterClosed={buttonRef.current ?? undefined}
+      >
+        <Details />
+      </Modal>
     </div>
   )
 }
