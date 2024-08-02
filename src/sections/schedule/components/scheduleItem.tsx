@@ -11,7 +11,7 @@ import { generateUniqueId } from '../../../utils/functions'
 
 export function ScheduleItem(props: ScheduleItemProps) {
   const { time, title, subtitle, speakers, details } = props
-  const { isModalOpen, setModalOpen } = useContext(GlobalContext)
+  const { isModalOpen, setModalOpen, togglePin } = useContext(GlobalContext)
   const titleId = generateUniqueId()
   const descriptionId = generateUniqueId()
   const [isOpen, setIsOpen] = useState(false)
@@ -28,6 +28,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
   const handleClickDetails = () => {
     setIsOpen(true)
     setModalOpen(true)
+    togglePin(true)
   }
   const ScheduleCardImage = ({
     speakers,
@@ -187,6 +188,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
         onClose={() => {
           setIsOpen(false)
           setModalOpen(false)
+          togglePin(false)
         }}
         titleId={titleId}
         descriptionId={descriptionId}

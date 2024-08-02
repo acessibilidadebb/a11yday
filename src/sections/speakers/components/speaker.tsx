@@ -9,7 +9,7 @@ import { generateUniqueId } from '../../../utils/functions'
 export default function SpeakerItem(props: SpeakerProps) {
   const { speaker } = props
   const [isOpen, setIsOpen] = useState(false)
-  const { isModalOpen, setModalOpen } = useContext(GlobalContext)
+  const { isModalOpen, setModalOpen, togglePin } = useContext(GlobalContext)
   const titleId = generateUniqueId()
   const descriptionId = generateUniqueId()
   const buttonRef = useRef<HTMLButtonElement>(null)
@@ -25,6 +25,7 @@ export default function SpeakerItem(props: SpeakerProps) {
   const handleClick = () => {
     setIsOpen(true)
     setModalOpen(true)
+    togglePin(true)
   }
 
   const DetailsContent = () => {
@@ -76,6 +77,7 @@ export default function SpeakerItem(props: SpeakerProps) {
         onClose={() => {
           setIsOpen(false)
           setModalOpen(false)
+          togglePin(false)
         }}
         titleId={titleId}
         descriptionId={descriptionId}

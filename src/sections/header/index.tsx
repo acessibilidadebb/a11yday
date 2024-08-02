@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { HashLink as Link } from 'react-router-hash-link'
+import { GlobalContext } from '../../contexts/globalContext'
 import './styles.scss'
 
 import { HeaderProps } from './types'
@@ -17,6 +18,7 @@ export default function Header({
   setShowSpeakers,
   setShowFrequentlyAsked,
 }: HeaderProps) {
+  const { isPin } = useContext(GlobalContext)
   const [scrollPosition, setScrollPosition] = useState(0)
   const [open, setOpen] = useState(false)
   const location = useLocation()
@@ -117,7 +119,7 @@ export default function Header({
     openSection('frequently-asked-questions')
   }
   return (
-    <header className={`header ${sticky}`} ref={headerRef}>
+    <header className={`header ${sticky} ${isPin ? 'modal-pin' : ''}`} ref={headerRef}>
       <h1 className="header-logo-container">
         <Link smooth to={`/`} onClick={resetSections}>
           <img
