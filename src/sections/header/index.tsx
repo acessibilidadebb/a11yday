@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom'
 import { HashLink as Link } from 'react-router-hash-link'
 import './styles.scss'
 
-import { GlobalContext } from '../../contexts/globalContext'
 import { HeaderProps } from './types'
 import bbLogo from '../../assets/bb-logo.png'
 import logo from '../../assets/logo.png'
@@ -21,7 +20,6 @@ export default function Header({
   const [scrollPosition, setScrollPosition] = useState(0)
   const [open, setOpen] = useState(false)
   const location = useLocation()
-  const { isSticky, setHeaderOffsetHeight } = useContext(GlobalContext)
   const headerRef = useRef<HTMLDivElement | null>(null) // Define explicitamente o tipo como HTMLDivElement ou null
 
   useEffect(() => {
@@ -35,7 +33,7 @@ export default function Header({
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
-  const sticky = scrollPosition > 30 || isSticky ? 'sticky' : ''
+  const sticky = scrollPosition > 30 ? 'sticky' : ''
   useEffect(() => {
     const scrollToSectionOnLoad = () => {
       const { pathname } = location
@@ -56,7 +54,6 @@ export default function Header({
           const headerHeight = headerRef.current
             ? headerRef.current.offsetHeight
             : 0 // Altura do cabeçalho fixo
-          setHeaderOffsetHeight(headerHeight)
           const offsetTop = element.offsetTop - headerHeight
 
           // Rola apenas um pouco se o header não estiver fixo
@@ -77,10 +74,6 @@ export default function Header({
     }
     scrollToSectionOnLoad()
   }, [location])
-  useEffect(() => {
-    const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0 // Altura do cabeçalho fixo
-    setHeaderOffsetHeight(headerHeight)
-  }, [isSticky])
 
   const handleMenuClick = () => {
     setOpen(!open)
