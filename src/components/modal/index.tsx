@@ -13,6 +13,7 @@ export default function Modal({
   descriptionId,
 }: ModalProps) {
   const modalRef = useRef<HTMLDivElement>(null)
+  const closeBtnRef = useRef<HTMLButtonElement>(null)
   const [focusTrapStart, setFocusTrapStart] = useState<HTMLDivElement | null>(
     null
   )
@@ -40,16 +41,10 @@ export default function Modal({
         setFocusTrapEnd(postDiv)
       }
 
-      const focusFirstElement =
-        typeof focusFirst === 'string'
-          ? document.getElementById(focusFirst)
-          : focusFirst
-
-      if (focusFirstElement) {
-        focusFirstElement.focus()
-      } else if (modalRef.current) {
-        focusFirstDescendant(modalRef.current)
-      }
+      // Set focus on the close button after a short delay
+      setTimeout(() => {
+        closeBtnRef.current?.focus()
+      }, 5)
 
       document.addEventListener('focus', trapFocus, true)
       document.addEventListener('keydown', handleKeyDown)
@@ -206,6 +201,7 @@ export default function Modal({
           className="close-modal-btn"
           title="Fechar"
           aria-label="Fechar"
+          ref={closeBtnRef}
         >
           <img src={closeBtn} alt="Ícone de Fechar" />
         </button>
