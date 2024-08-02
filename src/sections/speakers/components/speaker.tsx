@@ -7,10 +7,9 @@ import Modal from '../../../components/modal'
 import { generateUniqueId } from '../../../utils/functions'
 
 export default function SpeakerItem(props: SpeakerProps) {
-  const { speaker, initialIsStick, setInitialIsStick } = props
+  const { speaker } = props
   const [isOpen, setIsOpen] = useState(false)
-  const { isSticky, setIsSticky, isModalOpen, setModalOpen } =
-    useContext(GlobalContext)
+  const { isModalOpen, setModalOpen } = useContext(GlobalContext)
   const titleId = generateUniqueId()
   const descriptionId = generateUniqueId()
   const buttonRef = useRef<HTMLButtonElement>(null)
@@ -25,8 +24,6 @@ export default function SpeakerItem(props: SpeakerProps) {
 
   const handleClick = () => {
     setIsOpen(true)
-    setInitialIsStick(isSticky)
-    setIsSticky(true)
     setModalOpen(true)
   }
 
@@ -79,7 +76,6 @@ export default function SpeakerItem(props: SpeakerProps) {
         onClose={() => {
           setIsOpen(false)
           setModalOpen(false)
-          setIsSticky(initialIsStick)
         }}
         titleId={titleId}
         descriptionId={descriptionId}
