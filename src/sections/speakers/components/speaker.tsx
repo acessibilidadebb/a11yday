@@ -32,7 +32,7 @@ export default function SpeakerItem(props: SpeakerProps) {
 
   const DetailsContent = () => {
     return (
-      <div className="speaker-details-content">
+      <div className="default_dialog-content">
         <h3 id={titleId} className="speaker-details-name">
           Sobre {speaker.seuNome ? speaker.seuNome : ''}
         </h3>
@@ -83,7 +83,7 @@ export default function SpeakerItem(props: SpeakerProps) {
         }}
         titleId={titleId}
         descriptionId={descriptionId}
-        focusAfterClosed={buttonRef.current}
+        focusAfterClosed={buttonRef.current ?? undefined}
       >
         <DetailsContent />
       </Modal>
