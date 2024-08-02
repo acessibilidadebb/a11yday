@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { GlobalContext } from '../../../contexts/globalContext'
 import './speaker.scss'
 
@@ -13,6 +13,7 @@ export default function SpeakerItem(props: SpeakerProps) {
     useContext(GlobalContext)
   const titleId = generateUniqueId()
   const descriptionId = generateUniqueId()
+  const buttonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     if (isModalOpen) {
@@ -68,6 +69,7 @@ export default function SpeakerItem(props: SpeakerProps) {
           className="speaker-btn"
           title={`Conheça ${speaker.seuNome}`}
           aria-label={`Conheça ${speaker.seuNome}`}
+          ref={buttonRef}
         >
           Conheça
         </button>
@@ -81,6 +83,7 @@ export default function SpeakerItem(props: SpeakerProps) {
         }}
         titleId={titleId}
         descriptionId={descriptionId}
+        focusAfterClosed={buttonRef.current}
       >
         <DetailsContent />
       </Modal>
