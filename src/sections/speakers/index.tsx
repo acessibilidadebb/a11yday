@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './styles.scss'
 
 import SpeakerItem from './components/speaker'
@@ -20,7 +19,6 @@ speakersData.sort((a, b) => {
 const speakers: Speaker[] = speakersData as Speaker[]
 
 export default function Speakers({ showSpeakers }: SpeakersProps) {
-  const [initialIsStick, setInitialIsStick] = useState(false)
   return (
     <section id="speakers" className={`speakers ${showSpeakers ? 'open' : ''}`}>
       <div className="speakers-container">
@@ -40,8 +38,6 @@ export default function Speakers({ showSpeakers }: SpeakersProps) {
               <SpeakerItem
                 key={`${index}${speaker.seuEmail}`}
                 speaker={speaker}
-                setInitialIsStick={setInitialIsStick}
-                initialIsStick={initialIsStick}
               />
             )
           })}

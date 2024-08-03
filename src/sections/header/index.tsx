@@ -1,9 +1,9 @@
 import { useContext, useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { HashLink as Link } from 'react-router-hash-link'
+import { GlobalContext } from '../../contexts/globalContext'
 import './styles.scss'
 
-import { GlobalContext } from '../../contexts/globalContext'
 import { HeaderProps } from './types'
 import bbLogo from '../../assets/bb-logo.svg'
 import logo from '../../assets/logo.svg'
@@ -18,10 +18,10 @@ export default function Header({
   setShowSpeakers,
   setShowFrequentlyAsked,
 }: HeaderProps) {
+  const { isPin } = useContext(GlobalContext)
   const [scrollPosition, setScrollPosition] = useState(0)
   const [open, setOpen] = useState(false)
   const location = useLocation()
-  const { isSticky, setHeaderOffsetHeight } = useContext(GlobalContext)
   const headerRef = useRef<HTMLDivElement | null>(null) // Define explicitamente o tipo como HTMLDivElement ou null
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function Header({
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
-  const sticky = scrollPosition > 30 || isSticky ? 'sticky' : ''
+  const sticky = scrollPosition > 30 ? 'sticky' : ''
   useEffect(() => {
     const scrollToSectionOnLoad = () => {
       const { pathname } = location
@@ -56,7 +56,6 @@ export default function Header({
           const headerHeight = headerRef.current
             ? headerRef.current.offsetHeight
             : 0 // Altura do cabeçalho fixo
-          setHeaderOffsetHeight(headerHeight)
           const offsetTop = element.offsetTop - headerHeight
 
           // Rola apenas um pouco se o header não estiver fixo
@@ -77,10 +76,6 @@ export default function Header({
     }
     scrollToSectionOnLoad()
   }, [location])
-  useEffect(() => {
-    const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0 // Altura do cabeçalho fixo
-    setHeaderOffsetHeight(headerHeight)
-  }, [isSticky])
 
   const handleMenuClick = () => {
     setOpen(!open)
@@ -124,7 +119,7 @@ export default function Header({
     openSection('frequently-asked-questions')
   }
   return (
-    <header className={`header ${sticky}`} ref={headerRef}>
+    <header className={`header ${sticky} ${isPin ? 'modal-pin' : ''}`} ref={headerRef}>
       <h1 className="header-logo-container">
         <Link smooth to={`/`} onClick={resetSections}>
           <img

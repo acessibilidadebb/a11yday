@@ -41,13 +41,14 @@
     .default_dialog {
       padding: $containerPadding;
       max-width: 800px;
+      max-height: 80vh;
       height: auto;
       border-radius: 10px;
     }
     .close-modal-btn {
       top: $containerPadding;
     }
-    .speaker-details-content {
+    .default_dialog-content {
       padding: 0;
     }
   }
@@ -60,6 +61,7 @@
   overflow: auto;
   height: calc(100% - $headerHeightSmall);
   border-radius: 0;
+
   .close-modal-btn {
     right: $containerPaddingSmall;
   }
@@ -70,6 +72,9 @@
       right: $containerPadding;
     }
   }
+}
+.default_dialog-content {
+  padding: $containerPaddingSmall 0;
 }
 .close-modal-btn {
   border: none;

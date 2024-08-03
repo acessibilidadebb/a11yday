@@ -1,6 +1,27 @@
 @import '../../scss/variables';
 @import '../../scss/placeholders';
 @import '../../scss/mixins';
+
+@mixin sticky-header {
+  position: fixed;
+  top: 0;
+  height: $headerHeightSmall - $headerBorder;
+  border-bottom: $headerBorder solid $yellow;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 98;
+
+  .header-logo-bb {
+    width: 36px;
+    height: 36px;
+  }
+  .header-logo {
+    width: 166px;
+    height: 25px;
+  }
+}
+
+
 .header {
   @extend %container;
   height: $headerHeightSmall;
@@ -10,33 +31,14 @@
   background-color: $background;
   color: $color;
   padding-top: 36px;
-  transition: height 0.3s ease, border-bottom 0.3s ease; 
+  transition: height 0.3s ease, border-bottom 0.3s ease;
   position: relative;
   width: calc(100% - #{2 * $containerPaddingSmall});
-
-  &.sticky {
-    position: fixed;
-    top: 0;
-    height: $headerHeightSmall - $headerBorder;
-    border-bottom: $headerBorder solid $yellow;
-    padding-top: 0;
-    padding-bottom: 0;
-    z-index: 98;
-
-    .header-logo-bb {
-      width: 36px;
-      height: 36px;
-    }
-    .header-logo {
-      width: 166px;
-      height: 25px;
-    }
-  }
 
   .header-logo-bb {
     display: none;
   }
-  
+
   .header-logo {
     width: 249px;
   }
@@ -53,7 +55,8 @@
       text-decoration: none;
       color: $color;
 
-      &:hover, &:active {
+      &:hover,
+      &:active {
         color: rgba($color, 0.8);
       }
     }
@@ -68,12 +71,20 @@
       display: initial;
     }
   }
-  
+
   @include respond-to(lg) {
     position: static;
     width: calc(100% - #{2 * $containerPadding});
     .header-logo {
       width: auto;
+    }
+  }
+  &.sticky {
+    @include sticky-header();
+  }
+  &.modal-pin {
+    @include respond-to-max(lg) {
+      @include sticky-header();
     }
   }
 }

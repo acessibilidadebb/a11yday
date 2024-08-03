@@ -1,8 +1,8 @@
 import { createContext, useState } from 'react'
 
 export const GlobalContext = createContext({
-  isSticky: false,
-  setIsSticky: (_: boolean) => {},
+  isPin: false,
+  togglePin: (_: boolean) => {},
   headerOffsetHeight: 0,
   setHeaderOffsetHeight: (_: number) => {},
   isModalOpen: false,
@@ -14,11 +14,20 @@ interface GlobalContextProviderProps {
 }
 
 export default function GlobalContextProvider({ children }: GlobalContextProviderProps) {
-  const [isSticky, setIsSticky] = useState(false)
+  const [isPin, setIsPin] = useState(false)
   const [headerOffsetHeight, setHeaderOffsetHeight] = useState(0)
   const [isModalOpen, setModalOpen] = useState(false)
+  const togglePin = (newPin: boolean) => {
+    if(!newPin) {
+      setTimeout(() => {
+        setIsPin(newPin)
+      }, 550)
+    } else {
+      setIsPin(newPin)
+    }
+  }
   return (
-    <GlobalContext.Provider value={{ isSticky, setIsSticky, headerOffsetHeight, setHeaderOffsetHeight, isModalOpen, setModalOpen }}>
+    <GlobalContext.Provider value={{ isPin, togglePin, headerOffsetHeight, setHeaderOffsetHeight, isModalOpen, setModalOpen }}>
       {children}
     </GlobalContext.Provider>
   )

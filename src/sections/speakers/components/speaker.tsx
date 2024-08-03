@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { GlobalContext } from '../../../contexts/globalContext'
 import './speaker.scss'
 
@@ -7,12 +7,12 @@ import Modal from '../../../components/modal'
 import { generateUniqueId } from '../../../utils/functions'
 
 export default function SpeakerItem(props: SpeakerProps) {
-  const { speaker, initialIsStick, setInitialIsStick } = props
+  const { speaker } = props
   const [isOpen, setIsOpen] = useState(false)
-  const { isSticky, setIsSticky, isModalOpen, setModalOpen } =
-    useContext(GlobalContext)
+  const { isModalOpen, setModalOpen, togglePin } = useContext(GlobalContext)
   const titleId = generateUniqueId()
   const descriptionId = generateUniqueId()
+  const buttonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     if (isModalOpen) {
@@ -24,14 +24,13 @@ export default function SpeakerItem(props: SpeakerProps) {
 
   const handleClick = () => {
     setIsOpen(true)
-    setInitialIsStick(isSticky)
-    setIsSticky(true)
     setModalOpen(true)
+    togglePin(true)
   }
 
   const DetailsContent = () => {
     return (
-      <div className="speaker-details-content">
+      <div className="default_dialog-content">
         <h3 id={titleId} className="speaker-details-name">
           Sobre {speaker.seuNome ? speaker.seuNome : ''}
         </h3>
@@ -68,6 +67,7 @@ export default function SpeakerItem(props: SpeakerProps) {
           className="speaker-btn"
           title={`Conheça ${speaker.seuNome}`}
           aria-label={`Conheça ${speaker.seuNome}`}
+          ref={buttonRef}
         >
           Conheça
         </button>
@@ -77,10 +77,11 @@ export default function SpeakerItem(props: SpeakerProps) {
         onClose={() => {
           setIsOpen(false)
           setModalOpen(false)
-          setIsSticky(initialIsStick)
+          togglePin(false)
         }}
         titleId={titleId}
         descriptionId={descriptionId}
+        focusAfterClosed={buttonRef.current ?? undefined}
       >
         <DetailsContent />
       </Modal>
