@@ -47,10 +47,15 @@
       font-size: 26px;
       line-height: 32.5px;
     }
-    .bb-logo, .cafe-com-ux-logo {
+    .bb-logo {
+      width: 53px;
+      height: auto;
+    }
+    .cafe-com-ux-logo {
       width: auto;
       height: auto;
     }
+
   }
 }
 
@@ -82,10 +87,8 @@
   line-height: 17.5px;
 }
 .bb-logo {
-  width: 32px;
-  height: 32px;
+  width: 35px;
 }
 .cafe-com-ux-logo {
-  width: 34px;
-  height: 35px;
+  width: 35px;
 }

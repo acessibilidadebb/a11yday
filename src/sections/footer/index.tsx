@@ -1,8 +1,8 @@
 import './styles.scss'
 
-import logo from '../../assets/logo.png'
-import bbLogo from '../../assets/bb-logo.png'
-import cafeComUx from '../../assets/cafe-com-ux.png'
+import logo from '../../assets/logo.svg'
+import bbLogo from '../../assets/bb-logo.svg'
+import cafeComUx from '../../assets/cafe-com-ux.svg'
 
 export default function Footer() {
   return (
