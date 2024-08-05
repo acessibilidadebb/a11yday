@@ -34,7 +34,7 @@
     }
   }
   @include respond-to(xl) {
-    background-color: $lightPink;
+    background-color: $lighterPink;
     margin-right: $containerPadding * 2;
     border-radius: 0 10px 10px 0;
     h2 {
