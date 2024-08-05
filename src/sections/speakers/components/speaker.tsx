@@ -32,17 +32,17 @@ export default function SpeakerItem(props: SpeakerProps) {
     return (
       <div className="default_dialog-content">
         <h3 id={titleId} className="speaker-details-name">
-          Sobre {speaker.seuNome ? speaker.seuNome : ''}
+          Sobre {speaker.name ? speaker.name : ''}
         </h3>
         <img
           className="speaker-details-image"
           src={`${import.meta.env.BASE_URL}palestrantes/${
             speaker.image ? speaker.image : ''
           }`}
-          alt={`Foto de ${speaker.seuNome ? speaker.seuNome : ''}`}
+          alt={`Foto de ${speaker.name ? speaker.name : ''}`}
         />
         <p className="speaker-details-company">
-          {speaker.empresa ? speaker.empresa : ''}
+          {speaker.company ? speaker.company : ''}
         </p>
         <p id={descriptionId} className="speaker-details-description">
           {speaker?.miniBio ? speaker?.miniBio : ''}
@@ -56,17 +56,17 @@ export default function SpeakerItem(props: SpeakerProps) {
       <img
         className="speaker-card-image"
         src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image}`}
-        alt={`Foto de ${speaker.seuNome}`}
+        alt={`Foto de ${speaker.name}`}
       />
       <div className="speaker-card-body">
-        <h3>{speaker.seuNome}</h3>
-        <p>{speaker.empresa}</p>
+        <h3>{speaker.name}</h3>
+        <p>{speaker.company}</p>
         <button
           type="button"
           onClick={handleClick}
           className="speaker-btn"
-          title={`Conheça ${speaker.seuNome}`}
-          aria-label={`Conheça ${speaker.seuNome}`}
+          title={`Conheça ${speaker.name}`}
+          aria-label={`Conheça ${speaker.name}`}
           ref={buttonRef}
         >
           Conheça
