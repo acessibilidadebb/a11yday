@@ -5,7 +5,7 @@ import './scheduleitem.scss'
 import Modal from '../../../components/modal'
 import { SpeakersTitle } from './speakersTitle'
 import { Speaker } from '../../../types/speakers'
-import speakersData from '../../../speakers.json'
+import speakersData from '../../../json/speakers.json'
 import { ScheduleCardImageProps, ScheduleItemProps } from '../types'
 import { generateUniqueId } from '../../../utils/functions'
 

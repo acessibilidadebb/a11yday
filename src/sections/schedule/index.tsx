@@ -1,5 +1,5 @@
 import './styles.scss'
-import scheduleData from './scheduleData.json'
+import scheduleData from '../../json/scheduleData.json'
 import { ScheduleItem } from './components/scheduleItem'
 import { ScheduleProps } from './types'
 

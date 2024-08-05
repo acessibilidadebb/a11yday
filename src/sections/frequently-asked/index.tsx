@@ -3,7 +3,7 @@ import './styles.scss'
 import questionMark from '../../assets/question-mark.png'
 import questionMark2 from '../../assets/question-mark2.png'
 import { Accordion } from '../../components/accordion'
-import faq from './faq.json'
+import faq from '../../json/faq.json'
 import { FrequentlyAskedProps } from './types'
 
 export default function FrequentlyAsked({

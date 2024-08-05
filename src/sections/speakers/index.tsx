@@ -2,7 +2,7 @@ import './styles.scss'
 
 import SpeakerItem from './components/speaker'
 import lowVisionMark from '../../assets/low-vision-mark.png'
-import speakersData from '../../speakers.json'
+import speakersData from '../../json/speakers.json'
 import { Speaker } from '../../types/speakers'
 import { SpeakersProps } from './types'
 
