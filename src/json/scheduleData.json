@@ -1,180 +1,159 @@
 [
   {
+    "uuid": "241ff949-0a4d-4e55-8d5c-97c8a8430005",
+    "type": "block",
     "time": "8h00",
     "image": "d-braile.png",
     "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
     "imageAriaHidden": true,
     "title": "Checkin",
-    "speakers": [],
-    "details": ""
+    "speakers": []
   },
   {
+    "uuid": "340e99c6-6822-4143-824c-ef5569788376",
+    "type": "block",
+    "confirmed": true,
     "time": "9h00",
     "image": "d-braile.png",
     "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
     "imageAriaHidden": true,
     "title": "Abertura do Evento",
-    "speakers": [],
-    "details": ""
+    "speakers": []
   },
   {
+    "uuid": "392f9fcd-64e5-4c35-8353-86a75e5ce9bc",
+    "type": "talk",
+    "confirmed": true,
     "time": "9h45",
     "image": "",
     "title": "Silêncio: Palavras que não comunicam.",
-    "speakers": [
-      {
-        "image": "cesar-sathler.jpeg",
-        "nome": "Cesar Luiz",
-        "empresa": "Cast group"
-      }
-    ],
-    "details": "Detalhes da Palestra"
+    "summary": "Embora o público surdo represente o segundo maior grupo de clientes PcD do Banco do Brasil, muitas vezes não compreendemos suas reais necessidades. Como usuários primários da Língua Brasileira de Sinais (Libras), enfrentam frequentemente dificuldades e desafios de comunicação que limitam suas opções de interação com os produtos, serviços e ambientes do banco, especialmente quando baseados exclusivamente na comunicação textual. Diante dessa realidade, vamos explorar as barreiras mais comuns e discutir o que cada um de nós pode fazer, com sensibilidade e empatia, para minimizar e superar esses impedimentos, promovendo ambientes mais acessíveis e acolhedores para essa parcela tão significativa da população.",
+    "speakerIds": ["4d949bf9-4424-4dbd-b6e9-41bf39160dfe"]
   },
   {
+    "uuid": "973eed31-94fb-4a88-885a-19407854ab1b",
+    "type": "talk",
+    "confirmed": true,
     "time": "10h10",
     "image": "",
     "title": "Desbloqueando o Potencial Criativo com o Mapa da Alteridade",
-    "speakers": [
-      {
-        "image": "liliane-claudia.jpeg",
-        "nome": "Liliane Claudia",
-        "empresa": "Accenture"
-      }
-    ],
-    "details": "Detalhes da Palestra"
+    "summary": "Descubra como a acessibilidade pode desbloquear o potencial criativo na palestra de Liliane Claudia. Designer com tetraplegia, Liliane compartilha sua experiência única e apresenta o Mapa da Alteridade, uma ferramenta que une Design Inclusivo e exploração criativa. Aprenda a identificar e eliminar barreiras de acessibilidade e veja como essa abordagem pode transformar produtos e serviços, impulsionando a inovação.",
+    "speakerIds": ["2bac9f1e-e57f-4bd1-89cf-35526217e14e"]
   },
   {
+    "uuid": "99bfe0e1-d5bf-4a54-857f-5180da389f9b",
+    "type": "talk",
+    "confirmed": true,
     "time": "10h55",
     "image": "",
     "title": "Trazendo a acessibilidade para a realidade: uma nova experiência de usuário",
-    "speakers": [
-      {
-        "image": "muriel-de-almeida-xavier.jpeg",
-        "nome": "Muriel",
-        "empresa": "Banco do Brasil"
-      }
-    ],
-    "details": "Detalhes da Palestra"
+    "summary": "Após perder a visão repentinamente, trago minhas percepções sobre a importância da cultura da acessibilidade não só nas empresas, mas também na sociedade como um todo.  Conto algumas situações peculiares que vivi e como elas me incentivam a levar a informação de que a acessibilidade de verdade deve ser feita não só pela tecnologia, mas também pelas pessoas.",
+    "speakerIds": ["c32d489f-26dd-4968-ab8e-feeefc9cad1e"]
   },
   {
+    "uuid": "6ff8ae60-e7b1-4ea4-8f0c-34f8c92d2f26",
+    "type": "talk",
+    "confirmed": true,
     "time": "11h20",
     "image": "",
     "title": "Gestão de Acessibilidade em Produtos Digitais: do processo às métricas",
-    "speakers": [
-      {
-        "image": "sandyara-peres.jpeg",
-        "nome": "Sandyara Peres",
-        "empresa": "Itaú"
-      }
-    ],
-    "details": "Detalhes da Palestra"
+    "summary": "Vamos abordar desde os processos iniciais até a implementação final, compartilhando as melhores práticas e estratégias para garantir que suas criações atendam a todas as necessidades e habilidades dos usuários.",
+    "speakerIds": ["bf031aa6-dce7-4a9c-9b12-8da00cac922a"]
   },
   {
+    "uuid": "ce3d1fc0-3163-4394-828a-7571ff1aea03",
+    "type": "talk",
+    "confirmed": true,
     "time": "12h05",
     "image": "",
     "title": "Então, o seu produto é acessível. E o seu processo de trabalho?",
-    "speakers": [
-      {
-        "image": "maria-clara-tarrafa.jpeg",
-        "nome": "Maria Clara",
-        "empresa": "iFood"
-      }
-    ],
-    "details": "Detalhes da Palestra"
+    "summary": "Fala-se muito de requisitos de acessibilidade para produtos digitais, seguir padrões da WCAG e de inclusão e diversidade nos conteúdos, por exemplo. \nMas a sua empresa é acessível da porta pra dentro?\nVocê cria um ambiente para absorver pessoas vindas de contextos diversos? Se hoje entrasse na sua equipe uma pessoa não vidente, por exemplo, ela teria as ferramentas e o ambiente para exercer suas atividades plenamente? O que estamos fazendo para a inclusão dentro das empresas de tecnologia?",
+    "speakerIds": ["8a9f0c22-f512-4995-b504-ec8ec4c2fda6"]
   },
   {
+    "uuid": "a3c5ac45-0a06-4457-897e-96881d1c4562",
+    "type": "block",
+    "confirmed": true,
     "time": "12h25",
     "image": "cafe-blue.png",
     "imageAlt": "Ícone com um Garfo e uma Faca representando refeição",
     "title": "Pausa para almoço",
     "imageAriaHidden": true,
     "speakers": [],
-    "subtitle": "Vamos almoçar.",
-    "details": ""
+    "subtitle": "Vamos almoçar."
   },
   {
+    "uuid": "f40a5360-8fe0-4dd5-819a-186a86240980",
+    "type": "block",
+    "confirmed": true,
     "time": "13h30",
     "image": "d-braile.png",
     "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
     "imageAriaHidden": true,
     "title": "Abertura tarde",
-    "speakers": [],
-    "details": ""
+    "speakers": []
   },
   {
+    "uuid": "65a9f9ec-f4e9-4c93-8434-55f8356708b6",
+    "type": "block",
+    "confirmed": true,
     "time": "13h45",
     "image": "inclua-mais-ti-2.png",
     "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
     "imageAriaHidden": true,
     "imageBackground": "bg-blue",
     "title": "Painel Inclua Mais TI",
-    "speakers": [],
-    "details": ""
+    "speakers": []
   },
   {
+    "uuid": "0d2eba6e-945b-471e-8b61-6a1ff57b1b10",
+    "type": "talk",
+    "confirmed": true,
     "time": "14h45",
     "image": "",
     "title": "Conectando Vidas: Tecnologia e Acessibilidade",
-    "speakers": [
-      {
-        "image": "arthur-ximenes.jpeg",
-        "nome": "Arthur Ximenes",
-        "empresa": "Hefesto"
-      }
-    ],
-    "details": "Detalhes da Palestra"
+    "summary": "Junte-se a nós nesta palestra especial que abordará como a tecnologia pode ser um facilitador poderoso na promoção da acessibilidade para pessoas com deficiência. Descubra como inovações tecnológicas estão transformando vidas e criando um mundo mais inclusivo para todos. Não perca a oportunidade de aprender e se inspirar!",
+    "speakerIds": ["f224a048-e67e-4054-882d-c987a0aa221d"]
   },
   {
+    "uuid": "51b42b6b-74d5-48e9-8c18-5306942f6101",
+    "type": "talk",
+    "confirmed": true,
     "time": "15h10",
     "image": "",
     "title": "IA e Neurodiversidade: Ferramentas e Soluções em Acessibilidade Inclusiva para a Diversidade Cognitiva",
-    "speakers": [
-      {
-        "image": "sarah-fernn.jpeg",
-        "nome": "Sarah Fernn",
-        "empresa": "Stardust Zone"
-      }
-    ],
-    "details": "Detalhes da Palestra"
+    "summary": "Nesta atividade vamos explorar como a inteligência artificial, IA, pode ser usada para criar ferramentas que melhoram a acessibilidade digital para pessoas neurodivergentes. O público terá a oportunidade de aprender sobre diversos tópicos, incluindo a importância da acessibilidade digital, conceitos de neurodiversidade, aplicações de IA na acessibilidade, assistentes virtuais inteligentes, personalização e adaptabilidade, desafios e considerações éticas, e o futuro da IA em acessibilidade digital, tudo com foco em pessoas neurodivergentes.\n\nA neurodiversidade refere-se à variedade natural das diferenças cognitivas, abrangendo condições como autismo, TDAH, dislexia e outras que afetam a forma como as pessoas processam informações e interagem com o mundo. Já a IA envolve o desenvolvimento de sistemas computacionais capazes de realizar tarefas que normalmente exigem inteligência humana, como reconhecimento de fala, aprendizado e tomada de decisão.",
+    "speakerIds": ["7a362eda-52cb-4d53-94cb-2ba56408f355"]
   },
   {
+    "uuid": "3fef68fb-0b36-4947-8cd9-9d1a82d57cfd",
+    "type": "talk",
+    "confirmed": true,
     "time": "15h55",
     "image": "",
     "title": "Design inclusivo para a 3ª Idade",
-    "speakers": [
-      {
-        "image": "marcos-fernandes.jpeg",
-        "nome": "Marcos Vinicius",
-        "empresa": "GFT Tecnologia"
-      },
-      {
-        "image": "michael-liang.jpeg",
-        "nome": "Michael Liang",
-        "empresa": "GFT Tecnologia"
-      }
-    ],
-    "details": "Detalhes da Palestra"
+    "summary": "Em 2022, 47,2% das pessoas com deficiência tinham 60 anos ou mais, isso destaca a importância de um design inclusivo para a terceira idade. Nesta palestra, serão exploradas ferramentas, dados e práticas de acessibilidade, demonstrando como criar soluções digitais que beneficiem não apenas os idosos, mas a sociedade como um todo. Vamos descobrir como pensar em acessibilidade, entregar soluções digitais de maneira integrada para o time e também, como isso pode gerar economia e ainda aumentar faturamento.",
+    "speakerIds": [ "24ff11bc-b6d3-4a0b-b32b-7cf720e917e4", "4358a242-6a31-49f7-b6d1-e2197e77f948" ]
   },
   {
+    "uuid": "6a95b969-ccfc-43cd-8e5b-220b69f2fffc",
+    "type": "talk",
+    "confirmed": true,
     "time": "16h20",
     "image": "",
     "title": "Implementando Acessibilidade: Um Fluxo de Trabalho otimizado para Desenvolvedores",
-    "speakers": [
-      {
-        "image": "filipe-ballico-de-moraes.jpeg",
-        "nome": "Filipe Ballico de Moraes",
-        "empresa": "Ministério Público Federal"
-      }
-    ],
-    "details": "Detalhes da Palestra"
+    "summary": "Muitos desenvolvedores conhecem muito pouco ou não conhecem nada sobre acessibilidade. Apesar dessa situação estar sendo mudada gradativamente, ainda é necessário reciclar e conscientizar muitos deles. Quais as causas existentes na dificuldade em implementar acessibilidade? Existe alguma forma de otimizar os trabalhos, sem prejudicar o tempo, incluir retrabalho e conhecimento de ferramentas e frameworks que poderiam ajudar?",
+    "speakerIds": [ "7d1e25f9-4272-4d40-96eb-66a5e40240fb" ]
   },
   {
+    "uuid": "87c6ae64-ec69-41f2-8638-c684b8474027",
+    "type": "block",
+    "confirmed": true,
     "time": "17h00",
     "image": "d-braile.png",
     "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
     "imageAriaHidden": true,
     "title": "Encerramento",
-    "speakers": [],
-    "details": ""
+    "speakers": []
   }
 ]

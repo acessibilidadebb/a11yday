@@ -1,3 +1,5 @@
+import { ScheduleItemType } from "../../types/schedule"
+
 export interface ScheduleProps {
   showSchedule: boolean
 }
@@ -8,19 +10,11 @@ export interface SpeakersTitleProps {
 
 export interface SpeakerTitle {
   image: string
-  nome: string
-  empresa?: string
+  name: string
+  company?: string
+  nickname: string
 }
-export interface ScheduleItemProps {
-  time: string
-  image?: string
-  imageAlt?: string
-  imageAriaHidden?: boolean
-  imageBackground?: string
-  title: string
-  subtitle?: string
-  speakers: SpeakerTitle[]
-  details: string
+export interface ScheduleItemProps extends ScheduleItemType {
 }
 export interface DetailsProps extends ScheduleItemProps {
   isOpen: boolean

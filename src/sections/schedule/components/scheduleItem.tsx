@@ -5,17 +5,29 @@ import './scheduleitem.scss'
 import Modal from '../../../components/modal'
 import { SpeakersTitle } from './speakersTitle'
 import { Speaker } from '../../../types/speakers'
-import speakersData from '../../../json/speakers.json'
+import speakersData from '../../../json/speakersData.json'
 import { ScheduleCardImageProps, ScheduleItemProps } from '../types'
 import { generateUniqueId } from '../../../utils/functions'
 
 export function ScheduleItem(props: ScheduleItemProps) {
-  const { time, title, subtitle, speakers, details } = props
+  const { time, type, title, subtitle, summary, speakerIds } = props
   const { isModalOpen, setModalOpen, togglePin } = useContext(GlobalContext)
   const titleId = generateUniqueId()
   const descriptionId = generateUniqueId()
   const [isOpen, setIsOpen] = useState(false)
   const buttonRef = useRef<HTMLButtonElement>(null)
+  const [speakers, setSpeakers] = useState([] as Speaker[])
+
+  useEffect(() => {
+    if (speakerIds?.length) {
+      const filteredSpeakers = speakerIds.reduce((acc, id) => {
+        const found = speakersData.find((speaker) => speaker.id === id)
+        if (found) acc.push(found)
+        return acc
+      }, [] as Speaker[])
+      setSpeakers(filteredSpeakers)
+    }
+  }, [])
 
   useEffect(() => {
     if (isModalOpen) {
@@ -30,18 +42,19 @@ export function ScheduleItem(props: ScheduleItemProps) {
     setModalOpen(true)
     togglePin(true)
   }
-  const ScheduleCardImage = ({
-    speakers,
-    image,
-    imageAlt,
-    imageAriaHidden,
-    imageBackground,
-  }: ScheduleCardImageProps) => {
+  const ScheduleCardImage = (props: ScheduleCardImageProps) => {
+    const {
+      speakers,
+      image,
+      imageAlt,
+      imageAriaHidden,
+      imageBackground,
+    } = props
     const getAltText = () => {
       let altText = ''
       if (speakers.length) {
         altText =
-          'Foto de ' + speakers.map((speaker) => speaker.nome).join(', ')
+          'Foto de ' + speakers.map((speaker) => speaker.name).join(', ')
       } else {
         altText = imageAlt ?? ''
       }
@@ -92,39 +105,16 @@ export function ScheduleItem(props: ScheduleItemProps) {
     )
   }
 
-  const getResumo = () => {
-    const foundSpeaker = speakersDetails.find(
-      (speaker: Speaker) => speaker.resumo.trim().length
-    )
-    if (foundSpeaker) {
-      const resumo = foundSpeaker.resumo
-      if (typeof resumo === 'string') {
-        return resumo
-      }
-    }
-    return ''
-  }
-
-  const speakersDetails = speakers.map((speaker) => ({
-    ...speakersData.find(
-      (item) =>
-        item.seuNome.includes(speaker.nome) ||
-        item.apelido.includes(speaker.nome) ||
-        (item.seuNome + ' ' + item.apelido).includes(speaker.nome)
-    ),
-    image: speaker.image,
-  })) as Speaker[]
-
   const ScheduleSpeaker = ({ speaker }: { speaker: Speaker }) => {
     return (
       <div className="schedule-details-body">
-        <h4 className="schedule-details-name">Sobre {speaker.seuNome}</h4>
+        <h4 className="schedule-details-name">Sobre {speaker.name}</h4>
         <img
           className="schedule-details-image"
           src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image}`}
-          alt={`Foto de ${speaker.seuNome}`}
+          alt={`Foto de ${speaker.name}`}
         />
-        <p className="schedule-details-company">{speaker.empresa}</p>
+        <p className="schedule-details-company">{speaker.company}</p>
         <p className="schedule-details-description">{speaker?.miniBio}</p>
       </div>
     )
@@ -138,11 +128,11 @@ export function ScheduleItem(props: ScheduleItemProps) {
             {title}
           </h3>
           <p className="schedule-details-description" id={descriptionId}>
-            {getResumo()}
+            {summary}
           </p>
         </div>
-        {!!speakersDetails.length &&
-          speakersDetails.map((speaker, index) => {
+        {!!speakers.length &&
+          speakers.map((speaker, index) => {
             return (
               <ScheduleSpeaker
                 key={`schedulespeaker${index}`}
@@ -166,11 +156,11 @@ export function ScheduleItem(props: ScheduleItemProps) {
             : 'bg-lightblue'
         }`}
       >
-        <ScheduleCardImage {...props} />
+        <ScheduleCardImage {...props} speakers={speakers} />
         <h3 className="title">{title}</h3>
         <SpeakersTitle speakers={speakers} />
         {subtitle && <p className="subtitle">{subtitle}</p>}
-        {details && (
+        {type === 'talk' && (
           <button
             type="button"
             onClick={handleClickDetails}

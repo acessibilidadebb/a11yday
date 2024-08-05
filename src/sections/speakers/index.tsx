@@ -2,15 +2,16 @@ import './styles.scss'
 
 import SpeakerItem from './components/speaker'
 import lowVisionMark from '../../assets/low-vision-mark.png'
-import speakersData from '../../json/speakers.json'
+import speakersData from '../../json/speakersData.json'
 import { Speaker } from '../../types/speakers'
 import { SpeakersProps } from './types'
+import { generateUniqueId } from '../../utils/functions'
 
 speakersData.sort((a, b) => {
-  if (a.seuNome < b.seuNome) {
+  if (a.name < b.name) {
     return -1
   }
-  if (a.seuNome > b.seuNome) {
+  if (a.name > b.name) {
     return 1
   }
   return 0
@@ -33,10 +34,10 @@ export default function Speakers({ showSpeakers }: SpeakersProps) {
           <h2>Palestrantes</h2>
         </div>
         <div className="speakers-content">
-          {speakers.map((speaker: Speaker, index) => {
+          {speakers.map((speaker: Speaker) => {
             return (
               <SpeakerItem
-                key={`${index}${speaker.seuEmail}`}
+                key={`${generateUniqueId()}`}
                 speaker={speaker}
               />
             )
