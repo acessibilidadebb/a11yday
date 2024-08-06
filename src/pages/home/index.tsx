@@ -23,7 +23,7 @@ export default function Home(props: HomeProps) {
     <>
       <div style={{ overflowX: 'hidden' }}>
         <Overview style={{ display: showSections ? 'flex' : 'none' }} />
-        <Watch style={{ display: showSections ? 'flex' : 'none' }} />
+        <Watch style={{ display: showSections ? 'block' : 'none' }} />
       </div>
       <SectionsButtons
         showSections={showSections}

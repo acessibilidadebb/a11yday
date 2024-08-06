@@ -1,22 +1,33 @@
+import Button from '../../components/button'
 import './styles.scss'
 import { WatchProps } from './types'
 
-export default function Watch({style}: WatchProps) {
+export default function Watch({ style }: WatchProps) {
   return (
     <section className="watch" style={style}>
-      <div>
-        <h2>
-          <div className="play" /> Assista à transmissão ao vivo!
-        </h2>
-        <p>Nossa transmissão conta com tradução ao vivo em Libras</p>
-      </div>
-      <div className="buttons">
-        <a href="#" className="btn">
-          Pelo Teams
-        </a>
-        <a href="#" className="btn">
-          Pelo Youtube
-        </a>
+      <div className="watch-content">
+        <div className="watch-text">
+          <h2>
+            <div className="play" /> Assista à transmissão ao vivo!
+          </h2>
+          <p>
+            Nossa transmissão conta com intérprete de Libras e Audiodescrição
+          </p>
+        </div>
+        <div className="buttons">
+          <Button
+            href="https://youtube.com"
+            size="large"
+            title="YouTube"
+            className="btn"
+          />
+          <Button
+            href="https://youtube.com"
+            size="large"
+            title="YouTube com audiodescrição"
+            className="btn"
+          />
+        </div>
       </div>
     </section>
   )
