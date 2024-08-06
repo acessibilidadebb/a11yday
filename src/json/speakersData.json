@@ -2,7 +2,7 @@
   {
     "id": "7d1e25f9-4272-4d40-96eb-66a5e40240fb",
     "name": "Filipe Ballico de Moraes",
-    "nickname": "Filipe",
+    "nickname": "Filipe Ballico de Moraes",
     "company": "Ministério Público Federal",
     "miniBio": "Sou graduado em matemática com ênfase em informática pela Universidade Federal de São Carlos - UFSCar, com pós graduação em Segurança Cibernética pela FIAP e cursando pós graduação em Arquitetura de Software e Soluções pela XP Educação. Trabalho no MPF desde agosto de 2012, e por ser cego, tive muitos problemas com acessibilidade dos sistemas internos, baseados em web sites. Por isso, em um esforço conjunto com a Secretaria de Tecnologia da Informação  e Comunicação do MPF, atualmente faço parte da equipe de homologação dos serviços e aplicativos internos do órgão. Realizei diversos cursos referentes a acessibilidade, bem como estou trabalhando em um projeto de contornar dificuldades dos desenvolvedores em implementar acessibilidade, principalmente em sistemas legados e/ou novos sistemas.",
     "image": "filipe-ballico-de-moraes.jpeg",
@@ -14,23 +14,9 @@
     "website": ""
   },
   {
-    "id": "bf031aa6-dce7-4a9c-9b12-8da00cac922a",
-    "name": "Sandyara Peres",
-    "nickname": "",
-    "company": "Itaú",
-    "miniBio": "Mulher cis, de etnia rom, autista de nível 1 de suporte e TDAH. Pós-graduada em Gestão de Negócios Digitais pela USP, mestranda com ênfase em Interação Humano-Computador e Acessibilidade Digital na UNICAMP. Sou uma profissional apaixonada por design e acessibilidade, acreditando no potencial dessa combinação para criar soluções inclusivas e impactantes. Com vasta experiência em coordenação de design, gerenciamento de produtos e liderança de equipes, tenho trabalhado em empresas renomadas, como Serasa Experian, PicPay, Itaú Unibanco e Rede D'or São Luiz.",
-    "image": "sandyara-peres.jpeg",
-    "email": "sandyara.peres@gmail.com",
-    "linkedIn": "https://www.linkedIn.com/in/sandyaraperes/",
-    "instagram": "https://instagram.com/sandyaraperes",
-    "twitter": "",
-    "facebook": "",
-    "website": "https://sandyaraperes.com.br/"
-  },
-  {
     "id": "f224a048-e67e-4054-882d-c987a0aa221d",
     "name": "Arthur Ximenes",
-    "nickname": "Ximenes",
+    "nickname": "Arthur Ximenes",
     "company": "Hefestoshop.com",
     "miniBio": "Arthur Ximenes, doutor em direito pela universidade Panthéon-Assas em Paris , fundador e CEO da startup Hefestoshop.com . Sou uma pessoa com deficiência pois nasci com mielomeningocele",
     "image": "arthur-ximenes.jpeg",
@@ -58,7 +44,7 @@
   {
     "id": "8a9f0c22-f512-4995-b504-ec8ec4c2fda6",
     "name": "Maria Clara Reboucas Tarrafa",
-    "nickname": "Tarrafa",
+    "nickname": "Maria Clara Tarrafa",
     "company": "Stone",
     "miniBio": "Sou Product Designer engajada em questões de inclusão. Quando atuei como Product Designer no Itaú, fui voluntária e fomentei ativamente a cultura de inclusão e diversidade no grupo de trabalho que visava criar condições ideais de trabalho para as pessoas com deficiência. Trabalhei em grupos diversos com pessoas neurodivergentes e não videntes, nos dois casos criando padrões de inclusão e métodos de trabalho que fizessem sentido para todas as pessoas da equipe sem excluir nenhuma pessoa. Não sou uma pessoa com deficiência, mas tenho vivência no tema. Também atuo como voluntária do grupo Ladies That UX propagando conhecimento sobre acessibilidade e boas práticas para inclusão no ambiente de tecnologia.",
     "image": "maria-clara-tarrafa.jpeg",
@@ -72,7 +58,7 @@
   {
     "id": "c32d489f-26dd-4968-ab8e-feeefc9cad1e",
     "name": "Muriel de Almeida Xavier",
-    "nickname": "Muri",
+    "nickname": "Muriel Xavier",
     "company": "Banco do Brasil",
     "miniBio": "Sou a Muriel, escriturária no Banco do Brasil e perdi minha visão há 2 anos. Desde então, venho conhecendo melhor o mundo da acessibilidade e das tecnologias assistivas. Como entusiasta de novos conhecimentos, estou aprendendo HTML acessível, lógica de programação, WCAG e testes de acessibilidade. Acredito que tenho como missão levar uma mensagem positiva às pessoas, para que elas acreditem nelas mesmas e sigam sempre em frente, independente das dificuldades que encontrem pelo caminho.",
     "image": "muriel-de-almeida-xavier.jpeg",
@@ -100,7 +86,7 @@
   {
     "id": "2bac9f1e-e57f-4bd1-89cf-35526217e14e",
     "name": "Liliane Claudia",
-    "nickname": "Lili",
+    "nickname": "Liliane Claudia",
     "company": "Accenture",
     "miniBio": "Sou uma designer apaixonada por ensinar profissionais da área tech a projetar soluções criativas usando abordagens de acessibilidade. Sendo tetraplégica e usuária de recursos de acessibilidade, tenho uma visão única sobre como as pessoas com deficiência interagem com a tecnologia, e compartilho essa perspectiva em todos os projetos que participo. Atualmente, trabalho na Accenture Song, conduzindo a implementação de práticas de acessibilidade em consultorias de design, eventos globais e iniciativas internas.",
     "image": "liliane-claudia.jpeg",
@@ -114,7 +100,7 @@
   {
     "id": "24ff11bc-b6d3-4a0b-b32b-7cf720e917e4",
     "name": "Marcos Vinicius dos Santos Fernandes",
-    "nickname": "Marcos",
+    "nickname": "Marcos Vinicius",
     "company": "GFT tecnologia",
     "miniBio": "Lead Product Designer. MBA em Digital Business pela FIAP e certificação em Design inclusivo e acessibilidade pela PUCRS.\n\nCom mais de 12 anos de experiência em produtos digitais, tenho uma ampla atuação em pesquisa e desenvolvimento de novas tecnologias, inteligência artificial, machine learning, chatbot e IoT. Sou especialista em design inclusivo e acessibilidade, e tenho um forte background em desenho de interfaces e usabilidade (UI/UX). Além disso, tenho experiência em comunicação e publicidade, e conhecimentos em front-end (HTML, CSS, Javascript). O meu objetivo é criar soluções que gerem valor e impacto positivo para os usuários e os negócios.",
     "image": "marcos-fernandes.jpeg",

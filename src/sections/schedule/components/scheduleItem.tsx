@@ -96,7 +96,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
         }`}
       >
         <ScheduleCardImage {...props} speakers={speakers} />
-        <h3 className="title">{confirmed ? title : 'A confirmar'}</h3>
+        <h3 className="title">{!confirmed && type === 'talk' ? 'A confirmar' : title}</h3>
         {confirmed && <SpeakersTitle speakers={speakers} />}
         {subtitle && <p className="subtitle">{subtitle}</p>}
         {type === 'talk' && confirmed && (

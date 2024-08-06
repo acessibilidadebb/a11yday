@@ -2,11 +2,12 @@
   {
     "uuid": "241ff949-0a4d-4e55-8d5c-97c8a8430005",
     "type": "block",
+    "confirmed": true,
     "time": "8h00",
     "image": "d-braile.svg",
     "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
     "imageAriaHidden": true,
-    "title": "Checkin",
+    "title": "Início do Checkin",
     "speakers": []
   },
   {
