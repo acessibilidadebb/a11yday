@@ -11,7 +11,7 @@ import { generateUniqueId } from '../../../utils/functions'
 import ScheduleCardImage from './scheduleCardImage'
 
 export function ScheduleItem(props: ScheduleItemProps) {
-  const { time, type, title, subtitle, summary, speakerIds } = props
+  const { time, type, confirmed, title, subtitle, summary, speakerIds } = props
   const { isModalOpen, setModalOpen, togglePin } = useContext(GlobalContext)
   const titleId = generateUniqueId()
   const descriptionId = generateUniqueId()
@@ -96,10 +96,10 @@ export function ScheduleItem(props: ScheduleItemProps) {
         }`}
       >
         <ScheduleCardImage {...props} speakers={speakers} />
-        <h3 className="title">{title}</h3>
-        <SpeakersTitle speakers={speakers} />
+        <h3 className="title">{confirmed ? title : 'A confirmar'}</h3>
+        {confirmed && <SpeakersTitle speakers={speakers} />}
         {subtitle && <p className="subtitle">{subtitle}</p>}
-        {type === 'talk' && (
+        {type === 'talk' && confirmed && (
           <button
             type="button"
             onClick={handleClickDetails}

@@ -1,9 +1,16 @@
 import './scheduleCardImage.scss'
 
 import { ScheduleCardImageProps } from '../types'
+import { Speaker } from '../../../types/speakers'
 
 export default function ScheduleCardImage(props: ScheduleCardImageProps) {
-  const { speakers, image, imageAlt, imageAriaHidden } = props
+  const { speakers, confirmed, image, imageAlt, imageAriaHidden } = props
+  const getSrc = (speaker: Speaker) => {
+    if (confirmed) {
+      return `${import.meta.env.BASE_URL}palestrantes/${speaker.image}`
+    }
+    return 'blank-profile.png'
+  }
   const getAltText = () => {
     let altText = ''
     if (speakers.length) {
@@ -14,7 +21,11 @@ export default function ScheduleCardImage(props: ScheduleCardImageProps) {
     return altText
   }
   return (
-    <div className={`${speakers.length ? 'schedule-card-image' : 'schedule-card-icon'}`}>
+    <div
+      className={`${
+        speakers.length ? 'schedule-card-image' : 'schedule-card-icon'
+      }`}
+    >
       {speakers.length ? (
         speakers.map((speaker, index) => {
           const borderRadiusStyle = {
@@ -32,8 +43,8 @@ export default function ScheduleCardImage(props: ScheduleCardImageProps) {
                 width: `${100 / speakers.length}%`,
                 ...borderRadiusStyle,
               }}
-              aria-hidden={`${!!imageAriaHidden}`}
-              src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image}`}
+              aria-hidden={`${!!imageAriaHidden || !confirmed }`}
+              src={getSrc(speaker)}
               alt={getAltText()}
             />
           )

@@ -1,4 +1,5 @@
 import { ScheduleItemType } from "../../types/schedule"
+import { Speaker } from "../../types/speakers"
 
 export interface ScheduleProps {
   showSchedule: boolean
@@ -22,9 +23,10 @@ export interface DetailsProps extends ScheduleItemProps {
 }
 
 export interface ScheduleCardImageProps {
+  confirmed: boolean
   image?: string
   imageAlt?: string
   imageAriaHidden?: boolean
   imageBackground?: string
-  speakers: SpeakerTitle[]
+  speakers: Speaker[]
 }
