@@ -14,7 +14,7 @@ export default function Schedule({ showSchedule }: ScheduleProps) {
       <div>
         <div className="schedule-header">
           <div className="schedule-time">Hora</div>
-          <div className="schedule-event">Acontecimento</div>
+          <div className="schedule-event">Atividade</div>
         </div>
         {scheduleData.map((item: ScheduleItemType) => (
           <ScheduleItem key={`${generateUniqueId()}`} {...item} />
