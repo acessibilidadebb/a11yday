@@ -90,13 +90,13 @@ export function ScheduleItem(props: ScheduleItemProps) {
       </div>
       <div
         className={`schedule-card ${
-          Array.isArray(speakers) && speakers.length
-            ? 'bg-lightgray'
-            : 'bg-lightblue'
+          type === 'talk' ? 'bg-lightgray' : 'bg-lightblue'
         }`}
       >
         <ScheduleCardImage {...props} speakers={speakers} />
-        <h3 className="title">{!confirmed && type === 'talk' ? 'A confirmar' : title}</h3>
+        <h3 className="title">
+          {!confirmed && type === 'talk' ? 'A confirmar' : title}
+        </h3>
         {confirmed && <SpeakersTitle speakers={speakers} />}
         {subtitle && <p className="subtitle">{subtitle}</p>}
         {type === 'talk' && confirmed && (
