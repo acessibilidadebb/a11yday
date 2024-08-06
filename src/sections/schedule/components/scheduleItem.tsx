@@ -90,7 +90,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
       </div>
       <div
         className={`schedule-card ${
-          type === 'talk' ? 'bg-lightgray' : 'bg-lightblue'
+          type === 'talk' && confirmed ? 'bg-lightgray' : 'bg-lightblue'
         }`}
       >
         <ScheduleCardImage {...props} speakers={speakers} />
