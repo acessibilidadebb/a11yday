@@ -1,4 +1,4 @@
-$font-path: './assets';
+$font-path: '/src/assets';
 @font-face {
   font-family: 'BancoDoBrasilTextos';
   src: url('#{$font-path}/fonts/BancoDoBrasilTextos-Regular.ttf') format('truetype');
