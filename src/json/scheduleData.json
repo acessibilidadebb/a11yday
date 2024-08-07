@@ -54,12 +54,12 @@
   {
     "uuid": "6ff8ae60-e7b1-4ea4-8f0c-34f8c92d2f26",
     "type": "talk",
-    "confirmed": false,
+    "confirmed": true,
     "time": "11h20",
     "image": "",
-    "title": "Gestão de Acessibilidade em Produtos Digitais: do processo às métricas",
-    "summary": "Vamos abordar desde os processos iniciais até a implementação final, compartilhando as melhores práticas e estratégias para garantir que suas criações atendam a todas as necessidades e habilidades dos usuários.",
-    "speakerIds": ["bf031aa6-dce7-4a9c-9b12-8da00cac922a"]
+    "title": "Gestão de Projetos com Olhar de Acessibilidade",
+    "summary": "A acessibilidade se tornou um tema crucial para empresas e instituições que buscam construir um ambiente mais inclusivo e diverso. Na área de gestão de projetos, essa questão se torna ainda mais relevante, pois impacta diretamente na experiência de todos os envolvidos, desde os membros da equipe até os usuários finais.\n\nNesta palestra, abordarei os principais aspectos da gestão de projetos com foco na acessibilidade, explorando temas como: Conceitos básicos de acessibilidade, Legislação e normas de acessibilidade, Metodologias e ferramentas para gestão de projetos acessíveis e Dicas e boas práticas para a implementação de projetos acessíveis",
+    "speakerIds": ["550e8400-e29b-41d4-a716-446655440000"]
   },
   {
     "uuid": "ce3d1fc0-3163-4394-828a-7571ff1aea03",
