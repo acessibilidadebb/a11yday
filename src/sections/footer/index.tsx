@@ -32,6 +32,10 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <a href="https://www.instagram.com/UXnoBB/">UXnoBB</a>
+
+      <a href="https://instagram.com/comunicatibb?igshid=YmMyMTA2M2Y=">ComunicaTI</a>
+      <a href="https://www.linkedin.com/in/comunicatibb">ComunicaTI</a>
       <div className="overlay" />
     </footer>
   )

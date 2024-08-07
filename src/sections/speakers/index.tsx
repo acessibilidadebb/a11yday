@@ -3,19 +3,15 @@ import './styles.scss'
 import SpeakerItem from './components/speaker'
 import lowVisionMark from '../../assets/low-vision-mark.png'
 import speakersData from '../../json/speakersData.json'
+import scheduleData from '../../json/scheduleData.json'
 import { Speaker } from '../../types/speakers'
 import { SpeakersProps } from './types'
-import { generateUniqueId } from '../../utils/functions'
+import { generateUniqueId, getSpeakersIdsFromSchedule } from '../../utils/functions'
+import { ScheduleItemType } from '../../types/schedule'
 
-speakersData.sort((a, b) => {
-  if (a.name < b.name) {
-    return -1
-  }
-  if (a.name > b.name) {
-    return 1
-  }
-  return 0
-})
+const speakerIdsArray = getSpeakersIdsFromSchedule(scheduleData as ScheduleItemType[])
+
+console.log(speakerIdsArray)
 
 const speakers: Speaker[] = speakersData as Speaker[]
 

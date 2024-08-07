@@ -5,6 +5,11 @@ import './speaker.scss'
 import { SpeakerProps } from '../types'
 import Modal from '../../../components/modal'
 import { generateUniqueId } from '../../../utils/functions'
+import { ReactComponent as IconWebsite } from '../../../assets/window-tab.svg'
+import { ReactComponent as IconFacebook } from '../../../assets/facebook-negative.svg'
+import { ReactComponent as IconInstagram } from '../../../assets/instagram-negative.svg'
+import { ReactComponent as IconX } from '../../../assets/x-twitter-negative.svg'
+import { ReactComponent as IconLinkedin } from '../../../assets/linkedin-negative.svg'
 
 export default function SpeakerItem(props: SpeakerProps) {
   const { speaker } = props
@@ -29,6 +34,11 @@ export default function SpeakerItem(props: SpeakerProps) {
   }
 
   const DetailsContent = () => {
+    // console.log(speaker.linkedIn)
+    // console.log(speaker.facebook)
+    // console.log(speaker.twitter)
+    // console.log(speaker.website)
+    // console.log(speaker.instagram)
     return (
       <div className="default_dialog-content">
         <h3 id={titleId} className="speaker-details-name">
@@ -47,6 +57,13 @@ export default function SpeakerItem(props: SpeakerProps) {
         <p id={descriptionId} className="speaker-details-description">
           {speaker?.miniBio ? speaker?.miniBio : ''}
         </p>
+        <div style={{backgroundColor: 'red'}}>
+          <IconWebsite className='icon'/>
+          <IconFacebook className='icon' />
+          <IconLinkedin className='icon' />
+          <IconInstagram className='icon' />
+          <IconX className='icon' />
+        </div>
       </div>
     )
   }
