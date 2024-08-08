@@ -65,35 +65,35 @@ export default function SpeakerItem(props: SpeakerProps) {
               title={`Website de ${speaker.name}`}
               aria-label={`Website de ${speaker.name}`}
               >
-                <IconWebsite className="icon" />
+                <IconWebsite className="icon" aria-hidden="true" />
               </a>
             )}
             {speaker.facebook && (
               <a href={speaker.facebook} target="_blank"
               title={`Facebook de ${speaker.name}`}
               aria-label={`Facebook de ${speaker.name}`}>
-                <IconFacebook className="icon" />
+                <IconFacebook className="icon" aria-hidden="true" />
               </a>
             )}
             {speaker.instagram && (
               <a href={speaker.instagram} target="_blank"
               title={`Instagram de ${speaker.name}`}
               aria-label={`Instagram de ${speaker.name}`}>
-                <IconInstagram className="icon" />
+                <IconInstagram className="icon" aria-hidden="true" />
               </a>
             )}
             {speaker.twitter && (
               <a href={speaker.twitter} target="_blank"
               title={`X de ${speaker.name}`}
               aria-label={`X de ${speaker.name}`}>
-                <IconX className="icon" />
+                <IconX className="icon" aria-hidden="true" />
               </a>
             )}
             {speaker.linkedIn && (
               <a href={speaker.linkedIn} target="_blank"
               title={`Linkedin de ${speaker.name}`}
               aria-label={`Linkedin de ${speaker.name}`}>
-                <IconLinkedin className='icon' />
+                <IconLinkedin className='icon' aria-hidden="true" />
               </a>
             )}
           </div>
