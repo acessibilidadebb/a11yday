@@ -33,7 +33,7 @@
   justify-content: space-between;
   border-radius: 0 0 8px 8px;
   border: 1px solid $border-gray;
-  box-shadow: 0 0 1px 0 rgba(#19191C, 0.25), 0 1px 1px 0 rgba(#151518, 0.18);
+  box-shadow: 0 0 1px 0 rgba(#19191c, 0.25), 0 1px 1px 0 rgba(#151518, 0.18);
   h3 {
     font-weight: 600;
     padding: 5px 0;
@@ -88,12 +88,17 @@
   letter-spacing: 0.005em;
   text-align: left;
 }
-.icon-path {
-  // fill: none;
-  stroke: currentColor;
-  stroke-width: 2; /* Ajuste a largura do contorno conforme necessário */
-}
-.icon {
-  // background-color: green;
-  // color: blue;
+
+.speaker-social-icons {
+  padding-top: 16px;
+  h4 {
+    font-weight: bold;
+  }
+  a {
+    color: $link;
+  }
+  .icon {
+    width: 36px;
+    padding: 10px 10px 10px 0;
+  }
 }

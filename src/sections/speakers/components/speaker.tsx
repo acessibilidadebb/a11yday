@@ -6,10 +6,11 @@ import { SpeakerProps } from '../types'
 import Modal from '../../../components/modal'
 import { generateUniqueId } from '../../../utils/functions'
 import { ReactComponent as IconWebsite } from '../../../assets/window-tab.svg'
-import { ReactComponent as IconFacebook } from '../../../assets/facebook-negative.svg'
-import { ReactComponent as IconInstagram } from '../../../assets/instagram-negative.svg'
-import { ReactComponent as IconX } from '../../../assets/x-twitter-negative.svg'
-import { ReactComponent as IconLinkedin } from '../../../assets/linkedin-negative.svg'
+import { ReactComponent as IconFacebook } from '../../../assets/facebook.svg'
+import { ReactComponent as IconInstagram } from '../../../assets/instagram.svg'
+import { ReactComponent as IconX } from '../../../assets/x-twitter.svg'
+import { ReactComponent as IconLinkedin } from '../../../assets/linkedin.svg'
+
 
 export default function SpeakerItem(props: SpeakerProps) {
   const { speaker } = props
@@ -34,11 +35,6 @@ export default function SpeakerItem(props: SpeakerProps) {
   }
 
   const DetailsContent = () => {
-    // console.log(speaker.linkedIn)
-    // console.log(speaker.facebook)
-    // console.log(speaker.twitter)
-    // console.log(speaker.website)
-    // console.log(speaker.instagram)
     return (
       <div className="default_dialog-content">
         <h3 id={titleId} className="speaker-details-name">
@@ -57,13 +53,51 @@ export default function SpeakerItem(props: SpeakerProps) {
         <p id={descriptionId} className="speaker-details-description">
           {speaker?.miniBio ? speaker?.miniBio : ''}
         </p>
-        <div style={{backgroundColor: 'red'}}>
-          <IconWebsite className='icon'/>
-          <IconFacebook className='icon' />
-          <IconLinkedin className='icon' />
-          <IconInstagram className='icon' />
-          <IconX className='icon' />
-        </div>
+        {(speaker.website ||
+          speaker.facebook ||
+          speaker.instagram ||
+          speaker.twitter ||
+          speaker.linkedIn) && (
+          <div className='speaker-social-icons'>
+            <h4>Para mais informações</h4>
+            {speaker.website && (
+              <a href={speaker.website} target="_blank"
+              title={`Website de ${speaker.name}`}
+              aria-label={`Website de ${speaker.name}`}
+              >
+                <IconWebsite className="icon" />
+              </a>
+            )}
+            {speaker.facebook && (
+              <a href={speaker.facebook} target="_blank"
+              title={`Facebook de ${speaker.name}`}
+              aria-label={`Facebook de ${speaker.name}`}>
+                <IconFacebook className="icon" />
+              </a>
+            )}
+            {speaker.instagram && (
+              <a href={speaker.instagram} target="_blank"
+              title={`Instagram de ${speaker.name}`}
+              aria-label={`Instagram de ${speaker.name}`}>
+                <IconInstagram className="icon" />
+              </a>
+            )}
+            {speaker.twitter && (
+              <a href={speaker.twitter} target="_blank"
+              title={`X de ${speaker.name}`}
+              aria-label={`X de ${speaker.name}`}>
+                <IconX className="icon" />
+              </a>
+            )}
+            {speaker.linkedIn && (
+              <a href={speaker.linkedIn} target="_blank"
+              title={`Linkedin de ${speaker.name}`}
+              aria-label={`Linkedin de ${speaker.name}`}>
+                <IconLinkedin className='icon' />
+              </a>
+            )}
+          </div>
+        )}
       </div>
     )
   }

@@ -3,15 +3,9 @@ import './styles.scss'
 import SpeakerItem from './components/speaker'
 import lowVisionMark from '../../assets/low-vision-mark.png'
 import speakersData from '../../json/speakersData.json'
-import scheduleData from '../../json/scheduleData.json'
 import { Speaker } from '../../types/speakers'
 import { SpeakersProps } from './types'
-import { generateUniqueId, getSpeakersIdsFromSchedule } from '../../utils/functions'
-import { ScheduleItemType } from '../../types/schedule'
-
-const speakerIdsArray = getSpeakersIdsFromSchedule(scheduleData as ScheduleItemType[])
-
-console.log(speakerIdsArray)
+import { generateUniqueId } from '../../utils/functions'
 
 const speakers: Speaker[] = speakersData as Speaker[]
 
