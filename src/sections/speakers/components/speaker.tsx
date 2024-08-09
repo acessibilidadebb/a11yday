@@ -5,12 +5,10 @@ import './speaker.scss'
 import { SpeakerProps } from '../types'
 import Modal from '../../../components/modal'
 import { generateUniqueId } from '../../../utils/functions'
-import { ReactComponent as IconWebsite } from '../../../assets/window-tab.svg'
 import { ReactComponent as IconFacebook } from '../../../assets/facebook.svg'
 import { ReactComponent as IconInstagram } from '../../../assets/instagram.svg'
 import { ReactComponent as IconX } from '../../../assets/x-twitter.svg'
 import { ReactComponent as IconLinkedin } from '../../../assets/linkedin.svg'
-
 
 export default function SpeakerItem(props: SpeakerProps) {
   const { speaker } = props
@@ -58,44 +56,65 @@ export default function SpeakerItem(props: SpeakerProps) {
           speaker.instagram ||
           speaker.twitter ||
           speaker.linkedIn) && (
-          <div className='speaker-social-icons'>
-            <h4>Para mais informações</h4>
-            {speaker.website && (
-              <a href={speaker.website} target="_blank"
-              title={`Website de ${speaker.name}`}
-              aria-label={`Website de ${speaker.name}`}
-              >
-                <IconWebsite className="icon" aria-hidden="true" />
-              </a>
-            )}
-            {speaker.facebook && (
-              <a href={speaker.facebook} target="_blank"
-              title={`Facebook de ${speaker.name}`}
-              aria-label={`Facebook de ${speaker.name}`}>
-                <IconFacebook className="icon" aria-hidden="true" />
-              </a>
-            )}
-            {speaker.instagram && (
-              <a href={speaker.instagram} target="_blank"
-              title={`Instagram de ${speaker.name}`}
-              aria-label={`Instagram de ${speaker.name}`}>
-                <IconInstagram className="icon" aria-hidden="true" />
-              </a>
-            )}
-            {speaker.twitter && (
-              <a href={speaker.twitter} target="_blank"
-              title={`X de ${speaker.name}`}
-              aria-label={`X de ${speaker.name}`}>
-                <IconX className="icon" aria-hidden="true" />
-              </a>
-            )}
-            {speaker.linkedIn && (
-              <a href={speaker.linkedIn} target="_blank"
-              title={`Linkedin de ${speaker.name}`}
-              aria-label={`Linkedin de ${speaker.name}`}>
-                <IconLinkedin className='icon' aria-hidden="true" />
-              </a>
-            )}
+          <div className="speaker-social-icons">
+            <h4 className="social-title">Entre em contato</h4>
+            <div className="speaker-social-icons-container">
+              {speaker.linkedIn && (
+                <a
+                  href={speaker.linkedIn}
+                  target="_blank"
+                  className="social-link"
+                  title={`Linkedin de ${speaker.name}`}
+                  aria-label={`Linkedin de ${speaker.name}`}
+                >
+                  <IconLinkedin className="icon" aria-hidden="true" />
+                </a>
+              )}
+              {speaker.instagram && (
+                <a
+                  href={speaker.instagram}
+                  target="_blank"
+                  className="social-link"
+                  title={`Instagram de ${speaker.name}`}
+                  aria-label={`Instagram de ${speaker.name}`}
+                >
+                  <IconInstagram className="icon" aria-hidden="true" />
+                </a>
+              )}
+              {speaker.facebook && (
+                <a
+                  href={speaker.facebook}
+                  target="_blank"
+                  className="social-link"
+                  title={`Facebook de ${speaker.name}`}
+                  aria-label={`Facebook de ${speaker.name}`}
+                >
+                  <IconFacebook className="icon" aria-hidden="true" />
+                </a>
+              )}
+              {speaker.twitter && (
+                <a
+                  href={speaker.twitter}
+                  target="_blank"
+                  className="social-link"
+                  title={`X de ${speaker.name}`}
+                  aria-label={`X de ${speaker.name}`}
+                >
+                  <IconX className="icon" aria-hidden="true" />
+                </a>
+              )}
+              {speaker.website && (
+                <a
+                  href={speaker.website}
+                  target="_blank"
+                  className="social-link"
+                  title={`Site oficial de ${speaker.name}`}
+                  aria-label={`Site oficial de ${speaker.name}`}
+                >
+                  Site Oficial
+                </a>
+              )}
+            </div>
           </div>
         )}
       </div>

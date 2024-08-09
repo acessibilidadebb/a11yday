@@ -91,14 +91,24 @@
 
 .speaker-social-icons {
   padding-top: 16px;
-  h4 {
-    font-weight: bold;
-  }
-  a {
-    color: $link;
-  }
+
   .icon {
-    width: 36px;
+    width: 24px;
+    height: 24px;
     padding: 10px 10px 10px 0;
   }
+}
+.social-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.social-link {
+  color: $link;
+  text-decoration: none;
+  font-weight: 500;
+}
+.speaker-social-icons-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
