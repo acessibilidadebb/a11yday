@@ -5,7 +5,7 @@ import { GlobalContext } from '../../contexts/globalContext'
 import './styles.scss'
 
 import { HeaderProps } from './types'
-import bbLogo from '../../assets/bb-logo.svg'
+import { ReactComponent as BbLogo } from '../../assets/bb-logo.svg'
 import logo from '../../assets/logo.svg'
 import lowVision from '../../assets/low-vision.png'
 import signLanguage from '../../assets/sign-language.png'
@@ -119,13 +119,15 @@ export default function Header({
     openSection('frequently-asked-questions')
   }
   return (
-    <header className={`header ${sticky} ${isPin ? 'modal-pin' : ''}`} ref={headerRef}>
+    <header
+      className={`header ${sticky} ${isPin ? 'modal-pin' : ''}`}
+      ref={headerRef}
+    >
       <h1 className="header-logo-container">
         <Link smooth to={`/`} onClick={resetSections}>
-          <img
+          <BbLogo
             className="header-logo-bb"
-            src={bbLogo}
-            alt="Logo do Banco do Brasil"
+            aria-label="Logo do Banco do Brasil"
           />
           <img
             className="header-logo"
