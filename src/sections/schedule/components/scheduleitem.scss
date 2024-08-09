@@ -47,7 +47,7 @@ $scheduleItemMarginLeft: 45px;
 }
 .schedule-card {
   display: grid;
-  grid-template-rows: repeat(2, 36px) 1fr 1fr;
+  grid-template-rows: auto 36px 1fr 1fr;
   grid-template-columns: 88px 1fr 1fr;
   gap: 8px;
   flex-grow: 1;
