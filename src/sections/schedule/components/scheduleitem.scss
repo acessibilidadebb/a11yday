@@ -110,16 +110,9 @@ $scheduleItemMarginLeft: 45px;
 .name {
   color: $black;
   align-self: flex-end;
-  letter-spacing: 0.005em;
-  text-align: left;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: 0.005em;
-  text-align: left;
-  grid-column: 2/3;
   grid-row: 2;
 }
+
 .title {
   align-self: center;
   font-size: 16px;
@@ -130,11 +123,23 @@ $scheduleItemMarginLeft: 45px;
   grid-column: 1 / -1;
   grid-row: 1;
 }
+
+.name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.005em;
+  text-align: left;
+}
+
 .schedule-card-image {
   grid-column: 1;
   grid-row: 2 / span 2;
 }
-
+.name,
+.company {
+  grid-column: 2/4;
+}
 .subtitle,
 .company {
   color: $dark-gray;
