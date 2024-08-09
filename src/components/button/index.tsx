@@ -40,7 +40,6 @@ export default function Button({
         target="_blank"
         href={href}
         className={allClassNames}
-        title={title}
         aria-label={ariaLabel || title}
       >
         {title}
