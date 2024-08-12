@@ -21,6 +21,17 @@ export default function Footer() {
         <div className="footer-column grid2">
           <h2 className="footer-title">Siga nas Redes</h2>
           <div className="social-icons">
+            <div className="social-icons-group uxnobb">
+              <a
+                href="https://instagram.com/comunicatibb?igshid=YmMyMTA2M2Y="
+                target="_blank"
+                title="Instagram do ComunicaTI"
+                aria-label="Instagram do ComunicaTI"
+              >
+                <IconInstagram className="social-icon" aria-hidden="true" />
+              </a>
+              <p className="social-text">UXnoBB</p>
+            </div>
             <div className="social-icons-group comunicati">
               <a
                 href="https://instagram.com/comunicatibb?igshid=YmMyMTA2M2Y="
@@ -39,17 +50,6 @@ export default function Footer() {
                 <IconLinkedIn className="social-icon" aria-hidden="true" />
               </a>
               <p className="social-text">ComunicaTI</p>
-            </div>
-            <div className="social-icons-group uxnobb">
-              <a
-                href="https://instagram.com/comunicatibb?igshid=YmMyMTA2M2Y="
-                target="_blank"
-                title="Instagram do ComunicaTI"
-                aria-label="Instagram do ComunicaTI"
-              >
-                <IconInstagram className="social-icon" aria-hidden="true" />
-              </a>
-              <p className="social-text">UXnoBB</p>
             </div>
           </div>
         </div>
