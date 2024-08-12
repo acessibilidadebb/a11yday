@@ -27,16 +27,30 @@ export default function FrequentlyAsked({
         <h2>Dúvidas Frequentes</h2>
       </header>
       <div className="frequently-asked-body">
-        {faq.map((question, index) => (
-          <div className="accordion-container" key={index}>
+        <div className="accordion-container">
+          {faq.slice(0, Math.ceil(faq.length / 2)).map((question, index) => (
             <Accordion
+              key={index}
               title={question.title}
               description={question.description}
               isOpen={index === openAccordion}
               onToggle={() => toggleAccordion(index)}
             />
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="accordion-container">
+          {faq.slice(Math.ceil(faq.length / 2)).map((question, index) => (
+            <Accordion
+              key={index + Math.ceil(faq.length / 2)}
+              title={question.title}
+              description={question.description}
+              isOpen={index + Math.ceil(faq.length / 2) === openAccordion}
+              onToggle={() =>
+                toggleAccordion(index + Math.ceil(faq.length / 2))
+              }
+            />
+          ))}
+        </div>
       </div>
       <div className="watermark">
         <img
