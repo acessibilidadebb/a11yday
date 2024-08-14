@@ -111,7 +111,7 @@
   display: none;
   justify-content: center;
   align-items: center;
-  @include respond-to(xl) {
+  @include respond-to(xxl) {
     display: flex;
   }
 }
