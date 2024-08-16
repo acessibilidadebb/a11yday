@@ -14,6 +14,7 @@ export default function FrequentlyAsked({
   const toggleAccordion = (index: number) => {
     setOpenAccordion(openAccordion === index ? null : index)
   }
+  const emailSubject = 'Accessibility Day 2024: Dúvidas e Esclarecimentos'
   return (
     <section
       id="frequently-asked-questions"
@@ -33,7 +34,10 @@ export default function FrequentlyAsked({
             <Accordion
               key={index}
               title={question.title}
-              description={convertEmailsToLinks(question.description)}
+              description={convertEmailsToLinks({
+                text: question.description,
+                subject: emailSubject,
+              })}
               isOpen={index === openAccordion}
               onToggle={() => toggleAccordion(index)}
             />
@@ -44,7 +48,10 @@ export default function FrequentlyAsked({
             <Accordion
               key={index + Math.ceil(faq.length / 2)}
               title={question.title}
-              description={convertEmailsToLinks(question.description)}
+              description={convertEmailsToLinks({
+                text: question.description,
+                subject: emailSubject,
+              })}
               isOpen={index + Math.ceil(faq.length / 2) === openAccordion}
               onToggle={() =>
                 toggleAccordion(index + Math.ceil(faq.length / 2))
