@@ -4,6 +4,7 @@ import questionMark from '../../assets/question-mark.png'
 import questionMark2 from '../../assets/question-mark2.png'
 import { Accordion } from '../../components/accordion'
 import faq from '../../json/faq.json'
+import { convertEmailsToLinks } from '../../utils/stringFunctions'
 import { FrequentlyAskedProps } from './types'
 
 export default function FrequentlyAsked({
@@ -32,7 +33,7 @@ export default function FrequentlyAsked({
             <Accordion
               key={index}
               title={question.title}
-              description={question.description}
+              description={convertEmailsToLinks(question.description)}
               isOpen={index === openAccordion}
               onToggle={() => toggleAccordion(index)}
             />
@@ -43,7 +44,7 @@ export default function FrequentlyAsked({
             <Accordion
               key={index + Math.ceil(faq.length / 2)}
               title={question.title}
-              description={question.description}
+              description={convertEmailsToLinks(question.description)}
               isOpen={index + Math.ceil(faq.length / 2) === openAccordion}
               onToggle={() =>
                 toggleAccordion(index + Math.ceil(faq.length / 2))
