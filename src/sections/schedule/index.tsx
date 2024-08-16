@@ -1,4 +1,4 @@
-import './styles.scss'
+import './schedule.scss'
 import { ScheduleItemType } from '../../types/schedule'
 import scheduleJson  from '../../json/scheduleData.json'
 import { ScheduleItem } from './components/scheduleItem'

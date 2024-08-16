@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import './style.scss'
+import './modal.scss'
 import closeBtn from '../../assets/close.png'
 import { ModalProps } from './types'
 

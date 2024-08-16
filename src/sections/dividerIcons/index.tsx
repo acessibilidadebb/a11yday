@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import './styles.scss'
+import './dividerIcons.scss'
 
 import braile from '../../assets/braile.png'
 import bilateralDeafness from '../../assets/bilateral-deafness-alt.png'

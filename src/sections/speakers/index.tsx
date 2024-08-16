@@ -1,4 +1,4 @@
-import './styles.scss'
+import './speakers.scss'
 
 import SpeakerItem from './components/speaker'
 import lowVisionMark from '../../assets/low-vision-mark.png'

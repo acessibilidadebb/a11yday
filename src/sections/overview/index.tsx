@@ -1,4 +1,4 @@
-import './styles.scss'
+import './overview.scss'
 import lowVision from '../../assets/low-vision.png'
 import signLanguage from '../../assets/sign-language.png'
 import signLanguageBig from '../../assets/sign-language-big.png'

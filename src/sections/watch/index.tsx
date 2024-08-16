@@ -1,5 +1,5 @@
 import Button from '../../components/button'
-import './styles.scss'
+import './watch.scss'
 import { WatchProps } from './types'
 
 export default function Watch({ style }: WatchProps) {

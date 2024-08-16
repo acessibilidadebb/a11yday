@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './styles.scss'
+import './frequently-asked.scss'
 import questionMark from '../../assets/question-mark.png'
 import questionMark2 from '../../assets/question-mark2.png'
 import { Accordion } from '../../components/accordion'

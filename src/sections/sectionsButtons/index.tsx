@@ -1,4 +1,4 @@
-import './styles.scss'
+import './sectionsButtons.scss'
 import { SectionProps } from './types'
 
 export default function SectionsButtons({

@@ -1,6 +1,6 @@
 import React from 'react'
 import DOMPurify from 'dompurify'
-import './styles.scss'
+import './accordion.scss'
 import SvgCaret from '../../assets/IconComponents/SvgCaret'
 
 interface AccordionProps {

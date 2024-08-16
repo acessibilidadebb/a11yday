@@ -1,4 +1,4 @@
-import './styles.scss'
+import './footer.scss'
 
 import logo from '../../assets/logo.svg'
 import { ReactComponent as IconBbLogo } from '../../assets/bb-logo.svg'

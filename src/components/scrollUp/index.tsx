@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import './styles.scss'
+import './scrollUp.scss'
 import scrollUp from '../../assets/arrow-up.png'
 
 export default function ScrollUp() {

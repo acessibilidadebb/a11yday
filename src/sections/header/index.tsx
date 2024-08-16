@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { HashLink as Link } from 'react-router-hash-link'
 import { GlobalContext } from '../../contexts/globalContext'
-import './styles.scss'
+import './header.scss'
 
 import { HeaderProps } from './types'
 import { ReactComponent as BbLogo } from '../../assets/bb-logo.svg'
