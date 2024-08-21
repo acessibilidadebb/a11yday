@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100.902mm" height="121.256mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 10090 12126"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#F58634}
+    .fil3 {fill:#EC268F}
+    .fil0 {fill:#00AFEF}
+    .fil2 {fill:#00A859}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_348504928">
+   <path class="fil0" d="M612 10961l0 -10961 3851 0c1079,0 2049,234 2908,701 859,467 1527,1116 2004,1945 477,830 715,1764 715,2803 0,1040 -238,1995 -715,2835 -477,840 -1142,1496 -1996,1968 -854,473 -1826,709 -2916,709l-3851 0z"/>
+   <path class="fil1" d="M0 12126l0 -10671 3749 0c1050,0 1994,228 2830,682 837,455 1487,1087 1951,1894 464,807 696,1717 696,2729 0,1012 -232,1942 -696,2759 -464,818 -1112,1457 -1943,1917 -832,459 -1778,690 -2838,690l-3749 0z"/>
+   <g>
+    <polygon class="fil2" points="4981,4628 4568,4653 4255,4931 4208,5312 4368,5670 4825,5828 5302,5646 5429,5153 5299,4855 "/>
+    <polygon class="fil2" points="4951,2641 4568,2641 4255,2920 4231,3391 4515,3747 4924,3809 5314,3588 5429,3141 5299,2843 "/>
+    <polygon class="fil2" points="2701,4628 2288,4653 1975,4931 1928,5312 2088,5670 2545,5828 3022,5646 3149,5153 3019,4855 "/>
+    <polygon class="fil2" points="2671,2641 2288,2641 1975,2920 1951,3391 2235,3747 2644,3809 3034,3588 3149,3141 3019,2843 "/>
+   </g>
+   <polygon class="fil3" points="3202,12117 2414,8614 2832,8510 3339,8967 3772,10021 3951,6093 4205,5842 4639,5977 4727,6285 4727,9026 4918,7813 5360,7682 5652,7996 5652,9026 5802,8162 6138,7953 6536,8197 6589,9000 6722,8494 7022,8319 7447,8581 7482,10938 7059,12117 "/>
+  </g>
+ </g>
+</svg>
