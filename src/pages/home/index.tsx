@@ -1,12 +1,17 @@
+import './home.scss'
 import DividerIcons from '../../sections/dividerIcons'
 import FrequentlyAsked from '../../sections/frequently-asked'
 import Overview from '../../sections/overview'
 import Schedule from '../../sections/schedule'
 import SectionsButtons from '../../sections/sectionsButtons'
 import Speakers from '../../sections/speakers'
-import Watch from '../../sections/watch'
+import Participation from '../../sections/participation'
 import ScrollUp from '../../components/scrollUp'
 import { HomeProps } from './types'
+import { ParticipationData } from '../../sections/participation/types'
+import participationData from '../../json/participationData.json'
+
+const participationArray: ParticipationData[] = participationData as ParticipationData[]
 
 export default function Home(props: HomeProps) {
   const {
@@ -21,9 +26,16 @@ export default function Home(props: HomeProps) {
   } = props
   return (
     <>
-      <div style={{ overflowX: 'hidden' }}>
+      <div className='introduction'>
         <Overview style={{ display: showSections ? 'flex' : 'none' }} />
-        <Watch style={{ display: showSections ? 'block' : 'none' }} />
+        <div className='participation-container'>
+          {!!participationArray && !!participationArray.length && participationArray.map(
+            participation => <Participation
+            {...participation}
+            style={{ display: showSections ? 'block' : 'none' }}
+          />
+          )}
+        </div>
       </div>
       <SectionsButtons
         showSections={showSections}
