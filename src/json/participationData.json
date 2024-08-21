@@ -4,8 +4,8 @@
     "title": "Assista à transmissão ao vivo!",
     "subtitle": "Nossa transmissão conta com intérprete de Libras e Audiodescrição",
     "buttons": [
-      { "title": "YouTube", "url": "#" },
-      { "title": "YouTube com audiodescrição", "url": "#" }
+      { "title": "YouTube", "url": "https://www.youtube.com/bancodobrasil" },
+      { "title": "YouTube com audiodescrição", "url": "https://www.youtube.com/bancodobrasil" }
     ]
   },
   {
