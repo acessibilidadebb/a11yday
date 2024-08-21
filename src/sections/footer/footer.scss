@@ -9,6 +9,7 @@
   background-image: url('/footer-watermark.png');
   background-repeat: repeat-x;
   background-position: bottom;
+  max-width: 100%;
 
   .overlay {
     height: 355px;
@@ -31,8 +32,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  grid-column-gap: 16px;
+  
+  @include respond-to(galaxy-s20-fe) {
   grid-column-gap: 32px;
-
+  }
   @include respond-to(md) {
     justify-content: flex-start;
     .footer-column {
@@ -56,7 +60,11 @@
       height: auto;
     }
     .cafe-com-ux-logo {
-      width: auto;
+      width: 53px;
+      height: auto;
+    }
+    .acc-digital-logo {
+      width: 53px;;
       height: auto;
     }
   }
@@ -86,9 +94,25 @@
 }
 
 .footer-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
   img {
     padding: 20px 20px 20px 0;
   }
+}
+.bb-logo, .cafe-com-ux-logo, .acc-digital-logo {
+  margin-right: 32px;
+  max-height: 48px;
+}
+.bb-logo {
+  max-height: 56px;
+}
+.cafe-com-ux-logo {
+
+}
+.acc-digital-logo {
+  max-height: 48px;
 }
 .footer-date {
   margin-top: 10px;
@@ -100,14 +124,6 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 17.5px;
-}
-.bb-logo {
-  width: 35px;
-  margin-top: 24px;
-  margin-right: 32px;
-}
-.cafe-com-ux-logo {
-  width: 35px;
 }
 .social-icons {
   display: flex;

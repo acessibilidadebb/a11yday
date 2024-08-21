@@ -2,9 +2,9 @@ import './footer.scss'
 
 import logo from '../../assets/logo.svg'
 import { ReactComponent as IconBbLogo } from '../../assets/bb-logo.svg'
-import { ReactComponent as IconCafeComUx } from '../../assets/cafe-com-ux.svg'
 import { ReactComponent as IconInstagram } from '../../assets/instagram.svg'
 import { ReactComponent as IconLinkedIn } from '../../assets/linkedin.svg'
+import { ReactComponent as AccDigitalLogo } from '../../assets/acessibilidade_digital.svg'
 
 export default function Footer() {
   return (
@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="social-icons">
             <div className="social-icons-group uxnobb">
               <a
-                href="https://instagram.com/comunicatibb?igshid=YmMyMTA2M2Y="
+                href="https://www.instagram.com/uxnobb/"
                 target="_blank"
                 title="Instagram do ComunicaTI"
                 aria-label="Instagram do ComunicaTI"
@@ -36,8 +36,8 @@ export default function Footer() {
               <a
                 href="https://instagram.com/comunicatibb?igshid=YmMyMTA2M2Y="
                 target="_blank"
-                title="Instagram do ComunicaTI"
-                aria-label="Instagram do ComunicaTI"
+                title="Instagram da UXnoBB"
+                aria-label="Instagram da UXnoBB"
               >
                 <IconInstagram className="social-icon" aria-hidden="true" />
               </a>
@@ -56,16 +56,15 @@ export default function Footer() {
         <div className="footer-column grid3">
           <h2 className="footer-title">Realização e apoio</h2>
           <div className="footer-icons">
-            <IconBbLogo
-              className="bb-logo"
-              title="Banco do Brasil"
-              aria-label="Banco do Brasil"
-            />
-            <IconCafeComUx
-              className="cafe-com-ux-logo"
-              title="Café com UX"
-              aria-label="Café com UX"
-            />
+            <span title="Banco do Brasil" aria-label="Banco do Brasil">
+              <IconBbLogo className="bb-logo" />
+            </span>
+            <span
+              title="Time de Acessibilidade Digital"
+              aria-label="Time de Acessibilidade Digital"
+            >
+              <AccDigitalLogo className="acc-digital-logo" />
+            </span>
           </div>
         </div>
       </div>
