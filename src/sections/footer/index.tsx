@@ -56,12 +56,21 @@ export default function Footer() {
         <div className="footer-column grid3">
           <h2 className="footer-title">Realização e apoio</h2>
           <div className="footer-icons">
-            <span title="Banco do Brasil" aria-label="Banco do Brasil">
+            <span
+              title="Banco do Brasil"
+              aria-label="Banco do Brasil"
+              style={{
+                lineHeight: 0,
+              }}
+            >
               <IconBbLogo className="bb-logo" />
             </span>
             <span
               title="Time de Acessibilidade Digital"
               aria-label="Time de Acessibilidade Digital"
+              style={{
+                lineHeight: 0,
+              }}
             >
               <AccDigitalLogo className="acc-digital-logo" />
             </span>
