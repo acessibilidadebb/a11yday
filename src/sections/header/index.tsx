@@ -125,13 +125,19 @@ export default function Header({
     >
       <h1 className="header-logo-container">
         <Link smooth to={`/`} onClick={resetSections}>
-          <BbLogo
-            className="header-logo-bb"
+          <span
+            title="Logo do Banco do Brasil"
             aria-label="Logo do Banco do Brasil"
-          />
+            style={{
+              lineHeight: 0,
+            }}
+          >
+            <BbLogo className="header-logo-bb" />
+          </span>
           <img
             className="header-logo"
             src={logo}
+            title="Logo do Accessibility Day"
             alt="Logo do Accessibility Day"
           />
         </Link>
