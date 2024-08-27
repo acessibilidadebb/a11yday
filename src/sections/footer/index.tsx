@@ -2,6 +2,7 @@ import './footer.scss'
 
 import logo from '../../assets/logo.svg'
 import { ReactComponent as IconBbLogo } from '../../assets/bb-logo.svg'
+import { ReactComponent as IconCafeComUx } from '../../assets/cafe-com-ux.svg'
 import { ReactComponent as IconInstagram } from '../../assets/instagram.svg'
 import { ReactComponent as IconLinkedIn } from '../../assets/linkedin.svg'
 import { ReactComponent as AccDigitalLogo } from '../../assets/acessibilidade_digital.svg'
@@ -66,14 +67,23 @@ export default function Footer() {
               <IconBbLogo className="bb-logo" />
             </span>
             <span
-              title="Time de Acessibilidade Digital"
-              aria-label="Time de Acessibilidade Digital"
+              title="Centro de Experiência em Acessibilidade Digital do BB"
+              aria-label="Centro de Experiência em Acessibilidade Digital do BB"
               style={{
                 lineHeight: 0,
               }}
             >
               <AccDigitalLogo className="acc-digital-logo" />
             </span>
+            <span
+                title="Café com UX"
+                aria-label="Café com UX"
+                style={{
+                  lineHeight: 0,
+                }}
+              >
+                <IconCafeComUx className="cafe-com-ux" />
+              </span>
           </div>
         </div>
       </div>
