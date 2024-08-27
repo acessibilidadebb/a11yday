@@ -76,14 +76,25 @@ export default function Footer() {
               <AccDigitalLogo className="acc-digital-logo" />
             </span>
             <span
-                title="Café com UX"
-                aria-label="Café com UX"
-                style={{
-                  lineHeight: 0,
-                }}
-              >
-                <IconCafeComUx className="cafe-com-ux" />
-              </span>
+              title="Café com UX"
+              aria-label="Café com UX"
+              style={{
+                lineHeight: 0,
+              }}
+            >
+              <IconCafeComUx className="cafe-com-ux-logo" />
+            </span>
+          </div>
+        </div>
+        <div className="footer-column grid4">
+          <h2 className="footer-title">Parceiros</h2>
+          <div className="footer-icons">
+            <img
+              className="tecassitiva"
+              src={`${import.meta.env.BASE_URL}logo_teca.png`}
+              title={`Logo de Tecassitiva`}
+              alt={`Logo de Tecassitiva`}
+            />
           </div>
         </div>
       </div>

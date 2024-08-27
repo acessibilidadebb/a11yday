@@ -33,9 +33,9 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 16px;
-  
+
   @include respond-to(galaxy-s20-fe) {
-  grid-column-gap: 32px;
+    grid-column-gap: 32px;
   }
   @include respond-to(md) {
     justify-content: flex-start;
@@ -47,6 +47,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+  }
+  @include respond-to(xl) {
     .footer-logo {
       width: 394px;
       height: 59px;
@@ -64,8 +66,23 @@
       height: auto;
     }
     .acc-digital-logo {
-      width: 53px;;
+      width: 53px;
       height: auto;
+    }
+
+    .bb-logo,
+    .cafe-com-ux-logo,
+    .acc-digital-logo {
+      margin-right: 32px;
+    }
+    .bb-logo {
+      max-height: 56px;
+    }
+    .cafe-com-ux-logo {
+      max-height: 56px;
+    }
+    .acc-digital-logo {
+      max-height: 48px;
     }
   }
 }
@@ -79,12 +96,16 @@
     grid-row: 1;
   }
   &.grid2 {
-    grid-column: span 2;
+    grid-column: 1;
     grid-row: 2;
   }
   &.grid3 {
     grid-column: 2;
     grid-row: 1;
+  }
+  &.grid4 {
+    grid-column: 2;
+    grid-row: 2;
   }
 }
 
@@ -101,18 +122,20 @@
     padding: 20px 20px 20px 0;
   }
 }
-.bb-logo, .cafe-com-ux-logo, .acc-digital-logo {
-  margin-right: 32px;
+.bb-logo,
+.cafe-com-ux-logo,
+.acc-digital-logo {
+  margin-right: 0px;
   max-height: 48px;
 }
 .bb-logo {
-  max-height: 56px;
+  max-height: 28px;
 }
 .cafe-com-ux-logo {
-  max-height: 56px;
+  max-height: 28px;
 }
 .acc-digital-logo {
-  max-height: 48px;
+  max-height: 24px;
 }
 .footer-date {
   margin-top: 10px;
@@ -138,7 +161,7 @@
       padding: 8px 8px 8px 0;
     }
   }
-  @include respond-to(lg) {
+  @include respond-to(xl) {
     .social-text {
       font-size: 18px;
     }
@@ -167,4 +190,9 @@
 .social-text {
   font-size: 13px;
   font-weight: 500;
+}
+
+.tecassitiva {
+  padding: 0 !important;
+  max-width: 100px;
 }
