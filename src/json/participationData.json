@@ -12,6 +12,6 @@
     "background": "enrollment-background",
     "title": "Inscrição evento presencial",
     "subtitle": "Preencha o formulário para participar do evento presencial em Brasília. Participação online não requer inscrição.",
-    "buttons": [{ "title": "Em breve", "url": "#" }]
+    "buttons": [{ "title": "A partir de 02/09", "url": "#" }]
   }
 ]
