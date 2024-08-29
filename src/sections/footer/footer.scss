@@ -44,9 +44,7 @@
     }
   }
   @include respond-to(lg) {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+
   }
   @include respond-to(xl) {
     .footer-logo {
@@ -83,6 +81,34 @@
     }
     .acc-digital-logo {
       max-height: 48px;
+    }
+    .tecassitiva {
+      width: 100px;
+    }
+    .opty,
+    .wat {
+      width: 60px;
+    }
+  }
+  @include respond-to(xxl) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .tecassitiva {
+      width: 80px;
+    }
+    .opty,
+    .wat {
+      width: 50px;
+    }
+  }
+  @include respond-to(desktop) {
+    .tecassitiva {
+      width: 100px;
+    }
+    .opty,
+    .wat {
+      width: 60px;
     }
   }
 }
@@ -192,7 +218,37 @@
   font-weight: 500;
 }
 
+.tecassitiva, .opty {
+  margin-right: 16px;
+}
 .tecassitiva {
   padding: 0 !important;
-  max-width: 100px;
+  width: 50px;
+}
+
+.opty {
+  stroke: #3333bd;
+  fill: $white;
+  width: 30px;
+
+  .part1 {
+    // fill: darken($white, 10);
+  }
+  .part2 {
+    // fill: darken($white, 5);
+  }
+}
+.wat {
+  width: 30px;
+  .fil0,  
+  .fil5,
+  .fil6{
+    fill: $white;
+  }
+  .fil7 {
+    fill: #A9ABAE;
+  }
+  .fil8 {
+    fill: #737476;
+  }
 }

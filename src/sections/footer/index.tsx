@@ -6,6 +6,8 @@ import { ReactComponent as IconCafeComUx } from '../../assets/cafe-com-ux.svg'
 import { ReactComponent as IconInstagram } from '../../assets/instagram.svg'
 import { ReactComponent as IconLinkedIn } from '../../assets/linkedin.svg'
 import { ReactComponent as AccDigitalLogo } from '../../assets/acessibilidade_digital.svg'
+import { ReactComponent as OptyLogo } from '../../assets/opty_logo.svg'
+import { ReactComponent as WatLogo } from '../../assets/logo_WAT.svg'
 
 export default function Footer() {
   return (
@@ -95,6 +97,24 @@ export default function Footer() {
               title={`Logo de Tecassitiva`}
               alt={`Logo de Tecassitiva`}
             />
+            <span
+              title="Opty - Olhar pelos seus olhos"
+              aria-label="Opty - Olhar pelos seus olhos"
+              style={{
+                lineHeight: 0,
+              }}
+            >
+              <OptyLogo className='opty'/>
+            </span>
+            <span
+              title="WAT - Qualidade acessível"
+              aria-label="WAT - Qualidade acessível"
+              style={{
+                lineHeight: 0,
+              }}
+            >
+              <WatLogo className='wat'/>
+            </span>
           </div>
         </div>
       </div>
