@@ -10,6 +10,7 @@ import ScrollUp from '../../components/scrollUp'
 import { HomeProps } from './types'
 import { ParticipationData } from '../../sections/participation/types'
 import participationData from '../../json/participationData.json'
+import { generateUniqueId } from '../../utils/functions'
 
 const participationArray: ParticipationData[] = participationData as ParticipationData[]
 
@@ -31,6 +32,7 @@ export default function Home(props: HomeProps) {
         <div className='participation-container'>
           {!!participationArray && !!participationArray.length && participationArray.map(
             participation => <Participation
+            key={generateUniqueId()}
             {...participation}
             style={{ display: showSections ? 'block' : 'none' }}
           />
