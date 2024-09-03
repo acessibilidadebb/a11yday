@@ -124,10 +124,13 @@ export default function Header({
       ref={headerRef}
     >
       <h1 className="header-logo-container">
-        <Link smooth to={`/`} onClick={resetSections}>
+        <Link
+        aria-label="Accessibility Day"
+          smooth to={`/`} onClick={resetSections}>
           <span
             title="Logo do Banco do Brasil"
             aria-label="Logo do Banco do Brasil"
+            aria-hidden="true"
             style={{
               lineHeight: 0,
             }}
@@ -139,6 +142,7 @@ export default function Header({
             src={logo}
             title="Logo do Accessibility Day"
             alt="Logo do Accessibility Day"
+            aria-hidden="true"
           />
         </Link>
       </h1>

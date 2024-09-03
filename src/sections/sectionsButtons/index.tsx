@@ -60,36 +60,42 @@ export default function SectionsButtons({
         type="button"
         onClick={handleClickSchedule}
         className="section-button"
+        title="Programação"
+        accessibility-label="Programação"
       >
         <div className="section-card">
           <div className="section-card-cover cover-schedule">
-            <h3>Programação</h3>
+            <h3 aria-hidden="true">Programação</h3>
           </div>
-          <p>Programação</p>
+          <p aria-hidden="true">Programação</p>
         </div>
       </button>
       <button
         type="button"
         onClick={handleClickSpeakers}
         className="section-button"
+        title="Palestrantes"
+        accessibility-label="Palestrantes"
       >
         <div className="section-card">
           <div className="section-card-cover cover-speakers">
-            <h3>Palestrantes</h3>
+            <h3 aria-hidden="true">Palestrantes</h3>
           </div>
-          <p>Palestrantes</p>
+          <p aria-hidden="true">Palestrantes</p>
         </div>
       </button>
       <button
         type="button"
         onClick={handleClickFrequentlyAsked}
         className="section-button"
+        title="Dúvidas frequentes"
+        accessibility-label="Dúvidas frequentes"
       >
         <div className="section-card">
           <div className="section-card-cover cover-frequently-asked">
-            <h3>Dúvidas frequentes</h3>
+            <h3 aria-hidden="true">Dúvidas frequentes</h3>
           </div>
-          <p>Dúvidas frequentes</p>
+          <p aria-hidden="true">Dúvidas frequentes</p>
         </div>
       </button>
     </section>

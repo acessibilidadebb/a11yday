@@ -94,8 +94,8 @@ export default function Footer() {
             <img
               className="tecassitiva"
               src={`${import.meta.env.BASE_URL}logo_teca.png`}
-              title={`Logo de Tecassitiva`}
-              alt={`Logo de Tecassitiva`}
+              title={`Logo de Tecassistiva`}
+              alt={`Logo de Tecassistiva`}
             />
             <span
               title="Opty - Olhar pelos seus olhos"
@@ -103,8 +103,9 @@ export default function Footer() {
               style={{
                 lineHeight: 0,
               }}
+              role="img"
             >
-              <OptyLogo className='opty'/>
+              <OptyLogo className="opty" />
             </span>
             <span
               title="WAT - Qualidade acessível"
@@ -112,8 +113,9 @@ export default function Footer() {
               style={{
                 lineHeight: 0,
               }}
+              role="img"
             >
-              <WatLogo className='wat'/>
+              <WatLogo className="wat" />
             </span>
           </div>
         </div>
