@@ -34,23 +34,32 @@ export default function SectionsButtons({
     resetSections()
     setShowSections(false)
     setShowSchedule(!showSchedule)
-    scrollToTop()
-    focusSectionTitle('schedule')
+    setTimeout(() => {
+      scrollToTop()
+      focusSectionTitle('schedule')
+    }, 100)
   }
+
   const handleClickSpeakers = () => {
     resetSections()
     setShowSections(false)
     setShowSpeakers(!showSpeakers)
-    scrollToTop()
-    focusSectionTitle('speakers')
+    setTimeout(() => {
+      scrollToTop()
+      focusSectionTitle('speakers')
+    }, 100)
   }
+
   const handleClickFrequentlyAsked = () => {
     resetSections()
     setShowSections(false)
     setShowFrequentlyAsked(!showFrequentlyAsked)
-    scrollToTop()
-    focusSectionTitle('frequently-asked-questions')
+    setTimeout(() => {
+      scrollToTop()
+      focusSectionTitle('frequently-asked-questions')
+    }, 100)
   }
+
   return (
     <section
       id="sections"
