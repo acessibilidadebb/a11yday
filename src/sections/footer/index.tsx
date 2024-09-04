@@ -59,33 +59,30 @@ export default function Footer() {
         <div className="footer-column grid3">
           <h2 className="footer-title">Realização e apoio</h2>
           <div className="footer-icons">
-            <span
+            <IconBbLogo
               title="Banco do Brasil"
               aria-label="Banco do Brasil"
               style={{
                 lineHeight: 0,
               }}
-            >
-              <IconBbLogo className="bb-logo" />
-            </span>
-            <span
+              role="img"
+              className="bb-logo" />
+            <AccDigitalLogo
               title="Centro de Experiência em Acessibilidade Digital do BB"
               aria-label="Centro de Experiência em Acessibilidade Digital do BB"
               style={{
                 lineHeight: 0,
               }}
-            >
-              <AccDigitalLogo className="acc-digital-logo" />
-            </span>
-            <span
+              role="img"
+              className="acc-digital-logo" />
+            <IconCafeComUx
               title="Café com UX"
               aria-label="Café com UX"
               style={{
                 lineHeight: 0,
               }}
-            >
-              <IconCafeComUx className="cafe-com-ux-logo" />
-            </span>
+              role="img"
+              className="cafe-com-ux-logo" />
           </div>
         </div>
         <div className="footer-column grid4">
@@ -97,26 +94,22 @@ export default function Footer() {
               title={`Logo de Tecassistiva`}
               alt={`Logo de Tecassistiva`}
             />
-            <span
+            <OptyLogo
               title="Opty - Olhar pelos seus olhos"
               aria-label="Opty - Olhar pelos seus olhos"
               style={{
                 lineHeight: 0,
               }}
               role="img"
-            >
-              <OptyLogo className="opty" />
-            </span>
-            <span
+              className="opty" />
+            <WatLogo
               title="WAT - Qualidade acessível"
               aria-label="WAT - Qualidade acessível"
               style={{
                 lineHeight: 0,
               }}
               role="img"
-            >
-              <WatLogo className="wat" />
-            </span>
+              className="wat" />
           </div>
         </div>
       </div>
