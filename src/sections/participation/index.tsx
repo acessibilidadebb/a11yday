@@ -28,6 +28,7 @@ export default function Participation({
                 size="large"
                 title={button.title}
                 className="btn"
+                disabled={button.disabled}
               />
             ))}
           </div>

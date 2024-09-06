@@ -12,6 +12,6 @@
     "background": "enrollment-background",
     "title": "Inscrição evento presencial",
     "subtitle": "Preencha o formulário para participar do evento presencial em Brasília. Participação online não requer inscrição.",
-    "buttons": [{ "title": "Inscreva-se", "url": "https://forms.office.com/r/wanNAJ2jwN" }]
+    "buttons": [{ "title": "Vagas Presenciais Esgotadas", "disabled": true }]
   }
 ]

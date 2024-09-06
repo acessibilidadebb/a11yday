@@ -1,25 +1,5 @@
 import './button.scss'
-
-type ButtonKind =
-  | 'primary'
-  | 'secondary'
-  | 'critical-primary'
-  | 'critical-secondary'
-
-type ButtonType = 'button' | 'submit' | 'reset'
-
-type ButtonSize = 'xsmall' | 'small' | 'regular' | 'large'
-
-interface ButtonProps {
-  className?: string
-  kind?: ButtonKind
-  href?: string
-  type?: ButtonType
-  title: string
-  ariaLabel?: string
-  size?: ButtonSize
-  fullWidth?: boolean
-}
+import { ButtonProps } from './types'
 
 export default function Button({
   className = '',
@@ -30,6 +10,7 @@ export default function Button({
   ariaLabel,
   size = 'regular',
   fullWidth = false,
+  disabled = false
 }: ButtonProps) {
   const allClassNames = `bb-button ${kind} size-${size} ${className} ${
     fullWidth ? 'full-width' : ''
@@ -53,6 +34,7 @@ export default function Button({
       className={allClassNames}
       title={title}
       aria-label={ariaLabel || title}
+      disabled={disabled}
     >
       {title}
     </button>
