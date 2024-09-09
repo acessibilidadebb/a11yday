@@ -10,10 +10,6 @@ export default function Primer({ setPage }: PrimerProps) {
   const handleClick = () => {
     setPage('home')
   }
-  const handleDownload = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    // e.preventDefault()
-    // console.log('clicou')
-  }
 
   return (
     <div className="primer-container">
@@ -227,7 +223,6 @@ export default function Primer({ setPage }: PrimerProps) {
           icon="download"
           href="/03_cartilha_color_sem_marcacao_v2.pdf"
           target="_blank"
-          onClick={handleDownload}
         />
       </main>
       <ScrollUp />
