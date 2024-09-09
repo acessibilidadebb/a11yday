@@ -66,9 +66,8 @@ export default function Footer() {
                 lineHeight: 0,
               }}
               role="img"
-              className="bb-logo"
             >
-              <IconBbLogo />
+              <IconBbLogo className="bb-logo" />
             </div>
             <div
               title="Centro de Experiência em Acessibilidade Digital do BB"
@@ -77,9 +76,8 @@ export default function Footer() {
                 lineHeight: 0,
               }}
               role="img"
-              className="acc-digital-logo"
             >
-              <AccDigitalLogo />
+              <AccDigitalLogo className="acc-digital-logo" />
             </div>
             <div
               title="Café com UX"
@@ -88,9 +86,8 @@ export default function Footer() {
                 lineHeight: 0,
               }}
               role="img"
-              className="cafe-com-ux-logo"
             >
-              <IconCafeComUx />
+              <IconCafeComUx className="cafe-com-ux-logo" />
             </div>
           </div>
         </div>

@@ -143,6 +143,7 @@
 .footer-icons {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 24px;
   margin-bottom: 24px;
   img {

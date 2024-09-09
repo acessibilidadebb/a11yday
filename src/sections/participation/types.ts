@@ -1,6 +1,7 @@
 export type ButtonType = {
   title: string
   url: string
+  disabled?: boolean
 }
 
 export type ParticipationBackground =
