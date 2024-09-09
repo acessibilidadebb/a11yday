@@ -11,8 +11,8 @@ export default function Primer({ setPage }: PrimerProps) {
     setPage('home')
   }
   const handleDownload = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    e.preventDefault()
-    console.log('clicou')
+    // e.preventDefault()
+    // console.log('clicou')
   }
 
   return (
@@ -225,7 +225,7 @@ export default function Primer({ setPage }: PrimerProps) {
           className="link-download"
           title="Download da Cartilha (Conteúdo Externo)"
           icon="download"
-          href="pdf/03_cartilha_color_sem marcação_v2.pdf"
+          href="/03_cartilha_color_sem_marcacao_v2.pdf"
           target="_blank"
           onClick={handleDownload}
         />
