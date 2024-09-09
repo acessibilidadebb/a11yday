@@ -19,6 +19,7 @@ interface ButtonProps {
   ariaLabel?: string
   size?: ButtonSize
   fullWidth?: boolean
+  onClick?: () => void
 }
 
 export default function Button({
@@ -30,6 +31,7 @@ export default function Button({
   ariaLabel,
   size = 'regular',
   fullWidth = false,
+  onClick
 }: ButtonProps) {
   const allClassNames = `bb-button ${kind} size-${size} ${className} ${
     fullWidth ? 'full-width' : ''
@@ -53,6 +55,7 @@ export default function Button({
       className={allClassNames}
       title={title}
       aria-label={ariaLabel || title}
+      onClick={onClick}
     >
       {title}
     </button>

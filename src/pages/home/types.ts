@@ -7,4 +7,5 @@ export interface HomeProps {
   setShowSpeakers: React.Dispatch<React.SetStateAction<boolean>>
   showFrequentlyAsked: boolean
   setShowFrequentlyAsked: React.Dispatch<React.SetStateAction<boolean>>
+  setPage: React.Dispatch<React.SetStateAction<string>>
 }

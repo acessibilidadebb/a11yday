@@ -25,6 +25,7 @@ export default function Home(props: HomeProps) {
     setShowSpeakers,
     showFrequentlyAsked,
     setShowFrequentlyAsked,
+    setPage
   } = props
   return (
     <>
@@ -54,7 +55,7 @@ export default function Home(props: HomeProps) {
       <DividerIcons />
       <Speakers showSpeakers={showSpeakers} />
       <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />
-      <Primer/>
+      <Primer setPage={setPage}/>
       <ScrollUp />
     </>
   )

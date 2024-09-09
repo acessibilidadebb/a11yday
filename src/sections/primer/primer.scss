@@ -1,23 +1,61 @@
-.primer-container {
-  padding: 20px 30px 20px 20px;
-  line-height: 22px;
+@import '../../scss/variables';
+@import '../../scss/fonts';
+@import '../../scss/placeholders';
+
+.primer-section {
+  @extend %container;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  @include respond-to(md) {
+    flex-direction: row;
+  }
 }
-.primer-title {
+.primer-section-cover-container {
+  background-color: #fcfc30;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 20px 0;
+  @include respond-to(md) {
+    width: 50%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0;
+    padding: 0;
+  }
+}
+.primer-section-cover {
+  width: 100%;
+  flex-grow: 1;
+  border-radius: 8px;
+  @include respond-to(md) {
+    width: 50%;
+  }
+}
+.primer-section-container {
+  width: 100%;
+  background-color: #f0f2f4;
+  @include respond-to(md) {
+    width: 50%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+.primer-section-content {
+  padding: 30px;
+}
+.primer-section-title {
   font-size: 22px;
-  font-weight: 600;
-  margin: 25px 0;
+  font-weight: 700;
+  margin: 10px 0;
+  line-height: 27.5px;
 }
-.primer-subtitle {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 20px 0;
-}
-.primer-paragraph {
-  padding: 5px 0;
-}
-.primer-list {
-  list-style-type: decimal;
-  margin-left: 20px;
-  padding-left: 20px;
-  padding-top: 10px;
+.primer-section-description {
+  line-height: 25.6px;
+  margin-bottom: 20px;
 }
