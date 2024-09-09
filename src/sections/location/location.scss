@@ -1,0 +1,29 @@
+@import '../../scss/variables';
+@import '../../scss/placeholders';
+@import '../../scss/mixins';
+
+.location {
+  @extend %container;
+  background-color: $lightGray;
+}
+.address {
+}
+.address-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  padding: 20px 0;
+}
+.address-details {
+  font-size: 18px;
+  line-height: 23px;
+  margin: 10px 0;
+
+  strong {
+    font-weight: 700;
+  }
+}
+.maps-frame {
+  margin-top: 36px;
+  width: 100%;
+}
