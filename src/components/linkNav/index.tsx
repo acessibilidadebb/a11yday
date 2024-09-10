@@ -30,6 +30,7 @@ export default function LinkNav({
         className={`link-nav ${className}`}
         target={target}
         onClick={onClick}
+        accessibility-label={title}
       >
         <Icon icon={icon} />
         {title}

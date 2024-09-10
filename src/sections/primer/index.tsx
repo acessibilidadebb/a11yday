@@ -16,6 +16,7 @@ export default function Primer({ setPage }: PrimerSectionProps) {
           className="primer-section-cover"
           src="primer-cover.png"
           alt="Capa da sessão Cartilha Atitudes Acessíveis"
+          accessibility-label="Capa da sessão Cartilha Atitudes Acessíveis"
         />
       </div>
       <div className="primer-section-container">
@@ -32,6 +33,7 @@ export default function Primer({ setPage }: PrimerSectionProps) {
             type="button"
             onClick={handleClickBack}
             title="Acessar Cartilha"
+            accessibility-label="Acessar Cartilha"
           />
         </div>
       </div>
