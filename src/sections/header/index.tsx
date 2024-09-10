@@ -17,6 +17,7 @@ export default function Header({
   setShowSchedule,
   setShowSpeakers,
   setShowFrequentlyAsked,
+  setShowHandbook
 }: HeaderProps) {
   const { isPin } = useContext(GlobalContext)
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -42,7 +43,9 @@ export default function Header({
       if (
         pathname === '/schedule' ||
         pathname === '/speakers' ||
-        pathname === '/frequently-asked-questions'
+        pathname === '/frequently-asked-questions' ||
+        pathname === '/accessible-attitudes-handbook' ||
+        pathname === '/address-and-location'
       ) {
         const id = pathname.substring(1)
         const element = document.getElementById(id)
@@ -86,6 +89,7 @@ export default function Header({
     setShowSpeakers(false)
     setShowFrequentlyAsked(false)
     setOpen(false)
+    setShowHandbook(false)
   }
   const openSection = (section: string) => {
     if (window.innerWidth <= 768) {
@@ -101,7 +105,11 @@ export default function Header({
       case 'frequently-asked-questions':
         setShowFrequentlyAsked(true)
         break
-
+      case 'accessible-attitudes-handbook':
+        setShowHandbook(true)
+        break
+      case 'address-and-location':
+        break
       default:
         break
     }
@@ -118,6 +126,15 @@ export default function Header({
     resetSections()
     openSection('frequently-asked-questions')
   }
+  const handleClickHandbook = () => {
+    resetSections()
+    openSection('accessible-attitudes-handbook')
+    window.scrollTo(0, 0)
+  }
+  const handleClickAddress = () => {
+    resetSections()
+    openSection('address-and-location')
+  }
   return (
     <header
       className={`header ${sticky} ${isPin ? 'modal-pin' : ''}`}
@@ -125,8 +142,11 @@ export default function Header({
     >
       <h1 className="header-logo-container">
         <Link
-        aria-label="Accessibility Day"
-          smooth to={`/`} onClick={resetSections}>
+          aria-label="Accessibility Day"
+          smooth
+          to={`/`}
+          onClick={resetSections}
+        >
           <span
             title="Logo do Banco do Brasil"
             aria-label="Logo do Banco do Brasil"
@@ -201,6 +221,19 @@ export default function Header({
                 onClick={handleClickFrequentlyAsked}
               >
                 Dúvidas
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={`/accessible-attitudes-handbook`}
+                onClick={handleClickHandbook}
+              >
+                Cartilha
+              </Link>
+            </li>
+            <li>
+              <Link to={`/address-and-location`} onClick={handleClickAddress}>
+                Endereço e Localização
               </Link>
             </li>
           </ul>

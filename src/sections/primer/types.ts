@@ -1,3 +1,3 @@
 export type PrimerSectionProps = {
-  setPage: React.Dispatch<React.SetStateAction<string>>
+  setShowHandbook: React.Dispatch<React.SetStateAction<boolean>>
 }

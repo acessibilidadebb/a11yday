@@ -15,7 +15,7 @@ export default function Location() {
     )
   }
   return (
-    <div className="location">
+    <div id="address-and-location" className="location">
       <div className="address">
         <h3 className="address-title">Endereço e Localização</h3>
         <p className="address-details">

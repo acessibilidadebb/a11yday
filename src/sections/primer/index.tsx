@@ -1,10 +1,12 @@
+import { HashLink as Link } from 'react-router-hash-link'
 import './primer.scss'
 import { PrimerSectionProps } from './types'
-import Button from '../../components/button'
 
-export default function Primer({ setPage }: PrimerSectionProps) {
-  const handleClickBack = () => {
-    setPage('primer')
+export default function Primer({ setShowHandbook }: PrimerSectionProps) {
+  console.clear()
+  console.log(setShowHandbook)
+  const handleClickHandbook = () => {
+    setShowHandbook(true)
     setTimeout(() => {
       window.scrollTo(0, 0)
     }, 100)
@@ -29,12 +31,15 @@ export default function Primer({ setPage }: PrimerSectionProps) {
             Viviane. Leia sobre boas práticas de acessibilidade, texto a definir
             com a Viviane.{' '}
           </p>
-          <Button
-            type="button"
-            onClick={handleClickBack}
+          <Link
+            to="/accessible-attitudes-handbook"
+            className="bb-button primary size-regular  "
+            onClick={handleClickHandbook}
             title="Acessar Cartilha"
             accessibility-label="Acessar Cartilha"
-          />
+          >
+            Acessar Cartilha
+          </Link>
         </div>
       </div>
     </div>

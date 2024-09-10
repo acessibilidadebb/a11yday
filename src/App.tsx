@@ -6,14 +6,21 @@ import './App.scss'
 import Header from './sections/header'
 import Home from './pages/home'
 import Footer from './sections/footer'
-import Primer from './pages/primer'
+import Handbook from './pages/handbook'
 
 export default function App() {
   const [showSections, setShowSections] = useState(true)
   const [showSchedule, setShowSchedule] = useState(false)
   const [showSpeakers, setShowSpeakers] = useState(false)
   const [showFrequentlyAsked, setShowFrequentlyAsked] = useState(false)
-  const [page, setPage] = useState('home')
+  const [showHandbook, setShowHandbook] = useState(false)
+  const resetSections = () => {
+    setShowSections(true)
+    setShowSchedule(false)
+    setShowSpeakers(false)
+    setShowFrequentlyAsked(false)
+    setShowHandbook(false)
+  }
   return (
     <GlobalContextProvider>
       <Router>
@@ -22,8 +29,9 @@ export default function App() {
           setShowSchedule={setShowSchedule}
           setShowSpeakers={setShowSpeakers}
           setShowFrequentlyAsked={setShowFrequentlyAsked}
+          setShowHandbook={setShowHandbook}
         />
-        {page === 'home' && (
+        {!showHandbook ? (
           <Home
             showSections={showSections}
             setShowSections={setShowSections}
@@ -33,10 +41,12 @@ export default function App() {
             setShowSpeakers={setShowSpeakers}
             showFrequentlyAsked={showFrequentlyAsked}
             setShowFrequentlyAsked={setShowFrequentlyAsked}
-            setPage={setPage}
+            showHandbook={showHandbook}
+            setShowHandbook={setShowHandbook}
           />
+        ) : (
+          <Handbook resetSections={resetSections} />
         )}
-        {page === 'primer' && <Primer setPage={setPage}/>}
         <Footer />
       </Router>
     </GlobalContextProvider>

@@ -10,4 +10,5 @@ export type LinkNavProps = IconProps & {
   className?: string
   target?: AnchorTarget
   href?: string
+  link?: boolean
 }

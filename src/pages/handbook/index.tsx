@@ -1,20 +1,21 @@
-import './primer.scss'
+import './handbook.scss'
 import LinkNav from '../../components/linkNav'
 import ScrollUp from '../../components/scrollUp'
 
 type PrimerProps = {
-  setPage: React.Dispatch<React.SetStateAction<string>>
+  setPage?: React.Dispatch<React.SetStateAction<string>>
+resetSections: () => void
 }
 
-export default function Primer({ setPage }: PrimerProps) {
+export default function Handbook({ resetSections }: PrimerProps) {
   const handleClick = () => {
-    setPage('home')
+    resetSections()
   }
 
   return (
     <div className="primer-container">
       <main className="primer-content">
-        <LinkNav title="Voltar" onClick={handleClick} icon="back" />
+        <LinkNav href="/" link={true} title="Voltar" onClick={handleClick} icon="back" />
         <header>
           <h3 id="primer-title" className="primer-title">
             Cartilha Atitudes Acessíveis

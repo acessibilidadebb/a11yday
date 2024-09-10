@@ -1,3 +1,4 @@
+import { HashLink as Link } from 'react-router-hash-link'
 import './linkNav.scss'
 import { ReactComponent as IconBack } from '../../assets/chevron-left.svg'
 import { ReactComponent as IconDownload } from '../../assets/download-icon.svg'
@@ -10,6 +11,7 @@ export default function LinkNav({
   className,
   target = '_self',
   href,
+  link = false,
 }: LinkNavProps) {
   const Icon = ({ icon }: IconProps) => {
     switch (icon) {
@@ -24,18 +26,35 @@ export default function LinkNav({
     }
   }
   if (!!href?.trim()) {
-    return (
-      <a
-        href={href}
-        className={`link-nav ${className}`}
-        target={target}
-        onClick={onClick}
-        accessibility-label={title}
-      >
-        <Icon icon={icon} />
-        {title}
-      </a>
-    )
+    if (link) {
+      return (
+        <Link
+          to={href}
+          className={`link-nav ${className}`}
+          target={target}
+          onClick={onClick}
+          title={title}
+          accessibility-label={title}
+        >
+          <Icon icon={icon} />
+          {title}
+        </Link>
+      )
+    } else {
+      return (
+        <a
+          href={href}
+          className={`link-nav ${className}`}
+          target={target}
+          onClick={onClick}
+          title={title}
+          accessibility-label={title}
+        >
+          <Icon icon={icon} />
+          {title}
+        </a>
+      )
+    }
   } else {
     return (
       <button
