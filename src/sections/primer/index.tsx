@@ -27,9 +27,7 @@ export default function Primer({ setShowHandbook }: PrimerSectionProps) {
             Acesse nossa Cartilha Atitudes Acessíveis
           </h3>
           <p className="primer-section-description">
-            Leia sobre boas práticas de acessibilidade, texto a definir com a
-            Viviane. Leia sobre boas práticas de acessibilidade, texto a definir
-            com a Viviane.{' '}
+            Leia sobre boas práticas de acessibilidade
           </p>
           <Link
             to="/accessible-attitudes-handbook"
