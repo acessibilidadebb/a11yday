@@ -11,7 +11,7 @@
   {
     "background": "enrollment-background",
     "title": "Avalie o nosso evento",
-    "subtitle": "A sua opinião é muito importante para nós! Queremos saber como foi a sua experiência no Accessibility Day. Por favor, dedique alguns minutos para preencher a nossa avaliação. Seu feedback nos ajudará a melhorar ainda mais nossos futuros eventos.",
-    "buttons": [{ "title": "Avaliar o Evento" }]
+    "subtitle": "Sua opinião é essencial para nós! Conte-nos sobre sua experiência no Accessibility Day preenchendo nossa avaliação. Seu feedback é valioso para melhorarmos nossos futuros eventos.",
+    "buttons": [{ "title": "Avaliar o Evento", "url": "https://forms.office.com/Pages/ResponsePage.aspx?id=BykM6tI4gUGHULCxkLYEQytytPsOHbJKlZdqFnBi0phUMlpCMVFWSFFCS0JJNFFDWFE1SDVYQTZBRC4u" }]
   }
 ]
