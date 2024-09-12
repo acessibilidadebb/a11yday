@@ -10,8 +10,8 @@
   },
   {
     "background": "enrollment-background",
-    "title": "Inscrição evento presencial",
-    "subtitle": "Preencha o formulário para participar do evento presencial em Brasília. Participação online não requer inscrição.",
-    "buttons": [{ "title": "Vagas Presenciais Esgotadas", "disabled": true }]
+    "title": "Avalie o nosso evento",
+    "subtitle": "A sua opinião é muito importante para nós! Queremos saber como foi a sua experiência no Accessibility Day. Por favor, dedique alguns minutos para preencher a nossa avaliação. Seu feedback nos ajudará a melhorar ainda mais nossos futuros eventos.",
+    "buttons": [{ "title": "Avaliar o Evento" }]
   }
 ]
