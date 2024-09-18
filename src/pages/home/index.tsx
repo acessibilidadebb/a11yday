@@ -12,7 +12,7 @@ import { ParticipationData } from '../../sections/participation/types'
 import participationData from '../../json/participationData.json'
 import { generateUniqueId } from '../../utils/functions'
 import Primer from '../../sections/primer'
-import Location from '../../sections/location'
+import Gallery from '../../sections/gallery'
 
 const participationArray: ParticipationData[] = participationData as ParticipationData[]
 
@@ -57,7 +57,7 @@ export default function Home(props: HomeProps) {
       <Speakers showSpeakers={showSpeakers} />
       <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />
       <Primer setShowHandbook={setShowHandbook}/>
-      <Location/>
+      <Gallery/>
       <ScrollUp />
     </>
   )
