@@ -29,7 +29,8 @@
     "image": "",
     "title": "Silêncio: Palavras que não comunicam.",
     "summary": "Embora o público surdo represente o segundo maior grupo de clientes PcD do Banco do Brasil, muitas vezes não compreendemos suas reais necessidades. Como usuários primários da Língua Brasileira de Sinais (Libras), enfrentam frequentemente dificuldades e desafios de comunicação que limitam suas opções de interação com os produtos, serviços e ambientes do banco, especialmente quando baseados exclusivamente na comunicação textual. Diante dessa realidade, vamos explorar as barreiras mais comuns e discutir o que cada um de nós pode fazer, com sensibilidade e empatia, para minimizar e superar esses impedimentos, promovendo ambientes mais acessíveis e acolhedores para essa parcela tão significativa da população.",
-    "speakerIds": ["4d949bf9-4424-4dbd-b6e9-41bf39160dfe"]
+    "speakerIds": ["4d949bf9-4424-4dbd-b6e9-41bf39160dfe"],
+    "slide": "1-cesar-sathler-silencio-palavras-que-nao-comunicam.pdf"
   },
   {
     "uuid": "973eed31-94fb-4a88-885a-19407854ab1b",
@@ -39,7 +40,8 @@
     "image": "",
     "title": "Desbloqueando o Potencial Criativo com o Mapa da Alteridade",
     "summary": "Descubra como a acessibilidade pode desbloquear o potencial criativo na palestra de Liliane Claudia. Designer com tetraplegia, Liliane compartilha sua experiência única e apresenta o Mapa da Alteridade, uma ferramenta que une Design Inclusivo e exploração criativa. Aprenda a identificar e eliminar barreiras de acessibilidade e veja como essa abordagem pode transformar produtos e serviços, impulsionando a inovação.",
-    "speakerIds": ["2bac9f1e-e57f-4bd1-89cf-35526217e14e"]
+    "speakerIds": ["2bac9f1e-e57f-4bd1-89cf-35526217e14e"],
+    "slide": "2-liliane-claudia-desbloqueando-potencial-criativo-mapa-alteridade.pdf"
   },
   {
     "uuid": "99bfe0e1-d5bf-4a54-857f-5180da389f9b",
@@ -49,7 +51,8 @@
     "image": "",
     "title": "Trazendo a acessibilidade para a realidade: uma nova experiência de usuário",
     "summary": "Após perder a visão repentinamente, trago minhas percepções sobre a importância da cultura da acessibilidade não só nas empresas, mas também na sociedade como um todo.  Conto algumas situações peculiares que vivi e como elas me incentivam a levar a informação de que a acessibilidade de verdade deve ser feita não só pela tecnologia, mas também pelas pessoas.",
-    "speakerIds": ["c32d489f-26dd-4968-ab8e-feeefc9cad1e"]
+    "speakerIds": ["c32d489f-26dd-4968-ab8e-feeefc9cad1e"],
+    "slide": "3-muriel-xavier-trazendo-acessibilidade-nova-experiencia-usuario.pdf"
   },
   {
     "uuid": "6ff8ae60-e7b1-4ea4-8f0c-34f8c92d2f26",
@@ -59,7 +62,8 @@
     "image": "",
     "title": "Gestão de Projetos com Olhar de Acessibilidade",
     "summary": "A acessibilidade se tornou um tema crucial para empresas e instituições que buscam construir um ambiente mais inclusivo e diverso. Na área de gestão de projetos, essa questão se torna ainda mais relevante, pois impacta diretamente na experiência de todos os envolvidos, desde os membros da equipe até os usuários finais.\n\nNesta palestra, abordarei os principais aspectos da gestão de projetos com foco na acessibilidade, explorando temas como: Conceitos básicos de acessibilidade, Legislação e normas de acessibilidade, Metodologias e ferramentas para gestão de projetos acessíveis e Dicas e boas práticas para a implementação de projetos acessíveis",
-    "speakerIds": ["550e8400-e29b-41d4-a716-446655440000"]
+    "speakerIds": ["550e8400-e29b-41d4-a716-446655440000"],
+    "slide": "4-marcondes-gestao-de-projetos-com-acessibilidade-e-inclusao.pdf"
   },
   {
     "uuid": "ce3d1fc0-3163-4394-828a-7571ff1aea03",
@@ -69,7 +73,8 @@
     "image": "",
     "title": "Então, o seu produto é acessível. E o seu processo de trabalho?",
     "summary": "Fala-se muito de requisitos de acessibilidade para produtos digitais, seguir padrões da WCAG e de inclusão e diversidade nos conteúdos, por exemplo. \nMas a sua empresa é acessível da porta pra dentro?\nVocê cria um ambiente para absorver pessoas vindas de contextos diversos? Se hoje entrasse na sua equipe uma pessoa não vidente, por exemplo, ela teria as ferramentas e o ambiente para exercer suas atividades plenamente? O que estamos fazendo para a inclusão dentro das empresas de tecnologia?",
-    "speakerIds": ["8a9f0c22-f512-4995-b504-ec8ec4c2fda6"]
+    "speakerIds": ["8a9f0c22-f512-4995-b504-ec8ec4c2fda6"],
+    "slide": "5-maria-clara-tarrafa-entao-seu-produto-e-acessivel-e-seu-processo-de-trabalho.pdf"
   },
   {
     "uuid": "a3c5ac45-0a06-4457-897e-96881d1c4562",
@@ -114,7 +119,8 @@
     "image": "",
     "title": "Conectando Vidas: Tecnologia e Acessibilidade",
     "summary": "Junte-se a nós nesta palestra especial que abordará como a tecnologia pode ser um facilitador poderoso na promoção da acessibilidade para pessoas com deficiência. Descubra como inovações tecnológicas estão transformando vidas e criando um mundo mais inclusivo para todos. Não perca a oportunidade de aprender e se inspirar!",
-    "speakerIds": ["f224a048-e67e-4054-882d-c987a0aa221d"]
+    "speakerIds": ["f224a048-e67e-4054-882d-c987a0aa221d"],
+    "slide": "6-arthur-ximenes-conectando-vidas.pdf"
   },
   {
     "uuid": "51b42b6b-74d5-48e9-8c18-5306942f6101",
@@ -124,7 +130,8 @@
     "image": "",
     "title": "IA e Neurodiversidade: Ferramentas e Soluções em Acessibilidade Inclusiva para a Diversidade Cognitiva",
     "summary": "Nesta atividade vamos explorar como a inteligência artificial, IA, pode ser usada para criar ferramentas que melhoram a acessibilidade digital para pessoas neurodivergentes. O público terá a oportunidade de aprender sobre diversos tópicos, incluindo a importância da acessibilidade digital, conceitos de neurodiversidade, aplicações de IA na acessibilidade, assistentes virtuais inteligentes, personalização e adaptabilidade, desafios e considerações éticas, e o futuro da IA em acessibilidade digital, tudo com foco em pessoas neurodivergentes.\n\nA neurodiversidade refere-se à variedade natural das diferenças cognitivas, abrangendo condições como autismo, TDAH, dislexia e outras que afetam a forma como as pessoas processam informações e interagem com o mundo. Já a IA envolve o desenvolvimento de sistemas computacionais capazes de realizar tarefas que normalmente exigem inteligência humana, como reconhecimento de fala, aprendizado e tomada de decisão.",
-    "speakerIds": ["7a362eda-52cb-4d53-94cb-2ba56408f355"]
+    "speakerIds": ["7a362eda-52cb-4d53-94cb-2ba56408f355"],
+    "slide": "7-sarah-fernn-ia-e-neurodiversidade-ferramentas-e-solucoes-em-acessibilidade-inclusivas-para-a-diversidade-cognitiva-bb-accessibility-day.pdf"
   },
   {
     "uuid": "3fef68fb-0b36-4947-8cd9-9d1a82d57cfd",
@@ -134,7 +141,8 @@
     "image": "",
     "title": "Design inclusivo para a 3ª Idade",
     "summary": "Em 2022, 47,2% das pessoas com deficiência tinham 60 anos ou mais, isso destaca a importância de um design inclusivo para a terceira idade. Nesta palestra, serão exploradas ferramentas, dados e práticas de acessibilidade, demonstrando como criar soluções digitais que beneficiem não apenas os idosos, mas a sociedade como um todo. Vamos descobrir como pensar em acessibilidade, entregar soluções digitais de maneira integrada para o time e também, como isso pode gerar economia e ainda aumentar faturamento.",
-    "speakerIds": [ "24ff11bc-b6d3-4a0b-b32b-7cf720e917e4", "4358a242-6a31-49f7-b6d1-e2197e77f948" ]
+    "speakerIds": [ "24ff11bc-b6d3-4a0b-b32b-7cf720e917e4", "4358a242-6a31-49f7-b6d1-e2197e77f948" ],
+    "slide": "8-michael-acessibilidade-para-a-terceira-idade.pdf"
   },
   {
     "uuid": "6a95b969-ccfc-43cd-8e5b-220b69f2fffc",
@@ -144,7 +152,8 @@
     "image": "",
     "title": "Implementando Acessibilidade: Um Fluxo de Trabalho otimizado para Desenvolvedores",
     "summary": "Muitos desenvolvedores conhecem muito pouco ou não conhecem nada sobre acessibilidade. Apesar dessa situação estar sendo mudada gradativamente, ainda é necessário reciclar e conscientizar muitos deles. Quais as causas existentes na dificuldade em implementar acessibilidade? Existe alguma forma de otimizar os trabalhos, sem prejudicar o tempo, incluir retrabalho e conhecimento de ferramentas e frameworks que poderiam ajudar?",
-    "speakerIds": [ "7d1e25f9-4272-4d40-96eb-66a5e40240fb" ]
+    "speakerIds": [ "7d1e25f9-4272-4d40-96eb-66a5e40240fb" ],
+    "slide": "9-filipe-ballico-implementando-a-acessibilidade.pdf"
   },
   {
     "uuid": "87c6ae64-ec69-41f2-8638-c684b8474027",

@@ -9,9 +9,11 @@ import speakersData from '../../../json/speakersData.json'
 import { ScheduleItemProps } from '../types'
 import { generateUniqueId } from '../../../utils/functions'
 import ScheduleCardImage from './scheduleCardImage'
+import LinkNav from '../../../components/linkNav'
 
 export function ScheduleItem(props: ScheduleItemProps) {
-  const { time, type, confirmed, title, subtitle, summary, speakerIds } = props
+  const { time, type, confirmed, title, subtitle, summary, speakerIds, slide } =
+    props
   const { isModalOpen, setModalOpen, togglePin } = useContext(GlobalContext)
   const titleId = generateUniqueId()
   const descriptionId = generateUniqueId()
@@ -69,6 +71,17 @@ export function ScheduleItem(props: ScheduleItemProps) {
           <p className="schedule-details-description" id={descriptionId}>
             {summary}
           </p>
+          {!!slide && (
+            <p className="schedule-details-footer">
+              <LinkNav
+                className="link-download"
+                title="Download do slide da palestra (Conteúdo Externo)"
+                icon="download"
+                href={`/${slide}`}
+                target="_blank"
+              />
+            </p>
+          )}
         </div>
         {!!speakers.length &&
           speakers.map((speaker, index) => {
@@ -82,7 +95,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
       </div>
     )
   }
-
+  console.log(props)
   return (
     <div className="schedule-item">
       <div className="schedule-time">

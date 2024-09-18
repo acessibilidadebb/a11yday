@@ -13,4 +13,5 @@ export interface ScheduleItemType {
   imageAriaHidden?: boolean
   imageBackground?: string,
   speakerIds?: string[]
+  slide?: string
 }
