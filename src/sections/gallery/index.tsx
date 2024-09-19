@@ -10,7 +10,7 @@ export default function Gallery() {
         <ImageGallery
           items={galleryData}
           showThumbnails={true}
-          autoPlay={true}
+          autoPlay={false}
           slideInterval={3000}
         />
       </div>
