@@ -1,0 +1,15 @@
+[
+  {
+    "background": "watch-background",
+    "background2": "enrollment-background",
+    "title": "Seja um palestrante ou expositor no nosso evento!",
+    "subtitle": "Preencha aqui sua proposta de palestra, workshop ou produto para exposição. Vale soluções digitais ou temas relacionados à acessibilidade.",
+    "buttons": [
+      {
+        "title": "Formulário de Proposta",
+        "url": "https://forms.office.com/Pages/ResponsePage.aspx?id=BykM6tI4gUGHULCxkLYEQytytPsOHbJKlZdqFnBi0phUMlpCMVFWSFFCS0JJNFFDWFE1SDVYQTZBRC4u"
+      }
+    ],
+    "afterButtonText": "Inscrições até 15/07"
+  }
+]

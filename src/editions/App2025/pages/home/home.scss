@@ -1,0 +1,16 @@
+@import '../../scss/variables';
+@import '../../scss/placeholders';
+@import '../../scss/mixins';
+
+.introduction {
+  overflow-x: hidden;
+}
+
+
+.participation-container {
+  display: flex;
+  flex-direction: column;
+  @include respond-to(lg) {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,92 @@
+@import '../../scss/variables';
+@import '../../scss/placeholders';
+@import '../../scss/mixins';
+
+.dialog-backdrop {
+  position: fixed;
+  top: $headerHeightSmall;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -100%;
+  opacity: 1;
+  visibility: visible;
+  z-index: 85;
+  transition: right 0.5s ease-in-out;
+  display: flex;
+  align-items: end;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+  }
+  @include respond-to(lg) {
+    background-color: rgba(0, 0, 0, 0.5);
+    right: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: none;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000;
+    margin-top: 0;
+    align-items: center;
+    &.active {
+      .default_dialog {
+        transform: translateY(0);
+      }
+    }
+    .default_dialog {
+      padding: $containerPadding;
+      max-width: 800px;
+      max-height: 80vh;
+      height: auto;
+      border-radius: 10px;
+    }
+    .close-modal-btn {
+      top: $containerPadding;
+    }
+    .default_dialog-content {
+      padding: 0;
+    }
+  }
+}
+
+.default_dialog {
+  padding: 0 $containerPaddingSmall;
+  background: white;
+  position: relative;
+  overflow: auto;
+  height: calc(100% - $headerHeightSmall);
+  border-radius: 0;
+
+  .close-modal-btn {
+    right: $containerPaddingSmall;
+  }
+  @include respond-to(lg) {
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    .close-modal-btn {
+      right: $containerPadding;
+    }
+  }
+}
+.default_dialog-content {
+  padding: $containerPaddingSmall 0;
+}
+.close-modal-btn {
+  border: none;
+  background-color: transparent;
+  top: 16px;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 89;
+}
