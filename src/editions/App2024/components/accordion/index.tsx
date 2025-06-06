@@ -1,7 +1,7 @@
 import React from 'react'
 import DOMPurify from 'dompurify'
 import './accordion.scss'
-import SvgCaret from '../../assets/IconComponents/SvgCaret'
+import SvgCaret from '../../../../assets/IconComponents/SvgCaret'
 
 interface AccordionProps {
   title: string

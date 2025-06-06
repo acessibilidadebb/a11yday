@@ -3,9 +3,9 @@ import './speakers.scss'
 import SpeakerItem from './components/speaker'
 import lowVisionMark from '../../../../assets/low-vision-mark.png'
 import speakersData from '../../json/speakersData.json'
-import { Speaker } from '../../../../types/speakers'
+import { Speaker } from '../../types/speakers'
 import { SpeakersProps } from './types'
-import { generateUniqueId } from '../../../../utils/functions'
+import { generateUniqueId } from '../../utils/functions'
 
 const speakers: Speaker[] = speakersData as Speaker[]
 

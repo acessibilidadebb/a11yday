@@ -1,7 +1,0 @@
-@import 'mixins';
-%container {
-  padding: $containerPaddingSmall;
-  @include respond-to(lg) {
-    padding: $containerPadding;
-  }
-}
