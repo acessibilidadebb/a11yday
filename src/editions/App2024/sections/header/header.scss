@@ -1,0 +1,251 @@
+@import '../../scss/variables';
+@import '../../scss/placeholders';
+@import '../../scss/mixins';
+
+@mixin sticky-header {
+  position: fixed;
+  top: 0;
+  height: $headerHeightSmall - $headerBorder;
+  border-bottom: $headerBorder solid $yellow;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 98;
+
+  .header-logo-bb {
+    width: 36px;
+    height: 36px;
+  }
+  .header-logo {
+    width: 166px;
+    height: 25px;
+  }
+}
+
+
+.header {
+  @extend %container;
+  height: $headerHeightSmall;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background;
+  color: $color;
+  padding-top: 36px;
+  transition: height 0.3s ease, border-bottom 0.3s ease;
+  position: relative;
+  width: calc(100% - #{2 * $containerPaddingSmall});
+
+  .header-logo-bb {
+    display: none;
+    color: $yellow;
+  }
+
+  .header-logo {
+    width: 249px;
+  }
+
+  ul {
+    display: inline-flex;
+
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0.005em;
+      text-align: left;
+      text-decoration: none;
+      color: $color;
+
+      &:hover,
+      &:active {
+        color: rgba($color, 0.8);
+      }
+    }
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  @include respond-to(md) {
+    .header-logo-bb {
+      display: initial;
+    }
+  }
+
+  @include respond-to(lg) {
+    position: static;
+    width: calc(100% - #{2 * $containerPadding});
+    .header-logo {
+      width: auto;
+    }
+  }
+  &.sticky {
+    @include sticky-header();
+  }
+  &.modal-pin {
+    @include respond-to-max(lg) {
+      @include sticky-header();
+    }
+  }
+}
+
+.header-logo-container {
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header-logo-bb {
+  width: 58px;
+  height: auto;
+  padding-right: 22px;
+  transition: all 0.3s ease;
+}
+.header-logo {
+  width: 394px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: $darkBlue;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 90;
+
+  .navbar-content {
+    padding: $containerPaddingSmall;
+  }
+  &.open {
+    visibility: visible;
+    transform: translateX(0);
+
+    .decorative-icons {
+      height: auto;
+      visibility: visible;
+    }
+
+    ul {
+      visibility: initial;
+    }
+    .home-link {
+      display: initial;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+  }
+  li {
+    margin-left: 0;
+    margin-top: $containerPadding;
+  }
+
+  .decorative-icons {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    height: 0;
+    visibility: hidden;
+  }
+  .decorative-icon {
+    padding: 15px 20px 15px 0;
+  }
+  .low-vision {
+    width: 26px;
+    height: 15px;
+  }
+  .sign-language {
+    width: 30px;
+    height: 23px;
+  }
+  .braile {
+    width: 15px;
+    height: 26px;
+  }
+  .bilateral-deafness {
+    width: 22px;
+    height: 25px;
+  }
+  @include respond-to(lg) {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    transform: none;
+    transition: none;
+    z-index: auto;
+    .navbar-content {
+      padding: 0;
+    }
+    ul {
+      display: inline-flex;
+      flex-direction: row;
+      visibility: visible;
+    }
+    li {
+      margin-left: 20px;
+      margin-top: 0;
+    }
+  }
+}
+.home-link {
+  display: none;
+}
+.menu-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 2 * $containerPaddingSmall;
+  z-index: 100;
+  @include respond-to(lg) {
+    display: none;
+  }
+}
+.hamburguer {
+  position: relative;
+  display: block;
+  background: $color;
+  width: 30px;
+  height: 2px;
+  left: 15px;
+  transition: 0.5s ease-in-out;
+}
+
+.hamburguer:before,
+.hamburguer:after {
+  background: $color;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+.open .hamburguer {
+  transform: rotate(45deg);
+}
+.open .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+.open .hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+.hamburguer:before {
+  top: -10px;
+}
+
+.hamburguer:after {
+  bottom: -10px;
+}

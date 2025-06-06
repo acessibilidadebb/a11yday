@@ -1,0 +1,66 @@
+@import '../../scss/variables';
+@import '../../scss/placeholders';
+@import '../../scss/mixins';
+
+.schedule {
+  @extend %container;
+  background-color: $white;
+  flex-direction: column;
+  display: none;
+  &.open {
+    display: flex;
+  }
+  @include respond-to(lg) {
+    display: flex;
+  }
+}
+.schedule-title {
+  font-size: 1.6rem;
+  color: $color-blue;
+}
+.details {
+  background-color: inherit;
+  border: none;
+  color: $link;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  padding: 0;
+}
+.schedule-btn {
+  background-color: $buttonSecondary;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  img {
+    width: 12px;
+    height: 20px;
+  }
+}
+.schedule-header {
+  color: $color-gray;
+  text-transform: uppercase;
+  margin-top: 36px;
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-end;
+  @include respond-to(lg) {
+    display: flex;
+  }
+  .schedule-time,
+  .schedule-event {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+}
+

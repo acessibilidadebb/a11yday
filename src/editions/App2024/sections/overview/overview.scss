@@ -1,0 +1,165 @@
+@import '../../scss/variables';
+@import '../../scss/placeholders';
+@import '../../scss/mixins';
+
+.overview-section {
+  @extend %container;
+  height: $overviewSectionHeight;
+  width: calc(100% - #{2 * $containerPaddingSmall});
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  background-color: $background;
+  color: $color;
+
+  h2 {
+    line-height: 40px;
+    font-size: 32px;
+    max-width: 100%;
+  }
+
+  .decorative-icons {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+  }
+  .decorative-icon {
+    padding: 15px 20px 15px 0;
+  }
+  .low-vision {
+    width: 26px;
+    height: 15px;
+  }
+  .sign-language {
+    width: 30px;
+    height: 23px;
+  }
+  .braile {
+    width: 15px;
+    height: 26px;
+  }
+  .bilateral-deafness {
+    width: 22px;
+    height: 25px;
+  }
+
+  @include respond-to(lg) {
+    width: auto;
+    h2 {
+      font-size: 40px;
+      line-height: 50px;
+      max-width: 700px;
+    }
+    .low-vision {
+      width: 35px;
+      height: 20px;
+    }
+    .sign-language {
+      width: 40px;
+      height: 31px;
+    }
+    .braile {
+      width: 20px;
+      height: 34px;
+    }
+    .bilateral-deafness {
+      width: 30px;
+      height: 33px;
+    }
+  }
+}
+
+.overview-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 700px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 0;
+
+  p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  @include respond-to(lg) {
+    justify-content: flex-start;
+    p {
+      margin-right: 70px;
+    }
+  }
+
+}
+%overview-background-height {
+  height: $overviewSectionHeight + 2 * $containerPadding;
+}
+.overview-background-detail {
+  @extend %overview-background-height;
+  width: calc(50% + #{$containerPadding});
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  @include respond-to(lg) {
+    display: initial;
+  }
+}
+.overview-icons {
+  @extend %overview-background-height;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  @include respond-to(xxl) {
+    display: flex;
+  }
+}
+.overview-icons {
+  width: 75%;
+}
+.overview-icon {
+  width: 325px;
+}
+.circles {
+  @extend %overview-background-height;
+  width: 208px;
+  position: absolute;
+  right: 0;
+}
+.big-circle {
+  background-color: $turquoise;
+  width: 166px;
+  height: 166px;
+  border-radius: 50%;
+  position: absolute;
+  right: -12%;
+  bottom: -5%;
+}
+.medium-circle {
+  background-color: $pink;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  right: -10%;
+}
+.small-circle {
+  background-color: $yellow;
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 30%;
+}
+.mini-circle {
+  background-color: $lighterPink;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 25%;
+}
