@@ -48,7 +48,7 @@ export default function Home(props: HomeProps) {
       {/* <Speakers showSpeakers={showSpeakers} /> */}
       <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />
       <Primer setShowHandbook={setShowHandbook} />
-      <Gallery setShowGallery={setShowGallery} />
+      <Gallery />
       <ScrollUp />
     </>
   )
