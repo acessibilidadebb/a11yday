@@ -3,10 +3,8 @@ import 'react-image-gallery/styles/css/image-gallery.css'
 import galleryData from '../../json/galleryData.json'
 import './gallery.scss'
 
-export default function Gallery({ setShowGallery }: { setShowGallery: React.Dispatch<React.SetStateAction<boolean>> }) {
-  const handleCloseGallery = () => {
-    setShowGallery(false)
-  }
+export default function Gallery() {
+
   return (
     <div id='2024-gallery' className="gallery">
       <div className="gallery-container">

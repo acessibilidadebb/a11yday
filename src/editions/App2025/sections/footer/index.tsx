@@ -6,8 +6,6 @@ import { ReactComponent as IconCafeComUx } from '../../../../assets/cafe-com-ux.
 import { ReactComponent as IconInstagram } from '../../../../assets/instagram.svg'
 import { ReactComponent as IconLinkedIn } from '../../../../assets/linkedin.svg'
 import { ReactComponent as AccDigitalLogo } from '../../../../assets/acessibilidade_digital.svg'
-import { ReactComponent as OptyLogo } from '../../../../assets/opty_logo.svg'
-import { ReactComponent as WatLogo } from '../../../../assets/logo_WAT.svg'
 
 export default function Footer() {
   return (

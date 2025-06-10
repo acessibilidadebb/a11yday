@@ -1,10 +1,6 @@
 import './home.scss'
-import DividerIcons from '../../sections/dividerIcons'
 import FrequentlyAsked from '../../sections/frequently-asked'
 import Overview from '../../sections/overview'
-import Schedule from '../../sections/schedule'
-import SectionsButtons from '../../sections/sectionsButtons'
-import Speakers from '../../sections/speakers'
 import Participation from '../../sections/participation'
 import ScrollUp from '../../components/scrollUp'
 import { HomeProps } from './types'
@@ -19,15 +15,8 @@ const participationArray: ParticipationData[] = participationData as Participati
 export default function Home(props: HomeProps) {
   const {
     showSections,
-    setShowSections,
-    showSchedule,
-    setShowSchedule,
-    showSpeakers,
-    setShowSpeakers,
     showFrequentlyAsked,
-    setShowFrequentlyAsked,
     setShowHandbook,
-    showGallery,
     setShowGallery    
   } = props
   return (
