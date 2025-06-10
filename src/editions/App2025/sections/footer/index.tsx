@@ -19,7 +19,7 @@ export default function Footer() {
             src={logo}
             alt="Logo do Accessibility Day"
           />
-          <p className="footer-date">11 de setembro de 2024</p>
+          <p className="footer-date">25 de setembro de 2025</p>
         </div>
         <div className="footer-column grid2">
           <h2 className="footer-title">Siga nas Redes</h2>
@@ -88,39 +88,6 @@ export default function Footer() {
               role="img"
             >
               <IconCafeComUx className="cafe-com-ux-logo" />
-            </div>
-          </div>
-        </div>
-        <div className="footer-column grid4">
-          <h2 className="footer-title">Parceiros</h2>
-          <div className="footer-icons">
-            <img
-              className="tecassitiva"
-              src={`${import.meta.env.BASE_URL}logo_teca.png`}
-              title={`Logo de Tecassistiva`}
-              alt={`Logo de Tecassistiva`}
-            />
-            <div
-              title="Opty - Olhar pelos seus olhos"
-              aria-label="Opty - Olhar pelos seus olhos"
-              style={{
-                lineHeight: 0,
-              }}
-              role="img"
-              className="opty"
-            >
-              <OptyLogo />
-            </div>
-            <div
-              title="WAT - Qualidade acessível"
-              aria-label="WAT - Qualidade acessível"
-              style={{
-                lineHeight: 0,
-              }}
-              role="img"
-              className="wat"
-            >
-              <WatLogo />
             </div>
           </div>
         </div>
