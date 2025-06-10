@@ -17,7 +17,6 @@ export default function Home(props: HomeProps) {
     showSections,
     showFrequentlyAsked,
     setShowHandbook,
-    setShowGallery    
   } = props
   return (
     <>
