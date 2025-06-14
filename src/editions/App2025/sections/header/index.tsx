@@ -200,10 +200,10 @@ export default function Header({
             </li>
             <li>
               <Link
-                to={`/2024-gallery`}
-                onClick={() => handleClickMenu({ sectionId: 'gallery' })}
+                to={`/edicao-2024`}
+                onClick={() => handleClickMenu({ sectionId: 'edicao-2024' })}
               >
-                Galeria2024
+                Edição 2024
               </Link>
             </li>
           </ul>

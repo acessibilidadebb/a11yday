@@ -6,7 +6,6 @@ import Home from './pages/home'
 import Footer from './sections/footer'
 import Handbook from './pages/handbook'
 import GlobalContextProvider from './contexts/globalContext'
-import { HashRouter as Router } from 'react-router-dom'
 
 export default function App2024() {
   const [showSections, setShowSections] = useState(true)
@@ -23,32 +22,30 @@ export default function App2024() {
   }
   return (
     <GlobalContextProvider>
-      <Router>
-        <Header
+      <Header
+        setShowSections={setShowSections}
+        setShowSchedule={setShowSchedule}
+        setShowSpeakers={setShowSpeakers}
+        setShowFrequentlyAsked={setShowFrequentlyAsked}
+        setShowHandbook={setShowHandbook}
+      />
+      {!showHandbook ? (
+        <Home
+          showSections={showSections}
           setShowSections={setShowSections}
+          showSchedule={showSchedule}
           setShowSchedule={setShowSchedule}
+          showSpeakers={showSpeakers}
           setShowSpeakers={setShowSpeakers}
+          showFrequentlyAsked={showFrequentlyAsked}
           setShowFrequentlyAsked={setShowFrequentlyAsked}
+          showHandbook={showHandbook}
           setShowHandbook={setShowHandbook}
         />
-        {!showHandbook ? (
-          <Home
-            showSections={showSections}
-            setShowSections={setShowSections}
-            showSchedule={showSchedule}
-            setShowSchedule={setShowSchedule}
-            showSpeakers={showSpeakers}
-            setShowSpeakers={setShowSpeakers}
-            showFrequentlyAsked={showFrequentlyAsked}
-            setShowFrequentlyAsked={setShowFrequentlyAsked}
-            showHandbook={showHandbook}
-            setShowHandbook={setShowHandbook}
-          />
-        ) : (
-          <Handbook resetSections={resetSections} />
-        )}
-        <Footer />
-      </Router>
+      ) : (
+        <Handbook resetSections={resetSections} />
+      )}
+      <Footer />
     </GlobalContextProvider>
   )
 }

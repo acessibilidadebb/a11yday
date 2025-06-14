@@ -6,7 +6,6 @@ import Home from './pages/home'
 import Footer from './sections/footer'
 import Handbook from './pages/handbook'
 import GlobalContextProvider from './contexts/globalContext'
-import { HashRouter as Router } from 'react-router-dom'
 
 export default function App2025() {
   const [showSections, setShowSections] = useState(true)
@@ -24,35 +23,33 @@ export default function App2025() {
   }
   return (
     <GlobalContextProvider>
-      <Router>
-        <Header
+      <Header
+        setShowSections={setShowSections}
+        setShowSchedule={setShowSchedule}
+        setShowSpeakers={setShowSpeakers}
+        setShowFrequentlyAsked={setShowFrequentlyAsked}
+        setShowHandbook={setShowHandbook}
+        setShowGallery={setShowGallery}
+      />
+      {!showHandbook ? (
+        <Home
+          showSections={showSections}
           setShowSections={setShowSections}
+          showSchedule={showSchedule}
           setShowSchedule={setShowSchedule}
+          showSpeakers={showSpeakers}
           setShowSpeakers={setShowSpeakers}
+          showFrequentlyAsked={showFrequentlyAsked}
           setShowFrequentlyAsked={setShowFrequentlyAsked}
+          showHandbook={showHandbook}
           setShowHandbook={setShowHandbook}
+          showGallery={showGallery}
           setShowGallery={setShowGallery}
         />
-        {!showHandbook ? (
-          <Home
-            showSections={showSections}
-            setShowSections={setShowSections}
-            showSchedule={showSchedule}
-            setShowSchedule={setShowSchedule}
-            showSpeakers={showSpeakers}
-            setShowSpeakers={setShowSpeakers}
-            showFrequentlyAsked={showFrequentlyAsked}
-            setShowFrequentlyAsked={setShowFrequentlyAsked}
-            showHandbook={showHandbook}
-            setShowHandbook={setShowHandbook}
-            showGallery={showGallery}
-            setShowGallery={setShowGallery}
-          />
-        ) : (
-          <Handbook resetSections={resetSections} />
-        )}
-        <Footer />
-      </Router>
+      ) : (
+        <Handbook resetSections={resetSections} />
+      )}
+      <Footer />
     </GlobalContextProvider>
   )
 }

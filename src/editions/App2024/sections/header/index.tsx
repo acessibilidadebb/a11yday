@@ -17,13 +17,14 @@ export default function Header({
   setShowSchedule,
   setShowSpeakers,
   setShowFrequentlyAsked,
-  setShowHandbook
+  setShowHandbook,
 }: HeaderProps) {
   const { isPin } = useContext(GlobalContext)
   const [scrollPosition, setScrollPosition] = useState(0)
   const [open, setOpen] = useState(false)
   const location = useLocation()
   const headerRef = useRef<HTMLDivElement | null>(null) // Define explicitamente o tipo como HTMLDivElement ou null
+  const source = '/edicao-2024'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,16 +41,16 @@ export default function Header({
   useEffect(() => {
     const scrollToSectionOnLoad = () => {
       const { pathname } = location
+      const route = pathname.split('/').filter(Boolean).pop()
       if (
-        pathname === '/schedule' ||
-        pathname === '/speakers' ||
-        pathname === '/frequently-asked-questions' ||
-        pathname === '/accessible-attitudes-handbook' ||
-        pathname === '/address-and-location'
+        route === 'schedule' ||
+        route === 'speakers' ||
+        route === 'frequently-asked-questions' ||
+        route === 'accessible-attitudes-handbook' ||
+        route === 'address-and-location'
       ) {
-        const id = pathname.substring(1)
+        const id = route.substring(0)
         const element = document.getElementById(id)
-
         if (element) {
           const sectionTitle = element.querySelector('h2')
           if (sectionTitle) {
@@ -68,7 +69,7 @@ export default function Header({
             top: topPosition,
             behavior: 'smooth',
           })
-          openSection(pathname.substring(1))
+          openSection(route.substring(0))
         }
       } else {
         window.scrollTo({
@@ -144,7 +145,7 @@ export default function Header({
         <Link
           aria-label="Accessibility Day"
           smooth
-          to={`/`}
+          to={`/edicao-2024`}
           onClick={resetSections}
         >
           <span
@@ -201,23 +202,23 @@ export default function Header({
           </div>
           <ul id="nav-list">
             <li className="home-link">
-              <Link smooth to={`/`} onClick={resetSections}>
+              <Link smooth to={`/${source}`} onClick={resetSections}>
                 Página Inicial
               </Link>
             </li>
             <li>
-              <Link smooth to={`/schedule`} onClick={handleClickSchedule}>
+              <Link smooth to={`${source}/schedule`} onClick={handleClickSchedule}>
                 Programação
               </Link>
             </li>
             <li>
-              <Link smooth to={`/speakers`} onClick={handleClickSpeakers}>
+              <Link smooth to={`${source}/speakers`} onClick={handleClickSpeakers}>
                 Palestrantes
               </Link>
             </li>
             <li>
               <Link
-                to={`/frequently-asked-questions`}
+                to={`${source}/frequently-asked-questions`}
                 onClick={handleClickFrequentlyAsked}
               >
                 Dúvidas
@@ -225,14 +226,14 @@ export default function Header({
             </li>
             <li>
               <Link
-                to={`/accessible-attitudes-handbook`}
+                to={`${source}/accessible-attitudes-handbook`}
                 onClick={handleClickHandbook}
               >
                 Cartilha
               </Link>
             </li>
             <li>
-              <Link to={`/address-and-location`} onClick={handleClickAddress}>
+              <Link to={`${source}/address-and-location`} onClick={handleClickAddress}>
                 Endereço e Localização
               </Link>
             </li>
