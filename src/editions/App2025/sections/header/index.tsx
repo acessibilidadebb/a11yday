@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { HashLink as Link } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 import { GlobalContext } from '../../../../contexts/globalContext'
 import './header.scss'
 
@@ -47,7 +47,7 @@ export default function Header({
         pathname === '/frequently-asked-questions' ||
         pathname === '/accessible-attitudes-handbook' ||
         pathname === '/address-and-location' ||
-        pathname === '/2024-gallery' 
+        pathname === '/2024-gallery'
       ) {
         const id = pathname.substring(1)
         const element = document.getElementById(id)
@@ -129,12 +129,7 @@ export default function Header({
       ref={headerRef}
     >
       <h1 className="header-logo-container">
-        <Link
-          aria-label="Accessibility Day"
-          smooth
-          to={`/`}
-          onClick={resetSections}
-        >
+        <Link aria-label="Accessibility Day" to={`/`} onClick={resetSections}>
           <span
             title="Logo do Banco do Brasil"
             aria-label="Logo do Banco do Brasil"

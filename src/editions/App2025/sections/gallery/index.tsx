@@ -3,12 +3,15 @@ import 'react-image-gallery/styles/css/image-gallery.css'
 import galleryData from '../../json/galleryData.json'
 import './gallery.scss'
 
-export default function Gallery() {
+// Wrapper para resolver conflito de tipos
+const Gallery = ImageGallery as any
+
+export default function GallerySection() {
 
   return (
     <div id='2024-gallery' className="gallery">
       <div className="gallery-container">
-        <ImageGallery
+        <Gallery
           items={galleryData}
           showThumbnails={true}
           autoPlay={false}

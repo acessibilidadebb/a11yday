@@ -23,5 +23,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "custom.d.ts"]
+  "include": ["src/**/*", "src/**/*.json", "custom.d.ts"]
 }

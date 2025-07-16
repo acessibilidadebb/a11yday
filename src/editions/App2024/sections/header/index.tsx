@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { HashLink as Link } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 import { GlobalContext } from '../../../../contexts/globalContext'
 import './header.scss'
 
@@ -136,6 +136,7 @@ export default function Header({
     resetSections()
     openSection('address-and-location')
   }
+
   return (
     <header
       className={`header ${sticky} ${isPin ? 'modal-pin' : ''}`}
@@ -144,7 +145,6 @@ export default function Header({
       <h1 className="header-logo-container">
         <Link
           aria-label="Accessibility Day"
-          smooth
           to={`/edicao-2024`}
           onClick={resetSections}
         >
@@ -202,17 +202,17 @@ export default function Header({
           </div>
           <ul id="nav-list">
             <li className="home-link">
-              <Link smooth to={`/${source}`} onClick={resetSections}>
+              <Link to={`/${source}`} onClick={resetSections}>
                 Página Inicial
               </Link>
             </li>
             <li>
-              <Link smooth to={`${source}/schedule`} onClick={handleClickSchedule}>
+              <Link to={`${source}/schedule`} onClick={handleClickSchedule}>
                 Programação
               </Link>
             </li>
             <li>
-              <Link smooth to={`${source}/speakers`} onClick={handleClickSpeakers}>
+              <Link to={`${source}/speakers`} onClick={handleClickSpeakers}>
                 Palestrantes
               </Link>
             </li>
@@ -233,7 +233,10 @@ export default function Header({
               </Link>
             </li>
             <li>
-              <Link to={`${source}/address-and-location`} onClick={handleClickAddress}>
+              <Link
+                to={`${source}/address-and-location`}
+                onClick={handleClickAddress}
+              >
                 Endereço e Localização
               </Link>
             </li>
