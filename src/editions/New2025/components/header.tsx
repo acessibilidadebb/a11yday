@@ -1,121 +1,121 @@
 export default function Header() {
   return (
-    <header className="relative gradient-bg text-white overflow-hidden">
-      <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-2">
-              <span className="font-['Pacifico'] text-2xl text-primary">
+    <header className="tw-relative gradient-bg tw-text-white tw-overflow-hidden">
+      <nav className="tw-fixed tw-top-0 tw-left-0 tw-right-0 tw-bg-white tw-shadow-md tw-z-50">
+        <div className="tw-container tw-mx-auto tw-px-4">
+          <div className="tw-flex tw-items-center tw-justify-between tw-h-16">
+            <div className="tw-flex tw-items-center tw-space-x-2">
+              <span className="tw-font-['Pacifico'] tw-text-2xl tw-text-primary">
                 logo
               </span>
             </div>
-            <div className="hidden md:flex items-center space-x-6 text-sm">
-              <a href="#" className="text-gray-700 hover:text-primary">
+            <div className="tw-hidden md:tw-flex tw-items-center tw-space-x-6 tw-text-sm">
+              <a href="#" className="tw-text-gray-700 hover:tw-text-primary">
                 Início
               </a>
-              <a href="#" className="text-gray-700 hover:text-primary">
+              <a href="#" className="tw-text-gray-700 hover:tw-text-primary">
                 Programação
               </a>
-              <a href="#" className="text-gray-700 hover:text-primary">
+              <a href="#" className="tw-text-gray-700 hover:tw-text-primary">
                 Palestrantes
               </a>
-              <a href="#" className="text-gray-700 hover:text-primary">
+              <a href="#" className="tw-text-gray-700 hover:tw-text-primary">
                 Contato
               </a>
-              <a href="#" className="text-gray-700 hover:text-primary">
+              <a href="#" className="tw-text-gray-700 hover:tw-text-primary">
                 FAQ
               </a>
-              <button className="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">
+              <button className="tw-bg-primary tw-text-white tw-px-4 tw-py-2 tw-rounded-button tw-font-medium hover:tw-bg-opacity-90 tw-transition tw-whitespace-nowrap">
                 Inscreva-se
               </button>
             </div>
           </div>
         </div>
       </nav>
-      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10 mt-16">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="font-['Pacifico'] text-2xl">logo</span>
-            <div className="flex items-center space-x-1 text-xs">
-              <span className="w-6 h-6 flex items-center justify-center bg-white bg-opacity-20 rounded-full">
-                <i className="ri-eye-line text-white" />
+      <div className="tw-container tw-mx-auto tw-px-4 tw-py-16 md:tw-py-24 tw-relative tw-z-10 tw-mt-16">
+        <div className="tw-flex tw-items-center tw-justify-between">
+          <div className="tw-flex tw-items-center tw-space-x-2">
+            <span className="tw-font-['Pacifico'] tw-text-2xl">logo</span>
+            <div className="tw-flex tw-items-center tw-space-x-1 tw-text-xs">
+              <span className="tw-w-6 tw-h-6 tw-flex tw-items-center tw-justify-center tw-bg-white tw-bg-opacity-20 tw-rounded-full">
+                <i className="ri-eye-line tw-text-white" />
               </span>
-              <span className="w-6 h-6 flex items-center justify-center bg-white bg-opacity-20 rounded-full">
-                <i className="ri-volume-up-line text-white" />
+              <span className="tw-w-6 tw-h-6 tw-flex tw-items-center tw-justify-center tw-bg-white tw-bg-opacity-20 tw-rounded-full">
+                <i className="ri-volume-up-line tw-text-white" />
               </span>
-              <span className="w-6 h-6 flex items-center justify-center bg-white bg-opacity-20 rounded-full">
-                <i className="ri-contrast-2-line text-white" />
+              <span className="tw-w-6 tw-h-6 tw-flex tw-items-center tw-justify-center tw-bg-white tw-bg-opacity-20 tw-rounded-full">
+                <i className="ri-contrast-2-line tw-text-white" />
               </span>
             </div>
           </div>
-          <div className="hidden md:flex items-center space-x-6 text-sm">
-            <a href="#" className="hover:underline">
+          <div className="tw-hidden md:tw-flex tw-items-center tw-space-x-6 tw-text-sm">
+            <a href="#" className="hover:tw-underline">
               Início
             </a>
-            <a href="#" className="hover:underline">
+            <a href="#" className="hover:tw-underline">
               Programação
             </a>
-            <a href="#" className="hover:underline">
+            <a href="#" className="hover:tw-underline">
               Palestrantes
             </a>
-            <a href="#" className="hover:underline">
+            <a href="#" className="hover:tw-underline">
               Contato
             </a>
-            <a href="#" className="hover:underline">
+            <a href="#" className="hover:tw-underline">
               FAQ
             </a>
           </div>
-          <div className="w-10 h-10 flex items-center justify-center bg-yellow-300 text-blue-900 rounded-full">
+          <div className="tw-w-10 tw-h-10 tw-flex tw-items-center tw-justify-center tw-bg-yellow-300 tw-text-blue-900 tw-rounded-full">
             <i className="ri-sun-line" />
           </div>
         </div>
-        <div className="mt-16 md:mt-20 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="tw-mt-16 md:tw-mt-20 tw-flex tw-flex-col md:tw-flex-row tw-items-center">
+          <div className="md:tw-w-1/2 tw-mb-10 md:tw-mb-0">
+            <h1 className="tw-text-4xl md:tw-text-5xl tw-font-bold tw-mb-6">
               Acessibilidade Digital: A gente se importa!
             </h1>
-            <p className="text-lg md:text-xl mb-8 opacity-90">
+            <p className="tw-text-lg md:tw-text-xl tw-mb-8 tw-opacity-90">
               O Sistema de Acessibilidade Digital do Banco do Brasil.
             </p>
-            <p className="text-sm mb-8 bg-white bg-opacity-20 inline-block px-3 py-1 rounded-full">
+            <p className="tw-text-sm tw-mb-8 tw-bg-white tw-bg-opacity-20 tw-inline-block tw-px-3 tw-py-1 tw-rounded-full">
               Programado para 2025
             </p>
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-white text-primary px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">
+            <div className="tw-flex tw-flex-wrap tw-gap-4">
+              <button className="tw-bg-white tw-text-primary tw-px-6 tw-py-3 tw-rounded-button tw-font-medium hover:tw-bg-opacity-90 tw-transition tw-whitespace-nowrap">
                 Inscreva-se
               </button>
-              <button className="bg-transparent border-2 border-white px-6 py-3 rounded-button font-medium hover:bg-white hover:bg-opacity-10 transition whitespace-nowrap">
+              <button className="tw-bg-transparent tw-border-2 tw-border-white tw-px-6 tw-py-3 tw-rounded-button tw-font-medium hover:tw-bg-white hover:tw-bg-opacity-10 tw-transition tw-whitespace-nowrap">
                 Saiba mais sobre o evento
               </button>
             </div>
           </div>
-          <div className="md:w-1/2 relative">
-            <div className="relative z-10 flex justify-center items-center h-full">
+          <div className="md:tw-w-1/2 tw-relative">
+            <div className="tw-relative tw-z-10 tw-flex tw-justify-center tw-items-center tw-h-full">
               <img
                 src="https://readdy.ai/api/search-image?query=modern%20vector%20illustration%20of%20digital%20accessibility%20concept%2C%20floating%20geometric%20shapes%2C%20abstract%20hands%20and%20devices%2C%20minimalist%20design%20with%20gradient%20colors%20matching%20background%2C%20clean%20and%20simple%20style&width=500&height=300&seq=124&orientation=landscape"
                 alt="Acessibilidade Digital"
-                className="max-w-[90%] h-auto"
+                className="tw-max-w-[90%] tw-h-auto"
               />
             </div>
-            <div className="absolute -top-4 right-10 w-16 h-16 accessibility-icon">
-              <div className="w-10 h-10 flex items-center justify-center bg-yellow-300 bg-opacity-90 rounded-full shadow-md">
-                <i className="ri-braille-line text-blue-900 text-lg" />
+            <div className="tw-absolute -tw-top-4 tw-right-10 tw-w-16 tw-h-16 accessibility-icon">
+              <div className="tw-w-10 tw-h-10 tw-flex tw-items-center tw-justify-center tw-bg-yellow-300 tw-bg-opacity-90 tw-rounded-full tw-shadow-md">
+                <i className="ri-braille-line tw-text-blue-900 tw-text-lg" />
               </div>
             </div>
             <div
-              className="absolute -bottom-2 left-10 w-16 h-16 accessibility-icon"
+              className="tw-absolute -tw-bottom-2 tw-left-10 tw-w-16 tw-h-16 accessibility-icon"
               style={{ animationDelay: '0.5s' }}
             >
-              <div className="w-10 h-10 flex items-center justify-center bg-pink-300 bg-opacity-90 rounded-full shadow-md">
-                <i className="ri-sign-language-line text-blue-900 text-lg" />
+              <div className="tw-w-10 tw-h-10 tw-flex tw-items-center tw-justify-center tw-bg-pink-300 tw-bg-opacity-90 tw-rounded-full tw-shadow-md">
+                <i className="ri-sign-language-line tw-text-blue-900 tw-text-lg" />
               </div>
             </div>
             <div
-              className="absolute top-1/2 left-0 w-16 h-16 accessibility-icon"
+              className="tw-absolute tw-top-1/2 tw-left-0 tw-w-16 tw-h-16 accessibility-icon"
               style={{ animationDelay: '1s' }}
             >
-              <div className="w-10 h-10 flex items-center justify-center bg-blue-300 bg-opacity-90 rounded-full shadow-md">
-                <i className="ri-ear-line text-blue-900 text-lg" />
+              <div className="tw-w-10 tw-h-10 tw-flex tw-items-center tw-justify-center tw-bg-blue-300 tw-bg-opacity-90 tw-rounded-full tw-shadow-md">
+                <i className="ri-ear-line tw-text-blue-900 tw-text-lg" />
               </div>
             </div>
           </div>
@@ -123,19 +123,19 @@ export default function Header() {
       </div>
       {/* Floating accessibility icons */}
       <div
-        className="absolute top-20 right-10 w-16 h-16 accessibility-icon"
+        className="tw-absolute tw-top-20 tw-right-10 tw-w-16 tw-h-16 accessibility-icon"
         style={{ animationDelay: '1.5s' }}
       >
-        <div className="w-10 h-10 flex items-center justify-center bg-green-300 rounded-full shadow-lg">
-          <i className="ri-wheelchair-line text-blue-900 text-xl" />
+        <div className="tw-w-10 tw-h-10 tw-flex tw-items-center tw-justify-center tw-bg-green-300 tw-rounded-full tw-shadow-lg">
+          <i className="ri-wheelchair-line tw-text-blue-900 tw-text-xl" />
         </div>
       </div>
       <div
-        className="absolute bottom-40 right-20 w-16 h-16 accessibility-icon"
+        className="tw-absolute tw-bottom-40 tw-right-20 tw-w-16 tw-h-16 accessibility-icon"
         style={{ animationDelay: '2s' }}
       >
-        <div className="w-10 h-10 flex items-center justify-center bg-purple-300 rounded-full shadow-lg">
-          <i className="ri-eye-line text-blue-900 text-xl" />
+        <div className="tw-w-10 tw-h-10 tw-flex tw-items-center tw-justify-center tw-bg-purple-300 tw-rounded-full tw-shadow-lg">
+          <i className="ri-eye-line tw-text-blue-900 tw-text-xl" />
         </div>
       </div>
       {/* Wave shape divider */}

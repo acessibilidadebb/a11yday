@@ -9,6 +9,11 @@ $scheduleItemMarginLeft: 45px;
   margin-top: 16px;
   border-bottom: 1px solid $border-gray;
 
+  &:hover {
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+  }
+
   @include respond-to(lg) {
     display: flex;
     flex-direction: row;

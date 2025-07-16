@@ -8,27 +8,38 @@ import { ParticipationData } from '../../sections/participation/types'
 import participationData from '../../json/participationData.json'
 import { generateUniqueId } from '../../utils/functions'
 import Primer from '../../sections/primer'
+import Schedule from '../../sections/schedule'
+import Procramacao from '../../sections/programacao'
 
-const participationArray: ParticipationData[] = participationData as ParticipationData[]
+const participationArray: ParticipationData[] =
+  participationData as ParticipationData[]
 
 export default function Home(props: HomeProps) {
   const {
     showSections,
+    setShowSections,
+    showSchedule,
+    setShowSchedule,
+    showSpeakers,
+    setShowSpeakers,
     showFrequentlyAsked,
+    setShowFrequentlyAsked,
     setShowHandbook,
   } = props
   return (
     <>
-      <div className='introduction'>
+      <div className="introduction">
         <Overview style={{ display: showSections ? 'flex' : 'none' }} />
-        <div className='participation-container'>
-          {!!participationArray && !!participationArray.length && participationArray.map(
-            participation => <Participation
-            key={generateUniqueId()}
-            {...participation}
-            style={{ display: showSections ? 'block' : 'none' }}
-          />
-          )}
+        <div className="participation-container">
+          {!!participationArray &&
+            !!participationArray.length &&
+            participationArray.map((participation) => (
+              <Participation
+                key={generateUniqueId()}
+                {...participation}
+                style={{ display: showSections ? 'block' : 'none' }}
+              />
+            ))}
         </div>
       </div>
       {/* <SectionsButtons
@@ -41,7 +52,8 @@ export default function Home(props: HomeProps) {
         showFrequentlyAsked={showFrequentlyAsked}
         setShowFrequentlyAsked={setShowFrequentlyAsked}
       /> */}
-      {/* <Schedule showSchedule={showSchedule} /> */}
+      <Procramacao showSchedule={showSchedule} />
+      <Schedule showSchedule={showSchedule} />
       {/* <DividerIcons /> */}
       {/* <Speakers showSpeakers={showSpeakers} /> */}
       <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />

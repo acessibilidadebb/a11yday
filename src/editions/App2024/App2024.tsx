@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import '../../scss/_reset.scss'
 import './App.scss'
 
 import Header from './sections/header'
