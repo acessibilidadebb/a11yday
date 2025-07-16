@@ -9,7 +9,6 @@ import participationData from '../../json/participationData.json'
 import { generateUniqueId } from '../../utils/functions'
 import Primer from '../../sections/primer'
 import Schedule from '../../sections/schedule'
-import Procramacao from '../../sections/programacao'
 
 const participationArray: ParticipationData[] =
   participationData as ParticipationData[]
@@ -47,7 +46,7 @@ export default function Home(props: HomeProps) {
         showFrequentlyAsked={showFrequentlyAsked}
         setShowFrequentlyAsked={setShowFrequentlyAsked}
       /> */}
-      <Procramacao showSchedule={showSchedule} />
+      {/* <Procramacao showSchedule={showSchedule} /> */}
       <Schedule showSchedule={showSchedule} />
       {/* <DividerIcons /> */}
       {/* <Speakers showSpeakers={showSpeakers} /> */}
