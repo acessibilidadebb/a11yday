@@ -15,7 +15,6 @@ const participationArray: ParticipationData[] =
 export default function Home(props: HomeProps) {
   const {
     showSections,
-    showSchedule,
     showFrequentlyAsked,
     setShowHandbook,
   } = props
