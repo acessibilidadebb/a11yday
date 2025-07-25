@@ -1,0 +1,28 @@
+// Customizações para a galeria
+.gallery {
+  // Fundo escuro para toda a seção da galeria
+  background-color: #1a1a1acc;
+  padding: 20px 0 0 0;
+  
+  .image-gallery {
+    .image-gallery-slide {
+      .image-gallery-image {
+        // Limita o tamanho da imagem ao viewport
+        max-width: 90vw;
+        max-height: 80vh;
+        object-fit: contain;
+        
+        // Responsividade para diferentes tamanhos de tela
+        @media (max-width: 768px) {
+          max-width: 95vw;
+          max-height: 70vh;
+        }
+        
+        @media (max-width: 480px) {
+          max-width: 98vw;
+          max-height: 60vh;
+        }
+      }
+    }
+  }
+}
