@@ -1,5 +1,5 @@
-import { ScheduleItemType } from "../../types/schedule"
-import { Speaker } from "../../types/speakers"
+import { ScheduleItemType } from '../../types/schedule'
+import { Speaker } from '../../types/speakers'
 
 export interface ScheduleProps {
   showSchedule: boolean

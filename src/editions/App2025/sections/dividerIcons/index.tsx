@@ -47,7 +47,7 @@ export default function DividerIcons() {
 
     let totalSize = initialSize
     let index = 0
-    let newIcons: Icon[] = []
+    const newIcons: Icon[] = []
     while (totalSize <= containerWidth) {
       if (totalSize + iconWidths[index] <= containerWidth) {
         newIcons.push(icons[index])

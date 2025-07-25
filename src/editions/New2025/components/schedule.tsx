@@ -67,7 +67,7 @@ export default function Schedule() {
             {scheduleItems.map((item, idx) => (
               <div
                 key={idx}
-                className={`timeline-item tw-flex tw-items-start tw-p-3 tw-rounded-lg tw-transition-all`}
+                className={'timeline-item tw-flex tw-items-start tw-p-3 tw-rounded-lg tw-transition-all'}
               >
                 <div className="tw-w-20 tw-flex-shrink-0">
                   <span className="tw-text-gray-700 tw-font-medium">{item.time}</span>

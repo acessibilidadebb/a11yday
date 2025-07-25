@@ -50,7 +50,7 @@ export default function ScheduleCardImage(props: ScheduleCardImageProps) {
           ) : (
             <div
               className={`schedule-card-icon ${
-                image!.substring(image!?.lastIndexOf('.') + 1) === 'svg'
+                image!.substring(image?.lastIndexOf('.') + 1) === 'svg'
                   ? `svg ${image!.substring(0, image!.lastIndexOf('.'))}`
                   : ''
               }`}

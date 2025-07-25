@@ -145,7 +145,7 @@ export default function Header({
       <h1 className="header-logo-container">
         <Link
           aria-label="Accessibility Day"
-          to={`/edicao-2024`}
+          to={'/edicao-2024'}
           onClick={resetSections}
         >
           <span

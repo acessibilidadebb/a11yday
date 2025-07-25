@@ -81,7 +81,9 @@ export default function SpeakersModal({
     }
     try {
       element.focus()
-    } catch (e) {}
+    } catch (e) {
+      // Elemento não pode receber foco
+    }
     return document.activeElement === element
   }
 

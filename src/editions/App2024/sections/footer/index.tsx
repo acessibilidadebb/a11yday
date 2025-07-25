@@ -97,8 +97,8 @@ export default function Footer() {
             <img
               className="tecassitiva"
               src={`${import.meta.env.BASE_URL}logo_teca.png`}
-              title={`Logo de Tecassistiva`}
-              alt={`Logo de Tecassistiva`}
+              title={'Logo de Tecassistiva'}
+              alt={'Logo de Tecassistiva'}
             />
             <div
               title="Opty - Olhar pelos seus olhos"

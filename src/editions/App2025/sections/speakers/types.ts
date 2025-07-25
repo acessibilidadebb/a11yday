@@ -1,4 +1,4 @@
-import { Speaker } from "../../types/speakers"
+import { Speaker } from '../../types/speakers'
 
 export interface SpeakersProps {
   showSpeakers: boolean

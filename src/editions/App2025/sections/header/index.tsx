@@ -129,7 +129,7 @@ export default function Header({
       ref={headerRef}
     >
       <h1 className="header-logo-container">
-        <Link aria-label="Accessibility Day" to={`/`} onClick={resetSections}>
+        <Link aria-label="Accessibility Day" to={'/'} onClick={resetSections}>
           <span
             title="Logo do Banco do Brasil"
             aria-label="Logo do Banco do Brasil"
@@ -185,7 +185,7 @@ export default function Header({
           <ul id="nav-list">
             <li>
               <Link
-                to={`/frequently-asked-questions`}
+                to={'/frequently-asked-questions'}
                 onClick={() =>
                   handleClickMenu({ sectionId: 'frequently-asked-questions' })
                 }
@@ -195,7 +195,7 @@ export default function Header({
             </li>
             <li>
               <Link
-                to={`/edicao-2024`}
+                to={'/edicao-2024'}
                 onClick={() => handleClickMenu({ sectionId: 'edicao-2024' })}
               >
                 Edição 2024

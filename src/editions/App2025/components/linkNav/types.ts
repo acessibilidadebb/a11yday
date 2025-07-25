@@ -1,7 +1,7 @@
-type AnchorTarget = "_self" | "_blank" | "_parent" | "_top";
+type AnchorTarget = '_self' | '_blank' | '_parent' | '_top'
 
 export type IconProps = {
-  icon?: "back" | "download"
+  icon?: 'back' | 'download'
 }
 
 export type LinkNavProps = IconProps & {

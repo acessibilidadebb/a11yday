@@ -9,7 +9,7 @@ import './style.scss'
 
 export default function HomeNew2025() {
   return (
-    <div className={`home-new-2025 leading-normal`}>
+    <div className={'home-new-2025 leading-normal'}>
       <div>
         <Header />
         {/* Call4papers Section */}

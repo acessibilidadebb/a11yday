@@ -73,7 +73,7 @@ const PlayPauseCustom = React.memo(({ isPlaying, onClick }: { isPlaying: boolean
       type="button"
       className="image-gallery-icon image-gallery-play-button"
       onClick={onClick}
-      aria-label={isPlaying ? "Pausar slideshow" : "Reproduzir slideshow"}
+      aria-label={isPlaying ? 'Pausar slideshow' : 'Reproduzir slideshow'}
     >
       <svg className="image-gallery-svg" viewBox="0 0 24 24" strokeWidth={2}>
         {isPlaying ? (
@@ -92,7 +92,7 @@ const FullscreenCustom = React.memo(({ isFullscreen, onClick }: { isFullscreen: 
       type="button"
       className="image-gallery-icon image-gallery-fullscreen-button"
       onClick={onClick}
-      aria-label={isFullscreen ? "Sair da tela cheia" : "Abrir em tela cheia"}
+      aria-label={isFullscreen ? 'Sair da tela cheia' : 'Abrir em tela cheia'}
     >
       <svg className="image-gallery-svg" viewBox="0 0 24 24" strokeWidth={2}>
         {isFullscreen ? (

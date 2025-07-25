@@ -25,7 +25,7 @@ export default function LinkNav({
         return <></>
     }
   }
-  if (!!href?.trim()) {
+  if (href?.trim()) {
     if (link) {
       return (
         <Link
