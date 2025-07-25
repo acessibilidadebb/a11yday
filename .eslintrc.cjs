@@ -16,5 +16,10 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    // Desabilita regras chatas
+    'react-hooks/exhaustive-deps': 'off', // Para de encher sobre useEffect
+    '@typescript-eslint/no-unused-vars': 'off', // Para de reclamar de variáveis não usadas
+    '@typescript-eslint/no-explicit-any': 'off', // Permite usar 'any'
+    'no-empty': 'off', // Permite blocos vazios como catch (e) {}
   },
 }

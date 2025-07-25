@@ -5,7 +5,7 @@ import Header from './sections/header'
 import Home from './pages/home'
 import Footer from './sections/footer'
 import Handbook from './pages/handbook'
-import GlobalContextProvider from './contexts/globalContext'
+import GlobalContextProvider from '../../contexts/GlobalContextProvider'
 
 export default function App2025() {
   const [showSections, setShowSections] = useState(true)

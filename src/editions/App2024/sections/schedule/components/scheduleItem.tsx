@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from 'react'
-import { GlobalContext } from '../../../contexts/globalContext'
+import { GlobalContext } from '../../../../../contexts/globalContext'
 import './scheduleitem.scss'
 
 import Modal from '../../../components/modal'

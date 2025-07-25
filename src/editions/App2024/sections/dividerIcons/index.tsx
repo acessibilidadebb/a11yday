@@ -32,7 +32,15 @@ export default function DividerIcons() {
 
   const dividerIconsRef = useRef<HTMLDivElement | null>(null)
   const containerRef = useRef<HTMLDivElement | null>(null)
-  const iconRefs = icons.map(() => useRef<HTMLImageElement | null>(null))
+  const iconRefs = useRef<(HTMLImageElement | null)[]>([])
+
+  // Inicializa o array de refs
+  useEffect(() => {
+    iconRefs.current = iconRefs.current.slice(0, icons.length)
+    for (let i = iconRefs.current.length; i < icons.length; i++) {
+      iconRefs.current[i] = null
+    }
+  }, [])
 
   const viewportWidth = window.innerWidth
   const iconWidths: number[] = []
@@ -65,13 +73,13 @@ export default function DividerIcons() {
   }, [])
 
   useLayoutEffect(() => {
-    iconRefs.forEach((iconRef) => {
-      if (iconRef.current) {
+    iconRefs.current.forEach((iconRef, index) => {
+      if (iconRef) {
         const dividerIconsPadding = window.getComputedStyle(
           dividerIconsRef.current!
         ).padding
 
-        const iconWidth = iconRef.current.offsetWidth
+        const iconWidth = iconRef.offsetWidth
         iconWidths.push(iconWidth)
         maxContainerWidth = viewportWidth - parseInt(dividerIconsPadding)
 
@@ -93,7 +101,7 @@ export default function DividerIcons() {
           <img
             aria-hidden="true"
             key={index}
-            ref={iconRefs[index]}
+            ref={(el) => (iconRefs.current[index] = el)}
             className={`icon ${icon.className}`}
             src={icon.src}
             alt={icon.alt}
@@ -110,7 +118,7 @@ export default function DividerIcons() {
           <img
             aria-hidden="true"
             key={index}
-            ref={iconRefs[index]}
+            ref={(el) => (iconRefs.current[icons.length + index] = el)}
             className={`icon ${icon.className}`}
             src={icon.src}
             alt={icon.alt}

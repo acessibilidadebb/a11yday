@@ -52,7 +52,6 @@ export default function SpeakersModal({
         }
       }
     }
-    // eslint-disable-next-line
   }, [isOpen])
 
   const focusFirstDescendant = (element: HTMLElement) => {
