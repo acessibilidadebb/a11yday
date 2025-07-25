@@ -29,7 +29,7 @@ interface ImageGalleryProps {
   renderRightNav?: (onClick: () => void, disabled: boolean) => React.ReactElement
   renderPlayPauseButton?: (onClick: () => void, isPlaying: boolean) => React.ReactElement
   renderFullscreenButton?: (onClick: () => void, isFullscreen: boolean) => React.ReactElement
-  // renderItem?: (item: GalleryItem) => React.ReactElement
+  renderItem?: (item: GalleryItem) => React.ReactElement
 }
 
 const ImageGallery = ReactImageGallery as unknown as React.ComponentType<ImageGalleryProps>

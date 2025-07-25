@@ -73,7 +73,7 @@ export default function DividerIcons() {
   }, [])
 
   useLayoutEffect(() => {
-    iconRefs.current.forEach((iconRef, index) => {
+    iconRefs.current.forEach((iconRef) => {
       if (iconRef) {
         const dividerIconsPadding = window.getComputedStyle(
           dividerIconsRef.current!
