@@ -5,6 +5,12 @@ a.bb-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
+  &.disabled {
+    background-color: #e5e7eb;
+    color: #b4b9c1;
+    pointer-events: none;
+  }
 }
 .bb-button {
   border-radius: 4px;

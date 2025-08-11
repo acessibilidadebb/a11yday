@@ -1,3 +1,4 @@
+import { MouseEvent } from 'react'
 import './button.scss'
 import { ButtonProps } from './types'
 
@@ -11,11 +12,18 @@ export default function Button({
   size = 'regular',
   fullWidth = false,
   onClick,
-  disabled = false
+  disabled = false,
 }: ButtonProps) {
   const allClassNames = `bb-button ${kind} size-${size} ${className} ${
     fullWidth ? 'full-width' : ''
-  }`
+  }${disabled ? ' disabled' : ''}`
+
+  const onAnchorCLick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (disabled) {
+      event.preventDefault()
+    }
+  }
+
   if (href) {
     return (
       <a
@@ -23,6 +31,7 @@ export default function Button({
         href={href}
         className={allClassNames}
         aria-label={ariaLabel || title}
+        onClick={onAnchorCLick}
       >
         {title}
       </a>

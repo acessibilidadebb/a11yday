@@ -7,9 +7,10 @@
     "buttons": [
       {
         "title": "Formulário de Proposta",
-        "url": "https://forms.office.com/r/9rVqXVem3r"
+        "url": "https://forms.office.com/r/9rVqXVem3r",
+        "disabled": true
       }
     ],
-    "afterButtonText": "Inscrições até 25/07"
+    "afterButtonText": "Inscrições encerradas"
   }
 ]
