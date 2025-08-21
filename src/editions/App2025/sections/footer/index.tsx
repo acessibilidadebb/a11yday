@@ -2,14 +2,30 @@ import './footer.scss'
 
 import logo from '../../../../assets/logo.svg'
 import { ReactComponent as IconBbLogo } from '../../../../assets/bb-logo.svg'
-import { ReactComponent as IconCafeComUx } from '../../../../assets/cafe-com-ux.svg'
 import { ReactComponent as IconInstagram } from '../../../../assets/instagram.svg'
 import { ReactComponent as IconLinkedIn } from '../../../../assets/linkedin.svg'
-import { ReactComponent as AccDigitalLogo } from '../../../../assets/acessibilidade_digital.svg'
+import { ReactComponent as LogoBBTS } from '../../../../assets/Logo_BBTS_02.svg'
+import { ReactComponent as LogoPrevi } from '../../../../assets/Logo_Previ.svg'
+import { ReactComponent as LogoGoulart } from '../../../../assets/Logo_Goulart.svg'
+import { ReactComponent as LogoTB } from '../../../../assets/Logo_TB_Soluções.svg'
+import { ReactComponent as LogoCoEUX } from '../../../../assets/coe-ux.svg'
 
 export default function Footer() {
+  const LogoContainer = ({ children, title, className }: { children: React.ReactNode, title: string, className?: string }) => (
+    <div
+      title={title}
+      aria-label={title}
+      style={{
+        lineHeight: 0,
+      }}
+      role="img"
+      className={className}
+    >
+      {children}
+    </div>
+  )
   return (
-    <footer className="footer">
+    <footer className="footer footer-2025">
       <div className="footer-container">
         <div className="footer-column grid1">
           <img
@@ -57,36 +73,24 @@ export default function Footer() {
         <div className="footer-column grid3">
           <h2 className="footer-title">Realização e apoio</h2>
           <div className="footer-icons">
-            <div
-              title="Banco do Brasil"
-              aria-label="Banco do Brasil"
-              style={{
-                lineHeight: 0,
-              }}
-              role="img"
-            >
-              <IconBbLogo className="bb-logo" />
-            </div>
-            <div
-              title="Centro de Experiência em Acessibilidade Digital do BB"
-              aria-label="Centro de Experiência em Acessibilidade Digital do BB"
-              style={{
-                lineHeight: 0,
-              }}
-              role="img"
-            >
-              <AccDigitalLogo className="acc-digital-logo" />
-            </div>
-            <div
-              title="Café com UX"
-              aria-label="Café com UX"
-              style={{
-                lineHeight: 0,
-              }}
-              role="img"
-            >
-              <IconCafeComUx className="cafe-com-ux-logo" />
-            </div>
+            <LogoContainer title="Banco do Brasil" className='logo-square'>
+              <IconBbLogo className='logo-bb'/>
+            </LogoContainer>
+            <LogoContainer title='BB Tecnologia e Serviços' className='logo-square'>
+              <LogoBBTS />
+            </LogoContainer>
+            <LogoContainer title="CoE em UX" className='logo-square'>
+              <LogoCoEUX />
+            </LogoContainer>
+            <LogoContainer title="TB Soluções" className='logo-square'>
+              <LogoTB />
+            </LogoContainer>
+            <LogoContainer title="Goulart - Acessibilidade" className="logo-wide">
+              <LogoGoulart />
+            </LogoContainer>
+            <LogoContainer title="Previ - Caixa de Previdência dos Funcionários do Banco do Brasil" className="logo-wide">
+              <LogoPrevi />
+            </LogoContainer>
           </div>
         </div>
       </div>
