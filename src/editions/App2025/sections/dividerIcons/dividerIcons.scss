@@ -1,8 +1,9 @@
 @import '../../scss/variables';
 @import '../../scss/placeholders';
 
-.divider-icons {
+.divider-icons-2025 {
   @extend %container;
+  background-color: #465DFD;
   display: none;
   .icons-container {
     display: flex;

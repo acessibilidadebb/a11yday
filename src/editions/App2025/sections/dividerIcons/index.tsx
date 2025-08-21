@@ -1,10 +1,10 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import './dividerIcons.scss'
 
-import braile from '../../../../assets/braile.png'
-import bilateralDeafness from '../../../../assets/bilateral-deafness-alt.png'
-import lowVision from '../../../../assets/low-vision.png'
-import signLanguage from '../../../../assets/sign-language.png'
+import braile from '../../../../assets/braile.svg'
+import bilateralDeafness from '../../../../assets/bilateral-deafness-alt.svg'
+import lowVision from '../../../../assets/low-vision.svg'
+import signLanguage from '../../../../assets/sign-language.svg'
 
 interface Icon {
   src: string
@@ -14,12 +14,12 @@ interface Icon {
 
 const icons: Icon[] = [
   { src: braile, alt: 'Ícone de Braile', className: 'braile' },
+  { src: lowVision, alt: 'Ícone de Baixa Visão', className: 'low-vision' },
   {
     src: bilateralDeafness,
     alt: 'Ícone de Surdez Bilateral',
     className: 'bilateral-deafness',
   },
-  { src: lowVision, alt: 'Ícone de Baixa Visão', className: 'low-vision' },
   {
     src: signLanguage,
     alt: 'Ícone de Língua de Sinais',
@@ -129,7 +129,7 @@ export default function DividerIcons() {
   }
 
   return (
-    <section ref={dividerIconsRef} className="divider-icons" aria-hidden="true">
+    <section ref={dividerIconsRef} className="divider-icons-2025" aria-hidden="true">
       <div ref={containerRef} className="icons-container" aria-hidden="true">
         <IconContainer />
         <IconCompleter />
