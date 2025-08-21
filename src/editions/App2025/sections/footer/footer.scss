@@ -2,7 +2,7 @@
 @import '../../scss/placeholders';
 @import '../../scss/mixins';
 
-.footer {
+.footer-2025 {
   background-color: $backgroundDark;
   height: 355px;
   position: relative;
@@ -23,8 +23,7 @@
       #3333bd 100%
     );
   }
-}
-.footer-2025 {
+
   .footer-container {
     @extend %container;
     color: $white;
@@ -45,8 +44,8 @@
     }
     @include respond-to(xl) {
       .footer-logo {
-        width: 394px;
-        height: 59px;
+        // width: 394px;
+        // height: 59px;
       }
       .footer-title {
         font-size: 26px;
@@ -92,9 +91,9 @@
     }
   }
 
-  .footer-logo {
+  .footer-logo-2025 {
     width: 191px;
-    height: 28.76px;
+    // height: 28.76px;
   }
 
   .footer-icons {

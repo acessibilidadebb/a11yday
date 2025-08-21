@@ -1,6 +1,6 @@
 import './footer.scss'
 
-import logo from '../../../../assets/logo.svg'
+import logo from '../../../../assets/logo-2025-slogan.svg'
 import { ReactComponent as IconBbLogo } from '../../../../assets/bb-logo.svg'
 import { ReactComponent as IconInstagram } from '../../../../assets/instagram.svg'
 import { ReactComponent as IconLinkedIn } from '../../../../assets/linkedin.svg'
@@ -25,11 +25,11 @@ export default function Footer() {
     </div>
   )
   return (
-    <footer className="footer footer-2025">
+    <footer className="footer-2025">
       <div className="footer-container">
         <div className="footer-column grid1">
           <img
-            className="footer-logo"
+            className="footer-logo-2025"
             src={logo}
             alt="Logo do Accessibility Day"
           />
