@@ -16,13 +16,12 @@
     height: 36px;
   }
   .header-logo {
-    width: 166px;
     height: 25px;
   }
 }
 
 
-.header {
+.header-2025 {
   @extend %container;
   height: $headerHeightSmall;
   display: flex;

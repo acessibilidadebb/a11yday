@@ -6,7 +6,7 @@ import './header.scss'
 
 import { HeaderProps } from './types'
 import { ReactComponent as BbLogo } from '../../../../assets/bb-logo.svg'
-import logo from '../../../../assets/logo.svg'
+import logo from '../../../../assets/logo-2025.svg'
 import lowVision from '../../../../assets/low-vision.png'
 import signLanguage from '../../../../assets/sign-language.png'
 import braile from '../../../../assets/braile.png'
@@ -125,7 +125,7 @@ export default function Header({
   }
   return (
     <header
-      className={`header ${sticky} ${isPin ? 'modal-pin' : ''}`}
+      className={`header-2025 ${sticky} ${isPin ? 'modal-pin' : ''}`}
       ref={headerRef}
     >
       <h1 className="header-logo-container">
