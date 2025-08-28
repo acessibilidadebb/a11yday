@@ -29,6 +29,11 @@ $scheduleItemMarginLeft: 45px;
     }
   }
 }
+
+body:not(.no-scroll) .schedule-item:hover {
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
 .schedule-time {
   vertical-align: top;
   padding: 8px 20px 0 0;
