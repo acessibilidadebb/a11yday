@@ -2,15 +2,15 @@
   {
     "background": "watch-background",
     "background2": "enrollment-background",
-    "title": "Seja um palestrante ou expositor no nosso evento!",
-    "subtitle": "Preencha aqui sua proposta de palestra, workshop ou produto para exposição. Vale soluções digitais ou temas relacionados à acessibilidade.",
+    "title": "Venha assistir as palestras no Ed. BB, em Brasília!",
+    "subtitle": "",
     "buttons": [
       {
-        "title": "Formulário de Proposta",
-        "url": "https://forms.office.com/r/9rVqXVem3r",
-        "disabled": true
+        "title": "Inscrição",
+        "url": "https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=BykM6tI4gUGHULCxkLYEQwC5hwz6lf9HglCzGCDMmvtUM004WEpUUjJUQ1I0WEtPODZQMkxXQU5ZUCQlQCN0PWcu",
+        "disabled": false
       }
     ],
-    "afterButtonText": "Inscrições encerradas"
+    "afterButtonText": "Inscrições de 01 a 12 de setembro"
   }
 ]
