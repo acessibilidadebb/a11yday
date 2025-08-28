@@ -2,7 +2,7 @@ export interface Speaker {
   id: string
   name: string
   nickname: string
-  company: string
+  company?: string
   miniBio: string
   image: string
   email: string
