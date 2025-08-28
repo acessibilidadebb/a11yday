@@ -5,9 +5,11 @@
 $scheduleItemMarginTop: 24px;
 $scheduleItemMarginLeft: 45px;
 
+// ...existing code...
 .schedule-item {
   margin-top: 16px;
   border-bottom: 1px solid $border-gray;
+  // ...outros estilos...
 
   @include respond-to(lg) {
     display: flex;
@@ -158,6 +160,9 @@ body:not(.no-scroll) .schedule-item:hover {
 .subtitle {
   grid-column: 2/3;
 }
+.subtitle--break {
+  grid-row: 3 !important;
+}
 .company {
   grid-row: 3;
 }
@@ -170,7 +175,11 @@ body:not(.no-scroll) .schedule-item:hover {
 .schedule-details-header {
   padding-bottom: 32px;
   margin-bottom: 32px;
-  border-bottom: 1px solid $border-gray;
+  border-bottom: none;
+
+  &.border-bottom {
+    border-bottom: 1px solid $border-gray;
+  }
 }
 
 .schedule-details-title {

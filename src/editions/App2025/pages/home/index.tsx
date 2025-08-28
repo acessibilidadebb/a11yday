@@ -7,6 +7,10 @@ import { HomeProps } from './types'
 import { ParticipationData } from '../../sections/participation/types'
 import participationData from '../../json/participationData.json'
 import Primer from '../../sections/primer'
+import Speakers from '../../sections/speakers'
+import SectionsButtons from '../../sections/sectionsButtons'
+import DividerIcons from '../../sections/dividerIcons'
+import Schedule from '../../sections/schedule'
 
 const participationArray: ParticipationData[] =
   participationData as ParticipationData[]
@@ -14,8 +18,14 @@ const participationArray: ParticipationData[] =
 export default function Home(props: HomeProps) {
   const {
     showSections,
+    setShowSections,
+    showSchedule,
+    setShowSchedule,
+    showSpeakers,
+    setShowSpeakers,
     showFrequentlyAsked,
-    setShowHandbook,
+    setShowFrequentlyAsked,
+    setShowHandbook
   } = props
   return (
     <>
@@ -33,7 +43,7 @@ export default function Home(props: HomeProps) {
             ))}
         </div>
       </div>
-      {/* <SectionsButtons
+      <SectionsButtons
         showSections={showSections}
         setShowSections={setShowSections}
         showSchedule={showSchedule}
@@ -42,10 +52,10 @@ export default function Home(props: HomeProps) {
         setShowSpeakers={setShowSpeakers}
         showFrequentlyAsked={showFrequentlyAsked}
         setShowFrequentlyAsked={setShowFrequentlyAsked}
-      /> */}
+      />
       {/* <Procramacao showSchedule={showSchedule} /> */}
-      {/* <Schedule showSchedule={showSchedule} /> */}
-      {/* <DividerIcons /> */}
+      <Schedule showSchedule={showSchedule} />
+      <DividerIcons />
       {/* <Speakers showSpeakers={showSpeakers} /> */}
       <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />
       <Primer setShowHandbook={setShowHandbook} />

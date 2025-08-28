@@ -16,12 +16,18 @@ export default function ScheduleCardImage(props: ScheduleCardImageProps) {
   return (
     <div
       className={`${
-        speakers.length ? 'schedule-card-image' : 'schedule-card-icon'
+        speakers.length && !image?.trim() ? 'schedule-card-image' : 'schedule-card-icon'
       }`}
     >
       {confirmed ? (
         <>
-          {speakers.length ? (
+          {image ? (
+            <img
+              src={`${import.meta.env.BASE_URL}${image}`}
+              alt={getAltText()}
+              aria-hidden={`${!!imageAriaHidden || !confirmed}`}
+            />
+          ) : speakers.length ? (
             speakers.map((speaker, index) => {
               const borderRadiusStyle = {
                 borderTopLeftRadius: index === 0 ? '10px' : '0',
@@ -40,7 +46,7 @@ export default function ScheduleCardImage(props: ScheduleCardImageProps) {
                     ...borderRadiusStyle,
                   }}
                   aria-hidden={`${!!imageAriaHidden || !confirmed}`}
-                  src={`${import.meta.env.BASE_URL}palestrantes/${
+                  src={`${import.meta.env.BASE_URL}palestrantes/2025/${
                     speaker.image
                   }`}
                   alt={getAltText()}

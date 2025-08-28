@@ -10,6 +10,10 @@ import { ScheduleItemProps } from '../types'
 import { generateUniqueId } from '../../../utils/functions'
 import ScheduleCardImage from './scheduleCardImage'
 import LinkNav from '../../../components/linkNav'
+import { ReactComponent as IconFacebook } from '../../../../../assets/facebook.svg'
+import { ReactComponent as IconInstagram } from '../../../../../assets/instagram.svg'
+import { ReactComponent as IconX } from '../../../../../assets/x-twitter.svg'
+import { ReactComponent as IconLinkedin } from '../../../../../assets/linkedin.svg'
 
 export function ScheduleItem(props: ScheduleItemProps) {
   const { time, type, confirmed, title, subtitle, summary, speakerIds, slide } =
@@ -52,11 +56,77 @@ export function ScheduleItem(props: ScheduleItemProps) {
         <h4 className="schedule-details-name">Sobre {speaker.name}</h4>
         <img
           className="schedule-details-image"
-          src={`${import.meta.env.BASE_URL}palestrantes/${speaker.image}`}
+          src={`${import.meta.env.BASE_URL}palestrantes/2025/${speaker.image}`}
           alt={`Foto de ${speaker.name}`}
         />
         <p className="schedule-details-company">{speaker.company}</p>
         <p className="schedule-details-description">{speaker?.miniBio}</p>
+        {(speaker.website ||
+          speaker.facebook ||
+          speaker.instagram ||
+          speaker.twitter ||
+          speaker.linkedIn) && (
+          <div className="speaker-social-icons">
+            <h4 className="social-title">Entre em contato</h4>
+            <div className="speaker-social-icons-container">
+              {speaker.linkedIn && (
+                <a
+                  href={`https://www.linkedin.com/in/${speaker.linkedIn}`}
+                  target="_blank"
+                  className="social-link"
+                  title={`Linkedin de ${speaker.name}`}
+                  aria-label={`Linkedin de ${speaker.name}`}
+                >
+                  <IconLinkedin className="icon" aria-hidden="true" />
+                </a>
+              )}
+              {speaker.instagram && (
+                <a
+                  href={`https://www.instagram.com/${speaker.instagram}`}
+                  target="_blank"
+                  className="social-link"
+                  title={`Instagram de ${speaker.name}`}
+                  aria-label={`Instagram de ${speaker.name}`}
+                >
+                  <IconInstagram className="icon" aria-hidden="true" />
+                </a>
+              )}
+              {speaker.facebook && (
+                <a
+                  href={`https://www.facebook.com/${speaker.facebook}`}
+                  target="_blank"
+                  className="social-link"
+                  title={`Facebook de ${speaker.name}`}
+                  aria-label={`Facebook de ${speaker.name}`}
+                >
+                  <IconFacebook className="icon" aria-hidden="true" />
+                </a>
+              )}
+              {speaker.twitter && (
+                <a
+                  href={`https://x.com/${speaker.twitter}`}
+                  target="_blank"
+                  className="social-link"
+                  title={`X de ${speaker.name}`}
+                  aria-label={`X de ${speaker.name}`}
+                >
+                  <IconX className="icon" aria-hidden="true" />
+                </a>
+              )}
+              {speaker.website && (
+                <a
+                  href={speaker.website}
+                  target="_blank"
+                  className="social-link"
+                  title={`Site oficial de ${speaker.name}`}
+                  aria-label={`Site oficial de ${speaker.name}`}
+                >
+                  Site Oficial
+                </a>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     )
   }
@@ -64,7 +134,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
   const Details = () => {
     return (
       <div className="default_dialog-content">
-        <div className="schedule-details-header">
+        <div className={`schedule-details-header${speakers.length ? ' border-bottom' : ''}`}>
           <h3 className="schedule-details-title" id={titleId}>
             {title}
           </h3>
@@ -110,7 +180,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
           {!confirmed && type === 'talk' ? 'A confirmar' : title}
         </h3>
         {confirmed && <SpeakersTitle speakers={speakers} />}
-        {subtitle && <p className="subtitle">{subtitle}</p>}
+        {subtitle && subtitle.length > 0 && <p className="subtitle">{subtitle}</p>}
         {type === 'talk' && confirmed && (
           <button
             type="button"
