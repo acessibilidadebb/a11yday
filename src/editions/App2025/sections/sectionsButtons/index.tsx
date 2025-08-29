@@ -79,7 +79,7 @@ export default function SectionsButtons({
           <p aria-hidden="true">Programação</p>
         </div>
       </button>
-      <button
+      {/* <button
         type="button"
         onClick={handleClickSpeakers}
         className="section-button"
@@ -92,7 +92,7 @@ export default function SectionsButtons({
           </div>
           <p aria-hidden="true">Palestrantes</p>
         </div>
-      </button>
+      </button> */}
       <button
         type="button"
         onClick={handleClickFrequentlyAsked}
