@@ -6,7 +6,7 @@ export default function SectionsButtons({
   setShowSections,
   showSchedule,
   setShowSchedule,
-  showSpeakers,
+  // showSpeakers,
   setShowSpeakers,
   showFrequentlyAsked,
   setShowFrequentlyAsked,
@@ -40,15 +40,15 @@ export default function SectionsButtons({
     }, 100)
   }
 
-  const handleClickSpeakers = () => {
-    resetSections()
-    setShowSections(false)
-    setShowSpeakers(!showSpeakers)
-    setTimeout(() => {
-      scrollToTop()
-      focusSectionTitle('speakers')
-    }, 100)
-  }
+  // const handleClickSpeakers = () => {
+  //   resetSections()
+  //   setShowSections(false)
+  //   setShowSpeakers(!showSpeakers)
+  //   setTimeout(() => {
+  //     scrollToTop()
+  //     focusSectionTitle('speakers')
+  //   }, 100)
+  // }
 
   const handleClickFrequentlyAsked = () => {
     resetSections()
