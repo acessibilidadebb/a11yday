@@ -33,7 +33,7 @@ export default function Footer() {
             src={logo}
             alt="Logo do Accessibility Day"
           />
-          <p className="footer-date">25 de setembro de 2025</p>
+          <p className="footer-date">24 a 25 de setembro de 2025</p>
         </div>
         <div className="footer-column grid2">
           <h2 className="footer-title">Siga nas Redes</h2>
