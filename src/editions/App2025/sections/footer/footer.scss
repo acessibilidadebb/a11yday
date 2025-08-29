@@ -24,6 +24,10 @@
     );
   }
 
+  @include respond-to-max(galaxy-s20-fe) {
+    height: auto;
+  }
+
   .footer-container {
     @extend %container;
     color: $white;
