@@ -7,6 +7,7 @@ export interface ScheduleItemType {
   time: string
   title: string
   subtitle?: string
+  description?: string
   summary?: string
   image?: string
   imageAlt?: string

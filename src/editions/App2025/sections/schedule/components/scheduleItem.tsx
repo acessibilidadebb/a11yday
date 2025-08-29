@@ -16,7 +16,7 @@ import { ReactComponent as IconX } from '../../../../../assets/x-twitter.svg'
 import { ReactComponent as IconLinkedin } from '../../../../../assets/linkedin.svg'
 
 export function ScheduleItem(props: ScheduleItemProps) {
-  const { time, type, confirmed, title, subtitle, summary, speakerIds, slide } =
+  const { time, type, confirmed, description, title, subtitle, summary, speakerIds, slide } =
     props
   const { isModalOpen, setModalOpen, togglePin } = useContext(GlobalContext)
   const titleId = generateUniqueId()
@@ -139,7 +139,7 @@ export function ScheduleItem(props: ScheduleItemProps) {
             {title}
           </h3>
           <p className="schedule-details-description" id={descriptionId}>
-            {summary}
+            {description ? description : summary}
           </p>
           {!!slide && (
             <p className="schedule-details-footer">
