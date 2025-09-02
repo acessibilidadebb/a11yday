@@ -44,9 +44,9 @@ export default function Overview({ style }: OverviewProps) {
           />
         </div>
         <div className="overview-details">
+          <p className="hightlight">24/09 - Feira de exposição e vivências (braile e libras)</p>
+          <p className="hightlight">25/09 - Feira de exposição e palestras (transmissão ao vivo Youtube e presencial)</p>
           <p className="hightlight">Local: Edifício BB Brasília/DF</p>
-          <p className="hightlight">Data: 24 a 25 de Setembro</p>
-          <p className="hightlight">Transmissão ao vivo pelo Youtube e Presencial</p>
         </div>
       </div>
       <div className="overview-background-detail">

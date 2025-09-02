@@ -4,7 +4,7 @@
 
 .overview-section {
   @extend %container;
-  height: $overviewSectionHeight;
+  height: $overviewSectionHeight + 50;
   width: calc(100% - #{2 * $containerPaddingSmall});
   position: relative;
   display: flex;
@@ -41,6 +41,10 @@
   .bilateral-deafness {
     width: 22px;
     height: 25px;
+  }
+
+  @include respond-to(sm) {
+    height: $overviewSectionHeight !important;
   }
 
   @include respond-to(lg) {
@@ -89,7 +93,6 @@
       margin-right: 70px;
     }
   }
-
 }
 %overview-background-height {
   height: $overviewSectionHeight + 2 * $containerPadding;
