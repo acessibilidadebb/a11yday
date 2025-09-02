@@ -6,6 +6,7 @@ import './header.scss'
 
 import { HeaderProps } from './types'
 import { ReactComponent as BbLogo } from '../../../../assets/bb-logo.svg'
+import logoSlogan from '../../../../assets/logo-2025-slogan.svg'
 import logo from '../../../../assets/logo-2025.svg'
 import lowVision from '../../../../assets/low-vision.png'
 import signLanguage from '../../../../assets/sign-language.png'
@@ -140,13 +141,23 @@ export default function Header({
           >
             <BbLogo className="header-logo-bb" />
           </span>
-          <img
-            className="header-logo"
-            src={logo}
-            title="Logo do Accessibility Day"
-            alt="Logo do Accessibility Day"
-            aria-hidden="true"
-          />
+          {sticky ? (
+            <img
+              className="header-logo"
+              src={logo}
+              title="Logo do Accessibility Day"
+              alt="Logo do Accessibility Day"
+              aria-hidden="true"
+            />
+          ) : (
+            <img
+              className="header-logo"
+              src={logoSlogan}
+              title="Logo do Accessibility Day"
+              alt="Logo do Accessibility Day"
+              aria-hidden="true"
+            />
+          )}
         </Link>
       </h1>
       <button
