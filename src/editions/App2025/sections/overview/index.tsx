@@ -15,7 +15,7 @@ export default function Overview({ style }: OverviewProps) {
       <div>
         <h2>
           <p>Vem aí Accessibility Day 2025</p>
-          <p>Accessibilidade Digital: A gente se Importa!</p>
+          <p>Acessibilidade Digital: A gente se Importa!</p>
         </h2>
         <div className="decorative-icons">
           <img
