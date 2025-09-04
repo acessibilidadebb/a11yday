@@ -2,15 +2,36 @@
   {
     "background": "watch-background",
     "background2": "enrollment-background",
-    "title": "Venha assistir as palestras no Ed. BB, em Brasília!",
-    "subtitle": "",
+    "title": "Assista a transmissão ao vivo!",
+    "subtitle": "Nossa transmissão conta com tradução ao vivo em Libras e audiodescrição.",
     "buttons": [
       {
-        "title": "Inscrição",
-        "url": "https://forms.office.com/r/DFZu72PriK",
+        "title": "Link do youtube ",
+        "url": "https://youtube.com/live/aJeUChEDf4M?feature=share",
+        "disabled": false
+      },
+      {
+        "title": "Link do youtube acessível ",
+        "url": "https://youtube.com/live/jrJiRGzWa1U?feature=share",
+        "disabled": false
+      },
+      {
+        "title": "Check-in no dia do evento",
+        "url": "https://forms.office.com/r/V4rUEfky4F",
         "disabled": false
       }
-    ],
-    "afterButtonText": "Inscrições de 01 a 12 de setembro"
+    ]
+  },
+  {
+    "background": "enrollment-background",
+    "title": "Palestras",
+    "subtitle": "Presencial - Lotação esgotada \n Após o evento conte pra gente o que achou, mesmo que tenha assistido online:",
+    "buttons": [
+      {
+        "title": "Avaliação das Palestras",
+        "url": "https://forms.office.com/r/57ZwHxaskk",
+        "disabled": false
+      }
+    ]
   }
 ]
