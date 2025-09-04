@@ -9,6 +9,8 @@ export interface HomeProps {
   setShowFrequentlyAsked: React.Dispatch<React.SetStateAction<boolean>>
   showHandbook: boolean
   setShowHandbook: React.Dispatch<React.SetStateAction<boolean>>
+  showManual: boolean
+  setShowManual: React.Dispatch<React.SetStateAction<boolean>>
   showGallery: boolean
   setShowGallery: React.Dispatch<React.SetStateAction<boolean>>
 }

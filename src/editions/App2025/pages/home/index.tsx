@@ -24,7 +24,8 @@ export default function Home(props: HomeProps) {
     setShowSpeakers,
     showFrequentlyAsked,
     setShowFrequentlyAsked,
-    setShowHandbook
+    setShowHandbook,
+    setShowManual
   } = props
   return (
     <>
@@ -42,6 +43,7 @@ export default function Home(props: HomeProps) {
             ))}
         </div>
       </div>
+      {/* <SectionsCollapsible showSchedule={showSchedule} /> */}
       <SectionsButtons
         showSections={showSections}
         setShowSections={setShowSections}
@@ -58,6 +60,7 @@ export default function Home(props: HomeProps) {
       {/* <Speakers showSpeakers={showSpeakers} /> */}
       <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />
       <Primer setShowHandbook={setShowHandbook} />
+      {/* <InclusionManual setShowManual={setShowManual} /> */}
       {/* <Gallery /> */}
       <ScrollUp />
     </>

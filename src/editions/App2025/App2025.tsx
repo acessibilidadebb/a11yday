@@ -6,6 +6,7 @@ import Home from './pages/home'
 import Footer from './sections/footer'
 import Handbook from './pages/handbook'
 import GlobalContextProvider from '../../contexts/GlobalContextProvider'
+import Manual from './pages/manual'
 
 export default function App2025() {
   const [showSections, setShowSections] = useState(true)
@@ -13,6 +14,7 @@ export default function App2025() {
   const [showSpeakers, setShowSpeakers] = useState(false)
   const [showFrequentlyAsked, setShowFrequentlyAsked] = useState(false)
   const [showHandbook, setShowHandbook] = useState(false)
+  const [showManual, setShowManual] = useState(false)
   const [showGallery, setShowGallery] = useState(false)
   const resetSections = () => {
     setShowSections(true)
@@ -20,6 +22,7 @@ export default function App2025() {
     setShowSpeakers(false)
     setShowFrequentlyAsked(false)
     setShowHandbook(false)
+    setShowManual(false)
   }
   return (
     <GlobalContextProvider>
@@ -29,9 +32,10 @@ export default function App2025() {
         setShowSpeakers={setShowSpeakers}
         setShowFrequentlyAsked={setShowFrequentlyAsked}
         setShowHandbook={setShowHandbook}
+        setShowManual={setShowManual}
         setShowGallery={setShowGallery}
       />
-      {!showHandbook ? (
+      {!showHandbook && !showManual ? (
         <Home
           showSections={showSections}
           setShowSections={setShowSections}
@@ -43,12 +47,15 @@ export default function App2025() {
           setShowFrequentlyAsked={setShowFrequentlyAsked}
           showHandbook={showHandbook}
           setShowHandbook={setShowHandbook}
+          showManual={showManual}
+          setShowManual={setShowManual}
           showGallery={showGallery}
           setShowGallery={setShowGallery}
         />
       ) : (
-        <Handbook resetSections={resetSections} />
-      )}
+      ( showHandbook ? <Handbook resetSections={resetSections} />
+      : showManual && <Manual resetSections={resetSections} />
+      ))}
       <Footer />
     </GlobalContextProvider>
   )

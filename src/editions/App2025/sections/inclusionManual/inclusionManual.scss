@@ -1,0 +1,61 @@
+@import '../../scss/variables';
+@import '../../scss/fonts';
+@import '../../scss/placeholders';
+
+.inclusion-manual-section {
+  @extend %container;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  @include respond-to(md) {
+    flex-direction: row;
+  }
+}
+.inclusion-manual-cover-container {
+  background-color: #e0f7fa;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 20px 0;
+  @include respond-to(md) {
+    width: 50%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0;
+    padding: 0;
+  }
+}
+.inclusion-manual-cover {
+  width: 100%;
+  flex-grow: 1;
+  border-radius: 8px;
+  @include respond-to(md) {
+    width: 50%;
+  }
+}
+.inclusion-manual-container {
+  width: 100%;
+  background-color: #f0f2f4;
+  @include respond-to(md) {
+    width: 50%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+.inclusion-manual-content {
+  padding: 30px;
+}
+.inclusion-manual-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 10px 0;
+  line-height: 27.5px;
+}
+.inclusion-manual-description {
+  line-height: 25.6px;
+  margin-bottom: 20px;
+}
