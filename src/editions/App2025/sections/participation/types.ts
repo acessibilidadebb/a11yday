@@ -1,3 +1,4 @@
+import React from 'react'
 export type ButtonType = {
   title: string
   url: string
@@ -11,9 +12,11 @@ export type ParticipationBackground =
 export interface ParticipationData {
   background: ParticipationBackground
   title: string
-  subtitle: string
-  buttons: ButtonType[],
+  subtitle?: string 
+  subtitleHtml?: TrustedHTML[]
+  buttons: ButtonType[]
   afterButtonText?: string
+  alignButtons?: string
 }
 
 export interface ParticipationProps extends ParticipationData {

@@ -8,8 +8,10 @@ export default function Participation({
   background = 'watch-background',
   title,
   subtitle,
+  subtitleHtml,
   buttons = [],
   afterButtonText,
+  alignButtons
 }: ParticipationProps) {
   return (
     <section className={`participation ${background}`} style={style}>
@@ -18,11 +20,18 @@ export default function Participation({
           <h2>
             <div className="play" /> {title}
           </h2>
-          <p>{subtitle}</p>
+          {subtitle && <p>{subtitle}</p>}
+          {subtitleHtml && subtitleHtml.length > 0 && (
+            <div className="participation-subtitle">
+              {subtitleHtml.map((line, index) => (
+                <div className="subtitle-line" key={index} dangerouslySetInnerHTML={{ __html: line }} />
+              ))}
+            </div>
+          )}
         </div>
-        <div className='buttons-container'>
+        <div className="buttons-container">
           {!!buttons.length && (
-            <div className="buttons">
+            <div className={`buttons ${alignButtons}`}>
               {buttons.map((button) => (
                 <Button
                   key={generateUniqueId()}

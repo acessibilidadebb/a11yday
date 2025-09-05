@@ -15,6 +15,22 @@
     background-color: $enrollment-background;
   }
 
+  .highlight {
+    color: $highlightYellow;
+  }
+
+  .participation-subtitle {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .subtitle-line {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+  }
+
   .play {
     display: initial;
   }
@@ -106,6 +122,11 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
+  flex: 1;
+
+  &.flex-end {
+    justify-content: flex-end;
+  }
 }
 
 .bb-button.btn {
