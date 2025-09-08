@@ -60,11 +60,9 @@
     "type": "talk",
     "confirmed": true,
     "time": "10h50",
-    "image": "bb-shape.png",
-    "imageAriaHidden": true,
     "title": "Inovações de acessibilidade nos canais de atendimento BB",
     "summary": "Painel BB para abordar as tecnologias e inovações de acessibilidade disponíveis nos canais de atendimento.",
-    "speakerIds": []
+    "speakerIds": ["7e1b2c3d-4f5a-6b7c-8d9e-0f1a2b3c4d5e", "2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d"]
   },
   {
     "uuid": "a3b4c5d6-7e8f-9a0b-1c2d-3e4f5a6b7c8d",
@@ -126,21 +124,17 @@
     "type": "talk",
     "confirmed": true,
     "time": "14h25",
-    "image": "bb-shape.png",
-    "imageAriaHidden": true,
-    "title": "Tecnologia e Inclusão de Pessoas nas empresas",
-    "summary": "Painel BB que falará em primeira mão sobre Piloto de tecnologia para funcionários PCDs e também sobre uma solução desenvolvida numa das maiores instituições financeiras do Brasil, que decidiu ir além das obrigações legais e abraçar a diversidade como um valor estratégico e humano.",
-    "speakerIds": []
+    "title": "Comunicação: um ativo essencial para a inclusão de pessoas",
+    "summary": "Painel BB que contará com uma representante do Movimento da tecnologia para funcionários PCDs e Neurodivergentes  e que trará um lançamento imperdível. A segunda painelista  apresentará informações sobre um Projeto Piloto para uso de uma solução de comunicação. Inciativas corporativas que demonstram que o BB decidiu ir além das obrigações legais e abraçar a diversidade como um valor estratégico e humano.",
+    "speakerIds": ["9f8e7d6c-5b4a-3c2b-1a0f-9e8d7c6b5a4f", "1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f"]
   },
   {
     "uuid": "f8a9b0c1-2d3e-4f5a-6b7c-8d9e0f1a2b3c",
     "type": "talk",
     "confirmed": true,
     "time": "15h00",
-    "image": "previ-shape.png",
-    "imageAriaHidden": true,
-    "title": "Momento patrocinador - Iniciativas de acessibilidade e inclusão na Previ",
-    "summary": "Uma das patrocinadoras do evento, a Previ, vem falar sobre ações de inclusão e acessibilidade na instituição.",
+    "title": "Momento Patrocinador - Práticas de inclusão e acessibilidade na Assessoria Previdenciária da Previ",
+    "summary": "Uma das patrocinadoras do evento, a Previ aborda como está trabalhando a inclusão e a acessibilidade na Assessoria Previdenciária, serviço que auxilia no planejamento da aposentadoria.",
     "speakerIds": ["e2e2e2e2-2e2e-4e2e-8e2e-2e2e2e2e2e2e"]
   },
   {
@@ -159,8 +153,6 @@
     "type": "talk",
     "confirmed": true,
     "time": "15h50",
-    "image": "bbts-shape.png",
-    "imageAriaHidden": true,
     "title": "Momento Patrocinador - BBTS - ASG Três letras que transformam",
     "summary": "Uma das patrocinadoras do evento, a BBTS, vem abordar um olhar de inclusão e princípios da ASG que a empresa adotou como valores.",
     "speakerIds": ["a6b7c8d9-0e1f-2a3b-4c5d-6e7f8a9b0c1d", "f7a8b9c0-1d2e-3f4a-5b6c-7d8e9f0a1b2c"]
