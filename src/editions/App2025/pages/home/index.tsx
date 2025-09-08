@@ -9,7 +9,7 @@ import participationData from '../../json/participationData.json'
 import Primer from '../../sections/primer'
 import SectionsButtons from '../../sections/sectionsButtons'
 import DividerIcons from '../../sections/dividerIcons'
-import SectionsCollapsible from '../../sections/sectionsCollapsible'
+import Schedule from '../../sections/schedule'
 
 const participationArray: ParticipationData[] =
   participationData as ParticipationData[]
@@ -42,7 +42,7 @@ export default function Home(props: HomeProps) {
             ))}
         </div>
       </div>
-      <SectionsCollapsible showSchedule={showSchedule} />
+      {/* <SectionsCollapsible showSchedule={showSchedule} /> */}
       <SectionsButtons
         showSections={showSections}
         setShowSections={setShowSections}
@@ -54,7 +54,7 @@ export default function Home(props: HomeProps) {
         setShowFrequentlyAsked={setShowFrequentlyAsked}
       />
       {/* <Procramacao showSchedule={showSchedule} /> */}
-      {/* <Schedule showSchedule={showSchedule} /> */}
+      <Schedule showSchedule={showSchedule} />
       <DividerIcons />
       {/* <Speakers showSpeakers={showSpeakers} /> */}
       <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />
