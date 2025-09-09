@@ -10,7 +10,7 @@ const scheduleData = scheduleJson as ScheduleItemType[]
 export default function Schedule({ showSchedule }: ScheduleProps) {
   return (
     <section id="schedule" className={`schedule ${showSchedule ? 'open' : ''}`}>
-      <h2 className="schedule-title">Programação</h2>
+      <h2 className="schedule-title">Programação Palestras</h2>
       <div>
         <div className="schedule-header">
           <div className="schedule-time">Hora</div>
