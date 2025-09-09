@@ -1,11 +1,11 @@
 import { useContext, useEffect, useRef, useState } from 'react'
 import { GlobalContext } from '../../../../../contexts/globalContext'
-import './scheduleitem.scss'
+import './experienceItem.scss'
 
 import Modal from '../../../components/modal'
 import { ExperienceItemProps } from '../types'
 import { generateUniqueId } from '../../../utils/functions'
-import ScheduleCardImage from './scheduleCardImage'
+import ExperienceCardImage from './experienceCardImage'
 
 export function ExperienceItem(props: ExperienceItemProps) {
   const { title, subtitle, times } = props
@@ -32,15 +32,14 @@ export function ExperienceItem(props: ExperienceItemProps) {
   const Details = () => {
     return (
       <div className="default_dialog-content">
-        <div className="schedule-details-header">
-          <h3 className="schedule-details-title" id={titleId}>
+        <div className="experience-details-header">
+          <h3 className="experience-details-title" id={titleId}>
             Detalhes da Vivência
           </h3>
-          <p></p>
-          <h4>{title}</h4>
+          <h4 className='experience-details-subtitle'>{title}</h4>
           {!!times &&
             times.map((time: string, index: number) => (
-              <p key={index}>
+              <p className='experience-details-time' key={index}>
                 {time}
                 {index < times.length - 1 && ', '}
               </p>
@@ -50,10 +49,10 @@ export function ExperienceItem(props: ExperienceItemProps) {
     )
   }
   return (
-    <div className="schedule-item">
-      {/* <div className="schedule-time"></div> */}
-      <div className="schedule-card bg-lightblue">
-        <ScheduleCardImage {...props} />
+    <div className="experience-item">
+      {/* <div className="experience-time"></div> */}
+      <div className="experience-card bg-lightblue">
+        <ExperienceCardImage {...props} />
         <h3 className="title">Vivência em {title}</h3>
         {subtitle && subtitle.length > 0 && (
           <p className="subtitle">{subtitle}</p>

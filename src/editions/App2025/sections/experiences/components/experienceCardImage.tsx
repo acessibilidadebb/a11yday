@@ -1,11 +1,11 @@
-import './scheduleCardImage.scss'
+import './experienceCardImage.scss'
 
 import { ExperiencesCardImageProps } from '../types'
 
 export default function ScheduleCardImage(props: ExperiencesCardImageProps) {
   const { image, imageAriaHidden } = props
   return (
-    <div className="schedule-card-icon">
+    <div className="experience-card-icon">
       <>
           <img
             src={`${import.meta.env.BASE_URL}${image}`}

@@ -2,11 +2,11 @@
 @import '../../../scss/placeholders';
 @import '../../../scss/mixins';
 
-$scheduleItemMarginTop: 24px;
-$scheduleItemMarginLeft: 45px;
+$experienceItemMarginTop: 24px;
+$experienceItemMarginLeft: 45px;
 
 // ...existing code...
-.schedule-item {
+.experience-item {
   margin-top: 16px;
   border-bottom: 1px solid $border-gray;
   // ...outros estilos...
@@ -16,27 +16,27 @@ $scheduleItemMarginLeft: 45px;
     flex-direction: row;
     margin-top: 0;
     border-bottom: none;
-    .schedule-time {
+    .experience-time {
       font-size: 26px;
       line-height: 32.5px;
       // border-right: 1px solid $border-gray;
     }
-    .schedule-card {
-      margin-top: $scheduleItemMarginTop;
-      margin-left: $scheduleItemMarginTop;
+    .experience-card {
+      margin-top: $experienceItemMarginTop;
+      margin-left: $experienceItemMarginTop;
       margin-bottom: 0;
     }
-    .schedule-time-content {
-      margin-top: $scheduleItemMarginTop;
+    .experience-time-content {
+      margin-top: $experienceItemMarginTop;
     }
   }
 }
 
-body:not(.no-scroll) .schedule-item:hover {
+body:not(.no-scroll) .experience-item:hover {
   transform: translateX(5px);
   transition: all 0.3s ease;
 }
-.schedule-time {
+.experience-time {
   vertical-align: top;
   padding: 8px 20px 0 0;
   font-size: 18px;
@@ -48,11 +48,11 @@ body:not(.no-scroll) .schedule-item:hover {
   color: $color-gray;
   width: 115px;
 }
-.schedule-event {
+.experience-event {
   flex-grow: 1;
-  margin-left: $scheduleItemMarginTop;
+  margin-left: $experienceItemMarginTop;
 }
-.schedule-card {
+.experience-card {
   display: grid;
   grid-template-rows: auto repeat(2, 36px) auto;
   grid-template-columns: 88px 1fr 1fr;
@@ -69,7 +69,7 @@ body:not(.no-scroll) .schedule-item:hover {
     .title {
       grid-column: 2 / -1;
     }
-    .schedule-card-image {
+    .experience-card-image {
       grid-row: 1;
     }
     .subtitle {
@@ -87,7 +87,7 @@ body:not(.no-scroll) .schedule-item:hover {
       letter-spacing: normal;
       text-align: initial;
     }
-    .schedule-card-image {
+    .experience-card-image {
       grid-column: 1;
       grid-row: 1/5;
     }
@@ -110,7 +110,7 @@ body:not(.no-scroll) .schedule-item:hover {
   }
 }
 
-.schedule-card-content {
+.experience-card-content {
   margin-left: 15px;
 }
 
@@ -140,7 +140,7 @@ body:not(.no-scroll) .schedule-item:hover {
   text-align: left;
 }
 
-.schedule-card-image {
+.experience-card-image {
   grid-column: 1;
   grid-row: 2 / span 2;
 }
@@ -172,7 +172,7 @@ body:not(.no-scroll) .schedule-item:hover {
   grid-row: 4;
 }
 
-.schedule-details-header {
+.experience-details-header {
   padding-bottom: 32px;
   margin-bottom: 32px;
   border-bottom: none;
@@ -182,7 +182,7 @@ body:not(.no-scroll) .schedule-item:hover {
   }
 }
 
-.schedule-details-title {
+.experience-details-title {
   margin-right: 32px;
   margin-bottom: 16px;
   font-size: 22px;
@@ -191,46 +191,60 @@ body:not(.no-scroll) .schedule-item:hover {
   text-align: left;
 }
 
-.schedule-details-description {
+.experience-details-subtitle {
+  @extend .experience-details-title;
+  font-size: 18px;
+}
+
+.experience-details-time {
+  color: #4e5155;
+  font-family: 'BancoDoBrasil Textos';
   font-size: 14px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 22.4px;
-  text-align: left;
+  line-height: 160%;
 }
 
-.schedule-details-footer {
-  margin-top: 10px;
-}
+// .experience-details-description {
+//   font-size: 14px;
+//   font-weight: 400;
+//   line-height: 22.4px;
+//   text-align: left;
+// }
 
-.schedule-details-body {
-  padding-bottom: $containerPadding;
-  border-bottom: 1px solid $border-gray;
-  margin-bottom: $containerPadding;
-  &:last-child {
-    padding-bottom: 0;
-    border-bottom: 0;
-    margin-bottom: 0;
-  }
-}
+// .experience-details-footer {
+//   margin-top: 10px;
+// }
 
-.schedule-details-image {
-  width: 191px;
-  margin: 16px 0;
-  border-radius: 8px;
-}
+// .experience-details-body {
+//   padding-bottom: $containerPadding;
+//   border-bottom: 1px solid $border-gray;
+//   margin-bottom: $containerPadding;
+//   &:last-child {
+//     padding-bottom: 0;
+//     border-bottom: 0;
+//     margin-bottom: 0;
+//   }
+// }
 
-.schedule-details-name {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 30.8px;
-  text-align: left;
-}
+// .experience-details-image {
+//   width: 191px;
+//   margin: 16px 0;
+//   border-radius: 8px;
+// }
 
-.schedule-details-company {
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 15.75px;
-  letter-spacing: 0.005em;
-  text-align: left;
-}
+// .experience-details-name {
+//   font-size: 22px;
+//   font-weight: 700;
+//   line-height: 30.8px;
+//   text-align: left;
+// }
+
+// .experience-details-company {
+//   margin-bottom: 16px;
+//   font-size: 14px;
+//   font-weight: 400;
+//   line-height: 15.75px;
+//   letter-spacing: 0.005em;
+//   text-align: left;
+// }
