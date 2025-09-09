@@ -16,6 +16,7 @@ import bilateralDeafness from '../../../../assets/bilateral-deafness.png'
 export default function Header({
   setShowSections,
   setShowSchedule,
+  setShowExperiences,
   setShowSpeakers,
   setShowFrequentlyAsked,
   setShowHandbook,
@@ -90,6 +91,7 @@ export default function Header({
   const resetSections = () => {
     setShowSections(true)
     setShowSchedule(false)
+    setShowExperiences(false)
     setShowSpeakers(false)
     setShowFrequentlyAsked(false)
     setOpen(false)
@@ -103,6 +105,9 @@ export default function Header({
     switch (section) {
       case 'schedule':
         setShowSchedule(true)
+        break
+      case 'expo':
+        setShowExperiences(true)
         break
       case 'speakers':
         setShowSpeakers(true)

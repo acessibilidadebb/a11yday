@@ -10,6 +10,7 @@ import Primer from '../../sections/primer'
 import SectionsButtons from '../../sections/sectionsButtons'
 import DividerIcons from '../../sections/dividerIcons'
 import Schedule from '../../sections/schedule'
+import Experiences from '../../sections/experiences'
 
 const participationArray: ParticipationData[] =
   participationData as ParticipationData[]
@@ -20,6 +21,8 @@ export default function Home(props: HomeProps) {
     setShowSections,
     showSchedule,
     setShowSchedule,
+    showExperiences,
+    setShowExperiences,
     showSpeakers,
     setShowSpeakers,
     showFrequentlyAsked,
@@ -53,7 +56,7 @@ export default function Home(props: HomeProps) {
         showFrequentlyAsked={showFrequentlyAsked}
         setShowFrequentlyAsked={setShowFrequentlyAsked}
       />
-      {/* <Procramacao showSchedule={showSchedule} /> */}
+      <Experiences showExperiences={showExperiences} />
       <Schedule showSchedule={showSchedule} />
       <DividerIcons />
       {/* <Speakers showSpeakers={showSpeakers} /> */}

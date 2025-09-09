@@ -1,0 +1,26 @@
+[
+  {
+    "image": "libras.svg",
+    "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
+    "imageAriaHidden": true,
+    "title": "Libras",
+    "subtitle": "Venha aprender na prática ",
+    "times": [
+      "Inscrições no local à partir das 9hs (turma manhã) e 13hs (turma tarde)",
+      "1 turma - 10hs (duração 2 horas)",
+      "1 turma - 14hs (duração 2 horas)"
+    ]
+  },
+  {
+    "image": "d-braile.svg",
+    "imageAlt": "Ícone da letra D com sua representação em Braile e uma mãozinha",
+    "imageAriaHidden": true,
+    "title": "Braile",
+    "subtitle": "Venha aprender na prática ",
+    "times": [
+      "Inscrições no local à partir das 9hs (turma manhã) e 13hs (turma tarde)",
+      "1 turma - 10hs (duração 2 horas)",
+      "1 turma - 14hs (duração 2 horas)"
+    ]
+  }
+]

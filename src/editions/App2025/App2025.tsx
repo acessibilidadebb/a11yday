@@ -11,6 +11,7 @@ import Manual from './pages/manual'
 export default function App2025() {
   const [showSections, setShowSections] = useState(true)
   const [showSchedule, setShowSchedule] = useState(false)
+  const [showExperiences, setShowExperiences] = useState(false)
   const [showSpeakers, setShowSpeakers] = useState(false)
   const [showFrequentlyAsked, setShowFrequentlyAsked] = useState(false)
   const [showHandbook, setShowHandbook] = useState(false)
@@ -29,6 +30,7 @@ export default function App2025() {
       <Header
         setShowSections={setShowSections}
         setShowSchedule={setShowSchedule}
+        setShowExperiences={setShowExperiences}
         setShowSpeakers={setShowSpeakers}
         setShowFrequentlyAsked={setShowFrequentlyAsked}
         setShowHandbook={setShowHandbook}
@@ -41,6 +43,8 @@ export default function App2025() {
           setShowSections={setShowSections}
           showSchedule={showSchedule}
           setShowSchedule={setShowSchedule}
+          showExperiences={showExperiences}
+          setShowExperiences={setShowExperiences}
           showSpeakers={showSpeakers}
           setShowSpeakers={setShowSpeakers}
           showFrequentlyAsked={showFrequentlyAsked}
@@ -52,10 +56,11 @@ export default function App2025() {
           showGallery={showGallery}
           setShowGallery={setShowGallery}
         />
+      ) : showHandbook ? (
+        <Handbook resetSections={resetSections} />
       ) : (
-      ( showHandbook ? <Handbook resetSections={resetSections} />
-      : showManual && <Manual resetSections={resetSections} />
-      ))}
+        showManual && <Manual resetSections={resetSections} />
+      )}
       <Footer />
     </GlobalContextProvider>
   )
