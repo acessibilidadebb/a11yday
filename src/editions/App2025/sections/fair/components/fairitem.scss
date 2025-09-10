@@ -6,7 +6,7 @@ $scheduleItemMarginTop: 24px;
 $scheduleItemMarginLeft: 45px;
 
 // ...existing code...
-.schedule-item {
+.fair-item {
   margin-top: 16px;
   border-bottom: 1px solid $border-gray;
   // ...outros estilos...
@@ -16,43 +16,22 @@ $scheduleItemMarginLeft: 45px;
     flex-direction: row;
     margin-top: 0;
     border-bottom: none;
-    .schedule-time {
-      font-size: 26px;
-      line-height: 32.5px;
-      // border-right: 1px solid $border-gray;
-    }
-    .schedule-card {
+    .fair-card {
       margin-top: $scheduleItemMarginTop;
-      margin-left: $scheduleItemMarginTop;
       margin-bottom: 0;
-    }
-    .schedule-time-content {
-      margin-top: $scheduleItemMarginTop;
     }
   }
 }
 
-body:not(.no-scroll) .schedule-item:hover {
+body:not(.no-scroll) .fair-item:hover {
   transform: translateX(5px);
   transition: all 0.3s ease;
 }
-.schedule-time {
-  vertical-align: top;
-  padding: 8px 20px 0 0;
-  font-size: 18px;
-  line-height: 22.5px;
-  border: none;
-
-  font-weight: 700;
-  text-align: left;
-  color: $color-gray;
-  width: 115px;
-}
-.schedule-event {
+.fair-event {
   flex-grow: 1;
   margin-left: $scheduleItemMarginTop;
 }
-.schedule-card {
+.fair-card {
   display: grid;
   grid-template-rows: auto repeat(2, 36px) auto;
   grid-template-columns: 88px 1fr 1fr;
@@ -69,7 +48,7 @@ body:not(.no-scroll) .schedule-item:hover {
     .title {
       grid-column: 2 / -1;
     }
-    .schedule-card-image {
+    .fair-card-image {
       grid-row: 1;
     }
     .subtitle {
@@ -87,7 +66,7 @@ body:not(.no-scroll) .schedule-item:hover {
       letter-spacing: normal;
       text-align: initial;
     }
-    .schedule-card-image {
+    .fair-card-image {
       grid-column: 1;
       grid-row: 1/5;
     }
@@ -110,7 +89,7 @@ body:not(.no-scroll) .schedule-item:hover {
   }
 }
 
-.schedule-card-content {
+.fair-card-content {
   margin-left: 15px;
 }
 
@@ -140,7 +119,7 @@ body:not(.no-scroll) .schedule-item:hover {
   text-align: left;
 }
 
-.schedule-card-image {
+.fair-card-image {
   grid-column: 1;
   grid-row: 2 / span 2;
 }
@@ -172,7 +151,7 @@ body:not(.no-scroll) .schedule-item:hover {
   grid-row: 4;
 }
 
-.schedule-details-header {
+.fair-details-header {
   padding-bottom: 32px;
   margin-bottom: 32px;
   border-bottom: none;
@@ -182,7 +161,7 @@ body:not(.no-scroll) .schedule-item:hover {
   }
 }
 
-.schedule-details-title {
+.fair-details-title {
   margin-right: 32px;
   margin-bottom: 16px;
   font-size: 22px;
@@ -191,18 +170,18 @@ body:not(.no-scroll) .schedule-item:hover {
   text-align: left;
 }
 
-.schedule-details-description {
+.fair-details-description {
   font-size: 14px;
   font-weight: 400;
   line-height: 22.4px;
   text-align: left;
 }
 
-.schedule-details-footer {
+.fair-details-footer {
   margin-top: 10px;
 }
 
-.schedule-details-body {
+.fair-details-body {
   padding-bottom: $containerPadding;
   border-bottom: 1px solid $border-gray;
   margin-bottom: $containerPadding;
@@ -213,20 +192,20 @@ body:not(.no-scroll) .schedule-item:hover {
   }
 }
 
-.schedule-details-image {
+.fair-details-image {
   width: 191px;
   margin: 16px 0;
   border-radius: 8px;
 }
 
-.schedule-details-name {
+.fair-details-name {
   font-size: 22px;
   font-weight: 700;
   line-height: 30.8px;
   text-align: left;
 }
 
-.schedule-details-company {
+.fair-details-company {
   margin-bottom: 16px;
   font-size: 14px;
   font-weight: 400;

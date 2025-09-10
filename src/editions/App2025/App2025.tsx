@@ -12,6 +12,7 @@ export default function App2025() {
   const [showSections, setShowSections] = useState(true)
   const [showSchedule, setShowSchedule] = useState(false)
   const [showExperiences, setShowExperiences] = useState(false)
+  const [showFair, setShowFair] = useState(false)
   const [showSpeakers, setShowSpeakers] = useState(false)
   const [showFrequentlyAsked, setShowFrequentlyAsked] = useState(false)
   const [showHandbook, setShowHandbook] = useState(false)
@@ -45,6 +46,8 @@ export default function App2025() {
           setShowSchedule={setShowSchedule}
           showExperiences={showExperiences}
           setShowExperiences={setShowExperiences}
+          showFair={showFair}
+          setShowFair={setShowFair}
           showSpeakers={showSpeakers}
           setShowSpeakers={setShowSpeakers}
           showFrequentlyAsked={showFrequentlyAsked}

@@ -2,7 +2,7 @@
 @import '../../scss/placeholders';
 @import '../../scss/mixins';
 
-.schedule {
+.fair {
   @extend %container;
   background-color: $white;
   flex-direction: column;
@@ -14,7 +14,7 @@
     display: flex;
   }
 }
-.schedule-title {
+.fair-title {
   font-size: 1.6rem;
   color: $color-blue;
 }
@@ -29,7 +29,7 @@
   text-align: left;
   padding: 0;
 }
-.schedule-btn {
+.fair-btn {
   background-color: $buttonSecondary;
   width: 32px;
   height: 32px;
@@ -44,23 +44,3 @@
     height: 20px;
   }
 }
-.schedule-header {
-  color: $color-gray;
-  text-transform: uppercase;
-  margin-top: 36px;
-  display: none;
-  justify-content: flex-start;
-  align-items: flex-end;
-  @include respond-to(lg) {
-    display: flex;
-  }
-  .schedule-time,
-  .schedule-event {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: 0.05em;
-    text-align: left;
-  }
-}
-

@@ -1,8 +1,8 @@
-import { ScheduleItemType } from '../../types/schedule'
+import { FairItemType } from '../../types/fair'
 import { Speaker } from '../../types/speakers'
 
-export interface ScheduleProps {
-  showSchedule: boolean
+export interface FairProps {
+  showFair: boolean
 }
 
 export interface SpeakersTitleProps {
@@ -15,14 +15,14 @@ export interface SpeakerTitle {
   company?: string
   nickname: string
 }
-export interface ScheduleItemProps extends ScheduleItemType {
+export interface FairItemProps extends FairItemType {
 }
-export interface DetailsProps extends ScheduleItemProps {
+export interface DetailsProps extends FairItemProps {
   isOpen: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export interface ScheduleCardImageProps {
+export interface FairCardImageProps {
   confirmed: boolean
   image?: string
   imageAlt?: string

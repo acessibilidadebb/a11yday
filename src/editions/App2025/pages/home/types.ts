@@ -5,6 +5,8 @@ export interface HomeProps {
   setShowSchedule: React.Dispatch<React.SetStateAction<boolean>>
   showExperiences: boolean
   setShowExperiences: React.Dispatch<React.SetStateAction<boolean>>
+  showFair: boolean
+  setShowFair: React.Dispatch<React.SetStateAction<boolean>>
   showSpeakers: boolean
   setShowSpeakers: React.Dispatch<React.SetStateAction<boolean>>
   showFrequentlyAsked: boolean

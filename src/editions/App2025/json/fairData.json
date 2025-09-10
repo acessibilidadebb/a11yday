@@ -1,0 +1,44 @@
+[
+  {
+    "uuid": "2e1a4b6c-7d8e-4f9a-9b2c-1d3e5f7a8b9c",
+    "image": "abdv.svg",
+    "imageAriaHidden": true,
+    "title": "Associação Brasiliense de Deficientes Visuais"
+  },
+  {
+    "uuid": "3f2b5c7d-8e9f-4a0b-1c2d-3e4f5a6b7c8d",
+    "image": "unb.svg",
+    "imageAriaHidden": true,
+    "title": "UNB - Protótipo de Bengala Inteligente"
+  },
+  {
+    "uuid": "4a3c6d8e-9f0a-1b2c-3d4e-5f6a7b8c9d0e",
+    "image": "bb.svg",
+    "imageAriaHidden": true,
+    "title": "Cartões BB Voz e Braile"
+  },
+  {
+    "uuid": "5b4d7e9f-0a1b-2c3d-4e5f-6a7b8c9d0e1f",
+    "image": "rybena.svg",
+    "imageAriaHidden": true,
+    "title": "Rybena"
+  },
+  {
+    "uuid": "6c5e8f0a-1b2c-3d4e-5f6a-7b8c9d0e1f2a",
+    "image": "goulart.svg",
+    "imageAriaHidden": true,
+    "title": "Goulart Acessibilidade"
+  },
+  {
+    "uuid": "7d6f0a1b-2c3d-4e5f-6a7b-8c9d0e1f2a3b",
+    "image": "tb.svg",
+    "imageAriaHidden": true,
+    "title": "TB Soluções"
+  },
+  {
+    "uuid": "8e7f1b2c-3d4e-5f6a-7b8c-9d0e1f2a3b4c",
+    "image": "bbts.svg",
+    "imageAriaHidden": true,
+    "title": "BBTS"
+  }
+]

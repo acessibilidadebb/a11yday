@@ -20,8 +20,6 @@ export default function Home(props: HomeProps) {
     setShowSections,
     showSchedule,
     setShowSchedule,
-    showExperiences,
-    setShowExperiences,
     showSpeakers,
     setShowSpeakers,
     showFrequentlyAsked,
@@ -56,6 +54,7 @@ export default function Home(props: HomeProps) {
         setShowFrequentlyAsked={setShowFrequentlyAsked}
       />
       {/* <Experiences showExperiences={showExperiences} /> */}
+      {/* <Fair showFair={showFair} /> */}
       <Schedule showSchedule={showSchedule} />
       <DividerIcons />
       {/* <Speakers showSpeakers={showSpeakers} /> */}

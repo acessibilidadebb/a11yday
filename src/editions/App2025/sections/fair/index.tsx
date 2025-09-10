@@ -1,23 +1,19 @@
-import './schedule.scss'
-import { ScheduleItemType } from '../../types/schedule'
-import scheduleJson  from '../../json/scheduleData.json'
-import { ScheduleItem } from './components/scheduleItem'
-import { ScheduleProps } from './types'
+import './fair.scss'
+import { FairItemType } from '../../types/fair'
+import scheduleJson  from '../../json/fairData.json'
+import { FairItem } from './components/fairItem'
+import { FairProps } from './types'
 import { generateUniqueId } from '../../utils/functions'
 
-const scheduleData = scheduleJson as ScheduleItemType[]
+const scheduleData = scheduleJson as FairItemType[]
 
-export default function Schedule({ showSchedule }: ScheduleProps) {
+export default function Fair({ showFair }: FairProps) {
   return (
-    <section id="schedule" className={`schedule ${showSchedule ? 'open' : ''}`}>
-      <h2 className="schedule-title">Programação Palestras</h2>
+    <section id="fair" className={`fair ${showFair ? 'open' : ''}`}>
+      <h2 className="fair-title">Programação Feira de tecnologias assistivas</h2>
       <div>
-        <div className="schedule-header">
-          <div className="schedule-time">Hora</div>
-          <div className="schedule-event">Atividade</div>
-        </div>
-        {scheduleData.map((item: ScheduleItemType) => (
-          <ScheduleItem key={`${generateUniqueId()}`} {...item} />
+        {scheduleData.map((item: FairItemType) => (
+          <FairItem key={`${generateUniqueId()}`} {...item} />
         ))}
       </div>
     </section>
