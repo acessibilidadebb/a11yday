@@ -18,13 +18,13 @@ export default function Manual({ resetSections }: ManualProps) {
         <LinkNav href="/" link={true} title="Voltar" onClick={handleClick} icon="back" />
         <header>
           <h3 id="manual-title" className="manual-title">
-            Manual de Inclusão de PCDs nas Empresas
+            Manual de boas práticas de Inclusão e diversidade e Manual de Liderança inclusiva
           </h3>
           <img
             className="manual-cover"
             src="manual-cover.png"
-            alt="Capa do Manual de Inclusão de PCDs nas Empresas"
-            accessibility-label="Capa do Manual de Inclusão de PCDs nas Empresas"
+            alt="Capa do Manual de boas práticas de Inclusão e diversidade e Manual de Liderança inclusiva"
+            accessibility-label="Capa do Manual de boas práticas de Inclusão e diversidade e Manual de Liderança inclusiva"
           />
         </header>
         <div id="manual-description">
