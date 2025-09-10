@@ -62,7 +62,10 @@
     "time": "10h50",
     "title": "Inovações de acessibilidade nos canais de atendimento BB",
     "summary": "Painel BB para abordar as tecnologias e inovações de acessibilidade disponíveis nos canais de atendimento.",
-    "speakerIds": ["7e1b2c3d-4f5a-6b7c-8d9e-0f1a2b3c4d5e", "2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d"]
+    "speakerIds": [
+      "7e1b2c3d-4f5a-6b7c-8d9e-0f1a2b3c4d5e",
+      "2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d"
+    ]
   },
   {
     "uuid": "a3b4c5d6-7e8f-9a0b-1c2d-3e4f5a6b7c8d",
@@ -110,14 +113,14 @@
     "speakerIds": ["c4d5e6f7-8a9b-0c1d-2e3f-4a5b6c7d8e9f"]
   },
   {
-    "uuid": "d6e7f8a9-0b1c-2d3e-4f5a-6b7c8d9e0f1a",
+    "uuid": "e2f3a4b5-6c7d-8e9f-0a1b-2c3d4e5f6a7b",
     "type": "talk",
     "confirmed": true,
     "time": "14h00",
     "image": "",
-    "title": "Acessibilidade como Estratégia: Inovação, Inclusão e Resultado",
-    "summary": "Descubra como a acessibilidade deixou de ser apenas uma obrigação legal para se tornar um diferencial competitivo e uma alavanca de inovação nos negócios. Nesta palestra, vamos explorar como empresas de todos os setores podem gerar impacto social e ampliar resultados ao integrar acessibilidade em suas estratégias.",
-    "speakerIds": ["f8a9b0c1-2d3e-4f5a-6b7c-8d9e0f1a2b3c"]
+    "title": "Um olhar governamental para tecnologias assistivas",
+    "summary": "O que o Ministério da Ciência e Tecnologia tem feito para melhorar as ações de tecnologias assistivas e qual plano de futuro.",
+    "speakerIds": ["e8b9c0d1-2f3a-4b5c-6d7e-8f9a0b1c2d3e"]
   },
   {
     "uuid": "e7f8a9b0-1c2d-3e4f-5a6b-7c8d9e0f1a2b",
@@ -126,7 +129,10 @@
     "time": "14h25",
     "title": "Comunicação: um ativo essencial para a inclusão de pessoas",
     "summary": "Painel BB que contará com uma representante do Movimento da tecnologia para funcionários PCDs e Neurodivergentes  e que trará um lançamento imperdível. A segunda painelista  apresentará informações sobre um Projeto Piloto para uso de uma solução de comunicação. Inciativas corporativas que demonstram que o BB decidiu ir além das obrigações legais e abraçar a diversidade como um valor estratégico e humano.",
-    "speakerIds": ["9f8e7d6c-5b4a-3c2b-1a0f-9e8d7c6b5a4f", "1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f"]
+    "speakerIds": [
+      "9f8e7d6c-5b4a-3c2b-1a0f-9e8d7c6b5a4f",
+      "1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f"
+    ]
   },
   {
     "uuid": "f8a9b0c1-2d3e-4f5a-6b7c-8d9e0f1a2b3c",
@@ -155,17 +161,21 @@
     "time": "15h50",
     "title": "Momento Patrocinador - BBTS - ASG Três letras que transformam",
     "summary": "Uma das patrocinadoras do evento, a BBTS, vem abordar um olhar de inclusão e princípios da ASG que a empresa adotou como valores.",
-    "speakerIds": ["a6b7c8d9-0e1f-2a3b-4c5d-6e7f8a9b0c1d", "f7a8b9c0-1d2e-3f4a-5b6c-7d8e9f0a1b2c"]
+    "speakerIds": [
+      "a6b7c8d9-0e1f-2a3b-4c5d-6e7f8a9b0c1d",
+      "f7a8b9c0-1d2e-3f4a-5b6c-7d8e9f0a1b2c"
+    ]
   },
+
   {
-    "uuid": "e2f3a4b5-6c7d-8e9f-0a1b-2c3d4e5f6a7b",
+    "uuid": "d6e7f8a9-0b1c-2d3e-4f5a-6b7c8d9e0f1a",
     "type": "talk",
     "confirmed": true,
     "time": "16h15",
     "image": "",
-    "title": "Um olhar governamental para tecnologias assistivas",
-    "summary": "O que o Ministério da Ciência e Tecnologia tem feito para melhorar as ações de tecnologias assistivas e qual plano de futuro.",
-    "speakerIds": ["e8b9c0d1-2f3a-4b5c-6d7e-8f9a0b1c2d3e"]
+    "title": "Acessibilidade como Estratégia: Inovação, Inclusão e Resultado",
+    "summary": "Descubra como a acessibilidade deixou de ser apenas uma obrigação legal para se tornar um diferencial competitivo e uma alavanca de inovação nos negócios. Nesta palestra, vamos explorar como empresas de todos os setores podem gerar impacto social e ampliar resultados ao integrar acessibilidade em suas estratégias.",
+    "speakerIds": ["f8a9b0c1-2d3e-4f5a-6b7c-8d9e0f1a2b3c"]
   },
   {
     "uuid": "87c6ae64-ec69-41f2-8638-c684b8474027",
