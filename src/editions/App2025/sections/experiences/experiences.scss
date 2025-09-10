@@ -2,7 +2,7 @@
 @import '../../scss/placeholders';
 @import '../../scss/mixins';
 
-.schedule {
+.experiences {
   @extend %container;
   background-color: $white;
   flex-direction: column;
@@ -14,7 +14,7 @@
     display: flex;
   }
 }
-.schedule-title {
+.experiences-title {
   font-size: 1.6rem;
   color: $color-blue;
 }
@@ -29,7 +29,7 @@
   text-align: left;
   padding: 0;
 }
-.schedule-btn {
+.experiences-btn {
   background-color: $buttonSecondary;
   width: 32px;
   height: 32px;
@@ -44,7 +44,7 @@
     height: 20px;
   }
 }
-.schedule-header {
+.experiences-header {
   color: $color-gray;
   text-transform: uppercase;
   margin-top: 36px;
@@ -54,8 +54,8 @@
   @include respond-to(lg) {
     display: flex;
   }
-  .schedule-time,
-  .schedule-event {
+  .experiences-time,
+  .experiences-event {
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;

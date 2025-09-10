@@ -23,7 +23,6 @@ $experienceItemMarginLeft: 45px;
     }
     .experience-card {
       margin-top: $experienceItemMarginTop;
-      margin-left: $experienceItemMarginTop;
       margin-bottom: 0;
     }
     .experience-time-content {
@@ -173,8 +172,6 @@ body:not(.no-scroll) .experience-item:hover {
 }
 
 .experience-details-header {
-  padding-bottom: 32px;
-  margin-bottom: 32px;
   border-bottom: none;
 
   &.border-bottom {
@@ -193,58 +190,14 @@ body:not(.no-scroll) .experience-item:hover {
 
 .experience-details-subtitle {
   @extend .experience-details-title;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .experience-details-time {
   color: #4e5155;
   font-family: 'BancoDoBrasil Textos';
-  font-size: 14px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
 }
-
-// .experience-details-description {
-//   font-size: 14px;
-//   font-weight: 400;
-//   line-height: 22.4px;
-//   text-align: left;
-// }
-
-// .experience-details-footer {
-//   margin-top: 10px;
-// }
-
-// .experience-details-body {
-//   padding-bottom: $containerPadding;
-//   border-bottom: 1px solid $border-gray;
-//   margin-bottom: $containerPadding;
-//   &:last-child {
-//     padding-bottom: 0;
-//     border-bottom: 0;
-//     margin-bottom: 0;
-//   }
-// }
-
-// .experience-details-image {
-//   width: 191px;
-//   margin: 16px 0;
-//   border-radius: 8px;
-// }
-
-// .experience-details-name {
-//   font-size: 22px;
-//   font-weight: 700;
-//   line-height: 30.8px;
-//   text-align: left;
-// }
-
-// .experience-details-company {
-//   margin-bottom: 16px;
-//   font-size: 14px;
-//   font-weight: 400;
-//   line-height: 15.75px;
-//   letter-spacing: 0.005em;
-//   text-align: left;
-// }
