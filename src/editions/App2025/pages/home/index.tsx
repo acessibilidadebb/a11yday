@@ -20,8 +20,6 @@ export default function Home(props: HomeProps) {
     setShowSections,
     showSchedule,
     setShowSchedule,
-    showExperiences,
-    setShowExperiences,
     showSpeakers,
     setShowSpeakers,
     showFrequentlyAsked,
