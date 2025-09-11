@@ -6,6 +6,12 @@
     "title": "Associação Brasiliense de Deficientes Visuais"
   },
   {
+    "uuid": "3e2b1a4c-5d6f-7a8b-9c0d-1e2f3a4b5c6d",
+    "image": "previ.svg",
+    "imageAriaHidden": true,
+    "title": "Caixa de Previdência dos Funcionários do Banco do Brasil"
+  },
+  {
     "uuid": "3f2b5c7d-8e9f-4a0b-1c2d-3e4f5a6b7c8d",
     "image": "unb.svg",
     "imageAriaHidden": true,
@@ -40,5 +46,11 @@
     "image": "bbts.svg",
     "imageAriaHidden": true,
     "title": "BBTS"
+  },
+  {
+    "uuid": "8f7e6d5c-4b3a-2c1d-0e9f-8a7b6c5d4e3f",
+    "image": "cassi.svg",
+    "imageAriaHidden": true,
+    "title": "CASSI"
   }
 ]
