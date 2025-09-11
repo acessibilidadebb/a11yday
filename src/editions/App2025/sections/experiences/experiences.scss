@@ -6,13 +6,6 @@
   @extend %container;
   background-color: $white;
   flex-direction: column;
-  display: none;
-  &.open {
-    display: flex;
-  }
-  @include respond-to(lg) {
-    display: flex;
-  }
 }
 .experiences-title {
   font-size: 1.6rem;
