@@ -6,17 +6,14 @@ import Home from './pages/home'
 import Footer from './sections/footer'
 import Handbook from './pages/handbook'
 import GlobalContextProvider from '../../contexts/GlobalContextProvider'
-import Manual from './pages/manual'
 
 export default function App2025() {
   const [showSections, setShowSections] = useState(true)
   const [showSchedule, setShowSchedule] = useState(false)
   const [showExperiences, setShowExperiences] = useState(false)
-  const [showFair, setShowFair] = useState(false)
   const [showSpeakers, setShowSpeakers] = useState(false)
-  const [showFrequentlyAsked, setShowFrequentlyAsked] = useState(false)
+  const [showFrequentlyAsked, setShowFrequentlyAsked] = useState(true)
   const [showHandbook, setShowHandbook] = useState(false)
-  const [showManual, setShowManual] = useState(false)
   const [showGallery, setShowGallery] = useState(false)
   const resetSections = () => {
     setShowSections(true)
@@ -24,7 +21,6 @@ export default function App2025() {
     setShowSpeakers(false)
     setShowFrequentlyAsked(false)
     setShowHandbook(false)
-    setShowManual(false)
   }
   return (
     <GlobalContextProvider>
@@ -35,10 +31,9 @@ export default function App2025() {
         setShowSpeakers={setShowSpeakers}
         setShowFrequentlyAsked={setShowFrequentlyAsked}
         setShowHandbook={setShowHandbook}
-        setShowManual={setShowManual}
         setShowGallery={setShowGallery}
       />
-      {!showHandbook && !showManual ? (
+      {!showHandbook ? (
         <Home
           showSections={showSections}
           setShowSections={setShowSections}
@@ -46,23 +41,17 @@ export default function App2025() {
           setShowSchedule={setShowSchedule}
           showExperiences={showExperiences}
           setShowExperiences={setShowExperiences}
-          showFair={showFair}
-          setShowFair={setShowFair}
           showSpeakers={showSpeakers}
           setShowSpeakers={setShowSpeakers}
           showFrequentlyAsked={showFrequentlyAsked}
           setShowFrequentlyAsked={setShowFrequentlyAsked}
           showHandbook={showHandbook}
           setShowHandbook={setShowHandbook}
-          showManual={showManual}
-          setShowManual={setShowManual}
           showGallery={showGallery}
           setShowGallery={setShowGallery}
         />
-      ) : showHandbook ? (
-        <Handbook resetSections={resetSections} />
       ) : (
-        showManual && <Manual resetSections={resetSections} />
+        <Handbook resetSections={resetSections} />
       )}
       <Footer />
     </GlobalContextProvider>

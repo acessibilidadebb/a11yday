@@ -6,15 +6,14 @@ export default function SectionsButtons({
   setShowSections,
   showSchedule,
   setShowSchedule,
-  // showSpeakers,
-  setShowSpeakers,
-  showFrequentlyAsked,
+  showExperiences,
+  setShowExperiences,
   setShowFrequentlyAsked,
 }: SectionProps) {
   const resetSections = () => {
     setShowSections(true)
+    setShowExperiences(false)
     setShowSchedule(false)
-    setShowSpeakers(false)
     setShowFrequentlyAsked(false)
   }
   const scrollToTop = () => {
@@ -30,6 +29,16 @@ export default function SectionsButtons({
       }
     }
   }
+  const handleClickExperiences = () => {
+    resetSections()
+    setShowSections(false)
+    setShowExperiences(!showExperiences)
+    setTimeout(() => {
+      scrollToTop()
+      focusSectionTitle('experiences')
+    }, 100)
+  }
+
   const handleClickSchedule = () => {
     resetSections()
     setShowSections(false)
@@ -40,71 +49,43 @@ export default function SectionsButtons({
     }, 100)
   }
 
-  // const handleClickSpeakers = () => {
-  //   resetSections()
-  //   setShowSections(false)
-  //   setShowSpeakers(!showSpeakers)
-  //   setTimeout(() => {
-  //     scrollToTop()
-  //     focusSectionTitle('speakers')
-  //   }, 100)
-  // }
-
-  const handleClickFrequentlyAsked = () => {
-    resetSections()
-    setShowSections(false)
-    setShowFrequentlyAsked(!showFrequentlyAsked)
-    setTimeout(() => {
-      scrollToTop()
-      focusSectionTitle('frequently-asked-questions')
-    }, 100)
-  }
-
   return (
     <section
-      id="sections"
-      className={`sections ${!showSections ? 'closed' : ''}`}
+      id="sections-2025"
+      className={`sections-2025${!showSections ? ' closed-2025' : ''}`}
     >
       <button
         type="button"
-        onClick={handleClickSchedule}
-        className="section-button"
-        title="Programação"
-        accessibility-label="Programação"
+        onClick={handleClickExperiences}
+        className="section-button-2025"
+        title="Feira e Vivências"
+        accessibility-label="Feira e Vivências"
       >
-        <div className="section-card">
-          <div className="section-card-cover cover-schedule">
-            <h3 aria-hidden="true">Programação</h3>
-          </div>
-          <p aria-hidden="true">Programação</p>
+        <div className="section-card-2025">
+          <h3 className="title" aria-hidden="true">
+            Feira e Vivências
+          </h3>
+          <h4 className="subtitle">Programação</h4>
+          <p className="details" aria-hidden="true">
+            24 e 25 de Setembro
+          </p>
         </div>
       </button>
-      {/* <button
-        type="button"
-        onClick={handleClickSpeakers}
-        className="section-button"
-        title="Palestrantes"
-        accessibility-label="Palestrantes"
-      >
-        <div className="section-card">
-          <div className="section-card-cover cover-speakers">
-            <h3 aria-hidden="true">Palestrantes</h3>
-          </div>
-          <p aria-hidden="true">Palestrantes</p>
-        </div>
-      </button> */}
       <button
         type="button"
-        onClick={handleClickFrequentlyAsked}
-        className="section-button"
-        title="Dúvidas frequentes"
-        accessibility-label="Dúvidas frequentes"
+        onClick={handleClickSchedule}
+        className="section-button-2025 dark"
+        title="Palestras"
+        accessibility-label="Palestras"
       >
-        <div className="section-card">
-          <div className="section-card-cover cover-frequently-asked">
-            <h3 aria-hidden="true">Dúvidas frequentes</h3>
-          </div>
-          <p aria-hidden="true">Dúvidas frequentes</p>
+        <div className="section-card-2025">
+          <h3 className="title" aria-hidden="true">
+            Palestras
+          </h3>
+          <h4 className="subtitle">Programação</h4>
+          <p className="details" aria-hidden="true">
+            25 de Setembro
+          </p>
         </div>
       </button>
     </section>

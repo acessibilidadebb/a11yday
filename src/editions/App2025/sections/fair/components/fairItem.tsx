@@ -11,7 +11,7 @@ import FairCardImage from './fairCardImage'
 import LinkNav from '../../../components/linkNav'
 
 export function FairItem(props: FairItemProps) {
-  const { time, type, confirmed, description, title, subtitle, summary, speakerIds, slide } =
+  const { type, confirmed, description, title, subtitle, summary, speakerIds, slide } =
     props
   const { isModalOpen, setModalOpen, togglePin } = useContext(GlobalContext)
   const titleId = generateUniqueId()

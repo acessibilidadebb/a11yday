@@ -2,7 +2,7 @@ import { FairItemType } from '../../types/fair'
 import { Speaker } from '../../types/speakers'
 
 export interface FairProps {
-  showFair: boolean
+  showExperiences: boolean
 }
 
 export interface SpeakersTitleProps {

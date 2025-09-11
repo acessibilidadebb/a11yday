@@ -1,15 +1,14 @@
 import './experiences.scss'
 import experiencesJson  from '../../json/experiencesData.json'
-import { ScheduleProps } from './types'
 import { generateUniqueId } from '../../utils/functions'
 import { ExperienceItemType } from '../../types/experience'
 import { ExperienceItem } from './components/experienceItem'
 
 const experiencesData = experiencesJson as ExperienceItemType[]
 
-export default function Experiences({ showExperiences }: ScheduleProps) {
+export default function Experiences() {
   return (
-    <section id="experiences" className={`experiences ${showExperiences ? 'open' : ''}`}>
+    <section id="experiences" className='experiences'>
       <h2 className="experiences-title">Programação Vivências</h2>
       <div>
         {experiencesData.map((item: ExperienceItemType) => (

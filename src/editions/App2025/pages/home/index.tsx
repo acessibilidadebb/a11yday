@@ -10,6 +10,8 @@ import Primer from '../../sections/primer'
 import SectionsButtons from '../../sections/sectionsButtons'
 import DividerIcons from '../../sections/dividerIcons'
 import Schedule from '../../sections/schedule'
+import Experiences from '../../sections/experiences'
+import Fair from '../../sections/fair'
 
 const participationArray: ParticipationData[] =
   participationData as ParticipationData[]
@@ -22,6 +24,8 @@ export default function Home(props: HomeProps) {
     setShowSchedule,
     showSpeakers,
     setShowSpeakers,
+    showExperiences,
+    setShowExperiences,
     showFrequentlyAsked,
     setShowFrequentlyAsked,
     setShowHandbook,
@@ -42,7 +46,6 @@ export default function Home(props: HomeProps) {
             ))}
         </div>
       </div>
-      {/* <SectionsCollapsible showSchedule={showSchedule} /> */}
       <SectionsButtons
         showSections={showSections}
         setShowSections={setShowSections}
@@ -50,18 +53,18 @@ export default function Home(props: HomeProps) {
         setShowSchedule={setShowSchedule}
         showSpeakers={showSpeakers}
         setShowSpeakers={setShowSpeakers}
+        showExperiences={showExperiences}
+        setShowExperiences={setShowExperiences}
         showFrequentlyAsked={showFrequentlyAsked}
         setShowFrequentlyAsked={setShowFrequentlyAsked}
       />
-      {/* <Experiences showExperiences={showExperiences} /> */}
-      {/* <Fair showFair={showFair} /> */}
-      <Schedule showSchedule={showSchedule} />
+      {showExperiences && <Experiences />}
+      {showExperiences && <Fair />}
+      {showSchedule && <Schedule />}
+      {showFrequentlyAsked && <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />}
       <DividerIcons />
-      {/* <Speakers showSpeakers={showSpeakers} /> */}
-      <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />
       <Primer setShowHandbook={setShowHandbook} />
       {/* <InclusionManual setShowManual={setShowManual} /> */}
-      {/* <Gallery /> */}
       <ScrollUp />
     </>
   )

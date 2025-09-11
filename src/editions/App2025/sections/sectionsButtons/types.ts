@@ -1,6 +1,8 @@
 export interface SectionProps {
   showSections: boolean
   setShowSections: React.Dispatch<React.SetStateAction<boolean>>
+  showExperiences: boolean
+  setShowExperiences: React.Dispatch<React.SetStateAction<boolean>>
   showSchedule: boolean
   setShowSchedule: React.Dispatch<React.SetStateAction<boolean>>
   showSpeakers: boolean
