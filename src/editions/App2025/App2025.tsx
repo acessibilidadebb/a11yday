@@ -6,6 +6,7 @@ import Home from './pages/home'
 import Footer from './sections/footer'
 import Handbook from './pages/handbook'
 import GlobalContextProvider from '../../contexts/GlobalContextProvider'
+import LinkNav from './components/linkNav'
 
 export default function App2025() {
   const [showSections, setShowSections] = useState(true)
@@ -17,10 +18,14 @@ export default function App2025() {
   const [showGallery, setShowGallery] = useState(false)
   const resetSections = () => {
     setShowSections(true)
+    setShowExperiences(false)
     setShowSchedule(false)
     setShowSpeakers(false)
     setShowFrequentlyAsked(false)
     setShowHandbook(false)
+  }
+  const handleGoBack = () => {
+    resetSections()
   }
   return (
     <GlobalContextProvider>
@@ -33,6 +38,7 @@ export default function App2025() {
         setShowHandbook={setShowHandbook}
         setShowGallery={setShowGallery}
       />
+      {(showExperiences || showSchedule || showHandbook) && <LinkNav href="/" link={true} title="Voltar" onClick={handleGoBack} icon="back" />}
       {!showHandbook ? (
         <Home
           showSections={showSections}
@@ -51,7 +57,7 @@ export default function App2025() {
           setShowGallery={setShowGallery}
         />
       ) : (
-        <Handbook resetSections={resetSections} />
+        <Handbook />
       )}
       <Footer />
     </GlobalContextProvider>

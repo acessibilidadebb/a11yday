@@ -1,5 +1,6 @@
 @import '../../scss/variables';
 @import '../../scss/fonts';
+@import '../../scss/mixins';
 
 .link-nav {
   background-color: inherit;
@@ -11,6 +12,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  padding: $containerPaddingSmall 0 0 $containerPaddingSmall;
   &:hover,
   &:active {
     text-decoration: underline;
@@ -21,5 +23,9 @@
     width: 16px;
     height: 20px;
     margin-right: 10px;
+  }
+
+  @include respond-to(lg) {
+    padding: $containerPadding 0 0 $containerPadding;
   }
 }
