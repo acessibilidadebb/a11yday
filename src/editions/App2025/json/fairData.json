@@ -52,5 +52,17 @@
     "image": "cassi.svg",
     "imageAriaHidden": true,
     "title": "CASSI"
+  },
+  {
+    "uuid": "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d",
+    "image": "apabb.svg",
+    "imageAriaHidden": true,
+    "title": "APABB - Associação de Pais, Amigos e Pessoas com Deficiência, de Funcionários do Banco do Brasil e da Comunidade"
+  },
+  {
+    "uuid": "0b9c8d7e-6f5a-4b3c-2d1e-0f9e8d7c6b5a",
+    "image": "nttdata.svg",
+    "imageAriaHidden": true,
+    "title": "NTTDATA"
   }
 ]
