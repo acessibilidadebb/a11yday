@@ -24,11 +24,11 @@ export default function InclusionManual({
       <div className="inclusion-manual-container">
         <div className="inclusion-manual-content">
           <h3 className="inclusion-manual-title">
-            Acesse nosso manual de inclusão
+            Acesse nosso Manual de boas práticas de inclusão e diversidade e
+            manual de de boas práticas para liderança inclusiva
           </h3>
           <p className="inclusion-manual-description">
-            Modelo de acolhimento e acompanhamento de pessoas com deficiencia e
-            neurodivergentes.
+            Leia sobre boas práticas de inclusão, diversidade e liderança inclusiva
           </p>
           <Link
             to="/inclusion-manual"

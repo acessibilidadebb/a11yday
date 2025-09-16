@@ -12,6 +12,7 @@ import DividerIcons from '../../sections/dividerIcons'
 import Schedule from '../../sections/schedule'
 import Experiences from '../../sections/experiences'
 import Fair from '../../sections/fair'
+import InclusionManual from '../../sections/inclusionManual'
 
 const participationArray: ParticipationData[] =
   participationData as ParticipationData[]
@@ -29,6 +30,7 @@ export default function Home(props: HomeProps) {
     showFrequentlyAsked,
     setShowFrequentlyAsked,
     setShowHandbook,
+    setShowManual,
   } = props
   return (
     <>
@@ -64,7 +66,7 @@ export default function Home(props: HomeProps) {
       {showFrequentlyAsked && <FrequentlyAsked showFrequentlyAsked={showFrequentlyAsked} />}
       <DividerIcons />
       <Primer setShowHandbook={setShowHandbook} />
-      {/* <InclusionManual setShowManual={setShowManual} /> */}
+      <InclusionManual setShowManual={setShowManual} />
       <ScrollUp />
     </>
   )

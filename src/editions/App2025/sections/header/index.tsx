@@ -20,6 +20,7 @@ export default function Header({
   setShowSpeakers,
   setShowFrequentlyAsked,
   setShowHandbook,
+  setShowManual,
   setShowGallery,
 }: HeaderProps) {
   const { isPin } = useContext(GlobalContext)
@@ -95,6 +96,7 @@ export default function Header({
     setShowFrequentlyAsked(false)
     setOpen(false)
     setShowHandbook(false)
+    setShowManual(false)
   }
   const openSection = (section: string) => {
     if (window.innerWidth <= 768) {
@@ -116,6 +118,9 @@ export default function Header({
       case 'accessible-attitudes-handbook':
         setShowHandbook(true)
         break
+        break
+      case 'inclusion-manual':
+        setShowManual(true)
         break
       case 'address-and-location':
         break
