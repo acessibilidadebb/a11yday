@@ -1,6 +1,7 @@
 import './scheduleCardImage.scss'
 
 import { ScheduleCardImageProps } from '../types'
+import { Speaker } from '../../../types/speakers'
 
 function SpeakerImage({
   speaker,
@@ -10,7 +11,7 @@ function SpeakerImage({
 }: {
   speaker: Speaker
   width: string
-  ariaHidden: string
+  ariaHidden: boolean
   alt: string
 }) {
   return (
@@ -88,7 +89,7 @@ export default function ScheduleCardImage(props: ScheduleCardImageProps) {
                         key={`speakerCardImage-row1-${index}`}
                         speaker={speaker}
                         width={`${100 / firstRow.length}%`}
-                        ariaHidden={`${!!imageAriaHidden || !confirmed}`}
+                        ariaHidden={!!imageAriaHidden || !confirmed}
                         alt={getAltText()}
                       />
                     ))}
@@ -99,7 +100,7 @@ export default function ScheduleCardImage(props: ScheduleCardImageProps) {
                         key={`speakerCardImage-row2-${index}`}
                         speaker={speaker}
                         width={`${100 / secondRow.length}%`}
-                        ariaHidden={`${!!imageAriaHidden || !confirmed}`}
+                        ariaHidden={!!imageAriaHidden || !confirmed}
                         alt={getAltText()}
                       />
                     ))}
