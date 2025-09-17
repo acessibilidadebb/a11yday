@@ -2,6 +2,27 @@ import './scheduleCardImage.scss'
 
 import { ScheduleCardImageProps } from '../types'
 
+function SpeakerImage({
+  speaker,
+  width,
+  ariaHidden,
+  alt,
+}: {
+  speaker: Speaker
+  width: string
+  ariaHidden: string
+  alt: string
+}) {
+  return (
+    <img
+      style={{ width }}
+      aria-hidden={ariaHidden}
+      src={`${import.meta.env.BASE_URL}palestrantes/2025/${speaker.image}`}
+      alt={alt}
+    />
+  )
+}
+
 export default function ScheduleCardImage(props: ScheduleCardImageProps) {
   const { speakers, confirmed, image, imageAlt, imageAriaHidden } = props
   const getAltText = () => {
@@ -16,7 +37,9 @@ export default function ScheduleCardImage(props: ScheduleCardImageProps) {
   return (
     <div
       className={`${
-        speakers.length && !image?.trim() ? 'schedule-card-image' : 'schedule-card-icon'
+        speakers.length && !image?.trim()
+          ? 'schedule-card-image'
+          : 'schedule-card-icon'
       }`}
     >
       {confirmed ? (
@@ -27,7 +50,7 @@ export default function ScheduleCardImage(props: ScheduleCardImageProps) {
               alt={getAltText()}
               aria-hidden={`${!!imageAriaHidden || !confirmed}`}
             />
-          ) : speakers.length ? (
+          ) : speakers.length > 0 && speakers.length <= 3 ? (
             speakers.map((speaker, index) => {
               const borderRadiusStyle = {
                 borderTopLeftRadius: index === 0 ? '10px' : '0',
@@ -53,6 +76,37 @@ export default function ScheduleCardImage(props: ScheduleCardImageProps) {
                 />
               )
             })
+          ) : speakers.length >= 4 ? (
+            (() => {
+              const firstRow = speakers.slice(0, Math.ceil(speakers.length / 2))
+              const secondRow = speakers.slice(Math.ceil(speakers.length / 2))
+              return (
+                <div className="speakers-multi-row">
+                  <div className="speakers-row">
+                    {firstRow.map((speaker, index) => (
+                      <SpeakerImage
+                        key={`speakerCardImage-row1-${index}`}
+                        speaker={speaker}
+                        width={`${100 / firstRow.length}%`}
+                        ariaHidden={`${!!imageAriaHidden || !confirmed}`}
+                        alt={getAltText()}
+                      />
+                    ))}
+                  </div>
+                  <div className="speakers-row">
+                    {secondRow.map((speaker, index) => (
+                      <SpeakerImage
+                        key={`speakerCardImage-row2-${index}`}
+                        speaker={speaker}
+                        width={`${100 / secondRow.length}%`}
+                        ariaHidden={`${!!imageAriaHidden || !confirmed}`}
+                        alt={getAltText()}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )
+            })()
           ) : (
             <div
               className={`schedule-card-icon ${

@@ -50,3 +50,51 @@
 
   }
 }
+
+.speakers-multi-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.speakers-row {
+  display: flex;
+  gap: 0;
+}
+.speakers-row img {
+  margin: 0;
+  border-radius: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.speakers-row:first-child img:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.speakers-row:first-child img:last-child {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.speakers-row:last-child img:first-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.speakers-row:last-child img:last-child {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.speakers-row img {
+  width: 36px;
+  height: 36px;
+  width: auto;
+  object-fit: cover !important;
+  display: block;
+}
