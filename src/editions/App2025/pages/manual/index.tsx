@@ -33,7 +33,7 @@ export default function Manual() {
             className="link-download"
             title="Download do Manual de Boas Práticas em Liderança Inclusiva"
             icon="download"
-            href="/ManualBoasPráticas_LiderançaInclusiva_Público_V1.0.pdf"
+            href="/ManualBoasPráticas_LiderançaInclusiva_Público_V1.0 1.pdf"
             target="_blank"
           />
           <div className="manual-paragraph">
@@ -48,7 +48,7 @@ export default function Manual() {
             className="link-download"
             title="Download do Manual de Boas Práticas em Inclusão e Diversidade"
             icon="download"
-            href="/ManualBoasPráticas_Inclusão&Diversidade_Funcionários__Público_V1.0.pdf"
+            href="/ManualBoasPráticas_Inclusão&Diversidade_Funcionários__Público_V1.0 1.pdf"
             target="_blank"
           />
 
