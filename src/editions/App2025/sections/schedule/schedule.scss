@@ -2,16 +2,23 @@
 @import '../../scss/placeholders';
 @import '../../scss/mixins';
 
- .schedule-2025 {
+.schedule-2025 {
   @extend %container;
   background-color: $white;
   flex-direction: column;
+  display: none;
+  &.open {
+    display: flex;
+  }
+  @include respond-to(lg) {
+    display: flex;
+  }
 }
- .schedule-title-2025 {
+.schedule-title-2025 {
   font-size: 1.6rem;
   color: $color-blue;
 }
- .details-2025 {
+.details-2025-2025 {
   background-color: inherit;
   border: none;
   color: $link;
@@ -22,7 +29,7 @@
   text-align: left;
   padding: 0;
 }
- .schedule-btn-2025 {
+.schedule-btn-2025 {
   background-color: $buttonSecondary;
   width: 32px;
   height: 32px;
@@ -37,7 +44,7 @@
     height: 20px;
   }
 }
- .schedule-header-2025 {
+.schedule-header-2025 {
   color: $color-gray;
   text-transform: uppercase;
   margin-top: 36px;
