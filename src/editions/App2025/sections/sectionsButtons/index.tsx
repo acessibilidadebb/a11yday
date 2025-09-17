@@ -59,7 +59,7 @@ export default function SectionsButtons({
         onClick={handleClickExperiences}
         className="section-button-2025"
         title="Feira e Vivências"
-        accessibility-label="Feira e Vivências"
+        aria-label="Feira e Vivências"
       >
         <div className="section-card-2025">
           <h3 className="title" aria-hidden="true">
@@ -76,7 +76,7 @@ export default function SectionsButtons({
         onClick={handleClickSchedule}
         className="section-button-2025 dark"
         title="Palestras"
-        accessibility-label="Palestras"
+        aria-label="Palestras"
       >
         <div className="section-card-2025">
           <h3 className="title" aria-hidden="true">

@@ -16,7 +16,7 @@ export default function Primer({ setShowHandbook }: PrimerSectionProps) {
           className="primer-section-cover"
           src="primer-cover.png"
           alt="Capa da sessão Cartilha Atitudes Acessíveis"
-          accessibility-label="Capa da sessão Cartilha Atitudes Acessíveis"
+          aria-label="Capa da sessão Cartilha Atitudes Acessíveis"
         />
       </div>
       <div className="primer-section-container">
@@ -32,7 +32,7 @@ export default function Primer({ setShowHandbook }: PrimerSectionProps) {
             className="bb-button primary size-regular  "
             onClick={handleClickHandbook}
             title="Acessar Cartilha"
-            accessibility-label="Acessar Cartilha"
+            aria-label="Acessar Cartilha"
           >
             Acessar Cartilha
           </Link>

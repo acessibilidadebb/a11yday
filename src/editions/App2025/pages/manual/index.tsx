@@ -15,7 +15,7 @@ export default function Manual() {
             className="manual-cover"
             src="manual-cover.png"
             alt="Capa da sessão Manual de boas práticas de inclusão e diversidade e manual de boas práticas para liderança inclusiva"
-            accessibility-label="Capa da sessão Manual de boas práticas para liderança inclusiva"
+            aria-label="Capa da sessão Manual de boas práticas para liderança inclusiva"
           />
         </header>
 

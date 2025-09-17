@@ -70,7 +70,7 @@ export default function SectionsButtons({
         onClick={handleClickSchedule}
         className="section-button"
         title="Programação"
-        accessibility-label="Programação"
+        aria-label="Programação"
       >
         <div className="section-card">
           <div className="section-card-cover cover-schedule">
@@ -84,7 +84,7 @@ export default function SectionsButtons({
         onClick={handleClickSpeakers}
         className="section-button"
         title="Palestrantes"
-        accessibility-label="Palestrantes"
+        aria-label="Palestrantes"
       >
         <div className="section-card">
           <div className="section-card-cover cover-speakers">
@@ -98,7 +98,7 @@ export default function SectionsButtons({
         onClick={handleClickFrequentlyAsked}
         className="section-button"
         title="Dúvidas frequentes"
-        accessibility-label="Dúvidas frequentes"
+        aria-label="Dúvidas frequentes"
       >
         <div className="section-card">
           <div className="section-card-cover cover-frequently-asked">

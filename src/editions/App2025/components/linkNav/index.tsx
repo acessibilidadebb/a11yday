@@ -34,7 +34,7 @@ export default function LinkNav({
           target={target}
           onClick={onClick}
           title={title}
-          accessibility-label={title}
+          aria-label={title}
         >
           <Icon icon={icon} />
           {title}
@@ -48,7 +48,7 @@ export default function LinkNav({
           target={target}
           onClick={onClick}
           title={title}
-          accessibility-label={title}
+          aria-label={title}
         >
           <Icon icon={icon} />
           {title}
@@ -61,7 +61,7 @@ export default function LinkNav({
         className={`link-nav ${className}`}
         onClick={onClick}
         title={title}
-        accessibility-label={title}
+        aria-label={title}
       >
         <Icon icon={icon} />
         {title}

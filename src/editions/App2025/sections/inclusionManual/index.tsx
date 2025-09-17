@@ -18,7 +18,7 @@ export default function InclusionManual({
           className="inclusion-manual-cover"
           src="manual-cover.png"
           alt="Cover of the Inclusion Manual for People with Disabilities in Companies"
-          accessibility-label="Cover of the Inclusion Manual for People with Disabilities in Companies"
+          aria-label="Cover of the Inclusion Manual for People with Disabilities in Companies"
         />
       </div>
       <div className="inclusion-manual-container">
@@ -36,7 +36,7 @@ export default function InclusionManual({
             className="bb-button primary size-regular"
             onClick={handleClickManual}
             title="Acessar Manual"
-            accessibility-label="Acessar Manual"
+            aria-label="Acessar Manual"
           >
             Acessar Manual
           </Link>

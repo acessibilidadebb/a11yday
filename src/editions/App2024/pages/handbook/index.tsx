@@ -24,7 +24,7 @@ export default function Handbook({ resetSections }: PrimerProps) {
             className="primer-cover"
             src="primer-cover.png"
             alt="Capa da sessão Cartilha Atitudes Acessíveis"
-            accessibility-label="Capa da sessão Cartilha Atitudes Acessíveis"
+            aria-label="Capa da sessão Cartilha Atitudes Acessíveis"
           />
         </header>
         <div id="primer-description">
