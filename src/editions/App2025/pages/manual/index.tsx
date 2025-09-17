@@ -8,8 +8,8 @@ export default function Manual() {
       <main className="manual-content">
         <header>
           <h3 className="manual-title" id="manual-title">
-            Manual de boas práticas de inclusão e diversidade e manual de de
-            boas práticas para liderança inclusiva
+            Manual de boas práticas de inclusão e diversidade e manual de boas
+            práticas para liderança inclusiva
           </h3>
           <img
             className="manual-cover"

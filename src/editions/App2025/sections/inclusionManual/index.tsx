@@ -25,10 +25,11 @@ export default function InclusionManual({
         <div className="inclusion-manual-content">
           <h3 className="inclusion-manual-title">
             Acesse nosso Manual de boas práticas de inclusão e diversidade e
-            manual de de boas práticas para liderança inclusiva
+            manual de boas práticas para liderança inclusiva
           </h3>
           <p className="inclusion-manual-description">
-            Leia sobre boas práticas de inclusão, diversidade e liderança inclusiva
+            Leia sobre boas práticas de inclusão, diversidade e liderança
+            inclusiva
           </p>
           <Link
             to="/inclusion-manual"
