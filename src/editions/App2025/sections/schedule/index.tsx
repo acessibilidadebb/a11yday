@@ -8,12 +8,12 @@ const scheduleData = scheduleJson as ScheduleItemType[]
 
 export default function Schedule() {
   return (
-    <section id="schedule-2025" className='schedule'>
+    <section id="schedule-2025" className='schedule-2025'>
       <h2 className="schedule-title">Programação Palestras</h2>
       <div>
-        <div className="schedule-header">
-          <div className="schedule-time">Hora</div>
-          <div className="schedule-event">Atividade</div>
+        <div className="schedule-header-2025">
+          <div className="schedule-time-2025">Hora</div>
+          <div className="schedule-event-2025">Atividade</div>
         </div>
         {scheduleData.map((item: ScheduleItemType) => (
           <ScheduleItem key={`${generateUniqueId()}`} {...item} />

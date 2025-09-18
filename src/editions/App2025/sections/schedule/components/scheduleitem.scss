@@ -36,19 +36,16 @@ body:not(.no-scroll) .schedule-item:hover {
   transform: translateX(5px);
   transition: all 0.3s ease;
 }
-.schedule-time {
+.schedule-time-2025 {
   vertical-align: top;
   padding: 8px 20px 0 0;
-  font-size: 18px;
-  line-height: 22.5px;
   border: none;
 
-  font-weight: 700;
   text-align: left;
   color: $color-gray;
   width: 115px;
 }
-.schedule-event {
+.schedule-event-2025 {
   flex-grow: 1;
   margin-left: $scheduleItemMarginTop;
 }
